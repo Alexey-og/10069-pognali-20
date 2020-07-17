@@ -1,657 +1,657 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>HTML Academy: Направления</title>
-	<link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Направления</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header>
-		<a href="" aria-label="Логотип Погнали"></a>
-		<nav>
-			<a href="">О сервисе</a>
-			<a href="">Направления</a>
-			<a href="">Попутчики</a>
-		</nav>
-		<div>
-			<a href="" aria-label=""></a>
-			<a href="" aria-label=""></a>
-			<a href="">Авторизация</a>
-		</div>
-	</header>
-	<main>
-		<form action="" method="post">
-			<div>
-				<h1>Направления</h1>
-				<div>
-					<div>
-						<span>80</span>
-						<span>level</span>
-					</div>
-					<img src="" alt="Петя Демин - фотография">
-					<a href=""><span>сменить </span>фото</a>        
-				</div>
-			</div>
-			<div class="tags-transport tags-transport--mobile">
-				<fieldset class="tags-transport__item tags">
-					<legend class="tags__title">тэги</legend>					
-					<textarea class="tags__tags-list" name="tags-list" id="tags-list" cols="30" rows="2">#бургер #бар #футбол #концерт #крафт</textarea>
-					<label class="visually-hidden" for="tags-list" aria-label="Список тегов пользователя"></label>
-				</fieldset>
-				<fieldset class="tags-transport__item transport">
-					<legend class="transport__title">транспорт</legend>					
-					<label class="transport__label transport__label--avia" aria-label="Кнопка передвижения на самолете" data-transport="Авиаперелет"><input class="visually-hidden" type="checkbox" name="transport-avia"></label>					
-					<label class="transport__label transport__label--car" aria-label="Кнопка передвижения на автотранспорте" data-transport="Автотранспорт"><input class="visually-hidden" type="checkbox" name="transport-car"></label>
-					<label class="transport__label transport__label--bike" aria-label="Кнопка передвижения на велосипеде" data-transport="Велосипед"><input class="visually-hidden" type="checkbox" name="transport-bike"></label>					
-					<label class="transport__label transport__label--foot" aria-label="Кнопка передвижения пешком" data-transport="Пешком"><input class="visually-hidden" type="checkbox" name="transport-foot"></label>
-				</fieldset>
-			</div>
-			<section class="planned-trips">
-				<h2 class="visually-hidden">Список планируемых поездок</h2>
-				<p class="planned-trips__title">Мои планы:</p>
-				<div class="planned-trips__item trip">
-					<p class="trip__countries"><span class="trip__number">1.</span>Франция, Италия</p>
-					<p class="trip__info">
-						<span class="trip__travelmates">3 попутчика</span>
-						<span class="trip__dates">26 мар &ndash; 29 мар</span>
-					</p>					
-					<a class="trip__change" href="">изменить</a>
-				</div>
-				<div class="planned-trips__item trip">
-					<p class="trip__countries"><span class="trip__number">2.</span>Таиланд, Индонезия</p>
-					<p class="trip__info">
-						<span class="trip__travelmates">1 попутчик</span>
-						<span class="trip__dates">1 июл &ndash; 15 июл</span>
-					</p>					
-					<a class="trip__change" href="">изменить</a>
-				</div>
-			</section>
-			<section class="plan-adding">
-				<h2 class="visually-hidden">Пошаговое добавление плана путешествия</h2>
-				<div class="plan-adding__header">
-					<p class="plan-adding__title">Добавить план:</p>
-					<ul class="plan-adding__dots">
-						<li class="plan-adding__dot plan-adding__dot--current"></li>
-						<li class="plan-adding__dot"></li>
-						<li class="plan-adding__dot"></li>
-					</ul>
-				</div>
-				<section class="plan-adding__step plan-step" id="step-1">
-					<div class="plan-step__header step-header">
-						<h3 class="step-header__title"><span class="step-header__step-number">Шаг 1.</span>Даты пребывания</h3>
-						<p class="step-header__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-						<ul class="step-header__steps-list">
-							<li class="step-header__step step-header__step--current">Даты</li>
-							<li class="step-header__step">Маршрут</li>
-							<li class="step-header__step">Развлечения</li>
-						</ul>
-					</div>
-					<div class="plan-step__inputs step-inputs">
-						<div class="step-inputs__">
-							<label class="step-inputs__" for="travelmates-number">Ищу попутчиков:</label>
-							<div class="step-inputs__">
-								<button class="step-inputs__" type="button" aria-label="Уменьшить количество попутчиков"></button>
-								<input class="step-inputs__" type="number" name="travelmates-number" id="travelmates-number" value="2">
-								<button class="step-inputs__" type="button" aria-label="Увеличить количество попутчиков"></button>
-							</div>
-							<div class="step-inputs__">чел.</div>
-						</div>
-						<div class="step-inputs__">
-							<label class="step-inputs__" for="trip-duration">Длительность:</label>
-							<div class="step-inputs__">
-								<button class="step-inputs__" type="button" aria-label="Уменьшить длительность поездки"></button>
-								<input class="step-inputs__" type="number" name="trip-duration" id="trip-duration" value="2">
-								<button class="step-inputs__" type="button" aria-label="Увеличить длительность поездки"></button>
-							</div>
-							<div class="step-inputs__">дн.</div>
-						</div>
-						<div class="plan-step__kids">
-							<input type="checkbox" name="kids-possible" id="kids-possible">
-							<label for="kids-possible">Можно с детьми</label>
-						</div>
-					</div>
-					<article class="plan-step__calendar calendar">
-						<h4 class="visually-hidden">Выбор дат поездки в календаре</h4>
-						<div class="calendar__header">
-							<button class="calendar__prev-month" type="button" aria-label="Перейти в предыдущий месяц"></button>
-							<p class="calendar__current-month">Март 2019</p>
-							<button class="calendar__next-month" type="button" aria-label="Перейти в следующий месяц"></button>
-						</div>
-						<div class="calendar__body">
-							<table>
-								<thead>
-									<tr>
-										<th>Пн</th>
-										<th>Вт</th>
-										<th>Ср</th>
-										<th>Чт</th>
-										<th>Пт</th>
-										<th>Сб</th>
-										<th>Вс</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">23</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">24</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">25</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">26</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">27</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">28</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">1 мар</label>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">2</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">3</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">4</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">5</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">6</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">7</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">8</label>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">9</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">10</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">11</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">12</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">13</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">14</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">15</label>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">16</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">17</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">18</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">19</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">20</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">21</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">22</label>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">23</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">24</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">25</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">26</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">27</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">28</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">29</label>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">30</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">31</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">1 апр</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">2</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">3</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">4</label>
-										</td>
-										<td>
-											<input type="number" name="" id="">
-											<label for="">5</label>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<a class="button plan-step__button" href="#step-2">Следующий шаг</a>
-					</article>					
-				</section>
-				<section class="plan-adding__step plan-step" id="step-2">
-					<div class="plan-step__header step-header">
-						<h3 class="step-header__title"><span class="step-header__step-number">Шаг 2.</span>Маршрут</h3>
-						<p class="step-header__description">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
-						<ul class="step-header__steps-list">
-							<li class="step-header__step">Даты</li>
-							<li class="step-header__step step-header__step--current">Маршрут</li>
-							<li class="step-header__step">Развлечения</li>
-						</ul>
-					</div>
-					<article>
-						<h4>Список выбранных стран</h4>
-						<div>
-							<button>Босния и Герцеговина</button>
-							<div>
-								<img src="" alt="" width="" height="">
-								<a href=""></a>
-							</div>
-						</div>
-						<div>
-							<button>Босния и Герцеговина</button>
-							<div>
-								<img src="" alt="" width="" height="">
-								<a href=""></a>
-							</div>
-						</div>
-						<div>
-							<button>Выберите страну</button>
-							<div>
-								<img src="" alt="" width="" height="">
-								<a href=""></a>
-							</div>
-							<section>
-								<div>
-									<h5>Выберите страну</h5>
-									<button></button>
-								</div>
-								<div>
-									<fieldset>
-										<legend class="visually-hidden">Побуквенный переключатель стран</legend>
-										<input type="radio" name="" id=""><label for="">А</label>
-										<input type="radio" name="" id=""><label for="">Б</label>
-										<input type="radio" name="" id=""><label for="">В</label>
-										<input type="radio" name="" id=""><label for="">Г</label>
-										<input type="radio" name="" id=""><label for="">Д</label>
-										<input type="radio" name="" id=""><label for="">Е</label>
-										<input type="radio" name="" id=""><label for="">З</label>
-										<input type="radio" name="" id=""><label for="">И</label>
-										<input type="radio" name="" id=""><label for="">К</label>
-										<input type="radio" name="" id=""><label for="">Л</label>
-										<input type="radio" name="" id=""><label for="">М</label>
-										<input type="radio" name="" id=""><label for="">Н</label>
-										<input type="radio" name="" id=""><label for="">О</label>
-										<input type="radio" name="" id=""><label for="">П</label>
-										<input type="radio" name="" id=""><label for="">Р</label>
-										<input type="radio" name="" id=""><label for="">С</label>
-										<input type="radio" name="" id=""><label for="">Т</label>
-										<input type="radio" name="" id=""><label for="">У</label>
-										<input type="radio" name="" id=""><label for="">Ф</label>
-										<input type="radio" name="" id=""><label for="">Х</label>
-										<input type="radio" name="" id=""><label for="">Ч</label>
-										<input type="radio" name="" id=""><label for="">Ш</label>
-										<input type="radio" name="" id=""><label for="">Э</label>
-										<input type="radio" name="" id=""><label for="">Ю</label>
-										<input type="radio" name="" id=""><label for="">Я</label>
-									</fieldset>
-								</div>
-								<div>
-									<div>
-										<a href="">Австралия</a>
-										<a href="">Австрия</a>
-										<a href="">Азербайджан</a>
-										<a href="">Албания</a>
-										<a href="">Алжир</a>
-										<a href="">Ангола</a>
-										<a href="">Андорра</a>
-										<a href="">Антигуа и Барбуда</a>
-										<a href="">Аргентина</a>
-										<a href="">Армения</a>
-										<a href="">Афганистан</a>
-									</div>
-									<div>
-										<a href="">Багамские Острова</a>
-										<a href="">Бангладеш</a>
-										<a href="">Барбадос</a>
-										<a href="">Бахрейн</a>
-										<a href="">Белоруссия</a>
-										<a href="">Белиз</a>
-										<a href="">Бельгия</a>
-										<a href="">Бенин</a>
-										<a href="">Болгария</a>
-										<a href="">Боливия</a>
-										<a href="">Босния и Герцеговина</a>
-										<a href="">Ботсвана</a>
-										<a href="">Бразилия</a>
-										<a href="">Бруней</a>
-										<a href="">Буркина-Фасо</a>
-										<a href="">Бурунди</a>
-										<a href="">Бутан</a>
-									</div>
-									<div>
-										<a href="">Вануату</a>
-										<a href="">Великобритания</a>
-										<a href="">Венгрия</a>
-										<a href="">Венесуэла</a>
-										<a href="">Восточный Тимор</a>
-										<a href="">Вьетнам</a>
-									</div>
-									<div>
-										<a href="">Габон</a>
-										<a href="">Гаити</a>
-										<a href="">Гайана</a>
-										<a href="">Гамбия</a>
-										<a href="">Гана</a>
-										<a href="">Гватемала</a>
-										<a href="">Гвинея</a>
-										<a href="">Гвинея-Бисау</a>
-										<a href="">Германия</a>
-										<a href="">Гондурас</a>
-										<a href="">Гренада</a>
-										<a href="">Греция</a>
-										<a href="">Грузия</a>
-									</div>
-									<div>
-										<a href="">Дания</a>
-										<a href="">Джибути</a>
-										<a href="">Доминика</a>
-										<a href="">Доминикана</a>
-									</div>
-									<div>
-										<a href="">Египет</a>
-									</div>
-									<div>
-										<a href="">Замбия</a>
-										<a href="">Зимбабве</a>
-									</div>
-									<div>
-										<a href="">Израиль</a>
-										<a href="">Индия</a>
-										<a href="">Индонезия</a>
-										<a href="">Иордания</a>
-										<a href="">Ирак</a>
-										<a href="">Иран</a>
-										<a href="">Ирландия</a>
-										<a href="">Исландия</a>
-										<a href="">Испания</a>
-										<a href="">Италия</a>
-									</div>
-									<div>
-										<a href="">Кабо-Верде</a>
-										<a href="">Казахстан</a>
-										<a href="">Камбоджа</a>
-										<a href="">Камерун</a>
-										<a href="">Канада</a>
-										<a href="">Катар</a>
-										<a href="">Кения</a>
-										<a href="">Кипр</a>
-										<a href="">Киргизия</a>
-										<a href="">Кирибати</a>
-										<a href="">Китай</a>
-										<a href="">Колумбия</a>
-									</div>
-									<div>
-										<a href="">Лаос</a>
-										<a href="">Латвия</a>
-										<a href="">Лесото</a>
-										<a href="">Либерия</a>
-										<a href="">Ливан</a>
-										<a href="">Ливия</a>
-										<a href="">Литва</a>
-										<a href="">Лихтенштейн</a>
-										<a href="">Люксембург</a>
-									</div>
-									<div>
-										<a href="">Маврикий</a>
-										<a href="">Мавритания</a>
-										<a href="">Мадагаскар</a>
-										<a href="">Малави</a>
-										<a href="">Малайзия</a>
-										<a href="">Мали</a>
-										<a href="">Мальдивы</a>
-										<a href="">Мальта</a>
-										<a href="">Марокко</a>
-										<a href="">Мексика</a>										
-									</div>
-									<div>
-										<a href="">Намибия</a>
-										<a href="">Науру</a>
-										<a href="">Непал</a>
-										<a href="">Нигер</a>
-										<a href="">Нигерия</a>
-										<a href="">Нидерланды</a>
-										<a href="">Никарагуа</a>
-										<a href="">Новая Зеландия</a>
-										<a href="">Норвегия</a>
-									</div>
-									<div>
-										<a href="">ОАЭ</a>
-										<a href="">Оман</a>
-									</div>
-									<div>
-										<a href="">Пакистан</a>
-										<a href="">Палау</a>
-										<a href="">Панама</a>
-										<a href="">Папуа - Новая Гвинея</a>
-										<a href="">Парагвай</a>
-										<a href="">Перу</a>
-										<a href="">Польша</a>
-										<a href="">Португалия</a>
-									</div>
-									<div>
-										<a href="">Россия</a>
-										<a href="">Руанда</a>
-										<a href="">Румыния</a>
-									</div>
-									<div>
-										<a href="">Сальвадор</a>
-										<a href="">Самоа</a>
-										<a href="">Сан-Марино</a>
-										<a href="">Саудовская Аравия</a>
-										<a href="">Сейшелы</a>
-										<a href="">Сенегал</a>
-										<a href="">Сербия</a>
-										<a href="">Сингапур</a>
-										<a href="">Сирия</a>
-										<a href="">Словакия</a>
-										<a href="">Словения</a>
-										<a href="">США</a>
-									</div>
-									<div>
-										<a href="">Таджикистан</a>
-										<a href="">Таиланд</a>
-										<a href="">Танзания</a>
-										<a href="">Того</a>
-										<a href="">Тонга</a>
-										<a href="">Тринидад и Тобаго</a>
-										<a href="">Тувалу</a>
-										<a href="">Тунис</a>
-										<a href="">Туркмения</a>
-										<a href="">Турция</a>
-									</div>
-									<div>
-										<a href="">Уганда</a>
-										<a href="">Узбекистан</a>
-										<a href="">Украина</a>
-										<a href="">Уругвай</a>
-									</div>
-									<div>
-										<a href="">Фиджи</a>
-										<a href="">Филиппины</a>
-										<a href="">Финляндия</a>
-										<a href="">Франция</a>
-									</div>
-									<div>
-										<a href="">Хорватия</a>
-									</div>
-									<div>
-										<a href="">Чад</a>
-										<a href="">Черногория</a>
-										<a href="">Чехия</a>
-										<a href="">Чили</a>
-									</div>
-									<div>
-										<a href="">Швейцария</a>
-										<a href="">Швеция</a>
-										<a href="">Шри-Ланка</a>
-									</div>
-									<div>
-										<a href="">Эквадор</a>
-										<a href="">Эритрея</a>
-										<a href="">Эсватини</a>
-										<a href="">Эстония</a>
-										<a href="">Эфиопия</a>
-									</div>
-									<div>
-										<a href="">ЮАР</a>
-										<a href="">Южный Судан</a>
-									</div>
-									<div>
-										<a href="">Ямайка</a>
-										<a href="">Япония</a>
-									</div>
-								</div>
-							</section>
-						</div>
-						<div>
-							<button>Добавить страну</button>
-							<div>
-								<img src="" alt="" width="" height="">
-								<a href=""></a>
-							</div>
-						</div>
-						<div>
-							<a href="#step-3">Следующий шаг</a>
-							<div>
-								<a href="#step-1">На шаг назад</a>
-							</div>
-						</div>
-					</article>
-				</section>
-				<section class="plan-adding__step plan-step" id="step-3">
-					<div class="plan-step__header step-header">
-						<h3 class="step-header__title"><span class="step-header__step-number">Шаг 3.</span>Развлечения</h3>
-						<p class="step-header__description">Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной форме и ставить тэги.</p>
-						<ul class="step-header__steps-list">
-							<li class="step-header__step">Даты</li>
-							<li class="step-header__step">Маршрут</li>
-							<li class="step-header__step step-header__step--current">Развлечения</li>
-						</ul>
-					</div>
-					<fieldset>
-						<legend class="visually-hidden">Добавление плана действий к выбранным странам</legend>
-						<div>
-							<p>Босния и Герцеговина</p>
-							<img src="" alt="" width="" height="">						
-						</div>
-						<textarea name="" id="" cols="30" rows="5" placeholder="План действий"></textarea>
-						<label for="" aria-label=""></label>
-						<div>
-							<p>Чехия</p>
-							<img src="" alt="" width="" height="">						
-						</div>
-						<textarea name="" id="" cols="30" rows="5" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
-						<label for="" aria-label=""></label>
-					</fieldset>
-					<div>
-						<button type="submit">Отправить</button>
-						<div>
-							<a href="#step-2">На шаг назад</a>
-						</div>
-					</div>
-				</section>
-			</section>
-		</form>
+  <header>
+    <a href="index.html" aria-label="Логотип Погнали"></a>
+    <nav>
+      <a href="index.html">О сервисе</a>
+      <a>Направления</a>
+      <a href="catalog.html">Попутчики</a>
+    </nav>
+    <div>
+      <a href="" aria-label=""></a>
+      <a href="" aria-label=""></a>
+      <a href="">Авторизация</a>
+    </div>
+  </header>
+  <main>
+    <form action="" method="post">
+      <div>
+        <h1>Направления</h1>
+        <div>
+          <div>
+            <span>80</span>
+            <span>level</span>
+          </div>
+          <img src="" alt="Петя Демин - фотография">
+          <a href=""><span>сменить </span>фото</a>        
+        </div>
+      </div>
+      <div class="tags-transport tags-transport--mobile">
+        <fieldset class="tags-transport__item tags">
+          <legend class="tags__title">тэги</legend>          
+          <textarea class="tags__tags-list" name="tags-list" id="tags-list" cols="30" rows="2">#бургер #бар #футбол #концерт #крафт</textarea>
+          <label class="visually-hidden" for="tags-list" aria-label="Список тегов пользователя"></label>
+        </fieldset>
+        <fieldset class="tags-transport__item transport">
+          <legend class="transport__title">транспорт</legend>          
+          <label class="transport__label transport__label--avia" aria-label="Кнопка передвижения на самолете" data-transport="Авиаперелет"><input class="visually-hidden" type="checkbox" name="transport-avia"></label>          
+          <label class="transport__label transport__label--car" aria-label="Кнопка передвижения на автотранспорте" data-transport="Автотранспорт"><input class="visually-hidden" type="checkbox" name="transport-car"></label>
+          <label class="transport__label transport__label--bike" aria-label="Кнопка передвижения на велосипеде" data-transport="Велосипед"><input class="visually-hidden" type="checkbox" name="transport-bike"></label>          
+          <label class="transport__label transport__label--foot" aria-label="Кнопка передвижения пешком" data-transport="Пешком"><input class="visually-hidden" type="checkbox" name="transport-foot"></label>
+        </fieldset>
+      </div>
+      <section class="planned-trips">
+        <h2 class="visually-hidden">Список планируемых поездок</h2>
+        <p class="planned-trips__title">Мои планы:</p>
+        <div class="planned-trips__item trip">
+          <p class="trip__countries"><span class="trip__number">1.</span>Франция, Италия</p>
+          <p class="trip__info">
+            <span class="trip__travelmates">3 попутчика</span>
+            <span class="trip__dates">26 мар &ndash; 29 мар</span>
+          </p>          
+          <a class="trip__change" href="">изменить</a>
+        </div>
+        <div class="planned-trips__item trip">
+          <p class="trip__countries"><span class="trip__number">2.</span>Таиланд, Индонезия</p>
+          <p class="trip__info">
+            <span class="trip__travelmates">1 попутчик</span>
+            <span class="trip__dates">1 июл &ndash; 15 июл</span>
+          </p>          
+          <a class="trip__change" href="">изменить</a>
+        </div>
+      </section>
+      <section class="plan-adding">
+        <h2 class="visually-hidden">Пошаговое добавление плана путешествия</h2>
+        <div class="plan-adding__header">
+          <p class="plan-adding__title">Добавить план:</p>
+          <ul class="plan-adding__dots">
+            <li class="plan-adding__dot plan-adding__dot--current"></li>
+            <li class="plan-adding__dot"></li>
+            <li class="plan-adding__dot"></li>
+          </ul>
+        </div>
+        <section class="plan-adding__step plan-step" id="step-1">
+          <div class="plan-step__header step-header">
+            <h3 class="step-header__title"><span class="step-header__step-number">Шаг 1.</span>Даты пребывания</h3>
+            <p class="step-header__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+            <ul class="step-header__steps-list">
+              <li class="step-header__step step-header__step--current">Даты</li>
+              <li class="step-header__step">Маршрут</li>
+              <li class="step-header__step">Развлечения</li>
+            </ul>
+          </div>
+          <div class="plan-step__inputs step-inputs">
+            <div class="step-inputs__">
+              <label class="step-inputs__" for="travelmates-number">Ищу попутчиков:</label>
+              <div class="step-inputs__">
+                <button class="step-inputs__" type="button" aria-label="Уменьшить количество попутчиков"></button>
+                <input class="step-inputs__" type="number" name="travelmates-number" id="travelmates-number" value="2">
+                <button class="step-inputs__" type="button" aria-label="Увеличить количество попутчиков"></button>
+              </div>
+              <div class="step-inputs__">чел.</div>
+            </div>
+            <div class="step-inputs__">
+              <label class="step-inputs__" for="trip-duration">Длительность:</label>
+              <div class="step-inputs__">
+                <button class="step-inputs__" type="button" aria-label="Уменьшить длительность поездки"></button>
+                <input class="step-inputs__" type="number" name="trip-duration" id="trip-duration" value="2">
+                <button class="step-inputs__" type="button" aria-label="Увеличить длительность поездки"></button>
+              </div>
+              <div class="step-inputs__">дн.</div>
+            </div>
+            <div class="plan-step__kids">
+              <input type="checkbox" name="kids-possible" id="kids-possible">
+              <label for="kids-possible">Можно с детьми</label>
+            </div>
+          </div>
+          <article class="plan-step__calendar calendar">
+            <h4 class="visually-hidden">Выбор дат поездки в календаре</h4>
+            <div class="calendar__header">
+              <button class="calendar__prev-month" type="button" aria-label="Перейти в предыдущий месяц"></button>
+              <p class="calendar__current-month">Март 2019</p>
+              <button class="calendar__next-month" type="button" aria-label="Перейти в следующий месяц"></button>
+            </div>
+            <div class="calendar__body">
+              <table>
+                <thead>
+                  <tr>
+                    <th>П<span>н</span></th>
+                    <th>В<span>т</span></th>
+                    <th>С<span>р</span></th>
+                    <th>Ч<span>т</span></th>
+                    <th>П<span>т</span></th>
+                    <th>С<span>б</span></th>
+                    <th>В<span>с</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="feb-23" id="feb-23" disabled>
+                      <label for="feb-23">23</label>
+                    </td>
+                    <td>
+                      <input type="text" name="feb-24" id="feb-24" disabled>
+                      <label for="feb-24">24</label>
+                    </td>
+                    <td>
+                      <input type="text" name="feb-25" id="feb-25" disabled>
+                      <label for="feb-25">25</label>
+                    </td>
+                    <td>
+                      <input type="text" name="feb-26" id="feb-26" disabled>
+                      <label for="feb-26">26</label>
+                    </td>
+                    <td>
+                      <input type="text" name="feb-27" id="feb-27" disabled>
+                      <label for="feb-27">27</label>
+                    </td>
+                    <td>
+                      <input type="text" name="feb-28" id="feb-28" disabled>
+                      <label for="feb-28">28</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-1" id="march-1" disabled>
+                      <label for="march-1">1 мар</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" name="march-2" id="march-2" disabled>
+                      <label for="march-2">2</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-3" id="march-3" disabled>
+                      <label for="march-3">3</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-4" id="march-4" disabled>
+                      <label for="march-4">4</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-5" id="march-5" disabled>
+                      <label for="march-5">5</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-6" id="march-6" disabled>
+                      <label for="march-6">6</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-7" id="march-7" disabled>
+                      <label for="march-7">7</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-8" id="march-8" disabled>
+                      <label for="march-8">8</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" name="march-9" id="march-9" disabled>
+                      <label for="march-9">9</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-10" id="march-10" disabled>
+                      <label for="march-10">10</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-11" id="march-11" disabled>
+                      <label for="march-11">11</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-12" id="march-12" disabled>
+                      <label for="march-12">12</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-13" id="march-13" disabled>
+                      <label for="march-13">13</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-14" id="march-14" disabled>
+                      <label for="march-14">14</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-15" id="march-15" disabled>
+                      <label for="march-15">15</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" name="march-16" id="march-16" disabled>
+                      <label for="march-16">16</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-17" id="march-17" disabled>
+                      <label for="march-17">17</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-18" id="march-18" disabled>
+                      <label for="march-18">18</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-19" id="march-19" disabled>
+                      <label for="march-19">19</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-20" id="march-20" disabled>
+                      <label for="march-20">20</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-21" id="march-21" disabled>
+                      <label for="march-21">21</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-22" id="march-22" disabled>
+                      <label for="march-22">22</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" name="march-23" id="march-23" disabled>
+                      <label for="march-23">23</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-24" id="march-24" disabled>
+                      <label for="march-24">24</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-25" id="march-25" disabled>
+                      <label for="march-25">25</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-26" id="march-26">
+                      <label for="march-26">26</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-27" id="march-27">
+                      <label for="march-27">27</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-28" id="march-28">
+                      <label for="march-28">28</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-29" id="march-29">
+                      <label for="march-29">29</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" name="march-30" id="march-30">
+                      <label for="march-30">30</label>
+                    </td>
+                    <td>
+                      <input type="text" name="march-31" id="march-31">
+                      <label for="march-31">31</label>
+                    </td>
+                    <td>
+                      <input type="text" name="april-1" id="april-1">
+                      <label for="april-1">1 апр</label>
+                    </td>
+                    <td>
+                      <input type="text" name="april-2" id="april-2">
+                      <label for="april-2">2</label>
+                    </td>
+                    <td>
+                      <input type="text" name="april-3" id="april-3">
+                      <label for="april-3">3</label>
+                    </td>
+                    <td>
+                      <input type="text" name="april-4" id="april-4">
+                      <label for="april-4">4</label>
+                    </td>
+                    <td>
+                      <input type="text" name="april-5" id="april-5">
+                      <label for="april-5">5</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <a class="button plan-step__button" href="#step-2">Следующий шаг</a>
+          </article>          
+        </section>
+        <section class="plan-adding__step plan-step" id="step-2">
+          <div class="plan-step__header step-header">
+            <h3 class="step-header__title"><span class="step-header__step-number">Шаг 2.</span>Маршрут</h3>
+            <p class="step-header__description">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+            <ul class="step-header__steps-list">
+              <li class="step-header__step">Даты</li>
+              <li class="step-header__step step-header__step--current">Маршрут</li>
+              <li class="step-header__step">Развлечения</li>
+            </ul>
+          </div>
+          <article>
+            <h4>Список выбранных стран</h4>
+            <div>
+              <button>Босния и Герцеговина</button>
+              <div>
+                <img src="" alt="" width="" height="">
+                <a href=""></a>
+              </div>
+            </div>
+            <div>
+              <button>Босния и Герцеговина</button>
+              <div>
+                <img src="" alt="" width="" height="">
+                <a href=""></a>
+              </div>
+            </div>
+            <div>
+              <button>Выберите страну</button>
+              <div>
+                <img src="" alt="" width="" height="">
+                <a href=""></a>
+              </div>
+              <section>
+                <div>
+                  <h5>Выберите страну</h5>
+                  <button></button>
+                </div>
+                <div>
+                  <fieldset>
+                    <legend class="visually-hidden">Побуквенный переключатель стран</legend>
+                    <input type="radio" name="country-letter" id="letter-a"><label for="letter-">А</label>
+                    <input type="radio" name="country-letter" id="letter-b"><label for="letter-b">Б</label>
+                    <input type="radio" name="country-letter" id="letter-v"><label for="letter-v">В</label>
+                    <input type="radio" name="country-letter" id="letter-g"><label for="letter-g">Г</label>
+                    <input type="radio" name="country-letter" id="letter-d"><label for="letter-d">Д</label>
+                    <input type="radio" name="country-letter" id="letter-ye"><label for="letter-ye">Е</label>
+                    <input type="radio" name="country-letter" id="letter-z"><label for="letter-z">З</label>
+                    <input type="radio" name="country-letter" id="letter-i"><label for="letter-i">И</label>
+                    <input type="radio" name="country-letter" id="letter-k"><label for="letter-k">К</label>
+                    <input type="radio" name="country-letter" id="letter-l"><label for="letter-l">Л</label>
+                    <input type="radio" name="country-letter" id="letter-m"><label for="letter-m">М</label>
+                    <input type="radio" name="country-letter" id="letter-n"><label for="letter-n">Н</label>
+                    <input type="radio" name="country-letter" id="letter-o"><label for="letter-o">О</label>
+                    <input type="radio" name="country-letter" id="letter-p"><label for="letter-p">П</label>
+                    <input type="radio" name="country-letter" id="letter-r"><label for="letter-r">Р</label>
+                    <input type="radio" name="country-letter" id="letter-s"><label for="letter-s">С</label>
+                    <input type="radio" name="country-letter" id="letter-t"><label for="letter-t">Т</label>
+                    <input type="radio" name="country-letter" id="letter-u"><label for="letter-u">У</label>
+                    <input type="radio" name="country-letter" id="letter-f"><label for="letter-f">Ф</label>
+                    <input type="radio" name="country-letter" id="letter-kh"><label for="letter-kh">Х</label>
+                    <input type="radio" name="country-letter" id="letter-ch"><label for="letter-ch">Ч</label>
+                    <input type="radio" name="country-letter" id="letter-sh"><label for="letter-sh">Ш</label>
+                    <input type="radio" name="country-letter" id="letter-ya"><label for="letter-ya">Э</label>
+                    <input type="radio" name="country-letter" id="letter-ya"><label for="letter-ya">Ю</label>
+                    <input type="radio" name="country-letter" id="letter-ya"><label for="letter-ya">Я</label>
+                  </fieldset>
+                </div>
+                <div>
+                  <div data-country-letter="a">
+                    <a href="/islands/australia.html" data-region="islands">Австралия</a>
+                    <a href="/europe/austria.html" data-region="europe">Австрия</a>
+                    <a href="/asia/azerbaijan.html">Азербайджан</a>
+                    <a href="/europe/albania.html" data-region="europe">Албания</a>
+                    <a href="/algeria.html">Алжир</a>
+                    <a href="/angola.html">Ангола</a>
+                    <a href="/europe/andorra.html" data-region="europe">Андорра</a>
+                    <a href="/islands/antigua-and-barbuda.html">Антигуа и Барбуда</a>
+                    <a href="/argentina.html">Аргентина</a>
+                    <a href="/armenia.html">Армения</a>
+                    <a href="/afghanistan.html">Афганистан</a>
+                  </div>
+                  <div data-country-letter="b">
+                    <a href="/bahamas.html">Багамские Острова</a>
+                    <a href="/bangladesh.html">Бангладеш</a>
+                    <a href="/barbados.html">Барбадос</a>
+                    <a href="/bahrain.html">Бахрейн</a>
+                    <a href="/europe/belarus.html" data-region="europe">Белоруссия</a>
+                    <a href="/belize.html">Белиз</a>
+                    <a href="/europe/belgium.html" data-region="europe">Бельгия</a>
+                    <a href="/benin.html">Бенин</a>
+                    <a href="/europe/bulgaria.html" data-region="europe">Болгария</a>
+                    <a href="/bolivia.html">Боливия</a>
+                    <a href="/europe/bosnia-and-herzegovina.html" data-region="europe">Босния и Герцеговина</a>
+                    <a href="/botswana.html">Ботсвана</a>
+                    <a href="/brazil.html">Бразилия</a>
+                    <a href="/brunei.html">Бруней</a>
+                    <a href="/burkina-faso.html">Буркина-Фасо</a>
+                    <a href="/burundi.html">Бурунди</a>
+                    <a href="/bhutan.html">Бутан</a>
+                  </div>
+                  <div data-country-letter="v">
+                    <a href="/vanuatu.html">Вануату</a>
+                    <a href="/europe/united-kingdom.html" data-region="europe">Великобритания</a>
+                    <a href="/europe/hungary.html" data-region="europe">Венгрия</a>
+                    <a href="/venezuela.html">Венесуэла</a>
+                    <a href="/timor-leste.html">Восточный Тимор</a>
+                    <a href="/vietnam.html">Вьетнам</a>
+                  </div>
+                  <div data-country-letter="g">
+                    <a href="">Габон</a>
+                    <a href="">Гаити</a>
+                    <a href="">Гайана</a>
+                    <a href="">Гамбия</a>
+                    <a href="">Гана</a>
+                    <a href="">Гватемала</a>
+                    <a href="">Гвинея</a>
+                    <a href="">Гвинея-Бисау</a>
+                    <a href="/europe" data-region="europe">Германия</a>
+                    <a href="">Гондурас</a>
+                    <a href="">Гренада</a>
+                    <a href="/europe" data-region="europe">Греция</a>
+                    <a href="">Грузия</a>
+                  </div>
+                  <div data-country-letter="d">
+                    <a href="/europe" data-region="europe">Дания</a>
+                    <a href="">Джибути</a>
+                    <a href="">Доминика</a>
+                    <a href="">Доминикана</a>
+                  </div>
+                  <div data-country-letter="ye">
+                    <a href="">Египет</a>
+                  </div>
+                  <div data-country-letter="z">
+                    <a href="">Замбия</a>
+                    <a href="">Зимбабве</a>
+                  </div>
+                  <div data-country-letter="i">
+                    <a href="">Израиль</a>
+                    <a href="">Индия</a>
+                    <a href="">Индонезия</a>
+                    <a href="">Иордания</a>
+                    <a href="">Ирак</a>
+                    <a href="">Иран</a>
+                    <a href="/europe" data-region="europe">Ирландия</a>
+                    <a href="/europe" data-region="europe">Исландия</a>
+                    <a href="/europe" data-region="europe">Испания</a>
+                    <a href="/europe" data-region="europe">Италия</a>
+                  </div>
+                  <div data-country-letter="k">
+                    <a href="">Кабо-Верде</a>
+                    <a href="">Казахстан</a>
+                    <a href="">Камбоджа</a>
+                    <a href="">Камерун</a>
+                    <a href="">Канада</a>
+                    <a href="">Катар</a>
+                    <a href="">Кения</a>
+                    <a href="/europe" data-region="europe">Кипр</a>
+                    <a href="">Киргизия</a>
+                    <a href="">Кирибати</a>
+                    <a href="">Китай</a>
+                    <a href="">Колумбия</a>
+                  </div>
+                  <div data-country-letter="l">
+                    <a href="">Лаос</a>
+                    <a href="/europe" data-region="europe">Латвия</a>
+                    <a href="">Лесото</a>
+                    <a href="">Либерия</a>
+                    <a href="">Ливан</a>
+                    <a href="">Ливия</a>
+                    <a href="/europe" data-region="europe">Литва</a>
+                    <a href="/europe" data-region="europe">Лихтенштейн</a>
+                    <a href="/europe" data-region="europe">Люксембург</a>
+                  </div>
+                  <div data-country-letter="m">
+                    <a href="">Маврикий</a>
+                    <a href="">Мавритания</a>
+                    <a href="">Мадагаскар</a>
+                    <a href="">Малави</a>
+                    <a href="">Малайзия</a>
+                    <a href="">Мали</a>
+                    <a href="">Мальдивы</a>
+                    <a href="/europe" data-region="europe">Мальта</a>
+                    <a href="">Марокко</a>
+                    <a href="">Мексика</a>                    
+                  </div>
+                  <div data-country-letter="n">
+                    <a href="">Намибия</a>
+                    <a href="">Науру</a>
+                    <a href="">Непал</a>
+                    <a href="">Нигер</a>
+                    <a href="" data-region="africa">Нигерия</a>
+                    <a href="/europe" data-region="europe">Нидерланды</a>
+                    <a href="">Никарагуа</a>
+                    <a href="">Новая Зеландия</a>
+                    <a href="/europe" data-region="europe">Норвегия</a>
+                  </div>
+                  <div data-country-letter="o">
+                    <a href="">ОАЭ</a>
+                    <a href="">Оман</a>
+                  </div>
+                  <div data-country-letter="p">
+                    <a href="">Пакистан</a>
+                    <a href="">Палау</a>
+                    <a href="">Панама</a>
+                    <a href="">Папуа - Новая Гвинея</a>
+                    <a href="">Парагвай</a>
+                    <a href="">Перу</a>
+                    <a href="/europe" data-region="europe">Польша</a>
+                    <a href="/europe" data-region="europe">Португалия</a>
+                  </div>
+                  <div data-country-letter="">
+                    <a href="/europe" data-region="europe">Россия</a>
+                    <a href="" data-region="africa">Руанда</a>
+                    <a href="/europe" data-region="europe">Румыния</a>
+                  </div>
+                  <div data-country-letter="s">
+                    <a href="">Сальвадор</a>
+                    <a href="">Самоа</a>
+                    <a href="">Сан-Марино</a>
+                    <a href="">Саудовская Аравия</a>
+                    <a href="">Сейшелы</a>
+                    <a href="" data-region="africa">Сенегал</a>
+                    <a href="">Сербия</a>
+                    <a href="">Сингапур</a>
+                    <a href="">Сирия</a>
+                    <a href="/europe" data-region="europe">Словакия</a>
+                    <a href="/europe" data-region="europe">Словения</a>
+                    <a href="/america/usa">США</a>
+                  </div>
+                  <div data-country-letter="t">
+                    <a href="">Таджикистан</a>
+                    <a href="">Таиланд</a>
+                    <a href="" data-region="africa">Танзания</a>
+                    <a href="">Того</a>
+                    <a href="">Тонга</a>
+                    <a href="">Тринидад и Тобаго</a>
+                    <a href="">Тувалу</a>
+                    <a href="" data-region="africa">Тунис</a>
+                    <a href="">Туркмения</a>
+                    <a href="">Турция</a>
+                  </div>
+                  <div data-country-letter="u">
+                    <a href="">Уганда</a>
+                    <a href="">Узбекистан</a>
+                    <a href="/europe" data-region="europe">Украина</a>
+                    <a href="">Уругвай</a>
+                  </div>
+                  <div data-country-letter="f">
+                    <a href="">Фиджи</a>
+                    <a href="">Филиппины</a>
+                    <a href="/europe" data-region="europe">Финляндия</a>
+                    <a href="/europe" data-region="europe">Франция</a>
+                  </div>
+                  <div data-country-letter="kh">
+                    <a href="/europe">Хорватия</a>
+                  </div>
+                  <div data-country-letter="ch">
+                    <a href="">Чад</a>
+                    <a href="/europe/montenegro.html" data-region="europe">Черногория</a>
+                    <a href="/europe/czechia.html" data-region="europe">Чехия</a>
+                    <a href="/america/chile.html" data-region="america">Чили</a>
+                  </div>
+                  <div data-country-letter="sh">
+                    <a href="/europe/switzerland.html" data-region="europe">Швейцария</a>
+                    <a href="/europe/sweden.html" data-region="europe">Швеция</a>
+                    <a href="/asia/sri-lanka.html" data-region="asia">Шри-Ланка</a>
+                  </div>
+                  <div data-country-letter="e">
+                    <a href="/america/ecuador.html" data-region="america">Эквадор</a>
+                    <a href="/africa/eritrea.html" data-region="africa">Эритрея</a>
+                    <a href="/africa/eswatini.html" data-region="africa">Эсватини</a>
+                    <a href="/europe/estonia.html" data-region="europe">Эстония</a>
+                    <a href="/africa/ethiopia.html" data-region="africa">Эфиопия</a>
+                  </div>
+                  <div data-country-letter="yu">
+                    <a href="/africa/south-africa.html" data-region="africa">ЮАР</a>
+                    <a href="/africa/south-sudan.html" data-region="africa">Южный Судан</a>
+                  </div>
+                  <div data-country-letter="ya">
+                    <a href="/america/jamaica.html" data-region="america">Ямайка</a>
+                    <a href="/asia/japan.html" data-region="asia">Япония</a>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div>
+              <button>Добавить страну</button>
+              <div>
+                <img src="" alt="" width="" height="">
+                <a href=""></a>
+              </div>
+            </div>
+            <div>
+              <a href="#step-3">Следующий шаг</a>
+              <div>
+                <a href="#step-1">На шаг назад</a>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="plan-adding__step plan-step" id="step-3">
+          <div class="plan-step__header step-header">
+            <h3 class="step-header__title"><span class="step-header__step-number">Шаг 3.</span>Развлечения</h3>
+            <p class="step-header__description">Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+            <ul class="step-header__steps-list">
+              <li class="step-header__step">Даты</li>
+              <li class="step-header__step">Маршрут</li>
+              <li class="step-header__step step-header__step--current">Развлечения</li>
+            </ul>
+          </div>
+          <fieldset>
+            <legend class="visually-hidden">Добавление плана действий к выбранным странам</legend>
+            <div>
+              <p>Босния и Герцеговина</p>
+              <img src="" alt="" width="" height="">            
+            </div>
+            <textarea name="" id="" cols="30" rows="5" placeholder="План действий"></textarea>
+            <label for="" aria-label=""></label>
+            <div>
+              <p>Чехия</p>
+              <img src="" alt="" width="" height="">            
+            </div>
+            <textarea name="" id="" cols="30" rows="5" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+            <label for="" aria-label=""></label>
+          </fieldset>
+          <div>
+            <button type="submit">Отправить</button>
+            <div>
+              <a href="#step-2">На шаг назад</a>
+            </div>
+          </div>
+        </section>
+      </section>
+    </form>
   </main>
   <footer class="page-footer">
     <a class="page-footer__logo" href="" aria-label="Логотип Погнали"></a>
