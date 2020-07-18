@@ -57,57 +57,72 @@
       <p class="about-service__description">Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с&nbsp;тобой! Делитесь своими идеями путешествий и черпайте вдохновение в&nbsp;чужих.</p>
       <p class="about-service__description"><strong>А если найдете кого-то близкого по&nbsp;духу &mdash; скорее зовите в&nbsp;совместный трип</strong></p>
     </section>
-    <!-- <section class="countries">
-      <h2 class="heading-2">Направления</h2>
-      <p>Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться</p>
-      <a href="button">Показать все</a>
-      <article>
-        <h3 class="visually-hidden">Страны</h3>
-        <div>
-          <h4>Таиланд</h4>
-          <p>Джунгли зовут!</p>
-          <p>18321</p>
-        </div>
-        <div>
-          <h4>Франция</h4>
-          <p>Трэ бьен, манифик!</p>
-          <p>12518</p>
-        </div>
-        <div>
-          <h4>Чехия</h4>
-          <p>Закоулки старой Европы</p>
-          <p>5326</p>
+    <section class="countries">
+      <div>
+        <h2 class="heading-2">Направления</h2>
+        <p class="countries__description">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться</p>
+      </div>
+      <article class="country country--thailand">
+        <div class="country__description">
+          <div class="country__name">
+            <h3 class="country__title">Таиланд</h3>
+            <p class="country__slogan">Джунгли зовут!</p>
+          </div>
+          <p class="country__users">18321</p>
         </div>
       </article>
+      <article class="country country--france">
+        <div class="country__description">
+          <div class="country__name">
+            <h3 class="country__title">Франция</h3>
+            <p class="country__slogan">Трэ бьен, манифик!</p>
+          </div>
+          <p class="country__users">12518</p>
+        </div>
+      </article>
+      <article class="country country--czech">
+        <div class="country__description">
+          <div class="country__name">
+            <h3 class="country__title">Чехия</h3>
+            <p class="country__slogan">Закоулки старой Европы</p>
+          </div>
+          <p class="country__users">5326</p>
+        </div>
+      </article>
+      <a class="country__button" href="">Показать все</a>
     </section>
     <section class="travelmates">
-      <h2 class="visually-hidden">Выбор попутчика</h2>
-      <p>Попутчики</p>
-      <p>Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-      <p>Теперь можно легко найти единомышленников!</p>
-      <a class="button" href="">Показать всех</a>
+      <div class="travelmates__description">
+        <h2 class="heading-2">Попутчики</h2>
+        <p>Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+        <p><strong>Теперь можно легко найти единомышленников!</strong></p>
+      </div>
       <article>
-        <h3 class="visually-hidden">Анкеты путешественников</h3>
+        <picture>
+          <img src="" alt="Таня Фирсова - фотография" width="270" height="270">
+        </picture>
         <div>
-          <h4>Таня Фирсова</h4>
-          <img src="" alt="Таня Фирсова - фотография">
           <div>
             <span aria-label="Флаг Шри-Ланки"></span>
             <span aria-label="Флаг Тайланда"></span>
             <span aria-label="Флаг Сейшелл"></span>
           </div>
+          <h3>Таня Фирсова</h3>
+          <p>#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
           <div>
-            <a href="">#ЗОЖ</a>
-            <a href="">#ПП</a>
-            <a href="">#Фитнес</a>
-            <a href="">#пляж</a>
-            <a href="">#авокадо</a>
-            <a href="">#смузи</a>
+            <span aria-label="На самолете"></span>
+            <span aria-label="На автобусе"></span>
+            <span aria-label="На велосипеде"></span>
+            <span aria-label="Бегом"></span>
           </div>
         </div>
-        <div>
-          <h4>Петя Демин</h4>
+      </article>
+      <article>
+        <picture>
           <img src="" alt="Петя Демин - фотография">
+        </picture>
+          <h4>Петя Демин</h4>
+
           <div>
             <span aria-label="Флаг Бельгии"></span>
             <span aria-label="Флаг Чехии"></span>
@@ -121,8 +136,9 @@
           </div>
         </div>
       </article>
+      <a class="button" href="">Показать всех</a>
     </section>
-    <section class="rates">
+    <!-- <section class="rates">
       <h2 class="visually-hidden">Добавление своего профиля на сайт</h2>
       <p>Добавьте свой профиль</p>
       <div>
