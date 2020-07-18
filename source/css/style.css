@@ -15,6 +15,8 @@
   --special-orange-light: #FFA530;
   --button-blue: #1D2E5B;
   --button-orange-hover: #F26926;
+  --user-status-online: #81E31E;
+  --user-status-offline: #F97676;
 }
 
 
@@ -521,9 +523,230 @@ img {
 }
 
 .travelmates {
-  padding-top: 0;
+  margin-top: -30px;
+  padding: 98px 25px 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='132' height='132' viewBox='0 0 132 132' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20C0 8.9543 8.95431 0 20 0H108.637C121.54 0 132 8.95431 132 20V112C132 123.046 121.54 132 108.637 132H20C8.9543 132 0 123.046 0 112V20Z' fill='%23141B3B'/%3E%3C/svg%3E"), url("../img/smolov-back-desktop@2x.png"), url("../img/rogovaya-back-mobile@2x.png");
+  background-position: left -19px top 64px, right 25px top 64px, left -2px top 337px;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 132px 132px, 143px 143px, 71px 71px;
 }
 
 .travelmates__description {
-  margin: 68px 55px 0 50px;
+  padding: 0 30px 30px 25px;
+}
+
+.travelmates__description .heading-2 {
+  margin: 0 0 19px 0;
+}
+
+.travelmates__description p {
+  margin: 0 0 25px 0;
+}
+
+.travelmate {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 10px;
+  border-radius: 10px;
+}
+
+.travelmate__photo {
+  width: 270px;
+  height: 270px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.travelmate__info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  min-height: 158px;
+  background-color: var(--basic-white);
+}
+
+.travelmate__flags {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 25px;
+  margin-top: -11px;
+}
+
+.travelmate__flag {
+  width: 35px;
+  height: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.travelmate__flag--sri-lanka {
+  background-image: url("../img/flag-sri-lanka.svg");
+}
+
+.travelmate__flag--thailand {
+  background-image: url("../img/flag-thailand.svg");
+}
+
+.travelmate__flag--seychelles {
+  background-image: url("../img/flag-seychelles.svg");
+}
+
+.travelmate__flag--belgium {
+  background-image: url("../img/flag-belgium.svg");
+}
+
+.travelmate__flag--czech {
+  background-image: url("../img/flag-czech.svg");
+}
+
+
+.travelmate__name {
+  position: relative;
+  display: block;
+  margin: 13px 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: auto;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+  color: var(--button-blue);
+}
+
+.travelmate__name::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: calc(50% - 3px);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.travelmate__name--offline::before {
+  background-color: var(--user-status-offline);
+}
+
+.travelmate__name--online::before {
+  background-color: var(--user-status-online);
+}
+
+.travelmate__tags {
+  margin: 0;
+  width: 180px;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--special-grey);
+}
+
+.travelmate__transport {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.transport__item {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.transport__item--off {
+  fill-opacity: 0.15;
+}
+
+.travelmate__mark {
+  position: absolute;
+  content: "";
+  left: 17px;
+  top: 17px;
+}
+
+.mark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  /* border: 4px solid var(--special-orange); */
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--basic-white);
+}
+
+.mark__indicator {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+}
+
+
+.mark__indicator--80 {
+  stroke-dasharray: 141px 35px;
+}
+
+.mark__indicator--99 {
+  stroke-dasharray: 171px 5px;
+}
+
+/*  Длина окружности - 176px  */
+/*  Сдвиг дуги - stroke-dashoffset="44px"  */
+
+
+.mark__number {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mark__level {
+  position: relative;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.travelmate__button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 62px;
+  margin-top: 25px;
+  padding: 20px 23px;
+  border-radius: 10px;
+  background-color: var(--basic-yellow);
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='%231D2E5B' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 5.50001L0 11V0L10 5.50001Z'/%3E%3C/svg%3E");
+  background-position: right 23px top 50%;
+  background-repeat: no-repeat;
+  background-size: 10px 11px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  text-decoration: none;
+  color: var(--button-blue);
+}
+
+.travelmate__button:hover {
+  background-color: var(--special-yellow-dark);
+}
+
+.travelmate__button:active {
+  color: rgba(29, 46, 91, 0.3);
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='%231D2E5B' fill-opacity='0.3' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 5.50001L0 11V0L10 5.50001Z' /%3E%3C/svg%3E");
 }
