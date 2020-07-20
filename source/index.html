@@ -23,9 +23,9 @@
         <a href="catalog.html">Попутчики</a>
       </nav>
       <div>
-        <a href="" aria-label=""></a>
-        <a href="" aria-label=""></a>
-        <a href="">Авторизация</a>
+        <a href="#" aria-label=""></a>
+        <a href="#" aria-label=""></a>
+        <a href="#">Авторизация</a>
       </div>
     </div> -->
   </header>
@@ -36,7 +36,7 @@
         <div class="promo__buttons header-contacts">
           <a class="header-contacts__phone" href="tel:+78005558628"><span class="visually-hidden">8 800 555-86-28</span></a>
           <a class="header-contacts__email" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">mail@htmlacademy.ru</span></a>
-          <a class="header-contacts__login" href="">Авторизация</a>
+          <a class="header-contacts__login" href="#">Авторизация</a>
         </div>
       </div>
       <div class="promo__citation">
@@ -89,7 +89,7 @@
           <p class="country__users">5326</p>
         </div>
       </article>
-      <a class="country__button" href="">Показать все</a>
+      <a class="country__button" href="#">Показать все</a>
     </section>
     <section class="travelmates">
       <div class="travelmates__description">
@@ -158,7 +158,7 @@
           <span class="mark__level">level</span>
         </div>
       </article>
-      <a class="button travelmate__button" href="">Показать всех</a>
+      <a class="button travelmate__button" href="#">Показать всех</a>
     </section>
     <section class="add-profile">
       <h2 class="heading-2 add-profile__heading">Добавьте свой профиль</h2>
@@ -168,28 +168,34 @@
         <li class="profile-list__item"><span>Вывод на первых позициях</span><span>99 руб./мес</span></li>
         <li class="profile-list__item"><span>Кастомный цвет карточки</span><span>59 руб./мес</span></li>
       </ol>
-      <!-- <a href="" aria-label="Посмотреть все тарифы"></a> -->
-      <a class="profile-list__button" href="">Показать тарифы для бизнеса</a>
+      <!-- <a href="#" aria-label="Посмотреть все тарифы"></a> -->
+      <a class="profile-list__button" href="#">Показать тарифы для бизнеса</a>
     </section>
-    <!-- <section>
-      <h2>Регистрация и авторизация</h2>
-      <p>Заинтересовались?</p>
-      <p>Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a href="">авторизуйтесь</a></p>
-      <form action="" method="POST">
-        <input type="text" id="registration-email" placeholder="E-mail">
-        <label for="registration-email"></label>
-        <button type="submit">Регистрация</button>
+    <section class="interested">
+      <h2 class="heading-2">Заинтересовались?</h2>
+      <p class="interested__info">Зарегистрируйтесь, это&nbsp;быстро&nbsp;и&nbsp;бесплатно! Уже&nbsp;зарегистрированы? Тогда скорее&nbsp;<a href="#">авторизуйтесь</a></p>
+      <form class="interested__form" action="" method="POST">
+        <label for="registration-email"><input class="interested__input" type="text" name="registration-email" placeholder="E-mail"></label>
+        <button class="interested__button" type="submit" aria-label="Регистрация"></button>
       </form>
-      <p>Остались вопросы? Мы с радостью на них ответим!</p>
-      <div>
-        <a href="tel:+78005558628">8 800 555-86-28</a>
-        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      <p class="interested__info">Остались вопросы? Мы&nbsp;с&nbsp;радостью на них ответим!</p>
+      <div class="contacts">
+        <a class="contacts__item" href="tel:+78005558628">
+          <span class="contacts__icon contacts__icon--phone">
+            <svg width="16" height="15"><use xlink:href="#icon-phone"></use></svg>
+          </span>
+          800 555-86-28</a>
+        <a class="contacts__item" href="mailto:mail@htmlacademy.ru">
+          <span class="contacts__icon contacts__icon--email">
+            <svg width="19" height="13"><use xlink:href="#icon-email"></use></svg>
+          </span>
+          mail@htmlacademy.ru</a>
       </div>
     </section>
-    <section class="contacts">
+    <!-- <section class="contacts">
       <h2 class="visually-hidden">Офис "Погнали?" на карте</h2>
       <div>
-        <a href="">ул. Большая Конюшенная, 19/8</a>
+        <a href="#">ул. Большая Конюшенная, 19/8</a>
         <a href="button">Проложить маршрут</a>
       </div>
       <div aria-label="Интерактивная карта с офисом Погнали"></div>
@@ -201,15 +207,15 @@
 
   </main>
   <!-- <footer class="page-footer page-footer--mobile">
-    <a class="page-footer__logo page-footer__logo--mobile" href="" aria-label="Логотип Погнали"></a>
+    <a class="page-footer__logo page-footer__logo--mobile" href="#" aria-label="Логотип Погнали"></a>
     <div class="page-footer__menu footer-menu">
-      <a class="footer-menu__item" href="" aria-label="Страницы Погнали на Фейсбуке"></a>
-      <a class="footer-menu__item" href="" aria-label="Страницы Погнали во ВКонтакте"></a>
-      <a class="footer-menu__item" href="" aria-label="Страницы Погнали в Инстаграме"></a>
+      <a class="footer-menu__item" href="#" aria-label="Страницы Погнали на Фейсбуке"></a>
+      <a class="footer-menu__item" href="#" aria-label="Страницы Погнали во ВКонтакте"></a>
+      <a class="footer-menu__item" href="#" aria-label="Страницы Погнали в Инстаграме"></a>
     </div>
     <div class="page-footer__copyright">
       <p class="page-footer__copy">Разработано</p>
-      <a class="page-footer__academy" href="" aria-label="Логотип HTML Academy"></a>
+      <a class="page-footer__academy" href="#" aria-label="Логотип HTML Academy"></a>
     </div>
   </footer>
 
@@ -243,6 +249,12 @@
     </symbol>
     <symbol id="icon-run" viewBox="0 0 20 21">
       <path d="M15.35 4.349a2.184 2.184 0 002.193-2.175C17.543.974 16.561 0 15.35 0a2.184 2.184 0 00-2.193 2.174c0 1.201.982 2.175 2.193 2.175zM14.01 9.75c.25.373.612.659 1.033.82.421.162.883.19 1.321.083l3.636-.9-.53-2.11-3.635.901-1.512-2.247a2.205 2.205 0 00-1.395-.928L8.711 4.53a2.207 2.207 0 00-1.394.179c-.432.21-.782.555-.997.981L4.502 9.297l1.961.973 1.818-3.607 2.157.429-5.576 9.216H0v2.174h4.862a2.21 2.21 0 001.88-1.056l2.103-3.474 5.667 1.124L16.503 21l2.08-.688-1.99-5.923a2.179 2.179 0 00-.63-.943 2.207 2.207 0 00-1.022-.503l-3.332-.66 1.943-3.211.457.679z" fill="#161C35"/>
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 16 15">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C5.15 0 2.293.478 1.257 1.431.397 2.221.11 3.62.013 4.503c0 0-.013.088-.013.125 0 .347.3.625.667.625.043 0 1.646-.122 2.613-.197.023-.003.047-.006.07-.012.36-.01.65-.285.65-.625l.003-1.231c0-.382.33-.688.737-.688h6.52c.407 0 .737.306.737.688L12 4.418c0 .341.29.616.65.626.023.006.047.01.07.012.967.075 2.57.197 2.613.197.367 0 .667-.278.667-.625 0-.037-.013-.125-.013-.125-.097-.884-.383-2.281-1.244-3.072C13.707.478 10.85 0 8 0zm0 8.125c-.737 0-1.333.56-1.333 1.25s.596 1.25 1.333 1.25 1.333-.56 1.333-1.25S8.737 8.125 8 8.125zM7 5.312v-.78c0-.432-.373-.782-.833-.782-.46 0-.834.35-.834.781v.781L.837 9.816c-.31.284-.504.68-.504 1.118v1.254c0 .69.597 1.25 1.334 1.25H2v.78c0 .432.373.782.833.782.46 0 .834-.35.834-.781v-.781h8.666v.78c0 .432.373.782.834.782.46 0 .833-.35.833-.781v-.781h.333c.737 0 1.333-.56 1.333-1.25v-1.254c0-.437-.193-.834-.503-1.118l-4.496-4.504v-.78c0-.432-.374-.782-.834-.782-.46 0-.833.35-.833.781v.781H7zm1 1.563c1.473 0 2.667 1.119 2.667 2.5s-1.194 2.5-2.667 2.5c-1.473 0-2.667-1.119-2.667-2.5s1.194-2.5 2.667-2.5z"/>
+    </symbol>
+    <symbol id="icon-email" viewBox="0 0 19 13">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.662 10.625L12.16 6.5l4.502-4.125-.614-.656-6.548 6-6.548-6-.614.656L6.84 6.5l-4.502 4.125.614.656L7.505 7.11 9.5 8.938l1.995-1.829 4.553 4.172.614-.656zM1.521 0C.683 0 0 .727 0 1.62v9.76C0 12.275.676 13 1.523 13h15.954c.841 0 1.523-.727 1.523-1.62V1.62C19 .725 18.324 0 17.477 0H1.523z"/>
     </symbol>
   </svg>
 
