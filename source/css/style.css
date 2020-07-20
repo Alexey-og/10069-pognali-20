@@ -756,22 +756,84 @@ img {
 
 .add-profile {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  background-color: #E6E8F1;
   margin-top: -30px;
   padding: 80px 25px 38px 49px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: #E6E8F1;
 }
 
 .add-profile__heading {
-  flex-grow: 0;
+  width: 50%;
+  margin: 0;
 }
 
 .add-profile__icon {
-  flex-grow: 0;
+  width: 50%;
   width: 100px;
   height: 100px;
   background-image: url("../img/rates@2x.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.profile-list {
+  margin: 30px 45px 30px 0;
+  padding: 0;
+  list-style-type: none;
+  counter-reset: profile-list;
+}
+
+.profile-list__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 14px 0;
+  border-top: 1px solid rgba(68, 68, 68, 0.05);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--special-grey);
+}
+
+.profile-list__item::before {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  counter-increment: profile-list;
+  content: counter(profile-list);
+  right: -44px;
+  top: 3px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 16px;
+  color: var(--basic-white);
+}
+
+.profile-list__item:nth-child(1)::before {
+  background-color: var(--special-orange-light);
+}
+
+.profile-list__item:nth-child(2)::before {
+  background-color: var(--special-yellow-dark);
+}
+
+.profile-list__item:nth-child(3)::before {
+  background-color: var(--basic-yellow);
+}
+
+.profile-list__button {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+  color: var(--basic-blue-dark);
 }
