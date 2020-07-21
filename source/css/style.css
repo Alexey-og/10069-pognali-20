@@ -173,75 +173,6 @@ img {
   padding: 0 25px;
   display: flex; }
 
-.header-contacts__phone {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--special-orange); }
-
-.header-contacts__phone::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 40px;
-  background-image: url("../img/icon-call.svg");
-  background-repeat: no-repeat;
-  background-position: center; }
-
-.header-contacts__phone:hover {
-  background-color: var(--button-orange-hover); }
-
-.header-contacts__phone:active::before {
-  opacity: 0.3; }
-
-.header-contacts__email {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--special-yellow-dark); }
-
-.header-contacts__email::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 40px;
-  background-image: url("../img/icon-mail.svg");
-  background-repeat: no-repeat;
-  background-position: center; }
-
-.header-contacts__email:hover {
-  background-color: var(--special-orange); }
-
-.header-contacts__email:active::before {
-  opacity: 0.3; }
-
-.header-contacts__login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 190px;
-  min-height: 40px;
-  border-radius: 25px;
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 20px;
-  text-transform: uppercase;
-  text-decoration: none;
-  background-color: var(--basic-yellow);
-  color: var(--basic-blue); }
-
-.header-contacts__login:hover {
-  background-color: var(--special-yellow-dark); }
-
-.header-contacts__login:active {
-  color: rgba(22, 28, 53, 0.3); }
-
 .promo__slogan {
   margin: 0;
   font-weight: bold;
@@ -267,6 +198,67 @@ img {
   position: relative;
   height: 279px;
   background-color: var(--basic-blue-dark); }
+
+.header-contacts__phone {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--special-orange); }
+  .header-contacts__phone::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/icon-call.svg");
+    background-repeat: no-repeat;
+    background-position: center; }
+  .header-contacts__phone:hover {
+    background-color: var(--button-orange-hover); }
+  .header-contacts__phone:active::before {
+    opacity: 0.3; }
+
+.header-contacts__email {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--special-yellow-dark); }
+  .header-contacts__email::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-position: center; }
+  .header-contacts__email:hover {
+    background-color: var(--special-orange); }
+  .header-contacts__email:active::before {
+    opacity: 0.3; }
+
+.header-contacts__login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 190px;
+  min-height: 40px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--basic-yellow);
+  color: var(--basic-blue); }
+  .header-contacts__login:hover {
+    background-color: var(--special-yellow-dark); }
+  .header-contacts__login:active {
+    color: rgba(22, 28, 53, 0.3); }
 
 .steps {
   position: relative;
@@ -310,27 +302,27 @@ img {
   background-color: var(--basic-yellow); }
 
 .about-service {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   position: relative;
   min-height: 353px;
   padding: 33px 60px 60px 49px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
   background-color: var(--basic-blue-dark);
   background-image: url("../img/about-mobile@2x.png"), url("data:image/svg+xml,%3Csvg width='132' height='132' viewBox='0 0 132 132' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20C0 8.9543 8.95431 0 20 0H108.637C121.54 0 132 8.95431 132 20V112C132 123.046 121.54 132 108.637 132H20C8.9543 132 0 123.046 0 112V20Z' fill='%23141B3B'/%3E%3C/svg%3E");
-  background-position: center top, left -19px top;
-  background-repeat: no-repeat, no-repeat;
-  background-size: contain, 132px 132px;
+  background-position: center top, left -19px top;
+  background-repeat: no-repeat;
+  background-size: contain, 132px 132px;
   z-index: 9; }
 
 .about-service__description {
   margin: 0 0 20px 0; }
 
 .countries {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   position: relative;
   margin-top: -30px;
   padding: 100px 25px 34px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
   background-color: var(--basic-blue-light);
   z-index: 8; }
 
@@ -351,15 +343,18 @@ img {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: contain; }
-
-.country--thailand {
-  background-image: url("../img/thailand-mobile@2x.jpg"); }
-
-.country--france {
-  background-image: url("../img/france-mobile@2x.jpg"); }
-
-.country--czech {
-  background-image: url("../img/czech-mobile@2x.jpg"); }
+  .country--thailand {
+    background-image: url("../img/thailand-mobile@2x.jpg"); }
+    .country--thailand .country__description::before {
+      background-image: url("../img/flag-thailand.svg"); }
+  .country--france {
+    background-image: url("../img/france-mobile@2x.jpg"); }
+    .country--france .country__description::before {
+      background-image: url("../img/flag-france.svg"); }
+  .country--czech {
+    background-image: url("../img/czech-mobile@2x.jpg"); }
+    .country--czech .country__description::before {
+      background-image: url("../img/flag-czech.svg"); }
 
 .country__description {
   position: relative;
@@ -370,26 +365,16 @@ img {
   min-height: 90px;
   border-radius: 10px;
   background-color: var(--basic-white); }
-
-.country__description::before {
-  position: absolute;
-  content: "";
-  left: 25px;
-  top: -13px;
-  width: 35px;
-  height: 24px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain; }
-
-.country--thailand .country__description::before {
-  background-image: url("../img/flag-thailand.svg"); }
-
-.country--france .country__description::before {
-  background-image: url("../img/flag-france.svg"); }
-
-.country--czech .country__description::before {
-  background-image: url("../img/flag-czech.svg"); }
+  .country__description::before {
+    position: absolute;
+    content: "";
+    left: 25px;
+    top: -13px;
+    width: 35px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
 
 .country__name {
   display: flex;
@@ -421,19 +406,18 @@ img {
   line-height: 20px;
   color: var(--basic-blue);
   opacity: 0.3; }
-
-.country__users::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 2px;
-  width: 14px;
-  height: 14px;
-  background-image: url("../img/icon-user.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 12px 12px;
-  opacity: 0.3; }
+  .country__users::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 2px;
+    width: 14px;
+    height: 14px;
+    background-image: url("../img/icon-user.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    opacity: 0.3; }
 
 .country__button {
   display: flex;
@@ -453,25 +437,23 @@ img {
   line-height: 18px;
   text-decoration: none;
   color: var(--button-blue); }
-
-.country__button:hover {
-  background-color: var(--special-yellow-dark); }
-
-.country__button:active {
-  color: rgba(29, 46, 91, 0.3);
-  background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='%231D2E5B' fill-opacity='0.3' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 5.50001L0 11V0L10 5.50001Z' /%3E%3C/svg%3E"); }
+  .country__button:hover {
+    background-color: var(--special-yellow-dark); }
+  .country__button:active {
+    color: rgba(29, 46, 91, 0.3);
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='%231D2E5B' fill-opacity='0.3' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 5.50001L0 11V0L10 5.50001Z' /%3E%3C/svg%3E"); }
 
 .travelmates {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   position: relative;
   margin-top: -30px;
   padding: 98px 25px 31px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
   background-color: var(--basic-blue-dark);
   background-image: url("data:image/svg+xml,%3Csvg width='132' height='132' viewBox='0 0 132 132' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20C0 8.9543 8.95431 0 20 0H108.637C121.54 0 132 8.95431 132 20V112C132 123.046 121.54 132 108.637 132H20C8.9543 132 0 123.046 0 112V20Z' fill='%23141B3B'/%3E%3C/svg%3E"), url("../img/smolov-back-desktop@2x.png"), url("../img/rogovaya-back-mobile@2x.png");
-  background-position: left -19px top 64px, right 25px top 64px, left -2px top 337px;
-  background-repeat: no-repeat, no-repeat;
-  background-size: 132px 132px, 143px 143px, 71px 71px;
+  background-position: left -19px top 64px, right 25px top 64px, left -2px top 337px;
+  background-repeat: no-repeat;
+  background-size: 132px 132px, 143px 143px, 71px 71px;
   z-index: 7; }
 
 .travelmates__description {
@@ -497,14 +479,14 @@ img {
   border-top-right-radius: 10px; }
 
 .travelmate__info {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   margin: 0;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
   min-height: 158px;
   background-color: var(--basic-white); }
 
@@ -525,21 +507,16 @@ img {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: contain; }
-
-.travelmate__flag--sri-lanka {
-  background-image: url("../img/flag-sri-lanka.svg"); }
-
-.travelmate__flag--thailand {
-  background-image: url("../img/flag-thailand.svg"); }
-
-.travelmate__flag--seychelles {
-  background-image: url("../img/flag-seychelles.svg"); }
-
-.travelmate__flag--belgium {
-  background-image: url("../img/flag-belgium.svg"); }
-
-.travelmate__flag--czech {
-  background-image: url("../img/flag-czech.svg"); }
+  .travelmate__flag--sri-lanka {
+    background-image: url("../img/flag-sri-lanka.svg"); }
+  .travelmate__flag--thailand {
+    background-image: url("../img/flag-thailand.svg"); }
+  .travelmate__flag--seychelles {
+    background-image: url("../img/flag-seychelles.svg"); }
+  .travelmate__flag--belgium {
+    background-image: url("../img/flag-belgium.svg"); }
+  .travelmate__flag--czech {
+    background-image: url("../img/flag-czech.svg"); }
 
 .travelmate__name {
   position: relative;
@@ -553,21 +530,18 @@ img {
   line-height: 21px;
   text-align: center;
   color: var(--button-blue); }
-
-.travelmate__name::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: calc(50% - 3px);
-  width: 6px;
-  height: 6px;
-  border-radius: 50%; }
-
-.travelmate__name--offline::before {
-  background-color: var(--user-status-offline); }
-
-.travelmate__name--online::before {
-  background-color: var(--user-status-online); }
+  .travelmate__name::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: calc(50% - 3px);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%; }
+  .travelmate__name--offline::before {
+    background-color: var(--user-status-offline); }
+  .travelmate__name--online::before {
+    background-color: var(--user-status-online); }
 
 .travelmate__tags {
   margin: 0;
@@ -581,18 +555,41 @@ img {
   padding-top: 16px;
   padding-bottom: 16px; }
 
-.transport__item {
-  margin-left: 3px;
-  margin-right: 3px; }
-
-.transport__item--off {
-  fill-opacity: 0.15; }
+.travelmate__button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 62px;
+  margin-top: 25px;
+  padding: 20px 23px;
+  border-radius: 10px;
+  background-color: var(--basic-yellow);
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='%231D2E5B' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 5.50001L0 11V0L10 5.50001Z'/%3E%3C/svg%3E");
+  background-position: right 23px top 50%;
+  background-repeat: no-repeat;
+  background-size: 10px 11px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  text-decoration: none;
+  color: var(--button-blue); }
+  .travelmate__button:hover {
+    background-color: var(--special-yellow-dark); }
+  .travelmate__button:active {
+    color: rgba(29, 46, 91, 0.3);
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='%231D2E5B' fill-opacity='0.3' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 5.50001L0 11V0L10 5.50001Z' /%3E%3C/svg%3E"); }
 
 .travelmate__mark {
   position: absolute;
   content: "";
   left: 17px;
   top: 17px; }
+
+.transport__item {
+  margin-left: 3px;
+  margin-right: 3px; }
+  .transport__item--off {
+    fill-opacity: 0.15; }
 
 .mark {
   display: flex;
@@ -633,33 +630,9 @@ img {
   font-size: 14px;
   line-height: 14px; }
 
-.travelmate__button {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  min-height: 62px;
-  margin-top: 25px;
-  padding: 20px 23px;
-  border-radius: 10px;
-  background-color: var(--basic-yellow);
-  background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='%231D2E5B' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 5.50001L0 11V0L10 5.50001Z'/%3E%3C/svg%3E");
-  background-position: right 23px top 50%;
-  background-repeat: no-repeat;
-  background-size: 10px 11px;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 18px;
-  text-decoration: none;
-  color: var(--button-blue); }
-
-.travelmate__button:hover {
-  background-color: var(--special-yellow-dark); }
-
-.travelmate__button:active {
-  color: rgba(29, 46, 91, 0.3);
-  background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='%231D2E5B' fill-opacity='0.3' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 5.50001L0 11V0L10 5.50001Z' /%3E%3C/svg%3E"); }
-
 .add-profile {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -667,8 +640,6 @@ img {
   flex-wrap: wrap;
   margin-top: -30px;
   padding: 80px 25px 38px 49px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
   background-color: #E6E8F1;
   z-index: 6; }
 
@@ -704,30 +675,26 @@ img {
   font-size: 16px;
   line-height: 22px;
   color: var(--special-grey); }
-
-.profile-list__item::before {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  counter-increment: profile-list;
-  content: counter(profile-list);
-  right: -44px;
-  top: 3px;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  font-size: 16px;
-  color: var(--basic-white); }
-
-.profile-list__item:nth-child(1)::before {
-  background-color: var(--special-orange-light); }
-
-.profile-list__item:nth-child(2)::before {
-  background-color: var(--special-yellow-dark); }
-
-.profile-list__item:nth-child(3)::before {
-  background-color: var(--basic-yellow); }
+  .profile-list__item::before {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -44px;
+    top: 3px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    font-size: 16px;
+    color: var(--basic-white);
+    counter-increment: profile-list;
+    content: counter(profile-list); }
+  .profile-list__item:nth-child(1)::before {
+    background-color: var(--special-orange-light); }
+  .profile-list__item:nth-child(2)::before {
+    background-color: var(--special-yellow-dark); }
+  .profile-list__item:nth-child(3)::before {
+    background-color: var(--basic-yellow); }
 
 .profile-list__button {
   font-weight: bold;
@@ -737,6 +704,8 @@ img {
   color: var(--basic-blue-dark); }
 
 .interested {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -744,8 +713,6 @@ img {
   align-items: center;
   margin-top: -30px;
   padding: 90px 25px 30px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
   background-color: var(--basic-blue-dark);
   z-index: 5; }
 
@@ -755,12 +722,10 @@ img {
 
 .interested__info a {
   color: #FFD74B; }
-
-.interested__info a:hover {
-  color: var(--special-orange); }
-
-.interested__info a:active {
-  opacity: 0.3; }
+  .interested__info a:hover {
+    color: var(--special-orange); }
+  .interested__info a:active {
+    opacity: 0.3; }
 
 .interested__form {
   position: relative;
@@ -780,32 +745,27 @@ img {
   font: inherit;
   font-weight: bold;
   color: var(--special-grey); }
-
-.interested__input:hover {
-  background-color: var(--basic-blue-light);
-  border-color: var(--basic-blue-light); }
-
-.interested__input:active,
-.interested__input:focus {
-  border-color: var(--basic-white);
-  background-color: transparent;
-  color: var(--basic-white); }
-
-.interested__input::-moz-placeholder {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 18px;
-  vertical-align: middle;
-  color: var(--special-grey);
-  opacity: 0.3; }
-
-.interested__input::placeholder {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 18px;
-  vertical-align: middle;
-  color: var(--special-grey);
-  opacity: 0.3; }
+  .interested__input:hover {
+    background-color: var(--basic-blue-light);
+    border-color: var(--basic-blue-light); }
+  .interested__input:active, .interested__input:focus {
+    border-color: var(--basic-white);
+    background-color: transparent;
+    color: var(--basic-white); }
+  .interested__input::-moz-placeholder {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    vertical-align: middle;
+    color: var(--special-grey);
+    opacity: 0.3; }
+  .interested__input::placeholder {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    vertical-align: middle;
+    color: var(--special-grey);
+    opacity: 0.3; }
 
 .interested__button {
   position: absolute;
@@ -822,12 +782,10 @@ img {
   background-repeat: no-repeat;
   background-size: 10px 11px;
   cursor: pointer; }
-
-.interested__button:hover {
-  background-color: var(--special-yellow-dark); }
-
-.interested__button:active {
-  background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='%231D2E5B' fill-opacity='0.3' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 5.50001L0 11V0L10 5.50001Z' /%3E%3C/svg%3E"); }
+  .interested__button:hover {
+    background-color: var(--special-yellow-dark); }
+  .interested__button:active {
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='%231D2E5B' fill-opacity='0.3' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 5.50001L0 11V0L10 5.50001Z' /%3E%3C/svg%3E"); }
 
 .contacts {
   margin-right: auto;
@@ -883,15 +841,14 @@ img {
   line-height: 22px;
   text-transform: uppercase;
   color: var(--button-blue); }
-
-.pognali-location__address::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 0;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background-color: #121936; }
+  .pognali-location__address::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #121936; }
 
 /*# sourceMappingURL=style.css.map */

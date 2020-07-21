@@ -1,0 +1,149 @@
+.travelmate {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 10px;
+  border-radius: 10px;
+}
+
+.travelmate__photo {
+  width: 270px;
+  height: 270px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.travelmate__info {
+  @include bottom-radius(10px);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  min-height: 158px;
+  background-color: var(--basic-white);
+}
+
+.travelmate__flags {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 25px;
+  margin-top: -11px;
+}
+
+.travelmate__flag {
+  width: 35px;
+  height: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &--sri-lanka {
+    background-image: url("../img/flag-sri-lanka.svg");
+  }
+
+  &--thailand {
+    background-image: url("../img/flag-thailand.svg");
+  }
+
+  &--seychelles {
+    background-image: url("../img/flag-seychelles.svg");
+  }
+
+  &--belgium {
+    background-image: url("../img/flag-belgium.svg");
+  }
+
+  &--czech {
+    background-image: url("../img/flag-czech.svg");
+  }
+}
+
+.travelmate__name {
+  position: relative;
+  display: block;
+  margin: 13px 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: auto;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+  color: var(--button-blue);
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: calc(50% - 3px);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+
+  &--offline::before {
+    background-color: var(--user-status-offline);
+  }
+
+  &--online::before {
+    background-color: var(--user-status-online);
+  }
+}
+
+.travelmate__tags {
+  margin: 0;
+  width: 180px;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--special-grey);
+}
+
+.travelmate__transport {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.travelmate__button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 62px;
+  margin-top: 25px;
+  padding: 20px 23px;
+  border-radius: 10px;
+  background-color: var(--basic-yellow);
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='%231D2E5B' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 5.50001L0 11V0L10 5.50001Z'/%3E%3C/svg%3E");
+  background-position: right 23px top 50%;
+  background-repeat: no-repeat;
+  background-size: 10px 11px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  text-decoration: none;
+  color: var(--button-blue);
+
+  &:hover {
+    background-color: var(--special-yellow-dark);
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='%231D2E5B' fill-opacity='0.3' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 5.50001L0 11V0L10 5.50001Z' /%3E%3C/svg%3E");
+  }
+}
+
+.travelmate__mark {
+  position: absolute;
+  content: "";
+  left: 17px;
+  top: 17px;
+}

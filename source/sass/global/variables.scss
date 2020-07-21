@@ -22,3 +22,10 @@
 
 $black: #000000;
 $white: #FFFFFF;
+
+
+
+@mixin bottom-radius ($radius: 30px) {
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+}

@@ -1,0 +1,28 @@
+.pognali-location {
+  position: relative;
+  margin-top: -30px;
+  padding: 60px 25px 35px 25px;
+  background-color: var(--basic-yellow);
+  z-index: 4;
+}
+
+.pognali-location__address {
+  position: relative;
+  padding-left: 60px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: var(--button-blue);
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #121936;
+  }
+}
