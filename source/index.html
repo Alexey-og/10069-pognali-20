@@ -22,13 +22,13 @@
         <a href="#">Авторизация</a>
       </div> -->
     </div>
-    <div class="mobile-menu">
+    <!-- <div class="mobile-menu">
       <nav>
         <a>О сервисе</a>
         <a href="form.html">Направления</a>
         <a href="catalog.html">Попутчики</a>
       </nav>
-    </div>
+    </div> -->
   </header>
   <main>
     <section class="promo">
@@ -201,38 +201,41 @@
     <section class="pognali-map">
       <div aria-label="Интерактивная карта с офисом Погнали"></div>
       <picture>
-        <img src="img/map-mobile@1x.jpg" alt="" width="" height="">
+        <img src="img/map-mobile@1x.jpg" alt="Карта с местоположением офиса Погнали" width="" height="">
       </picture>
     </section>
-
-
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
   </main>
-  <!-- <footer class="page-footer page-footer--mobile">
-    <a class="page-footer__logo page-footer__logo--mobile" href="#" aria-label="Логотип Погнали"></a>
+  <footer class="page-footer">
+    <a class="page-footer__logo" aria-label="Логотип Погнали"></a>
     <div class="page-footer__menu footer-menu">
-      <a class="footer-menu__item" href="#" aria-label="Страница Погнали на Фейсбуке"></a>
-      <a class="footer-menu__item" href="#" aria-label="Страница Погнали во ВКонтакте"></a>
-      <a class="footer-menu__item" href="#" aria-label="Страница Погнали в Инстаграме"></a>
+      <a class="footer-menu__item footer-menu__item--facebook" href="#" aria-label="Страница Погнали на Фейсбуке">
+        <svg width="11" height="21"><use xlink:href="#icon-fb"></use></svg>
+      </a>
+      <a class="footer-menu__item footer-menu__item--vkontakte" href="#" aria-label="Страница Погнали во ВКонтакте">
+        <svg width="22" height="11"><use xlink:href="#icon-vk"></use></svg>
+      </a>
+      <a class="footer-menu__item footer-menu__item--insta" href="#" aria-label="Страница Погнали в Инстаграме">
+        <svg width="16" height="16"><use xlink:href="#icon-insta"></use></svg>
+      </a>
     </div>
     <div class="page-footer__copyright">
       <p class="page-footer__copy">Разработано</p>
-      <a class="page-footer__academy" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTML Academy"></a>
+      <a class="page-footer__academy" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTML Academy">
+        <svg width="27" height="34"><use xlink:href="#logo-academy"></use></svg>
+      </a>
     </div>
   </footer>
 
-  <section class="modal business-rates">
-    <h2>Бизнес-тарифы</h2>
-    <ul>
-      <li>Реклама у блоггера<span>300 000 руб./пост</span></li>
-      <li>Накрутка подписчиков<span>от 1 руб./шт.</span></li>
-      <li>Лайки от ботов<span>от 20 коп./лайк</span></li>
-      <li>Ваш продакт-плейсмент<span>Индивидуально</span></li>
+  <section class="modal business-rates hidden">
+    <h2 class="heading-2">Бизнес-тарифы</h2>
+    <ul class="business-rates__list">
+      <li class="business-rates__item">Реклама у блоггера<span>300 000 руб./пост</span></li>
+      <li class="business-rates__item">Накрутка подписчиков<span>от 1 руб./шт.</span></li>
+      <li class="business-rates__item">Лайки от ботов<span>от 20 коп./лайк</span></li>
+      <li class="business-rates__item">Ваш продакт-плейсмент<span>Индивидуально</span></li>
     </ul>
-    <button type="button">Закрыть окно</button>
-  </section> -->
+    <button class="business-rates__button" type="button">Закрыть окно</button>
+  </section>
 
 
   <svg style="display: none;">
@@ -259,6 +262,19 @@
     </symbol>
     <symbol id="icon-email" viewBox="0 0 19 13">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M16.662 10.625L12.16 6.5l4.502-4.125-.614-.656-6.548 6-6.548-6-.614.656L6.84 6.5l-4.502 4.125.614.656L7.505 7.11 9.5 8.938l1.995-1.829 4.553 4.172.614-.656zM1.521 0C.683 0 0 .727 0 1.62v9.76C0 12.275.676 13 1.523 13h15.954c.841 0 1.523-.727 1.523-1.62V1.62C19 .725 18.324 0 17.477 0H1.523z"/>
+    </symbol>
+    <symbol id="icon-fb" viewBox="0 0 11 21">
+      <path d="M7.8 21H2.2v-9.8H0V6.4h2.1c-.1-2.2.3-3.8 1.3-4.9C4.2.6 5.5.1 7.1 0H11v4.7H7.9c-.1.2-.2.8-.2 1.7H11v4.8H7.8V21zm-4.4-1.1h3.1v-9.8h3.2V7.5H6.5v-.6c0-1.5 0-2.9.8-3.4l.2-.1h2.3V1.1H7.1c-1.2.1-2.2.5-2.8 1.2-.8.9-1.1 2.5-.9 4.6l.1.6H1.2v2.6h2.2v9.8z" fill="#192144"/>
+    </symbol>
+    <symbol id="icon-insta" viewBox="0 0 23 23">
+      <path d="M17 1.5c2.5 0 4.5 2 4.5 4.5v11c0 2.5-2 4.5-4.5 4.5H6c-2.5 0-4.5-2-4.5-4.5V6c0-2.5 2-4.5 4.5-4.5h11zM17 0H6C2.7 0 0 2.7 0 6v11c0 3.3 2.7 6 6 6h11c3.3 0 6-2.7 6-6V6c0-3.3-2.7-6-6-6z" fill="#192144"/>
+      <path d="M11.5 7.1c2.4 0 4.4 2 4.4 4.4 0 2.4-2 4.4-4.4 4.4-2.4 0-4.4-2-4.4-4.4 0-2.4 2-4.4 4.4-4.4zm0-1.5c-3.3 0-5.9 2.7-5.9 5.9s2.7 5.9 5.9 5.9 5.9-2.7 5.9-5.9-2.6-5.9-5.9-5.9zM17.6 6.7a1.3 1.3 0 100-2.6 1.3 1.3 0 000 2.6z" fill="#192144"/>
+    </symbol>
+    <symbol id="icon-vk" viewBox="0 0 30 16">
+      <path d="M23.884 16c-.4 0-1.2-.101-2.1-.608-.6-.405-1.2-1.012-1.8-1.519-.4-.405-1.2-1.215-1.4-1.215-.3.101-.499.912-.499 1.62 0 .102 0 .81-.5 1.216-.4.405-1.1.506-1.2.506h-1.9c-.999 0-4.398-.203-7.397-3.038C3.388 9.519.289 3.038.089 2.734c-.1-.506-.2-1.215.2-1.62s1.1-.506 1.4-.506h4.199c.1 0 .6.1 1 .303.4.203.6.71.6.71s.6 1.417 1.5 2.733c1.299 2.026 1.899 2.532 2.099 2.633.2-.405.3-1.721.2-2.936 0-.507-.1-1.114-.3-1.317-.1-.101-.4-.304-.8-.304l-.7-.607c-.1-.71.6-1.215 1.1-1.418.7-.304 1.8-.405 3.1-.405h.699c1.2 0 1.6.101 2.1.203 1.699.405 1.599 1.721 1.599 3.341V5.671c0 .405 0 1.013.1 1.316.2-.1.9-.709 2.1-2.531.8-1.215 1.4-2.532 1.499-2.836.2-.405.6-.911 1.6-.911H28.083c1 0 1.6.304 1.799.911.3.608.2 1.722-2.4 4.658-.4.406-.7.81-1 1.114-.599.71-1.199 1.418-1.199 1.62.1.102.7.608 1.3 1.115 1.5 1.215 2.5 2.329 3 3.139.499.81.399 1.316.299 1.721-.4.912-1.6 1.013-1.9 1.013h-4.099zm-5.3-4.962c.9 0 1.7.81 2.5 1.62.5.507 1 1.013 1.5 1.317.7.405 1.3.405 1.4.405h3.899c.2 0 .4-.102.5-.102 0 0 0-.1-.1-.202-.4-.709-1.4-1.722-2.7-2.734-1.2-1.013-1.8-1.52-1.9-2.228-.1-.81.5-1.418 1.6-2.734.3-.304.6-.71 1-1.114 1.6-1.823 2-2.633 2.1-3.038H23.082c-.2.405-.8 1.823-1.599 3.038-1.9 2.835-2.8 3.24-3.399 3.24-.2 0-.4 0-.6-.1-1-.609-1-1.824-.9-2.836v-.405-1.722c.1-1.721 0-1.721-.4-1.823-.4-.101-.7-.101-1.9-.202h-.699c-.6 0-1.3 0-1.9.101l.3.304c.6.709.6 2.025.6 2.228.1 1.62.1 3.848-1 4.354-.2.101-.4.101-.6.101-.9 0-1.899-.911-3.398-3.341-.8-1.216-1.5-2.735-1.5-2.836l-.1-.101c-.1 0-.2-.101-.3-.101H1.689h-.1c.6 1.215 3.4 6.683 6.498 9.62 2.7 2.531 5.799 2.633 6.399 2.633h1.9s.2-.102.3-.102v-.1c0-.305 0-2.634 1.599-3.039.1-.101.2-.101.3-.101z" fill="#192144"/>
+    </symbol>
+    <symbol id="logo-academy" viewBox="0 0 27 34">
+      <path d="M13.6 0h-.2L0 1.4V26l13.5 8L27 26V1.4L13.6 0zm5.7 16.8l-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8L25 13.5l-4.5 2.6-7.1-4.2v1.4l5.9 3.5zM1.9 15.1l11.4 6.8v1l-8-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.2-4.9V17l3.4-2v10l-11.6 6.9-11.4-7v-9.8zm0-3v-9l11.6-1.2 11.6 1.2v9L13.5 5.3v-.1h-.2v.1L1.9 12.1z" fill="#192144"/>
     </symbol>
   </svg>
 

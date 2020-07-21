@@ -1,0 +1,20 @@
+.footer-menu {
+  display: flex;
+}
+
+.footer-menu__item {
+  @include circle(45px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFD74B;
+
+  &:hover {
+    background-color: #FFBD30;
+  }
+
+  &:active {
+    fill-opacity: 0.3;
+  }
+}

@@ -29,3 +29,9 @@ $white: #FFFFFF;
   border-bottom-left-radius: $radius;
   border-bottom-right-radius: $radius;
 }
+
+@mixin circle ($radius: 45px) {
+  width: $radius;
+  height: $radius;
+  border-radius: 50%;
+}
