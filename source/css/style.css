@@ -63,7 +63,8 @@ body {
   /*  Потом заменить!  */
   min-height: 100%;
   margin: 0 auto;
-  background-color: var(--basic-blue);
+  /* background-color: var(--basic-blue); */
+  background-color: #edeff6;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -94,6 +95,16 @@ textarea {
 .container {
   margin: 0 auto;
   padding: 0 25px; }
+
+.heading-1 {
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 9px;
+  border-bottom: 5px solid #ff8d30;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  color: #ffffff; }
 
 .heading-2 {
   margin: 0 0 19px 0;
@@ -134,7 +145,8 @@ textarea {
   transform: translate(-50%, -50%); }
 
 .page-header {
-  position: relative; }
+  position: relative;
+  background-color: #161c35; }
 
 .page-header__top {
   display: flex;
@@ -927,6 +939,16 @@ textarea {
     background-color: #ffbd30; }
   .footer-menu__item:active {
     fill-opacity: 0.3; }
+
+.page-title {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 100%;
+  min-height: 70px;
+  padding: 26px 25px 0;
+  background-color: #161c35; }
 
 /*  Modals  */
 .business-rates {
