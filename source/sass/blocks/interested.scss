@@ -8,7 +8,7 @@
   align-items: center;
   margin-top: -30px;
   padding: 90px 25px 30px;
-  background-color: var(--basic-blue-dark);
+  background-color: $color-basic-blue-dark;
   z-index: 5;
 }
 
@@ -18,10 +18,10 @@
 }
 
 .interested__info a {
-  color: #FFD74B;
+  color: $color-basic-yellow;
 
   &:hover {
-    color: var(--special-orange);
+    color: $color-special-orange;
   }
 
   &:active {
@@ -42,23 +42,23 @@
   width: 100%;
   min-height: 62px;
   padding: 15px 70px 15px 25px;
-  border: 4px solid var(--basic-white);
+  border: 4px solid $color-white;
   border-radius: 10px;
-  background-color: var(--basic-white);
+  background-color: $color-white;
   font: inherit;
   font-weight: bold;
-  color: var(--special-grey);
+  color: $color-special-grey;
 
   &:hover {
-    background-color: var(--basic-blue-light);
-    border-color: var(--basic-blue-light);
+    background-color: $color-basic-blue-light;
+    border-color: $color-basic-blue-light;
   }
 
   &:active,
   &:focus {
-    border-color: var(--basic-white);
+    border-color: $color-white;
     background-color: transparent;
-    color: var(--basic-white);
+    color: $color-white;
   }
 
   &::placeholder {
@@ -66,7 +66,7 @@
     font-size: 18px;
     line-height: 18px;
     vertical-align: middle;
-    color: var(--special-grey);
+    color: $color-special-grey;
     opacity: 0.3;
   }
 }
@@ -80,7 +80,7 @@
   height: 100%;
   border-width: 0;
   border-radius: 10px;
-  background-color: var(--basic-yellow);
+  background-color: $color-basic-yellow;
   background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='%231D2E5B' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 5.50001L0 11V0L10 5.50001Z'/%3E%3C/svg%3E");
   background-position: center;
   background-repeat: no-repeat;
@@ -88,7 +88,7 @@
   cursor: pointer;
 
   &:hover {
-    background-color: var(--special-yellow-dark);
+    background-color: $color-special-yellow-dark;
   }
 
   &:active {

@@ -4,7 +4,7 @@
   position: relative;
   margin-top: -30px;
   padding: 100px 25px 34px;
-  background-color: var(--basic-blue-light);
+  background-color: $color-basic-blue-light;
   z-index: 8;
 }
 
@@ -14,5 +14,5 @@
 
 .countries__description {
   margin: 0 30px 60px 24px;
-  color: var(--special-grey);
+  color: $color-special-grey;
 }

@@ -13,38 +13,37 @@
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 14px 0;
-  border-top: 1px solid rgba(68, 68, 68, 0.05);
+  border-top: 1px solid rgba($color-special-grey, 0.05);
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
-  color: var(--special-grey);
+  color: $color-special-grey;
 
   &::before {
+    @include circle(34px);
+
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     right: -44px;
     top: 3px;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
     font-size: 16px;
-    color: var(--basic-white);
+    color: $color-white;
     counter-increment: profile-list;
     content: counter(profile-list);
   }
 
   &:nth-child(1)::before {
-    background-color: var(--special-orange-light);
+    background-color: $color-special-orange-light;
   }
 
   &:nth-child(2)::before {
-    background-color: var(--special-yellow-dark);
+    background-color: $color-special-yellow-dark;
   }
 
   &:nth-child(3)::before {
-    background-color: var(--basic-yellow);
+    background-color: $color-basic-yellow;
   }
 }
 
@@ -53,5 +52,5 @@
   font-size: 16px;
   line-height: 16px;
   text-decoration: none;
-  color: var(--basic-blue-dark);
+  color: $color-basic-blue-dark;
 }

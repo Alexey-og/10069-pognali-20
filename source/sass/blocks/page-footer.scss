@@ -1,7 +1,7 @@
 .page-footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  @include top-radius(30px);
+
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -9,9 +9,8 @@
   width: 100%;
   min-height: 239px;
   padding: 37px 25px 5px 25px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  background-color: var(--basic-white);
+  background-color: $color-white;
+  z-index: 5;
 }
 
 .page-footer__logo {
@@ -33,7 +32,7 @@
   align-items: center;
   width: 100%;
   padding-top: 13px;
-  border-top: 1px solid #F2F2F2;
+  border-top: 1px solid $color-grey-f2;
 
   &:hover {
     opacity: 0.6;
@@ -48,7 +47,7 @@
   margin: 0;
   font-size: 16px;
   line-height: 16px;
-  color: var(--special-grey);
+  color: $color-grey-44;
 }
 
 .page-footer__academy {
