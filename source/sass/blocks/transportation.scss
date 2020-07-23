@@ -1,0 +1,49 @@
+.transportation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.transportation__label {
+  @include circle(31px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1px 0 0;
+  background-color: $color-white;
+  fill: $color-grey-d9;
+  fill-opacity: 0.15;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0px 2px 6px rgba($color-basic-blue, 0.17);
+    fill: $color-grey-b2;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $color-button-blue-light;
+    fill: $color-button-blue;
+  }
+}
+
+.transportation__checkbox:checked + .transportation__label  {
+  fill: $color-button-blue;
+  fill-opacity: 1;
+
+  &:hover {
+    fill-opacity: 0.7;
+  }
+
+  &:active {
+    fill-opacity: 0.3;
+  }
+}
+
+.transportation__checkbox:focus + .transportation__label {
+  outline-style: auto;
+  outline-width: 1px;
+}

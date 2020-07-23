@@ -38,7 +38,7 @@
     </div>
     <section class="profile-header">
       <div class="mark profile-header__mark">
-        <svg class="mark__indicator mark__indicator--80" width="60" height="60"><use xlink:href="#level-percent"></use></svg>
+        <svg class="mark__indicator" width="100" height="100"><use xlink:href="#level-percent"></use></svg>
         <span class="mark__number">80</span>
         <span class="mark__level">level</span>
       </div>
@@ -58,12 +58,26 @@
         <textarea class="tags__tags-list" name="tags-list" id="tags-list">#бургер #бар #футбол #концерт #крафт</textarea>
         <label class="visually-hidden" for="tags-list" aria-label="Список тегов пользователя"></label>
       </fieldset>
-      <fieldset class="tags-transport__item transport">
+      <fieldset class="tags-transport__item">
         <legend class="tags-transport__title">транспорт</legend>
-        <label class="transport__label transport__label--avia" aria-label="Кнопка передвижения на самолете" data-transport="Авиаперелет"><input class="visually-hidden" type="checkbox" name="transport-avia"></label>
-        <label class="transport__label transport__label--car" aria-label="Кнопка передвижения на автотранспорте" data-transport="Автотранспорт"><input class="visually-hidden" type="checkbox" name="transport-car"></label>
-        <label class="transport__label transport__label--bike" aria-label="Кнопка передвижения на велосипеде" data-transport="Велосипед"><input class="visually-hidden" type="checkbox" name="transport-bike"></label>
-        <label class="transport__label transport__label--foot" aria-label="Кнопка передвижения пешком" data-transport="Пешком"><input class="visually-hidden" type="checkbox" name="transport-foot"></label>
+        <div class="transportation">
+          <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-avia" id="transportation-avia">
+          <label class="transportation__label transportation__label--avia" for="transportation-avia" aria-label="Кнопка передвижения на самолете" data-transport="Авиаперелет">
+            <svg height="16"><use xlink:href="#icon-plane"></use></svg>
+          </label>
+          <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bus" id="transportation-bus">
+          <label class="transportation__label transportation__label--bus" for="transportation-bus" aria-label="Кнопка передвижения на автотранспорте" data-transport="Автотранспорт">
+            <svg height="16"><use xlink:href="#icon-bus"></use></svg>
+          </label>
+          <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bicycle" id="transportation-bicycle">
+          <label class="transportation__label transportation__label--bicycle" for="transportation-bicycle" aria-label="Кнопка передвижения на велосипеде" data-transport="Велосипед">
+            <svg height="16"><use xlink:href="#icon-bicycle"></use></svg>
+          </label>
+          <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-foot" id="transportation-foot">
+          <label class="transportation__label transportation__label--foot" for="transportation-foot" aria-label="Кнопка передвижения пешком" data-transport="Пешком">
+            <svg height="16"><use xlink:href="#icon-run"></use></svg>
+          </label>
+        </div>
       </fieldset>
     </div>
       <section class="planned-trips">
@@ -693,14 +707,14 @@
   </footer>
 
   <svg style="display: none;">
-    <symbol id="level-percent" viewBox="0 0 60 60">
-      <circle r="28" cx="30" cy="30" fill="none" stroke="#FF8D30" stroke-width="4" stroke-dashoffset="44px"></circle>
+    <symbol id="level-percent" viewBox="0 0 100 100">
+      <circle r="48" cx="50" cy="50" fill="none" stroke="#ff8d30"></circle>
     </symbol>
     <symbol id="icon-plane" viewBox="0 0 19 21">
-      <path d="M17.622.016c-.823.185-1.649.37-1.956.88l-2.378 4.483L.518 8.252 0 9.685l9.772.874-1.658 3.882-3.706.833-.93 1.526 2.673.274.305 1.248c.137.442.616.738 1.025.646l1.236-.278L10.149 21l.93-1.526-.914-3.742 2.683-3.236 5.12 8.501L19 19.89 15.85 6.996l2.893-4.16c.31-.51.108-1.34-.096-2.175-.101-.413-.616-.737-1.025-.645z" fill="#161C35"/>
+      <path d="M17.622.016c-.823.185-1.649.37-1.956.88l-2.378 4.483L.518 8.252 0 9.685l9.772.874-1.658 3.882-3.706.833-.93 1.526 2.673.274.305 1.248c.137.442.616.738 1.025.646l1.236-.278L10.149 21l.93-1.526-.914-3.742 2.683-3.236 5.12 8.501L19 19.89 15.85 6.996l2.893-4.16c.31-.51.108-1.34-.096-2.175-.101-.413-.616-.737-1.025-.645z" fill="#161c35"/>
     </symbol>
     <symbol id="icon-bus" viewBox="0 0 19 21">
-      <path d="M4.75 14.25c0-.414-.155-.768-.464-1.06a1.57 1.57 0 00-1.12-.44c-.436 0-.81.146-1.119.44-.31.292-.464.646-.464 1.06 0 .414.155.768.464 1.06.31.293.683.44 1.12.44.437 0 .81-.146 1.12-.44.308-.292.463-.646.463-1.06zm12.667 0c0-.414-.155-.768-.464-1.06a1.57 1.57 0 00-1.12-.44c-.437 0-.81.146-1.12.44-.308.292-.463.646-.463 1.06 0 .414.155.768.464 1.06.31.293.682.44 1.12.44.436 0 .81-.146 1.119-.44.31-.292.464-.646.464-1.06zm-.57-4.64l-.89-4.5a.788.788 0 00-.78-.61H3.823a.788.788 0 00-.779.61l-.89 4.5a.713.713 0 00.173.62c.156.18.358.27.606.27h13.136c.248 0 .45-.09.606-.27a.713.713 0 00.174-.62zm-2.795-7.172a.529.529 0 00-.173-.399.59.59 0 00-.42-.164H5.541a.59.59 0 00-.42.164.528.528 0 00-.174.398c0 .157.058.29.173.399a.59.59 0 00.42.164h7.917a.59.59 0 00.421-.164.529.529 0 00.173-.398zM19 10.934V18h-1.583v1.5c0 .414-.155.768-.464 1.06a1.57 1.57 0 01-1.12.44c-.437 0-.81-.146-1.12-.44a1.408 1.408 0 01-.463-1.06V18h-9.5v1.5c0 .414-.155.768-.464 1.06a1.57 1.57 0 01-1.12.44 1.57 1.57 0 01-1.119-.44 1.408 1.408 0 01-.464-1.06V18H0v-7.066c0-.875.103-1.746.31-2.614L1.582 3c.075-.61.477-1.145 1.206-1.605C3.52.934 4.468.585 5.634.352 6.801.117 8.09 0 9.5 0c1.41 0 2.699.117 3.866.352 1.166.234 2.115.582 2.845 1.043.73.46 1.132.996 1.206 1.605l1.298 5.32c.19.797.285 1.668.285 2.614z" fill="#161C35"/>
+      <path d="M4.75 14.25c0-.414-.155-.768-.464-1.06a1.57 1.57 0 00-1.12-.44c-.436 0-.81.146-1.119.44-.31.292-.464.646-.464 1.06 0 .414.155.768.464 1.06.31.293.683.44 1.12.44.437 0 .81-.146 1.12-.44.308-.292.463-.646.463-1.06zm12.667 0c0-.414-.155-.768-.464-1.06a1.57 1.57 0 00-1.12-.44c-.437 0-.81.146-1.12.44-.308.292-.463.646-.463 1.06 0 .414.155.768.464 1.06.31.293.682.44 1.12.44.436 0 .81-.146 1.119-.44.31-.292.464-.646.464-1.06zm-.57-4.64l-.89-4.5a.788.788 0 00-.78-.61H3.823a.788.788 0 00-.779.61l-.89 4.5a.713.713 0 00.173.62c.156.18.358.27.606.27h13.136c.248 0 .45-.09.606-.27a.713.713 0 00.174-.62zm-2.795-7.172a.529.529 0 00-.173-.399.59.59 0 00-.42-.164H5.541a.59.59 0 00-.42.164.528.528 0 00-.174.398c0 .157.058.29.173.399a.59.59 0 00.42.164h7.917a.59.59 0 00.421-.164.529.529 0 00.173-.398zM19 10.934V18h-1.583v1.5c0 .414-.155.768-.464 1.06a1.57 1.57 0 01-1.12.44c-.437 0-.81-.146-1.12-.44a1.408 1.408 0 01-.463-1.06V18h-9.5v1.5c0 .414-.155.768-.464 1.06a1.57 1.57 0 01-1.12.44 1.57 1.57 0 01-1.119-.44 1.408 1.408 0 01-.464-1.06V18H0v-7.066c0-.875.103-1.746.31-2.614L1.582 3c.075-.61.477-1.145 1.206-1.605C3.52.934 4.468.585 5.634.352 6.801.117 8.09 0 9.5 0c1.41 0 2.699.117 3.866.352 1.166.234 2.115.582 2.845 1.043.73.46 1.132.996 1.206 1.605l1.298 5.32c.19.797.285 1.668.285 2.614z" fill="#161c35"/>
     </symbol>
     <symbol id="icon-bicycle" viewBox="0 0 24 21">
       <g>

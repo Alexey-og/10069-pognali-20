@@ -15,14 +15,24 @@
 
 /*
 $pi: math.$pi;
-$circumference: 2 * $pi * 100;
+$circumference: 2 * $pi * 50;
 $arc-length: $circumference * 0.8;
  */
+
+/*
+
+Длина окружности - 301px
+stroke-dasharray: 241px 60px;
+
+*/
+
 
 .profile-header__mark .mark__indicator {
   width: 100px;
   height: 100px;
-  stroke-dasharray: 141px 35px;
+  stroke-dasharray: 251px 63px;
+  stroke-dashoffset: 87px;
+  stroke-width: 3;
 }
 
 .profile-header__mark .mark__number {
