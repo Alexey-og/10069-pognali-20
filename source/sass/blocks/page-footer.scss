@@ -1,0 +1,55 @@
+.page-footer {
+  @include top-radius(30px);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  min-height: 239px;
+  padding: 37px 25px 5px 25px;
+  background-color: $color-white;
+  z-index: 5;
+}
+
+.page-footer__logo {
+  width: 96px;
+  height: 18px;
+  background-image: url("../img/logo-mobile-blue@1x.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.page-footer__menu {
+  margin: 37px 0;
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 13px;
+  border-top: 1px solid $color-grey-f2;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__copy {
+  margin: 0;
+  font-size: 16px;
+  line-height: 16px;
+  color: $color-grey-44;
+}
+
+.page-footer__academy {
+  height: 34px;
+}

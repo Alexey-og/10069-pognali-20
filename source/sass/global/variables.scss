@@ -1,0 +1,64 @@
+:root {
+  --basic-white: #ffffff;
+  --basic-black: #000000;
+  --basic-blue: #161c35;
+  --basic-blue-light: #edeff6;
+  --basic-blue-dark: #192144;
+  --basic-yellow: #ffd74b;
+  --special-yellow-dark: #ffbd30;
+  --special-blue: #192144;
+  --special-blue-light: #dfe3f0;
+  --special-blue-dark: #141b3b;
+  --special-grey: #444444;
+  --special-red: #f47e7e;
+  --special-orange: #ff8d30;
+  --special-orange-light: #ffa530;
+  --button-blue: #1d2e5b;
+  --button-orange-hover: #f26926;
+  --user-status-online: #81e31e;
+  --user-status-offline: #f97676;
+}
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+$color-grey-44: #444444;
+$color-grey-b2: #b2b2b2;
+$color-grey-d9: #d9d9d9;
+$color-grey-f2: #f2f2f2;
+
+$color-basic-blue: #161c35;
+$color-basic-blue-light: #edeff6;
+$color-basic-blue-dark: #192144;
+$color-basic-yellow: #ffd74b;
+$color-special-yellow-dark: #ffbd30;
+$color-special-blue: #192144;
+$color-special-blue-light: #dfe3f0;
+$color-special-blue-dark: #141b3b;
+$color-special-grey: #444444;
+$color-special-red: #f47e7e;
+$color-special-orange: #ff8d30;
+$color-special-orange-light: #ffa530;
+$color-button-blue: #1d2e5b;
+$color-button-blue-light: #e2e5f1;
+$color-button-orange-hover: #f26926;
+$color-user-status-online: #81e31e;
+$color-user-status-offline: #f97676;
+$color-header-blue: #182044;
+
+
+@mixin top-radius ($radius: 30px) {
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin bottom-radius ($radius: 30px) {
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin circle ($radius: 45px) {
+  width: $radius;
+  height: $radius;
+  border-radius: 50%;
+}

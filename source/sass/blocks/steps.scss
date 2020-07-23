@@ -1,0 +1,50 @@
+.steps {
+  position: relative;
+  top: -80px;
+  counter-reset: steps;
+}
+
+.steps__item {
+  position: relative;
+  padding: 22px 70px 42px 24px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--basic-blue);
+  list-style-type: none;
+}
+
+.steps__item::before {
+  position: absolute;
+  counter-increment: steps;
+  content: counter(steps);
+  top: 22px;
+  right: 21px;
+  color: var(--basic-white);
+}
+
+.steps__item:not(:first-child) {
+  margin-top: -20px;
+}
+
+
+.steps__item:last-child {
+  padding-bottom: 22px;
+}
+
+.steps__item:nth-child(1) {
+  background-color: var(--special-orange);
+}
+
+.steps__item:nth-child(2) {
+  background-color: var(--special-orange-light);
+}
+
+.steps__item:nth-child(3) {
+  background-color: var(--special-yellow-dark);
+}
+
+.steps__item:nth-child(4) {
+  background-color: var(--basic-yellow);
+}

@@ -1,0 +1,60 @@
+.promo {
+  position: relative;
+  background-image: url("../img/globe-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top -73px;
+  background-size: contain;
+  z-index: 10;
+}
+
+.promo__illustration {
+  position: relative;
+  min-height: 405px;
+  padding-top: 21px;
+  background-image: url("../img/traveller-illustration-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: left 80px bottom;
+  background-size: 192px 255px;
+}
+
+.promo__buttons {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -20px;
+  min-width: 270px;
+  min-height: 40px;
+  padding: 0 25px;
+  display: flex;
+}
+
+.promo__slogan {
+  margin: 0;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  color: var(--basic-white);
+}
+
+.promo__citation {
+  background-color: var(--basic-blue);
+  min-height: 285px;
+  padding: 50px 100px 100px 50px;
+}
+
+.promo__quote,
+.promo__author {
+  margin: 0;
+}
+
+.promo__author {
+  padding-top: 15px;
+  font-weight: bold;
+}
+
+.promo__steps {
+  position: relative;
+  height: 279px;
+  background-color: var(--basic-blue-dark);
+}

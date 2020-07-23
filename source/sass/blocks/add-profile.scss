@@ -1,0 +1,27 @@
+.add-profile {
+  @include bottom-radius(30px);
+
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  padding: 80px 25px 38px 49px;
+  background-color: #e6e8f1;
+  z-index: 6;
+}
+
+.add-profile__heading {
+  width: 50%;
+  margin: 0;
+}
+
+.add-profile__icon {
+  width: 100px;
+  height: 100px;
+  background-image: url("../img/rates@1x.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

@@ -1,0 +1,79 @@
+.header-contacts__phone {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--special-orange);
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/icon-call.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover {
+    background-color: var(--button-orange-hover);
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+}
+
+.header-contacts__email {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--special-yellow-dark);
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover {
+    background-color: var(--special-orange);
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+}
+
+.header-contacts__login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 190px;
+  min-height: 40px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--basic-yellow);
+  color: var(--basic-blue);
+
+  &:hover {
+    background-color: var(--special-yellow-dark);
+  }
+
+  &:active {
+    color: rgba($color-basic-blue, 0.3);
+  }
+}

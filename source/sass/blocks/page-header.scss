@@ -1,0 +1,51 @@
+.page-header {
+  position: relative;
+  background-color: $color-basic-blue;
+}
+
+.page-header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 320px;
+  min-height: 73px;
+}
+
+.page-header__logo {
+  display: flex;
+  width: 96px;
+  height: 60px;
+  background-image: url("../img/logo-mobile-white@1x.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+  z-index: 100;
+}
+
+.page-header__button {
+  position: relative;
+  width: 25px;
+  height: 19px;
+  border: 0;
+  background-color: transparent;
+  z-index: 100;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 25px;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: $color-white;
+  }
+
+  &::before {
+    bottom: 4px;
+  }
+
+  &::after {
+    bottom: 12px;
+  }
+}

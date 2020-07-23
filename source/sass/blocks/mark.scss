@@ -1,0 +1,44 @@
+.mark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba($color-black, 0.6);
+  color: var(--basic-white);
+}
+
+.mark__indicator {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+}
+
+.mark__indicator--80 {
+  stroke-dasharray: 141px 35px;
+}
+
+.mark__indicator--99 {
+  stroke-dasharray: 171px 5px;
+}
+
+/*  Длина окружности - 176px  */
+/*  Сдвиг дуги - stroke-dashoffset="44px"  */
+
+.mark__number {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  border-bottom: 1px solid rgba($color-white, 0.3);
+}
+
+.mark__level {
+  position: relative;
+  font-size: 14px;
+  line-height: 14px;
+}

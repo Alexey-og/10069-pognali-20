@@ -1,0 +1,56 @@
+.profile-list {
+  margin: 30px 45px 30px 0;
+  padding: 0;
+  list-style-type: none;
+  counter-reset: profile-list;
+}
+
+.profile-list__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 14px 0;
+  border-top: 1px solid rgba($color-special-grey, 0.05);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-special-grey;
+
+  &::before {
+    @include circle(34px);
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -44px;
+    top: 3px;
+    font-size: 16px;
+    color: $color-white;
+    counter-increment: profile-list;
+    content: counter(profile-list);
+  }
+
+  &:nth-child(1)::before {
+    background-color: $color-special-orange-light;
+  }
+
+  &:nth-child(2)::before {
+    background-color: $color-special-yellow-dark;
+  }
+
+  &:nth-child(3)::before {
+    background-color: $color-basic-yellow;
+  }
+}
+
+.profile-list__button {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+  color: $color-basic-blue-dark;
+}
