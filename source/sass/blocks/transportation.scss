@@ -19,7 +19,7 @@
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0px 2px 6px rgba($color-basic-blue, 0.17);
+    box-shadow: 0 2px 6px rgba($color-basic-blue, 0.17);
     fill: $color-grey-b2;
   }
 
@@ -30,7 +30,7 @@
   }
 }
 
-.transportation__checkbox:checked + .transportation__label  {
+.transportation__checkbox:checked + .transportation__label {
   fill: $color-button-blue;
   fill-opacity: 1;
 

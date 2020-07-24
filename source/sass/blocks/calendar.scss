@@ -1,0 +1,72 @@
+.calendar__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 42px;
+  margin-bottom: 17px;
+  border-top: 1px solid #d6d9e6;
+  border-bottom: 1px solid #d6d9e6;
+}
+
+.calendar__month {
+  margin: 0;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  color: $color-button-blue;
+}
+
+.calendar__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 31px);
+}
+
+.calendar__weekday {
+  height: 30px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: $color-special-grey;
+
+  &--weekend {
+    color: #ff5c23;
+  }
+}
+
+.calendar__days {
+  display: grid;
+  grid-template-columns: repeat(7, 31px);
+}
+
+.calendar__days input {
+  @include visually-hidden;
+}
+
+.calendar__day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 31px;
+  height: 31px;
+  border: 1px solid #d6d9e6;
+  background-color: $color-basic-blue-light;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-button-blue;
+}
+
+.calendar__days input:checked + .calendar__day {
+  background-color: $color-button-blue;
+  color: $color-white;
+}
+
+.calendar__days input:disabled + .calendar__day {
+  background-color: $color-white;
+  color: rgba($color-grey-44, 0.3);
+}
+
+.calendar__days input:not(:disabled) + .calendar__day:hover {
+  border: 2px solid #ff5c23;
+  cursor: pointer;
+}

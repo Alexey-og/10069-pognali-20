@@ -1,0 +1,10 @@
+.plan-adding {
+  @include top-radius(30px);
+
+  padding: 30px 25px;
+  background-color: #d4d9eb;
+}
+
+.plan-adding__step {
+  margin-bottom: 10px;
+}

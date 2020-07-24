@@ -12,6 +12,7 @@
 /*  BLOCKS  */
 
 @import "blocks/visually-hidden.scss";
+@import "blocks/mobile-hidden.scss";
 @import "blocks/container.scss";
 @import "blocks/heading-1.scss";
 @import "blocks/heading-2.scss";
@@ -43,6 +44,9 @@
 @import "blocks/tags-transport.scss";
 @import "blocks/tags.scss";
 @import "blocks/transportation.scss";
+@import "blocks/plan-adding.scss";
+@import "blocks/plan-step.scss";
+@import "blocks/calendar.scss";
 
 
 /*  Modals  */
