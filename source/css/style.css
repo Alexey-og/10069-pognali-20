@@ -929,8 +929,11 @@ textarea {
   .footer-menu__item:active {
     fill-opacity: 0.3; }
 
-.user-edit {
+.user-form {
   position: relative; }
+
+.user-form .heading-2 {
+  color: #1d2e5b; }
 
 .page-title {
   border-bottom-left-radius: 30px;
@@ -1110,6 +1113,156 @@ stroke-dasharray: 241px 60px;
   padding: 23px 25px;
   border-radius: 10px;
   background-color: #ffffff; }
+
+.step-header {
+  display: flex; }
+
+.step-header__title {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 16px 0;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  color: #1d2e5b; }
+
+.step-header__description {
+  margin: 0;
+  color: #444444; }
+
+.step-header__steps-list {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.step-header__step {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 42px;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6); }
+  .step-header__step::before {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(29, 46, 91, 0.3); }
+  .step-header__step--current {
+    letter-spacing: 0.11em;
+    color: #000000; }
+    .step-header__step--current::before {
+      background-color: #1d2e5b; }
+
+.step-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0 25px;
+  color: #1d2e5b; }
+
+.step-inputs__item {
+  display: flex;
+  flex-wrap: wrap; }
+
+.step-inputs__label {
+  font-weight: 500;
+  font-size: 16px;
+  margin-right: auto;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #1d2e5b;
+  order: 1; }
+
+.step-inputs__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+  height: 43px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+  order: 3; }
+
+.step-inputs__button,
+.step-inputs__input {
+  border: none;
+  background-color: transparent; }
+
+.step-inputs__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 60px;
+  fill: #cccccc;
+  cursor: pointer; }
+  .step-inputs__button--minus {
+    padding: 10px 30px 10px 13px; }
+  .step-inputs__button--plus {
+    padding: 10px 13px 10px 30px; }
+  .step-inputs__button:hover {
+    fill: #959bb2; }
+  .step-inputs__button:active {
+    fill: #161c35; }
+
+.step-inputs__input {
+  width: 100px;
+  padding: 10px;
+  text-align: center; }
+
+.step-inputs__unit {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(29, 46, 91, 0.3);
+  margin-left: auto;
+  order: 2; }
+
+.step-inputs__kids-possible {
+  position: relative;
+  padding-left: 40px;
+  font-size: 15px;
+  line-height: 15px;
+  color: #1d2e5b;
+  cursor: pointer; }
+  .step-inputs__kids-possible::before, .step-inputs__kids-possible::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 26px; }
+  .step-inputs__kids-possible::before {
+    border: 1px solid #cbced9;
+    border-radius: 4px; }
+  .step-inputs__kids-possible::after {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 8px; }
+  .step-inputs__kids-possible:hover::before {
+    border-color: #959bb2; }
+  .step-inputs__kids-possible:active::before {
+    border-color: #e2e5f1;
+    background-color: #e2e5f1; }
+
+.step-inputs__kids input:checked + .step-inputs__kids-possible::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M12 0L3.8 8 0 4.3v4L3.8 12 12 4z' fill='%23161c35'/%3E%3C/svg%3E"); }
+
+.step-inputs__kids input:checked + .step-inputs__kids-possible:active::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M12 0L3.8 8 0 4.3v4L3.8 12 12 4z' fill='%23161c35' fill-opacity='0.3'/%3E%3C/svg%3E"); }
 
 .calendar__title {
   display: flex;

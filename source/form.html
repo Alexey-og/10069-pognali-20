@@ -32,54 +32,54 @@
     </div> -->
   </header>
   <main>
-    <form class="user-edit" action="https://echo.htmlacademy.ru/" method="post"></form>
-    <div class="page-title">
-      <h1 class="heading-1">Направления</h1>
-    </div>
-    <section class="profile-header">
-      <div class="mark profile-header__mark">
-        <svg class="mark__indicator" width="100" height="100"><use xlink:href="#level-percent"></use></svg>
-        <span class="mark__number">80</span>
-        <span class="mark__level">level</span>
+    <form class="user-form" action="https://echo.htmlacademy.ru/" method="post">
+      <div class="page-title">
+        <h1 class="heading-1">Направления</h1>
       </div>
-      <div class="profile-header__photo">
-        <picture>
-          <img src="img/demin-mobile@1x.jpg" alt="Петя Демин - фотография" width="100" height="100">
-        </picture>
-      </div>
-      <label class="profile-header__change-photo">
-        <input class="visually-hidden" type="file">
-        <span class="visually-hidden">Сменить </span>фото
-      </label>
-    </section>
-    <div class="tags-transport">
-      <fieldset class="tags-transport__item tags">
-        <legend class="tags-transport__title">тэги</legend>
-        <textarea class="tags__tags-list" name="tags-list" id="tags-list">#бургер #бар #футбол #концерт #крафт</textarea>
-        <label class="visually-hidden" for="tags-list" aria-label="Список тегов пользователя"></label>
-      </fieldset>
-      <fieldset class="tags-transport__item">
-        <legend class="tags-transport__title">транспорт</legend>
-        <div class="transportation">
-          <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-avia" id="transportation-avia">
-          <label class="transportation__label transportation__label--avia" for="transportation-avia" aria-label="Кнопка передвижения на самолете" data-transport="Авиаперелет">
-            <svg height="16"><use xlink:href="#icon-plane"></use></svg>
-          </label>
-          <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bus" id="transportation-bus">
-          <label class="transportation__label transportation__label--bus" for="transportation-bus" aria-label="Кнопка передвижения на автотранспорте" data-transport="Автотранспорт">
-            <svg height="16"><use xlink:href="#icon-bus"></use></svg>
-          </label>
-          <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bicycle" id="transportation-bicycle">
-          <label class="transportation__label transportation__label--bicycle" for="transportation-bicycle" aria-label="Кнопка передвижения на велосипеде" data-transport="Велосипед">
-            <svg height="16"><use xlink:href="#icon-bicycle"></use></svg>
-          </label>
-          <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-foot" id="transportation-foot">
-          <label class="transportation__label transportation__label--foot" for="transportation-foot" aria-label="Кнопка передвижения пешком" data-transport="Пешком">
-            <svg height="16"><use xlink:href="#icon-run"></use></svg>
-          </label>
+      <section class="profile-header">
+        <div class="mark profile-header__mark">
+          <svg class="mark__indicator" width="100" height="100"><use xlink:href="#level-percent"></use></svg>
+          <span class="mark__number">80</span>
+          <span class="mark__level">level</span>
         </div>
-      </fieldset>
-    </div>
+        <div class="profile-header__photo">
+          <picture>
+            <img src="img/demin-mobile@1x.jpg" alt="Петя Демин - фотография" width="100" height="100">
+          </picture>
+        </div>
+        <label class="profile-header__change-photo">
+          <input class="visually-hidden" type="file">
+          <span class="visually-hidden">Сменить </span>фото
+        </label>
+      </section>
+      <div class="tags-transport">
+        <fieldset class="tags-transport__item tags">
+          <legend class="tags-transport__title">тэги</legend>
+          <textarea class="tags__tags-list" name="tags-list" id="tags-list">#бургер #бар #футбол #концерт #крафт</textarea>
+          <label class="visually-hidden" for="tags-list" aria-label="Список тегов пользователя"></label>
+        </fieldset>
+        <fieldset class="tags-transport__item">
+          <legend class="tags-transport__title">транспорт</legend>
+          <div class="transportation">
+            <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-avia" id="transportation-avia">
+            <label class="transportation__label transportation__label--avia" for="transportation-avia" aria-label="Кнопка передвижения на самолете" data-transport="Авиаперелет">
+              <svg height="16"><use xlink:href="#icon-plane"></use></svg>
+            </label>
+            <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bus" id="transportation-bus">
+            <label class="transportation__label transportation__label--bus" for="transportation-bus" aria-label="Кнопка передвижения на автотранспорте" data-transport="Автотранспорт">
+              <svg height="16"><use xlink:href="#icon-bus"></use></svg>
+            </label>
+            <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bicycle" id="transportation-bicycle">
+            <label class="transportation__label transportation__label--bicycle" for="transportation-bicycle" aria-label="Кнопка передвижения на велосипеде" data-transport="Велосипед">
+              <svg height="16"><use xlink:href="#icon-bicycle"></use></svg>
+            </label>
+            <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-foot" id="transportation-foot">
+            <label class="transportation__label transportation__label--foot" for="transportation-foot" aria-label="Кнопка передвижения пешком" data-transport="Пешком">
+              <svg height="16"><use xlink:href="#icon-run"></use></svg>
+            </label>
+          </div>
+        </fieldset>
+      </div>
       <section class="planned-trips">
         <h2 class="heading-2 planned-trips__title">Мои планы:</h2>
         <div class="planned-trips__item trip">
@@ -110,38 +110,49 @@
         </div>
         <section class="plan-adding__step plan-step" id="step-1">
           <div class="plan-step__header step-header">
-            <h3 class="step-header__title"><span class="step-header__step-number">Шаг 1.</span>Даты пребывания</h3>
-            <p class="step-header__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+            <div class="step-header__title-wrapper">
+              <h3 class="step-header__title"><span class="step-header__step-number">Шаг 1.</span>Даты пребывания</h3>
+              <p class="step-header__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+            </div>
             <ul class="step-header__steps-list">
               <li class="step-header__step step-header__step--current">Даты</li>
               <li class="step-header__step">Маршрут</li>
               <li class="step-header__step">Развлечения</li>
             </ul>
           </div>
-          <div class="plan-step__inputs step-inputs">
-            <div class="step-inputs__">
-              <label class="step-inputs__" for="travelmates-number">Ищу попутчиков:</label>
-              <div class="step-inputs__">
-                <button class="step-inputs__" type="button" aria-label="Уменьшить количество попутчиков"></button>
-                <input class="step-inputs__" type="number" name="travelmates-number" id="travelmates-number" value="2">
-                <button class="step-inputs__" type="button" aria-label="Увеличить количество попутчиков"></button>
+          <article class="plan-step__inputs step-inputs">
+            <h4 class="visually-hidden">Выбор количества попутчиков и длительности поездки</h4>
+            <div class="step-inputs__item">
+              <label class="step-inputs__label" for="travelmates-number">Ищу попутчиков:</label>
+              <div class="step-inputs__wrapper">
+                <button class="step-inputs__button step-inputs__button--minus" type="button" aria-label="Уменьшить количество попутчиков">
+                  <svg width="14" height="2"><use xlink:href="#icon-minus"></use></svg>
+                </button>
+                <input class="step-inputs__input" type="text" name="travelmates-number" id="travelmates-number" value="2">
+                <button class="step-inputs__button step-inputs__button--plus" type="button" aria-label="Увеличить количество попутчиков">
+                  <svg width="14" height="14"><use xlink:href="#icon-plus"></use></svg>
+                </button>
               </div>
-              <div class="step-inputs__">чел.</div>
+              <div class="step-inputs__unit">чел.</div>
             </div>
-            <div class="step-inputs__">
-              <label class="step-inputs__" for="trip-duration">Длительность:</label>
-              <div class="step-inputs__">
-                <button class="step-inputs__" type="button" aria-label="Уменьшить длительность поездки"></button>
-                <input class="step-inputs__" type="number" name="trip-duration" id="trip-duration" value="2">
-                <button class="step-inputs__" type="button" aria-label="Увеличить длительность поездки"></button>
+            <div class="step-inputs__item">
+              <label class="step-inputs__label" for="trip-duration">Длительность:</label>
+              <div class="step-inputs__wrapper">
+                <button class="step-inputs__button step-inputs__button--minus" type="button" aria-label="Уменьшить длительность поездки">
+                  <svg width="14" height="2"><use xlink:href="#icon-minus"></use></svg>
+                </button>
+                <input class="step-inputs__input" type="text" name="trip-duration" id="trip-duration" value="2">
+                <button class="step-inputs__button step-inputs__button--plus" type="button" aria-label="Увеличить длительность поездки">
+                  <svg width="14" height="14"><use xlink:href="#icon-plus"></use></svg>
+                </button>
               </div>
-              <div class="step-inputs__">дн.</div>
+              <div class="step-inputs__unit">дн.</div>
             </div>
-            <div class="plan-step__kids">
-              <input type="checkbox" name="kids-possible" id="kids-possible">
-              <label for="kids-possible">Можно с детьми</label>
+            <div class="step-inputs__kids">
+              <input class="visually-hidden" type="checkbox" name="kids-possible" id="kids-possible" checked>
+              <label class="step-inputs__kids-possible" for="kids-possible">Можно с детьми</label>
             </div>
-          </div>
+          </article>
           <article class="plan-step__calendar calendar">
             <div class="calendar__title">
               <a class="calendar__previous" href="#" aria-label="Перейти в предыдущий месяц"></a>
@@ -564,6 +575,12 @@
   </footer>
 
   <svg style="display: none;">
+    <symbol id="icon-minus" viewBox="0 0 14 2">
+      <path d="M0 0h14v2H0z"/>
+    </symbol>
+    <symbol id="icon-plus" viewBox="0 0 14 14">
+      <path d="M8 6V0H6v6H0v2h6v6h2V8h6V6z"/>
+    </symbol>
     <symbol id="level-percent" viewBox="0 0 100 100">
       <circle r="48" cx="50" cy="50" fill="none" stroke="#ff8d30"></circle>
     </symbol>
