@@ -1,17 +1,13 @@
 .transportation {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
+
   padding: 15px;
 }
 
 .transportation__label {
   @include circle(31px);
+  @include flex-center;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0 1px 0 0;
   background-color: $color-white;
   fill: $color-grey-d9;

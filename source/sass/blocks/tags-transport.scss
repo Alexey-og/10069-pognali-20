@@ -5,10 +5,9 @@
 }
 
 .tags-transport__item {
+  @include flex-center;
+
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 1px solid #cbced9;
   box-sizing: border-box;
   border-radius: 10px;

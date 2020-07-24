@@ -43,11 +43,11 @@
 }
 
 .calendar__day {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
+
   width: 31px;
   height: 31px;
+  padding: 3px;
   border: 1px solid #d6d9e6;
   background-color: $color-basic-blue-light;
   font-weight: 500;

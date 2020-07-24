@@ -4,14 +4,12 @@
 
 .footer-menu__item {
   @include circle(45px);
+  @include flex-center;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffd74b;
+  background-color: $color-basic-yellow;
 
   &:hover {
-    background-color: #ffbd30;
+    background-color: $color-special-yellow-dark;
   }
 
   &:active {

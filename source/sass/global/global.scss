@@ -13,14 +13,14 @@ body {
   width: 320px;   /*  Потом заменить!  */
   min-height: 100%;
   margin: 0 auto;
-  /* background-color: var(--basic-blue); */
+  /* background-color: $color-basic-blue; */
   background-color: $color-basic-blue-light;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
-  color: var(--basic-white);
+  color: $color-white;
 }
 
 img {

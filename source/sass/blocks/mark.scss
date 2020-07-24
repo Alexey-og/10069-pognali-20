@@ -1,13 +1,12 @@
 .mark {
+  @include circle(60px);
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
   background-color: rgba($color-black, 0.6);
-  color: var(--basic-white);
+  color: $color-white;
 }
 
 .mark__indicator {

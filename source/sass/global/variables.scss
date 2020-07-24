@@ -1,23 +1,4 @@
-:root {
-  --basic-white: #ffffff;
-  --basic-black: #000000;
-  --basic-blue: #161c35;
-  --basic-blue-light: #edeff6;
-  --basic-blue-dark: #192144;
-  --basic-yellow: #ffd74b;
-  --special-yellow-dark: #ffbd30;
-  --special-blue: #192144;
-  --special-blue-light: #dfe3f0;
-  --special-blue-dark: #141b3b;
-  --special-grey: #444444;
-  --special-red: #f47e7e;
-  --special-orange: #ff8d30;
-  --special-orange-light: #ffa530;
-  --button-blue: #1d2e5b;
-  --button-orange-hover: #f26926;
-  --user-status-online: #81e31e;
-  --user-status-offline: #f97676;
-}
+/*  Colors  */
 
 $color-white: #ffffff;
 $color-black: #000000;
@@ -47,9 +28,12 @@ $color-user-status-offline: #f97676;
 $color-header-blue: #182044;
 
 
-@mixin top-radius ($radius: 30px) {
-  border-top-left-radius: $radius;
-  border-top-right-radius: $radius;
+/*  Mixins  */
+
+@mixin background-center {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 @mixin bottom-radius ($radius: 30px) {
@@ -61,4 +45,16 @@ $color-header-blue: #182044;
   width: $radius;
   height: $radius;
   border-radius: 50%;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin top-radius ($radius: 30px) {
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
 }

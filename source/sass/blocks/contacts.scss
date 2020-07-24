@@ -16,28 +16,25 @@
   min-height: 45px;
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--basic-yellow);
-  fill: var(--basic-yellow);
+  color: $color-basic-yellow;
+  fill: $color-basic-yellow;
 }
 
 .contacts__item:hover {
-  color: var(--special-yellow-dark);
-  fill: var(--special-yellow-dark);
+  color: $color-special-yellow-dark;
+  fill: $color-special-yellow-dark;
 }
 
 .contacts__item:active {
-  color: rgba(255, 215, 75, 0.3);
-  fill: var(--basic-yellow);
+  color: rgba($color-basic-yellow, 0.3);
+  fill: $color-basic-yellow;
   fill-opacity: 0.3;
 }
 
 .contacts__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
+  @include circle(45px);
+
   margin-right: 15px;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
   background-color: #121936;
 }
