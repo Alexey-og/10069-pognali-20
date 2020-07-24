@@ -155,19 +155,23 @@
           </article>
           <article class="plan-step__calendar calendar">
             <div class="calendar__title">
-              <a class="calendar__previous" href="#" aria-label="Перейти в предыдущий месяц"></a>
+              <a class="calendar__arrow calendar__arrow--previous" href="#" aria-label="Перейти в предыдущий месяц">
+                <svg width="18" height="34"><use xlink:href="#month-arrow-left"></use></svg>
+              </a>
               <h4 class="calendar__month">Март 2019</h4>
-              <a class="calendar__next" href="#" aria-label="Перейти в следующий месяц"></a>
+              <a class="calendar__arrow calendar__arrow--next" href="#" aria-label="Перейти в следующий месяц">
+                <svg width="18" height="34"><use xlink:href="#month-arrow-right"></use></svg>
+              </a>
             </div>
             <div class="calendar__list">
               <div class="calendar__weekdays">
-                <div class="calendar__weekday" aria-label="Понедельник">П<span>н</span></div>
-                <div class="calendar__weekday" aria-label="Вторник">В<span>т</span></div>
-                <div class="calendar__weekday" aria-label="Среда">С<span>р</span></div>
-                <div class="calendar__weekday" aria-label="Четверг">Ч<span>т</span></div>
-                <div class="calendar__weekday" aria-label="Пятница">П<span>т</span></div>
-                <div class="calendar__weekday calendar__weekday--weekend" aria-label="Суббота">С<span>б</span></div>
-                <div class="calendar__weekday calendar__weekday--weekend" aria-label="Воскресенье">В<span>с</span></div>
+                <div class="calendar__weekday" aria-label="Понедельник">П<span class="mobile-hidden">н</span></div>
+                <div class="calendar__weekday" aria-label="Вторник">В<span class="mobile-hidden">т</span></div>
+                <div class="calendar__weekday" aria-label="Среда">С<span class="mobile-hidden">р</span></div>
+                <div class="calendar__weekday" aria-label="Четверг">Ч<span class="mobile-hidden">т</span></div>
+                <div class="calendar__weekday" aria-label="Пятница">П<span class="mobile-hidden">т</span></div>
+                <div class="calendar__weekday calendar__weekday--weekend" aria-label="Суббота">С<span class="mobile-hidden">б</span></div>
+                <div class="calendar__weekday calendar__weekday--weekend" aria-label="Воскресенье">В<span class="mobile-hidden">с</span></div>
               </div>
               <div class="calendar__days">
                 <input type="checkbox" name="feb-23" id="feb-23" disabled><label class="calendar__day" for="feb-23">23</label>
@@ -219,8 +223,10 @@
         </section>
         <section class="plan-adding__step plan-step" id="step-2">
           <div class="plan-step__header step-header">
-            <h3 class="step-header__title"><span class="step-header__step-number">Шаг 2.</span>Маршрут</h3>
-            <p class="step-header__description">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+            <div class="step-header__title-wrapper">
+              <h3 class="step-header__title"><span class="step-header__step-number">Шаг 2.</span>Маршрут</h3>
+              <p class="step-header__description">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+            </div>
             <ul class="step-header__steps-list">
               <li class="step-header__step">Даты</li>
               <li class="step-header__step step-header__step--current">Маршрут</li>
@@ -249,43 +255,46 @@
                 <img src="" alt="" width="" height="">
                 <a href=""></a>
               </div>
-              <section>
-                <div>
-                  <h5>Выберите страну</h5>
-                  <button></button>
+              <section class="country-selection hidden">
+                <div class="country-selection__header">
+                  <h5 class="country-selection__title">Выберите страну</h5>
+                  <button class="country-selection__close" type="button">
+                    <svg width="8" height="8"><use xlink:href="#icon-close"></use></svg>
+                  </button>
                 </div>
-                <div>
-                  <fieldset>
-                    <legend class="visually-hidden">Побуквенный переключатель стран</legend>
-                    <input type="radio" name="country-letter" id="letter-a"><label for="letter-">А</label>
-                    <input type="radio" name="country-letter" id="letter-b"><label for="letter-b">Б</label>
-                    <input type="radio" name="country-letter" id="letter-v"><label for="letter-v">В</label>
-                    <input type="radio" name="country-letter" id="letter-g"><label for="letter-g">Г</label>
-                    <input type="radio" name="country-letter" id="letter-d"><label for="letter-d">Д</label>
-                    <input type="radio" name="country-letter" id="letter-ye"><label for="letter-ye">Е</label>
-                    <input type="radio" name="country-letter" id="letter-z"><label for="letter-z">З</label>
-                    <input type="radio" name="country-letter" id="letter-i"><label for="letter-i">И</label>
-                    <input type="radio" name="country-letter" id="letter-k"><label for="letter-k">К</label>
-                    <input type="radio" name="country-letter" id="letter-l"><label for="letter-l">Л</label>
-                    <input type="radio" name="country-letter" id="letter-m"><label for="letter-m">М</label>
-                    <input type="radio" name="country-letter" id="letter-n"><label for="letter-n">Н</label>
-                    <input type="radio" name="country-letter" id="letter-o"><label for="letter-o">О</label>
-                    <input type="radio" name="country-letter" id="letter-p"><label for="letter-p">П</label>
-                    <input type="radio" name="country-letter" id="letter-r"><label for="letter-r">Р</label>
-                    <input type="radio" name="country-letter" id="letter-s"><label for="letter-s">С</label>
-                    <input type="radio" name="country-letter" id="letter-t"><label for="letter-t">Т</label>
-                    <input type="radio" name="country-letter" id="letter-u"><label for="letter-u">У</label>
-                    <input type="radio" name="country-letter" id="letter-f"><label for="letter-f">Ф</label>
-                    <input type="radio" name="country-letter" id="letter-kh"><label for="letter-kh">Х</label>
-                    <input type="radio" name="country-letter" id="letter-ch"><label for="letter-ch">Ч</label>
-                    <input type="radio" name="country-letter" id="letter-sh"><label for="letter-sh">Ш</label>
-                    <input type="radio" name="country-letter" id="letter-ya"><label for="letter-ya">Э</label>
-                    <input type="radio" name="country-letter" id="letter-ya"><label for="letter-ya">Ю</label>
-                    <input type="radio" name="country-letter" id="letter-ya"><label for="letter-ya">Я</label>
-                  </fieldset>
-                </div>
-                <div>
-                  <div data-country-letter="a">
+                <fieldset class="country-selection__fieldset" id="country-selection">
+                  <legend class="visually-hidden">Побуквенный переключатель стран</legend>
+                  <label class="visually-hidden" for="country-selection">Побуквенный переключатель стран</label>
+                  <div class="country-selection__letters">
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-a"><label class="country-selection__letter" for="letter-a">А</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-b"><label class="country-selection__letter" for="letter-b">Б</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-v"><label class="country-selection__letter" for="letter-v">В</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-g"><label class="country-selection__letter" for="letter-g">Г</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-d"><label class="country-selection__letter" for="letter-d">Д</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-ye"><label class="country-selection__letter" for="letter-ye">Е</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-z"><label class="country-selection__letter" for="letter-z">З</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-i"><label class="country-selection__letter" for="letter-i">И</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-k"><label class="country-selection__letter" for="letter-k">К</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-l"><label class="country-selection__letter" for="letter-l">Л</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-m"><label class="country-selection__letter" for="letter-m">М</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-n"><label class="country-selection__letter" for="letter-n">Н</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-o"><label class="country-selection__letter" for="letter-o">О</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-p"><label class="country-selection__letter" for="letter-p">П</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-r"><label class="country-selection__letter" for="letter-r">Р</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-s"><label class="country-selection__letter" for="letter-s">С</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-t"><label class="country-selection__letter" for="letter-t">Т</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-u"><label class="country-selection__letter" for="letter-u">У</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-f"><label class="country-selection__letter" for="letter-f">Ф</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-kh"><label class="country-selection__letter" for="letter-kh">Х</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-ch"><label class="country-selection__letter" for="letter-ch">Ч</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-sh"><label class="country-selection__letter" for="letter-sh">Ш</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-e"><label class="country-selection__letter" for="letter-e">Э</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-yu"><label class="country-selection__letter" for="letter-yu">Ю</label>
+                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-ya"><label class="country-selection__letter" for="letter-ya">Я</label>
+                  </div>
+                </fieldset>
+                <div class="country-selection__countries-wrapper">
+                  <div class="country-selection__countries" data-country-letter="a">
                     <a href="/islands/australia.html" data-region="islands">Австралия</a>
                     <a href="/europe/austria.html" data-region="europe">Австрия</a>
                     <a href="/asia/azerbaijan.html" data-region="asia">Азербайджан</a>
@@ -298,7 +307,7 @@
                     <a href="/europe/armenia.html" data-region="europe">Армения</a>
                     <a href="/asia/afghanistan.html" data-region="asia">Афганистан</a>
                   </div>
-                  <div data-country-letter="b">
+                  <div class="country-selection__countries hidden" data-country-letter="b">
                     <a href="/islands/bahamas.html" data-region="islands">Багамские Острова</a>
                     <a href="/asia/bangladesh.html" data-region="asia">Бангладеш</a>
                     <a href="/islands/barbados.html" data-region="islands">Барбадос</a>
@@ -317,7 +326,7 @@
                     <a href="/africa/burundi.html" data-region="africa">Бурунди</a>
                     <a href="/asia/bhutan.html" data-region="asia">Бутан</a>
                   </div>
-                  <div data-country-letter="v">
+                  <div class="country-selection__countries hidden" data-country-letter="v">
                     <a href="/islands/vanuatu.html" data-region="islands">Вануату</a>
                     <a href="/europe/united-kingdom.html" data-region="europe">Великобритания</a>
                     <a href="/europe/hungary.html" data-region="europe">Венгрия</a>
@@ -325,7 +334,7 @@
                     <a href="/asia/timor-leste.html" data-region="asia">Восточный Тимор</a>
                     <a href="/asia/vietnam.html" data-region="asia">Вьетнам</a>
                   </div>
-                  <div data-country-letter="g">
+                  <div class="country-selection__countries hidden" data-country-letter="g">
                     <a href="/africa/gabon.html" data-region="africa">Габон</a>
                     <a href="/islands/haiti.html" data-region="islands">Гаити</a>
                     <a href="/america/guyana.html" data-region="america">Гайана</a>
@@ -340,20 +349,20 @@
                     <a href="/europe/greece.html" data-region="europe">Греция</a>
                     <a href="/europe/georgia.html" data-region="europe">Грузия</a>
                   </div>
-                  <div data-country-letter="d">
+                  <div class="country-selection__countries hidden" data-country-letter="d">
                     <a href="/europe/denmark.html" data-region="europe">Дания</a>
                     <a href="/africa/djibouti.html" data-region="africa">Джибути</a>
                     <a href="/islands/dominica.html" data-region="islands">Доминика</a>
                     <a href="/islands/dominican-republic.html" data-region="islands">Доминикана</a>
                   </div>
-                  <div data-country-letter="ye">
+                  <div class="country-selection__countries hidden" data-country-letter="ye">
                     <a href="/africa/egypt.html" data-region="africa">Египет</a>
                   </div>
-                  <div data-country-letter="z">
+                  <div class="country-selection__countries hidden" data-country-letter="z">
                     <a href="/africa/zambia.html" data-region="africa">Замбия</a>
                     <a href="/africa/zimbabwe.html" data-region="africa">Зимбабве</a>
                   </div>
-                  <div data-country-letter="i">
+                  <div class="country-selection__countries hidden" data-country-letter="i">
                     <a href="/asia/israel.html" data-region="asia">Израиль</a>
                     <a href="/asia/india.html" data-region="asia">Индия</a>
                     <a href="/asia/indonesia.html" data-region="asia">Индонезия</a>
@@ -365,7 +374,7 @@
                     <a href="/europe/spain.html" data-region="europe">Испания</a>
                     <a href="/europe/italy.html" data-region="europe">Италия</a>
                   </div>
-                  <div data-country-letter="k">
+                  <div class="country-selection__countries hidden" data-country-letter="k">
                     <a href="/africa/cabo-verde.html" data-region="africa">Кабо-Верде</a>
                     <a href="/asia/kazakhstan.html" data-region="asia">Казахстан</a>
                     <a href="/asia/cambodia.html" data-region="asia">Камбоджа</a>
@@ -379,7 +388,7 @@
                     <a href="/asia/china.html" data-region="asia">Китай</a>
                     <a href="/america/colombia.html" data-region="america">Колумбия</a>
                   </div>
-                  <div data-country-letter="l">
+                  <div class="country-selection__countries hidden" data-country-letter="l">
                     <a href="/asia/laos.html" data-region="asia">Лаос</a>
                     <a href="/europe/latvia.html" data-region="europe">Латвия</a>
                     <a href="/africa/lesotho.html" data-region="africa">Лесото</a>
@@ -390,7 +399,7 @@
                     <a href="/europe/liechtenstein.html" data-region="europe">Лихтенштейн</a>
                     <a href="/europe/luxembourg.html" data-region="europe">Люксембург</a>
                   </div>
-                  <div data-country-letter="m">
+                  <div class="country-selection__countries hidden" data-country-letter="m">
                     <a href="/islands/mauritius.html" data-region="islands">Маврикий</a>
                     <a href="/africa/mauritania.html" data-region="africa">Мавритания</a>
                     <a href="/africa/madagascar.html" data-region="africa">Мадагаскар</a>
@@ -402,7 +411,7 @@
                     <a href="/africa/morocco.html" data-region="africa">Марокко</a>
                     <a href="/america/mexico.html" data-region="america">Мексика</a>
                   </div>
-                  <div data-country-letter="n">
+                  <div class="country-selection__countries hidden" data-country-letter="n">
                     <a href="/africa/namibia.html" data-region="africa">Намибия</a>
                     <a href="/islands/nauru.html" data-region="islands">Науру</a>
                     <a href="/asia/nepal.html" data-region="asia">Непал</a>
@@ -413,11 +422,11 @@
                     <a href="/islands/new-zealand.html" data-region="islands">Новая Зеландия</a>
                     <a href="/europe/norway.html" data-region="europe">Норвегия</a>
                   </div>
-                  <div data-country-letter="o">
+                  <div class="country-selection__countries hidden" data-country-letter="o">
                     <a href="/asia/united-arab-emirates.html" data-region="asia">ОАЭ</a>
                     <a href="/asia/oman.html" data-region="asia">Оман</a>
                   </div>
-                  <div data-country-letter="p">
+                  <div class="country-selection__countries hidden" data-country-letter="p">
                     <a href="/asia/pakistan.html" data-region="asia">Пакистан</a>
                     <a href="/islands/palau.html" data-region="islands">Палау</a>
                     <a href="/america/panama.html" data-region="america">Панама</a>
@@ -427,12 +436,12 @@
                     <a href="/europe/poland.html" data-region="europe">Польша</a>
                     <a href="/europe/portugal.html" data-region="europe">Португалия</a>
                   </div>
-                  <div data-country-letter="r">
+                  <div class="country-selection__countries hidden" data-country-letter="r">
                     <a href="/europe/russia.html" data-region="europe">Россия</a>
                     <a href="/africa/rwanda.html" data-region="africa">Руанда</a>
                     <a href="/europe/romania.html" data-region="europe">Румыния</a>
                   </div>
-                  <div data-country-letter="s">
+                  <div class="country-selection__countries hidden" data-country-letter="s">
                     <a href="/america/el-salvador.html" data-region="america">Сальвадор</a>
                     <a href="/islands/samoa.html" data-region="islands">Самоа</a>
                     <a href="/europe/san-marino.html" data-region="europe">Сан-Марино</a>
@@ -446,7 +455,7 @@
                     <a href="/europe/slovenia.html" data-region="europe">Словения</a>
                     <a href="/america/usa.html" data-region="america">США</a>
                   </div>
-                  <div data-country-letter="t">
+                  <div class="country-selection__countries hidden" data-country-letter="t">
                     <a href="/asia/tajikistan.html" data-region="asia">Таджикистан</a>
                     <a href="/asia/thailand.html" data-region="asia">Таиланд</a>
                     <a href="/africa/tanzania.html" data-region="africa">Танзания</a>
@@ -458,44 +467,44 @@
                     <a href="/asia/turkmenistan.html" data-region="asia">Туркмения</a>
                     <a href="/asia/turkey.html" data-region="asia">Турция</a>
                   </div>
-                  <div data-country-letter="u">
+                  <div class="country-selection__countries hidden" data-country-letter="u">
                     <a href="/africa/uganda.html" data-region="africa">Уганда</a>
                     <a href="/asia/uzbekistan.html" data-region="asia">Узбекистан</a>
                     <a href="/europe/ukraine.html" data-region="europe">Украина</a>
                     <a href="/america/uruguay.html" data-region="america">Уругвай</a>
                   </div>
-                  <div data-country-letter="f">
+                  <div class="country-selection__countries hidden" data-country-letter="f">
                     <a href="/islands/fiji.html" data-region="islands">Фиджи</a>
                     <a href="/islands/philippines.html" data-region="islands">Филиппины</a>
                     <a href="/europe/finland.html" data-region="europe">Финляндия</a>
                     <a href="/europe/france.html" data-region="europe">Франция</a>
                   </div>
-                  <div data-country-letter="kh">
+                  <div class="country-selection__countries hidden" data-country-letter="kh">
                     <a href="/europe/croatia.html" data-region="europe">Хорватия</a>
                   </div>
-                  <div data-country-letter="ch">
+                  <div class="country-selection__countries hidden" data-country-letter="ch">
                     <a href="/africa/chad.html" data-region="africa">Чад</a>
                     <a href="/europe/montenegro.html" data-region="europe">Черногория</a>
                     <a href="/europe/czechia.html" data-region="europe">Чехия</a>
                     <a href="/america/chile.html" data-region="america">Чили</a>
                   </div>
-                  <div data-country-letter="sh">
+                  <div class="country-selection__countries hidden" data-country-letter="sh">
                     <a href="/europe/switzerland.html" data-region="europe">Швейцария</a>
                     <a href="/europe/sweden.html" data-region="europe">Швеция</a>
                     <a href="/asia/sri-lanka.html" data-region="asia">Шри-Ланка</a>
                   </div>
-                  <div data-country-letter="e">
+                  <div class="country-selection__countries hidden" data-country-letter="e">
                     <a href="/america/ecuador.html" data-region="america">Эквадор</a>
                     <a href="/africa/eritrea.html" data-region="africa">Эритрея</a>
                     <a href="/africa/eswatini.html" data-region="africa">Эсватини</a>
                     <a href="/europe/estonia.html" data-region="europe">Эстония</a>
                     <a href="/africa/ethiopia.html" data-region="africa">Эфиопия</a>
                   </div>
-                  <div data-country-letter="yu">
+                  <div class="country-selection__countries hidden" data-country-letter="yu">
                     <a href="/africa/south-africa.html" data-region="africa">ЮАР</a>
                     <a href="/africa/south-sudan.html" data-region="africa">Южный Судан</a>
                   </div>
-                  <div data-country-letter="ya">
+                  <div class="country-selection__countries hidden" data-country-letter="ya">
                     <a href="/america/jamaica.html" data-region="america">Ямайка</a>
                     <a href="/asia/japan.html" data-region="asia">Япония</a>
                   </div>
@@ -519,8 +528,10 @@
         </section>
         <section class="plan-adding__step plan-step" id="step-3">
           <div class="plan-step__header step-header">
-            <h3 class="step-header__title"><span class="step-header__step-number">Шаг 3.</span>Развлечения</h3>
-            <p class="step-header__description">Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+            <div class="step-header__title-wrapper">
+              <h3 class="step-header__title"><span class="step-header__step-number">Шаг 3.</span>Развлечения</h3>
+              <p class="step-header__description">Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+            </div>
             <ul class="step-header__steps-list">
               <li class="step-header__step">Даты</li>
               <li class="step-header__step">Маршрут</li>
@@ -580,6 +591,16 @@
     </symbol>
     <symbol id="icon-plus" viewBox="0 0 14 14">
       <path d="M8 6V0H6v6H0v2h6v6h2V8h6V6z"/>
+    </symbol>
+    <symbol id="month-arrow-left" viewBox="0 0 18 34">
+      <path d="M3.6 17l14-14.4c.6-.6.6-1.6 0-2.1-.6-.6-1.5-.6-2.1 0L.4 15.9c-.6.6-.6 1.6 0 2.1l15.1 15.5c.3.3.7.4 1 .4s.8-.1 1-.4c.6-.6.6-1.6 0-2.1L3.6 17z"/>
+    </symbol>
+    <symbol id="month-arrow-right" viewBox="0 0 18 34">
+      <path d="M14.4 17L.4 2.6C-.1 2-.1 1 .4.4 1-.2 1.9-.2 2.5.4l15.1 15.5c.6.6.6 1.6 0 2.1L2.5 33.6c-.3.3-.7.4-1 .4s-.8-.1-1-.4c-.6-.6-.6-1.6 0-2.1L14.4 17z"/>
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 9 9">
+      <path d="M8 1L1 8" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M1 1L8 8" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
     <symbol id="level-percent" viewBox="0 0 100 100">
       <circle r="48" cx="50" cy="50" fill="none" stroke="#ff8d30"></circle>

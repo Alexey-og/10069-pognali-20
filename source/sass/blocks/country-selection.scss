@@ -1,0 +1,115 @@
+.country-selection {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 2px 16px rgba(#d4d9eb, 0.25);
+  background: $color-white;
+}
+
+.country-selection__header {
+  @include top-radius(4px);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 5px 5px 17px;
+  min-height: 42px;
+  background-color: $color-button-blue;
+}
+
+.country-selection__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $color-white;
+}
+
+.country-selection__close {
+  @include flex-center;
+
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  stroke-opacity: 0.7;
+  cursor: pointer;
+
+  &:hover {
+    stroke-opacity: 1;
+  }
+
+  &:active {
+    stroke-opacity: 0.1;
+  }
+}
+
+.country-selection__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.country-selection__letters {
+  display: grid;
+  grid-template-columns: repeat(5, 44px);
+}
+
+.country-selection__letters input:checked + .country-selection__letter {
+  border-color: #1d2e5b;
+  background-color: #1d2e5b;
+  color: $color-white;
+}
+
+.country-selection__letter {
+  @include flex-center;
+
+  height: 40px;
+  border: 1px solid #cbced9;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $color-button-blue;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:active {
+    border-color: #1d2e5b;
+    background-color: #1d2e5b;
+    color: $color-white;
+  }
+}
+
+.country-selection__countries-wrapper {
+  @include bottom-radius(4px);
+
+  padding: 19px 19px 27px 19px;
+  border: 1px solid #cbced9;
+  border-top: none;
+  background-color: $color-white;
+}
+
+.country-selection__countries {
+  display: flex;
+  flex-direction: column;
+}
+
+.country-selection__countries a {
+  font-weight: normal;
+  color: $color-grey-44;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-button-blue;
+  }
+
+  &:active {
+    color: rgba($color-button-blue, 0.3);
+  }
+}

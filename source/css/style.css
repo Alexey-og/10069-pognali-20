@@ -1000,6 +1000,7 @@ stroke-dasharray: 241px 60px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
   min-height: 40px;
   border-radius: 20px;
@@ -1010,6 +1011,11 @@ stroke-dasharray: 241px 60px;
   text-transform: uppercase;
   color: #161c35;
   cursor: pointer; }
+  .profile-header__change-photo:hover {
+    background-color: #d1d7e9; }
+  .profile-header__change-photo:active {
+    background-color: #dfe3f0;
+    color: rgba(22, 28, 53, 0.3); }
 
 .tags-transport {
   display: flex;
@@ -1106,6 +1112,32 @@ stroke-dasharray: 241px 60px;
   padding: 30px 25px;
   background-color: #d4d9eb; }
 
+.plan-adding__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 34px; }
+
+.plan-adding__header .heading-2 {
+  margin-bottom: 0; }
+
+.plan-adding__dots {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 18px; }
+
+.plan-adding__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-left: 16px;
+  background-color: rgba(29, 46, 91, 0.3); }
+  .plan-adding__dot--current {
+    background-color: #1d2e5b; }
+
 .plan-adding__step {
   margin-bottom: 10px; }
 
@@ -1113,6 +1145,19 @@ stroke-dasharray: 241px 60px;
   padding: 23px 25px;
   border-radius: 10px;
   background-color: #ffffff; }
+
+.plan-step__button {
+  justify-content: center;
+  min-height: 40px;
+  padding: 7px;
+  border-radius: 20px;
+  background-image: none;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #1d2e5b; }
+  .plan-step__button:hover, .plan-step__button:active {
+    background-image: none; }
 
 .step-header {
   display: flex; }
@@ -1131,10 +1176,10 @@ stroke-dasharray: 241px 60px;
   color: #444444; }
 
 .step-header__steps-list {
-  display: none;
   list-style-type: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  display: none; }
 
 .step-header__step {
   position: relative;
@@ -1188,10 +1233,13 @@ stroke-dasharray: 241px 60px;
   height: 43px;
   margin-top: 8px;
   margin-bottom: 20px;
-  border: 1px solid;
   border: 1px solid #cbced9;
   border-radius: 4px;
   order: 3; }
+  .step-inputs__wrapper:hover {
+    border-color: #959bb2; }
+  .step-inputs__wrapper:active {
+    border-color: #161c35; }
 
 .step-inputs__button,
 .step-inputs__input {
@@ -1218,7 +1266,12 @@ stroke-dasharray: 241px 60px;
 .step-inputs__input {
   width: 100px;
   padding: 10px;
-  text-align: center; }
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1d2e5b; }
 
 .step-inputs__unit {
   font-weight: 500;
@@ -1280,6 +1333,25 @@ stroke-dasharray: 241px 60px;
   line-height: 20px;
   color: #1d2e5b; }
 
+.calendar__arrow {
+  display: flex;
+  align-items: center;
+  width: 30px;
+  height: 100%; }
+  .calendar__arrow:hover svg {
+    fill-opacity: 0.5; }
+  .calendar__arrow:active svg {
+    fill-opacity: 0.1; }
+  .calendar__arrow--previous {
+    justify-content: flex-start; }
+  .calendar__arrow--next {
+    justify-content: flex-end; }
+
+.calendar__arrow svg {
+  width: 9px;
+  height: 18px;
+  fill-opacity: 0.3; }
+
 .calendar__weekdays {
   display: grid;
   grid-template-columns: repeat(7, 31px); }
@@ -1333,6 +1405,103 @@ stroke-dasharray: 241px 60px;
 .calendar__days input:not(:disabled) + .calendar__day:hover {
   border: 2px solid #ff5c23;
   cursor: pointer; }
+
+.country-selection {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 2px 16px rgba(212, 217, 235, 0.25);
+  background: #ffffff; }
+
+.country-selection__header {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 5px 5px 17px;
+  min-height: 42px;
+  background-color: #1d2e5b; }
+
+.country-selection__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ffffff; }
+
+.country-selection__close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  stroke-opacity: 0.7;
+  cursor: pointer; }
+  .country-selection__close:hover {
+    stroke-opacity: 1; }
+  .country-selection__close:active {
+    stroke-opacity: 0.1; }
+
+.country-selection__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent; }
+
+.country-selection__letters {
+  display: grid;
+  grid-template-columns: repeat(5, 44px); }
+
+.country-selection__letters input:checked + .country-selection__letter {
+  border-color: #1d2e5b;
+  background-color: #1d2e5b;
+  color: #ffffff; }
+
+.country-selection__letter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 40px;
+  border: 1px solid #cbced9;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #1d2e5b;
+  cursor: pointer; }
+  .country-selection__letter:hover {
+    border-color: #959bb2; }
+  .country-selection__letter:active {
+    border-color: #1d2e5b;
+    background-color: #1d2e5b;
+    color: #ffffff; }
+
+.country-selection__countries-wrapper {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 19px 19px 27px 19px;
+  border: 1px solid #cbced9;
+  border-top: none;
+  background-color: #ffffff; }
+
+.country-selection__countries {
+  display: flex;
+  flex-direction: column; }
+
+.country-selection__countries a {
+  font-weight: normal;
+  color: #444444;
+  text-decoration: none; }
+  .country-selection__countries a:hover {
+    color: #1d2e5b; }
+  .country-selection__countries a:active {
+    color: rgba(29, 46, 91, 0.3); }
 
 /*  Modals  */
 .business-rates {

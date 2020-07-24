@@ -28,10 +28,17 @@
   height: 43px;
   margin-top: 8px;
   margin-bottom: 20px;
-  border: 1px solid ;
   border: 1px solid #cbced9;
   border-radius: 4px;
   order: 3;
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:active {
+    border-color: $color-basic-blue;
+  }
 }
 
 .step-inputs__button,
@@ -64,14 +71,15 @@
   }
 }
 
-
-
-
-
 .step-inputs__input {
   width: 100px;
   padding: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 15px;
   text-align: center;
+  text-transform: uppercase;
+  color: $color-button-blue;
 }
 
 .step-inputs__unit {

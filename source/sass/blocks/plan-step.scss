@@ -3,3 +3,20 @@
   border-radius: 10px;
   background-color: $color-white;
 }
+
+.plan-step__button {
+  justify-content: center;
+  min-height: 40px;
+  padding: 7px;
+  border-radius: 20px;
+  background-image: none;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $color-button-blue;
+
+  &:hover,
+  &:active {
+    background-image: none;
+  }
+}

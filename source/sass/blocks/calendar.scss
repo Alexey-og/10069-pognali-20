@@ -16,6 +16,35 @@
   color: $color-button-blue;
 }
 
+.calendar__arrow {
+  display: flex;
+  align-items: center;
+  width: 30px;
+  height: 100%;
+
+  &:hover svg {
+    fill-opacity: 0.5;
+  }
+
+  &:active svg {
+    fill-opacity: 0.1;
+  }
+
+  &--previous {
+    justify-content: flex-start;
+  }
+
+  &--next {
+    justify-content: flex-end;
+  }
+}
+
+.calendar__arrow svg {
+  width: 9px;
+  height: 18px;
+  fill-opacity: 0.3;
+}
+
 .calendar__weekdays {
   display: grid;
   grid-template-columns: repeat(7, 31px);

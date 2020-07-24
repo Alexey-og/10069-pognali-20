@@ -18,8 +18,9 @@
 }
 
 .step-header__steps-list {
-  display: none;
   @include list-reset;
+
+  display: none;
 }
 
 .step-header__step {
