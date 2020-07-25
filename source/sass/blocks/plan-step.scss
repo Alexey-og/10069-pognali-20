@@ -1,7 +1,11 @@
 .plan-step {
-  padding: 23px 25px;
+  padding: 23px 25px 17px;
   border-radius: 10px;
   background-color: $color-white;
+
+  &--calendar {
+    padding-bottom: 25px;
+  }
 }
 
 .plan-step__button {
@@ -19,4 +23,8 @@
   &:active {
     background-image: none;
   }
+}
+
+.plan-step__calendar {
+  margin-bottom: 25px;
 }

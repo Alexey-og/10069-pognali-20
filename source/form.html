@@ -116,7 +116,7 @@
             <li class="plan-adding__dot"></li>
           </ul>
         </div>
-        <section class="plan-adding__step plan-step" id="step-1">
+        <section class="plan-adding__step plan-step plan-step--calendar" id="step-1">
           <div class="plan-step__header step-header">
             <div class="step-header__title-wrapper">
               <h3 class="step-header__title"><span class="step-header__step-number">Шаг 1.</span>Даты пребывания</h3>
@@ -225,9 +225,9 @@
                 <input type="checkbox" name="april-4" id="april-4"><label class="calendar__day" for="april-4">4</label>
                 <input type="checkbox" name="april-5" id="april-5"><label class="calendar__day" for="april-5">5</label>
               </div>
-            </article>
-            <a class="button plan-step__button" href="#step-2">Следующий шаг</a>
+            </div>
           </article>
+          <a class="button plan-step__button" href="#step-2">Следующий шаг</a>
         </section>
         <section class="plan-adding__step plan-step" id="step-2">
           <div class="plan-step__header step-header">
@@ -241,34 +241,35 @@
               <li class="step-header__step">Развлечения</li>
             </ul>
           </div>
-          <article>
-            <h4>Список выбранных стран</h4>
-            <div>
-              <button>Босния и Герцеговина</button>
-              <div>
-                <img src="" alt="" width="" height="">
-                <a href=""></a>
+          <article class="desired-countries">
+            <h4 class="visually-hidden">Список выбранных стран</h4>
+            <div class="desired-countries__item">
+              <a class="desired-countries__name" href="">Босния и Герцеговина</a>
+              <div class="desired-countries__flag desired-countries__flag--bosnia-and-herzegovina"></div>
+              <a class="desired-countries__close" aria-label="Удалить выбранную страну">
+                <svg width="9" height="9"><use xlink:href="#icon-close"></use></svg>
+              </a>
+            </div>
+            <div class="desired-countries__item">
+              <a class="desired-countries__name" href="">Чехия</a>
+              <div class="desired-countries__flag desired-countries__flag--czechia">
+              <a class="desired-countries__close" aria-label="Удалить выбранную страну">
+                <svg width="9" height="9"><use xlink:href="#icon-close"></use></svg>
+              </a>
               </div>
             </div>
-            <div>
-              <button>Босния и Герцеговина</button>
-              <div>
-                <img src="" alt="" width="" height="">
-                <a href=""></a>
-              </div>
-            </div>
-            <div>
-              <button>Выберите страну</button>
-              <div>
-                <img src="" alt="" width="" height="">
-                <a href=""></a>
-              </div>
+            <div class="desired-countries__item desired-countries__item--choose">
+              <a class="desired-countries__name" href="">Выберите страну</a>
+              <div class="desired-countries__flag hidden"></div>
+              <a class="desired-countries__close" aria-label="Удалить выбранную страну">
+                <svg width="9" height="9"><use xlink:href="#icon-close"></use></svg>
+              </a>
               <section class="country-selection hidden">
                 <div class="country-selection__header">
                   <h5 class="country-selection__title">Выберите страну</h5>
-                  <button class="country-selection__close" type="button">
+                  <a class="country-selection__close">
                     <svg width="8" height="8"><use xlink:href="#icon-close"></use></svg>
-                  </button>
+                  </a>
                 </div>
                 <fieldset class="country-selection__fieldset" id="country-selection">
                   <legend class="visually-hidden">Побуквенный переключатель стран</legend>
@@ -519,20 +520,20 @@
                 </div>
               </section>
             </div>
-            <div>
-              <button>Добавить страну</button>
-              <div>
-                <img src="" alt="" width="" height="">
-                <a href=""></a>
-              </div>
-            </div>
-            <div>
-              <a href="#step-3">Следующий шаг</a>
-              <div>
-                <a href="#step-1">На шаг назад</a>
-              </div>
+            <div class="desired-countries__item desired-countries__item--add">
+              <a class="desired-countries__name" href="">Добавить страну</a>
+              <div class="desired-countries__flag hidden"></div>
+              <a class="desired-countries__close" aria-label="Удалить выбранную страну">
+                <svg width="9" height="9"><use xlink:href="#icon-close"></use></svg>
+              </a>
             </div>
           </article>
+          <div class="desired-countries__buttons">
+            <a class="button plan-step__button" href="#step-3">Следующий шаг</a>
+            <div class="desired-countries__back">
+              <a class="desired-countries__step-back" href="#step-1">На шаг назад</a>
+            </div>
+          </div>
         </section>
         <section class="plan-adding__step plan-step" id="step-3">
           <div class="plan-step__header step-header">
@@ -607,8 +608,8 @@
       <path d="M14.4 17L.4 2.6C-.1 2-.1 1 .4.4 1-.2 1.9-.2 2.5.4l15.1 15.5c.6.6.6 1.6 0 2.1L2.5 33.6c-.3.3-.7.4-1 .4s-.8-.1-1-.4c-.6-.6-.6-1.6 0-2.1L14.4 17z"/>
     </symbol>
     <symbol id="icon-close" viewBox="0 0 9 9">
-      <path d="M8 1L1 8" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M1 1L8 8" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M8 1L1 8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M1 1L8 8" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
     <symbol id="level-percent" viewBox="0 0 100 100">
       <circle r="48" cx="50" cy="50" fill="none" stroke="#ff8d30"></circle>
