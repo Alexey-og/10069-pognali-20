@@ -61,11 +61,11 @@
         <fieldset class="tags-transport__item">
           <legend class="tags-transport__title">транспорт</legend>
           <div class="transportation">
-            <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-avia" id="transportation-avia">
+            <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-avia" id="transportation-avia" checked>
             <label class="transportation__label transportation__label--avia" for="transportation-avia" aria-label="Кнопка передвижения на самолете" data-transport="Авиаперелет">
               <svg height="16"><use xlink:href="#icon-plane"></use></svg>
             </label>
-            <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bus" id="transportation-bus">
+            <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bus" id="transportation-bus" checked>
             <label class="transportation__label transportation__label--bus" for="transportation-bus" aria-label="Кнопка передвижения на автотранспорте" data-transport="Автотранспорт">
               <svg height="16"><use xlink:href="#icon-bus"></use></svg>
             </label>
@@ -73,7 +73,7 @@
             <label class="transportation__label transportation__label--bicycle" for="transportation-bicycle" aria-label="Кнопка передвижения на велосипеде" data-transport="Велосипед">
               <svg height="16"><use xlink:href="#icon-bicycle"></use></svg>
             </label>
-            <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-foot" id="transportation-foot">
+            <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-foot" id="transportation-foot" checked>
             <label class="transportation__label transportation__label--foot" for="transportation-foot" aria-label="Кнопка передвижения пешком" data-transport="Пешком">
               <svg height="16"><use xlink:href="#icon-run"></use></svg>
             </label>
@@ -81,21 +81,29 @@
         </fieldset>
       </div>
       <section class="planned-trips">
-        <h2 class="heading-2 planned-trips__title">Мои планы:</h2>
+        <div class="plan-adding__header">
+          <h2 class="heading-2 planned-trips__title">Мои планы:</h2>
+        </div>
         <div class="planned-trips__item trip">
-          <p class="trip__countries"><span class="trip__number">1.</span>Франция, Италия</p>
-          <p class="trip__info">
-            <span class="trip__travelmates">3 попутчика</span>
-            <span class="trip__dates">26 мар &ndash; 29 мар</span>
-          </p>
+          <div class="trip__header">
+            <p class="trip__number">1.</p>
+            <p class="trip__countries">Франция, Италия</p>
+          </div>
+          <div class="trip__info">
+            <p class="trip__travelmates">3 попутчика</p>
+            <p class="trip__dates">26 мар &mdash; 29 мар</p>
+          </div>
           <a class="trip__change" href="">изменить</a>
         </div>
         <div class="planned-trips__item trip">
-          <p class="trip__countries"><span class="trip__number">2.</span>Таиланд, Индонезия</p>
-          <p class="trip__info">
-            <span class="trip__travelmates">1 попутчик</span>
-            <span class="trip__dates">1 июл &ndash; 15 июл</span>
-          </p>
+          <div class="trip__header">
+            <p class="trip__number">2.</p>
+            <p class="trip__countries">Таиланд, Индонезия</p>
+          </div>
+          <div class="trip__info">
+            <p class="trip__travelmates">1 попутчик</p>
+            <p class="trip__dates">1 июл &mdash; 15 июл</p>
+          </div>
           <a class="trip__change" href="">изменить</a>
         </div>
       </section>

@@ -187,6 +187,7 @@ textarea {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  margin-top: -30px;
   min-height: 239px;
   padding: 37px 25px 5px 25px;
   background-color: #ffffff;
@@ -1106,10 +1107,71 @@ stroke-dasharray: 241px 60px;
   outline-style: auto;
   outline-width: 1px; }
 
+.planned-trips {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  position: relative;
+  padding: 25px 25px 60px 25px;
+  background-color: #dfe3f0; }
+
+.planned-trips__item {
+  margin-bottom: 10px; }
+
+.trip {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 23px;
+  min-height: 154px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #1d2e5b; }
+
+.trip__header {
+  display: flex;
+  align-items: center; }
+
+.trip__number {
+  margin: 0 5px 0 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px; }
+
+.trip__countries {
+  margin: 0;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px; }
+
+.trip__info {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase; }
+
+.trip__travelmates,
+.trip__dates {
+  margin: 0 0 5px 0; }
+
+.trip__change {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  opacity: 0.3; }
+
 .plan-adding {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  padding: 30px 25px;
+  position: relative;
+  margin-top: -30px;
+  padding: 30px 25px 73px;
   background-color: #d4d9eb; }
 
 .plan-adding__header {
@@ -1409,7 +1471,7 @@ stroke-dasharray: 241px 60px;
 .country-selection {
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 2px 16px rgba(212, 217, 235, 0.25);
+  box-shadow: 0 2px 16px rgba(212, 217, 235, 0.25);
   background: #ffffff; }
 
 .country-selection__header {

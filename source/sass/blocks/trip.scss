@@ -1,0 +1,55 @@
+.trip {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 23px;
+  min-height: 154px;
+  border-radius: 10px;
+  background-color: $color-white;
+  color: $color-button-blue;
+}
+
+.trip__header {
+  display: flex;
+  align-items: center;
+}
+
+.trip__number {
+  margin: 0 5px 0 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.trip__countries {
+  margin: 0;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.trip__info {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.trip__travelmates,
+.trip__dates {
+  margin: 0 0 5px 0;
+}
+
+.trip__change {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-black;
+  opacity: 0.3;
+}

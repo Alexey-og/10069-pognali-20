@@ -1,7 +1,9 @@
 .plan-adding {
   @include top-radius(30px);
 
-  padding: 30px 25px;
+  position: relative;
+  margin-top: -30px;
+  padding: 30px 25px 73px;
   background-color: #d4d9eb;
 }
 
