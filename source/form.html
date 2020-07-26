@@ -53,14 +53,14 @@
         </label>
       </section>
       <div class="tags-transport">
-        <fieldset class="tags-transport__item tags">
+        <fieldset class="tags-transport__item tags-transport__item--tags">
           <legend class="tags-transport__title">тэги</legend>
-          <textarea class="tags__tags-list" name="tags-list" id="tags-list">#бургер #бар #футбол #концерт #крафт</textarea>
+          <textarea class="tags-transport__tags" name="tags-list" id="tags-list" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
           <label class="visually-hidden" for="tags-list" aria-label="Список тегов пользователя"></label>
         </fieldset>
         <fieldset class="tags-transport__item">
           <legend class="tags-transport__title">транспорт</legend>
-          <div class="transportation">
+          <div class="tags-transport__transportation transportation">
             <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-avia" id="transportation-avia" checked>
             <label class="transportation__label transportation__label--avia" for="transportation-avia" aria-label="Кнопка передвижения на самолете" data-transport="Авиаперелет">
               <svg height="16"><use xlink:href="#icon-plane"></use></svg>

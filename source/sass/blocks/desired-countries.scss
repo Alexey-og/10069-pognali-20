@@ -41,30 +41,35 @@
 }
 
 .desired-countries__item--add {
+
   &::before {
     border: 1px solid #cbced9;
     background-color: $color-basic-blue-light;
   }
+}
 
-  & .desired-countries__name {
-    background-color: $color-basic-blue-light;
+.desired-countries__item--add .desired-countries__name {
+  background-color: $color-basic-blue-light;
 
-    &::before {
-      background-image: none;
-    }
-
-    &::after {
-      width: 14px;
-      height: 14px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath fill='%23c2c4c9' d='M8 6V0H6v6H0v2h6v6h2V8h6V6z'/%3E%3C/svg%3E");
-      background-size: 14px 14px;
-      opacity: 1;
-    }
+  &:hover {
+    background-color: $color-special-blue-light;
   }
 
-  & .desired-countries__close {
-    display: none;
+  &::before {
+    background-image: none;
   }
+
+  &::after {
+    width: 14px;
+    height: 14px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath fill='%23c2c4c9' d='M8 6V0H6v6H0v2h6v6h2V8h6V6z'/%3E%3C/svg%3E");
+    background-size: 14px 14px;
+    opacity: 1;
+  }
+}
+
+.desired-countries__item--add .desired-countries__close {
+  display: none;
 }
 
 .desired-countries__item:last-of-type::after {
@@ -152,5 +157,14 @@
   right: -10px;
   top: -10px;
   background-color: $color-basic-blue-light;
+  cursor: pointer;
   stroke: #afb0b5;
+
+  &:hover {
+    stroke-opacity: 0.3;
+  }
+
+  &:active {
+    stroke-opacity: 0.05;
+  }
 }

@@ -26,20 +26,6 @@
   flex-direction: column;
 }
 
-.plan-step__back {
-  @include flex-center;
-  margin-top: 17px;
-}
-
-.plan-step__step-back {
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 17px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: $color-button-blue;
-}
-
 .plan-step__button {
   justify-content: center;
   min-height: 40px;
@@ -57,5 +43,27 @@
   &:hover,
   &:active {
     background-image: none;
+  }
+}
+
+.plan-step__back {
+  @include flex-center;
+  margin-top: 17px;
+}
+
+.plan-step__step-back {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-button-blue;
+
+  &:hover {
+    color: rgba($color-button-blue, 0.7);
+  }
+
+  &:active {
+    color: rgba($color-button-blue, 0.3);
   }
 }

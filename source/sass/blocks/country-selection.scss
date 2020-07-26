@@ -76,6 +76,7 @@
 .country-selection__letters {
   display: grid;
   grid-template-columns: repeat(5, 44px);
+  border-right: 1px solid #cbced9;
 }
 
 .country-selection__letters input:checked + .country-selection__letter {
@@ -88,7 +89,8 @@
   @include flex-center;
 
   height: 40px;
-  border: 1px solid #cbced9;
+  border-left: 1px solid #cbced9;
+  border-bottom: 1px solid #cbced9;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
@@ -97,7 +99,7 @@
   cursor: pointer;
 
   &:hover {
-    border-color: #959bb2;
+    background-color: $color-basic-blue-light;
   }
 
   &:active {
