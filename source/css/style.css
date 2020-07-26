@@ -45,7 +45,6 @@ body {
   /*  Потом заменить!  */
   min-height: 100%;
   margin: 0 auto;
-  /* background-color: $color-basic-blue; */
   background-color: #edeff6;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-style: normal;
@@ -1874,7 +1873,7 @@ stroke-dasharray: 241px 60px;
   position: relative;
   background-color: #e2e5f2;
   min-height: 85px;
-  margin-top: -30px;
+  margin: -30px 0 21px;
   padding: 53px 25px 30px 25px;
   z-index: 2; }
 
@@ -2033,6 +2032,84 @@ stroke-dasharray: 241px 60px;
 .filter-country__button-icon {
   margin-right: 12px;
   stroke: #192144; }
+
+.perfect-travelmate {
+  background-color: #ffd74b;
+  border-radius: 20px;
+  padding: 25px 25px 22px; }
+
+.perfect-travelmate__heading {
+  margin: 0 40px 23px 0;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: #1d2e5b; }
+
+.perfect-travelmate__fieldset {
+  margin: 0 0 9px 0;
+  padding: 0;
+  border: none; }
+
+.perfect-travelmate__title {
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-top: 1px solid #f3c72b;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #1d2e5b;
+  cursor: pointer; }
+  .perfect-travelmate__title::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 10px;
+    height: 5px;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='5' viewBox='0 0 10 5' fill='%23192144' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 5L0 0H10L5 5Z'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 10px 5px; }
+
+.perfect-travelmate__input-wrapper {
+  display: flex;
+  flex-direction: column; }
+
+.perfect-travelmate__label {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 27px;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+  cursor: pointer; }
+  .perfect-travelmate__label::before, .perfect-travelmate__label::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px; }
+  .perfect-travelmate__label::before {
+    border-radius: 4px;
+    background-color: #ffffff; }
+  .perfect-travelmate__label::after {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 8px; }
+  .perfect-travelmate__label:hover {
+    opacity: 0.6; }
+  .perfect-travelmate__label:active {
+    opacity: 0.3; }
+
+.perfect-travelmate__input-wrapper input:checked + .perfect-travelmate__label::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M12 0L3.8 8 0 4.3v4L3.8 12 12 4z' fill='%23161c35'/%3E%3C/svg%3E"); }
 
 /*  Modals  */
 .business-rates {

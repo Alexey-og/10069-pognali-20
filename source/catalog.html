@@ -38,7 +38,7 @@
     <section class="filter-country">
       <div class="filter-country__header">
         <h2 class="filter-country__title">Фильтрация по странам<span class="hidden">:</span></h2>
-        <div class="filter-country__regions">
+        <div class="filter-country__regions hidden">
           <a class="filter-country__region filter-country__region--current" href="/europe.html" data-region="europe">Европа</a>
           <a class="filter-country__region" href="/asia.html" data-region="asia">Азия</a>
           <a class="filter-country__region" href="/america.html" data-region="america">Америка</a>
@@ -50,7 +50,7 @@
           <span class="filter-country__close-icon"></span>
         </a>
       </div>
-      <article class="filter-country__filter">
+      <article class="filter-country__filter hidden">
         <h3 class="visually-hidden">Выбор страны</h3>
         <fieldset class="filter-country__letters-wrapper" id="country-selection">
           <legend class="visually-hidden">Побуквенный переключатель стран</legend>
@@ -325,31 +325,75 @@
           </div>
         </div>
       </article>
-      <a class="filter-country__button">
+      <a class="filter-country__button hidden">
         <svg class="filter-country__button-icon" width="12" height="12"><use xlink:href="#icon-close"></use></svg>Свернуть
       </a>
     </section>
+    <form class="perfect-travelmate" action="https://echo.htmlacademy.ru/" method="post">
+      <h2 class="perfect-travelmate__heading">Подберите идеального попутчика</h2>
+      <fieldset class="perfect-travelmate__fieldset">
+        <legend class="visually-hidden">Хобби</legend>
+        <a class="perfect-travelmate__title">Хобби</a>
+        <div class="perfect-travelmate__input-wrapper">
+          <input class="visually-hidden" type="checkbox" name="hobby-gym" id="hobby-gym" checked><label class="perfect-travelmate__label" for="hobby-gym">Спортзал</label>
+          <input class="visually-hidden" type="checkbox" name="hobby-hookah" id="hobby-hookah"><label class="perfect-travelmate__label" for="hobby-hookah">Кальян</label>
+          <input class="visually-hidden" type="checkbox" name="hobby-sofa" id="hobby-sofa"><label class="perfect-travelmate__label" for="hobby-sofa">Диван</label>
+        </div>
+      </fieldset>
+      <fieldset class="perfect-travelmate__fieldset">
+        <legend class="visually-hidden">Музыка</legend>
+        <a class="perfect-travelmate__title">Музыка</a>
+        <div class="perfect-travelmate__input-wrapper">
+          <input class="visually-hidden" type="checkbox" name="music-hard-rock" id="music-hard-rock" checked><label class="perfect-travelmate__label" for="music-hard-rock">Тяжелый рок</label>
+          <input class="visually-hidden" type="checkbox" name="music-russian-rap" id="music-russian-rap" checked><label class="perfect-travelmate__label" for="music-russian-rap">Русский рэп</label>
+          <input class="visually-hidden" type="checkbox" name="music-eurodance" id="music-eurodance"><label class="perfect-travelmate__label" for="music-eurodance">Евроденс</label>
+        </div>
+      </fieldset>
+      <fieldset class="perfect-travelmate__fieldset">
+        <legend class="visually-hidden">Еда</legend>
+        <a class="perfect-travelmate__title">Еда</a>
+        <div class="perfect-travelmate__input-wrapper">
+          <input class="visually-hidden" type="checkbox" name="food-meat" id="food-meat" checked><label class="perfect-travelmate__label" for="food-meat">Мясоед</label>
+          <input class="visually-hidden" type="checkbox" name="food-healthy-diet" id="food-healthy-diet"><label class="perfect-travelmate__label" for="food-healthy-diet">Сидит на ПП</label>
+          <input class="visually-hidden" type="checkbox" name="food-vegan" id="food-vegan"><label class="perfect-travelmate__label" for="food-vegan">Веган-сыроед</label>
+        </div>
+      </fieldset>
+      <fieldset class="perfect-travelmate__fieldset">
+        <legend class="visually-hidden">Транспорт</legend>
+        <a class="perfect-travelmate__title">Транспорт</a>
+        <div class="tags-transport__transportation transportation">
+          <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-avia" id="transportation-avia" checked>
+          <label class="transportation__label transportation__label--avia" for="transportation-avia" aria-label="Кнопка передвижения на самолете" data-transport="Авиаперелет">
+            <svg height="16"><use xlink:href="#icon-plane"></use></svg>
+          </label>
+          <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bus" id="transportation-bus" checked>
+          <label class="transportation__label transportation__label--bus" for="transportation-bus" aria-label="Кнопка передвижения на автотранспорте" data-transport="Автотранспорт">
+            <svg height="16"><use xlink:href="#icon-bus"></use></svg>
+          </label>
+          <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bicycle" id="transportation-bicycle">
+          <label class="transportation__label transportation__label--bicycle" for="transportation-bicycle" aria-label="Кнопка передвижения на велосипеде" data-transport="Велосипед">
+            <svg height="16"><use xlink:href="#icon-bicycle"></use></svg>
+          </label>
+          <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-foot" id="transportation-foot" checked>
+          <label class="transportation__label transportation__label--foot" for="transportation-foot" aria-label="Кнопка передвижения пешком" data-transport="Пешком">
+            <svg height="16"><use xlink:href="#icon-run"></use></svg>
+          </label>
+        </div>
+      </fieldset>
+      <fieldset class="perfect-travelmate__fieldset">
+        <legend class="visually-hidden">Левел</legend>
+        <a class="perfect-travelmate__title">Левел</a>
+        <div>
+          <div></div>
+        </div>
+        <div>
+          <input type="text" value="30">
+          <input type="text" value="100">
+        </div>
+      </fieldset>
+      <button type="submit">Показать</button>
+    </form>
     <div>
-      <form action="" method="POST">
-        <h2 class="visually-hidden">Фильтр подбора попутчиков</h2>
-        <p>Подберите идеального попутчика</p>
-        <fieldset>
-          <legend>Хобби</legend>
-        </fieldset>
-        <fieldset>
-          <legend>Музыка</legend>
-        </fieldset>
-        <fieldset>
-          <legend>Еда</legend>
-        </fieldset>
-        <fieldset>
-          <legend>Транспорт</legend>
-        </fieldset>
-        <fieldset>
-          <legend>Левел</legend>
-        </fieldset>
-        <button type="submit">Показать</button>
-      </form>
       <section>
         <h2>Список потенциальных попутчиков</h2>
         <article>
