@@ -25,11 +25,11 @@
     }
   }
 
-  &--czech {
+  &--czechia {
     background-image: url("../img/czech-mobile@2x.jpg");
 
     & .country__description::before {
-      background-image: url("../img/flag-czech.svg");
+      background-image: url("../img/flag-czechia.svg");
     }
   }
 }

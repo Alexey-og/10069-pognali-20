@@ -241,11 +241,11 @@
               <li class="step-header__step">Развлечения</li>
             </ul>
           </div>
-          <article class="desired-countries">
+          <article class="plan-step__countries desired-countries">
             <h4 class="visually-hidden">Список выбранных стран</h4>
             <div class="desired-countries__item">
               <a class="desired-countries__name" href="">Босния и Герцеговина</a>
-              <div class="desired-countries__flag desired-countries__flag--bosnia-and-herzegovina"></div>
+              <div class="desired-countries__flag desired-countries__flag--bosnia"></div>
               <a class="desired-countries__close" aria-label="Удалить выбранную страну">
                 <svg width="9" height="9"><use xlink:href="#icon-close"></use></svg>
               </a>
@@ -528,10 +528,10 @@
               </a>
             </div>
           </article>
-          <div class="desired-countries__buttons">
+          <div class="plan-step__buttons">
             <a class="button plan-step__button" href="#step-3">Следующий шаг</a>
-            <div class="desired-countries__back">
-              <a class="desired-countries__step-back" href="#step-1">На шаг назад</a>
+            <div class="plan-step__back">
+              <a class="plan-step__step-back" href="#step-1">На шаг назад</a>
             </div>
           </div>
         </section>
@@ -547,25 +547,30 @@
               <li class="step-header__step step-header__step--current">Развлечения</li>
             </ul>
           </div>
-          <fieldset>
+          <fieldset class="plan-step__entertainments entertainments" id="entertainments">
             <legend class="visually-hidden">Добавление плана действий к выбранным странам</legend>
-            <div>
-              <p>Босния и Герцеговина</p>
-              <img src="" alt="" width="" height="">
+            <label for="entertainments" aria-label="Добавление плана действий к выбранным странам"></label>
+            <div class="entertainments__item">
+              <div class="entertainments__header">
+                <p class="entertainments__country">Босния и Герцеговина</p>
+                <div class="entertainments__flag entertainments__flag--bosnia"></div>
+              </div>
+              <textarea class="entertainments__plan" name="action-plan_bosnia" id="action-plan_bosnia" placeholder="План действий"></textarea>
+              <label for="action-plan_bosnia" aria-label="План действий в выбранной стране"></label>
             </div>
-            <textarea name="" id="" cols="30" rows="5" placeholder="План действий"></textarea>
-            <label for="" aria-label=""></label>
-            <div>
-              <p>Чехия</p>
-              <img src="" alt="" width="" height="">
+            <div class="entertainments__item">
+              <div class="entertainments__header">
+                <p class="entertainments__country">Чехия</p>
+                <div class="entertainments__flag entertainments__flag--czechia"></div>
+              </div>
+              <textarea class="entertainments__plan" name="action-plan_czechia" id="action-plan_czechia" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+              <label for="action-plan_czechia" aria-label="План действий в выбранной стране"></label>
             </div>
-            <textarea name="" id="" cols="30" rows="5" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
-            <label for="" aria-label=""></label>
           </fieldset>
-          <div>
-            <button type="submit">Отправить</button>
-            <div>
-              <a href="#step-2">На шаг назад</a>
+          <div class="plan-step__buttons">
+            <button class="button plan-step__button" type="submit">Отправить</button>
+            <div class="plan-step__back">
+              <a class="plan-step__step-back" href="#step-2">На шаг назад</a>
             </div>
           </div>
         </section>

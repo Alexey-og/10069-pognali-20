@@ -1,7 +1,3 @@
-.desired-countries {
-  margin: 20px 0 25px;
-}
-
 .desired-countries__item {
   position: relative;
   display: flex;
@@ -138,13 +134,12 @@
   background-repeat: no-repeat;
   background-size: 35px 24px;
 
-  &--bosnia-and-herzegovina {
-    position: relative;
+  &--bosnia {
     background-image: url("/img/flag-bosnia.svg");
   }
 
   &--czechia {
-    background-image: url("/img/flag-czech.svg");
+    background-image: url("/img/flag-czechia.svg");
   }
 }
 
@@ -158,23 +153,4 @@
   top: -10px;
   background-color: $color-basic-blue-light;
   stroke: #afb0b5;
-}
-
-.desired-countries__buttons {
-  display: flex;
-  flex-direction: column;
-}
-
-.desired-countries__back {
-  @include flex-center;
-  margin-top: 17px;
-}
-
-.desired-countries__step-back {
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 17px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: $color-button-blue;
 }

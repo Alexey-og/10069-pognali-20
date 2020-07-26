@@ -432,10 +432,10 @@ textarea {
     background-image: url("../img/france-mobile@2x.jpg"); }
     .country--france .country__description::before {
       background-image: url("../img/flag-france.svg"); }
-  .country--czech {
+  .country--czechia {
     background-image: url("../img/czech-mobile@2x.jpg"); }
-    .country--czech .country__description::before {
-      background-image: url("../img/flag-czech.svg"); }
+    .country--czechia .country__description::before {
+      background-image: url("../img/flag-czechia.svg"); }
 
 .country__description {
   position: relative;
@@ -572,8 +572,8 @@ textarea {
     background-image: url("../img/flag-seychelles.svg"); }
   .travelmate__flag--belgium {
     background-image: url("../img/flag-belgium.svg"); }
-  .travelmate__flag--czech {
-    background-image: url("../img/flag-czech.svg"); }
+  .travelmate__flag--czechia {
+    background-image: url("../img/flag-czechia.svg"); }
 
 .travelmate__name {
   position: relative;
@@ -1209,10 +1209,42 @@ stroke-dasharray: 241px 60px;
   .plan-step--calendar {
     padding-bottom: 25px; }
 
+.plan-step__inputs,
+.plan-step__countries {
+  margin: 0 0 25px; }
+
+.plan-step__calendar {
+  margin-bottom: 25px; }
+
+.plan-step__entertainments {
+  margin: 0 0 22px; }
+
+.plan-step__buttons {
+  display: flex;
+  flex-direction: column; }
+
+.plan-step__back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 17px; }
+
+.plan-step__step-back {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #1d2e5b; }
+
 .plan-step__button {
   justify-content: center;
   min-height: 40px;
+  margin-left: -5px;
+  margin-right: -5px;
   padding: 7px;
+  border-width: 0;
   border-radius: 20px;
   background-image: none;
   font-size: 17px;
@@ -1222,11 +1254,11 @@ stroke-dasharray: 241px 60px;
   .plan-step__button:hover, .plan-step__button:active {
     background-image: none; }
 
-.plan-step__calendar {
-  margin-bottom: 25px; }
-
 .step-header {
   display: flex; }
+
+.step-header__title-wrapper {
+  margin-bottom: 20px; }
 
 .step-header__title {
   display: flex;
@@ -1275,7 +1307,6 @@ stroke-dasharray: 241px 60px;
 .step-inputs {
   display: flex;
   flex-wrap: wrap;
-  margin: 20px 0 25px;
   color: #1d2e5b; }
 
 .step-inputs__item {
@@ -1472,9 +1503,6 @@ stroke-dasharray: 241px 60px;
   border: 2px solid #ff5c23;
   cursor: pointer; }
 
-.desired-countries {
-  margin: 20px 0 25px; }
-
 .desired-countries__item {
   position: relative;
   display: flex;
@@ -1581,11 +1609,10 @@ stroke-dasharray: 241px 60px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 35px 24px; }
-  .desired-countries__flag--bosnia-and-herzegovina {
-    position: relative;
+  .desired-countries__flag--bosnia {
     background-image: url("/img/flag-bosnia.svg"); }
   .desired-countries__flag--czechia {
-    background-image: url("/img/flag-czech.svg"); }
+    background-image: url("/img/flag-czechia.svg"); }
 
 .desired-countries__close {
   width: 21px;
@@ -1601,25 +1628,6 @@ stroke-dasharray: 241px 60px;
   top: -10px;
   background-color: #edeff6;
   stroke: #afb0b5; }
-
-.desired-countries__buttons {
-  display: flex;
-  flex-direction: column; }
-
-.desired-countries__back {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 17px; }
-
-.desired-countries__step-back {
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 17px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #1d2e5b; }
 
 .country-selection {
   border-top-left-radius: 4px;
@@ -1737,6 +1745,99 @@ stroke-dasharray: 241px 60px;
     color: #1d2e5b; }
   .country-selection__countries a:active {
     color: rgba(29, 46, 91, 0.3); }
+
+.entertainments {
+  padding: 0;
+  border: none; }
+
+.entertainments__item {
+  position: relative;
+  height: 258px; }
+
+.entertainments__item:not(:last-child) {
+  margin-bottom: 23px; }
+  .entertainments__item:not(:last-child)::before {
+    position: absolute;
+    content: "";
+    left: -16px;
+    top: 11px;
+    width: 2px;
+    height: 281px;
+    background-color: #1d2e5b; }
+
+.entertainments__header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 24px;
+  margin-bottom: 14px; }
+  .entertainments__header::before, .entertainments__header::after {
+    position: absolute;
+    content: "";
+    background-color: #1d2e5b; }
+  .entertainments__header::before {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    top: 9px;
+    left: -3px; }
+  .entertainments__header::after {
+    top: 11px;
+    left: -16px;
+    width: 16px;
+    height: 2px; }
+
+.entertainments__country {
+  position: relative;
+  flex-grow: 1;
+  margin: 0;
+  padding-left: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  color: #1d2e5b;
+  white-space: nowrap;
+  overflow: hidden; }
+  .entertainments__country::after {
+    position: absolute;
+    content: "";
+    top: -3px;
+    right: -12px;
+    width: 50px;
+    height: 24px;
+    background-image: url(/img/fade-mobile.png);
+    background-position: right;
+    background-repeat: repeat-y;
+    background-size: 50px 24px; }
+
+.entertainments__flag {
+  position: relative;
+  flex-shrink: 0;
+  width: 35px;
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 35px 24px; }
+  .entertainments__flag--bosnia {
+    background-image: url("/img/flag-bosnia.svg"); }
+  .entertainments__flag--czechia {
+    background-image: url("/img/flag-czechia.svg"); }
+
+.entertainments__plan {
+  width: 100%;
+  height: 220px;
+  padding: 11px 14px;
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+  color: #444444;
+  resize: none; }
+  .entertainments__plan::-moz-placeholder {
+    color: #444444;
+    opacity: 0.3; }
+  .entertainments__plan::placeholder {
+    color: #444444;
+    opacity: 0.3; }
 
 /*  Modals  */
 .business-rates {

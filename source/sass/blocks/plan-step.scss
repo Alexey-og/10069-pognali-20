@@ -8,10 +8,45 @@
   }
 }
 
+.plan-step__inputs,
+.plan-step__countries {
+  margin: 0 0 25px;
+}
+
+.plan-step__calendar {
+  margin-bottom: 25px;
+}
+
+.plan-step__entertainments {
+  margin: 0 0 22px;
+}
+
+.plan-step__buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-step__back {
+  @include flex-center;
+  margin-top: 17px;
+}
+
+.plan-step__step-back {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-button-blue;
+}
+
 .plan-step__button {
   justify-content: center;
   min-height: 40px;
+  margin-left: -5px;
+  margin-right: -5px;
   padding: 7px;
+  border-width: 0;
   border-radius: 20px;
   background-image: none;
   font-size: 17px;
@@ -23,8 +58,4 @@
   &:active {
     background-image: none;
   }
-}
-
-.plan-step__calendar {
-  margin-bottom: 25px;
 }
