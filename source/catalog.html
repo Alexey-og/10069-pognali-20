@@ -1,279 +1,333 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <title>HTML Academy: Попутчики</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>HTML Academy: Попутчики</title>
+  </head>
 <body>
-  <header>
-    <a href="index.html">Логотип Погнали</a>
-    <nav>
-      <a href="index.html">О сервисе</a>
-      <a href="form.html">Направления</a>
-      <a>Попутчики</a>
-    </nav>
-    <div>
-      <a href="" aria-label=""></a>
-      <a href="" aria-label=""></a>
-      <a href="">Авторизация</a>
+  <header class="page-header">
+    <div class="page-header__menu">
+      <div class="page-header__top container">
+        <a class="page-header__logo" href="index.html">
+          <span class="visually-hidden">Погнали?</span>
+        </a>
+        <button class="page-header__button page-header__menu-show" type="button" aria-label="Кнопка показа меню"></button>
+      </div>
+      <!--
+      <div>
+        <a href="#" aria-label=""></a>
+        <a href="#" aria-label=""></a>
+        <a href="#">Авторизация</a>
+      </div> -->
     </div>
+    <!-- <div class="mobile-menu">
+      <nav>
+        <a>О сервисе</a>
+        <a href="form.html">Направления</a>
+        <a href="catalog.html">Попутчики</a>
+      </nav>
+    </div> -->
   </header>
   <main>
-    <h1>Попутчики</h1>
-    <a href="index.html">На главную</a>
-    <section>
-      <div>
-        <h2>Фильтрация по странам:</h2>
-        <a href="">Европа</a>
-        <a href="">Азия</a>
-        <a href="">Америка</a>
-        <a href="">Острова</a>
+    <div class="page-title">
+      <h1 class="heading-1">Попутчики</h1>
+      <a class="hidden" href="index.html">На главную</a>
+    </div>
+    <section class="filter-country">
+      <div class="filter-country__header">
+        <h2 class="filter-country__title">Фильтрация по странам<span class="hidden">:</span></h2>
+        <div class="filter-country__regions">
+          <a class="filter-country__region filter-country__region--current" href="/europe.html" data-region="europe">Европа</a>
+          <a class="filter-country__region" href="/asia.html" data-region="asia">Азия</a>
+          <a class="filter-country__region" href="/america.html" data-region="america">Америка</a>
+          <a class="filter-country__region hidden" href="/africa.html" data-region="africa">Африка</a>
+          <a class="filter-country__region" href="/islands.html" data-region="islands">Острова</a>
+        </div>
+        <a class="filter-country__close" href="">
+          <span class="hidden">Свернуть</span>
+          <span class="filter-country__close-icon"></span>
+        </a>
       </div>
-      <button type="button">Свернуть</button>
-    </section>
-    <section>
-      <h2 class="">Список стран для выбора</h2>
-      <div>
-        <h3>А</h3>
-        <a href="/islands/australia.html" data-region="islands">Австралия</a>
-        <a href="/europe/austria.html" data-region="europe">Австрия</a>
-        <a href="/asia/azerbaijan.html" data-region="asia">Азербайджан</a>
-        <a href="/europe/albania.html" data-region="europe">Албания</a>
-        <a href="/africa/algeria.html" data-region="africa">Алжир</a>
-        <a href="/africa/angola.html" data-region="africa">Ангола</a>
-        <a href="/europe/andorra.html" data-region="europe">Андорра</a>
-        <a href="/islands/antigua-and-barbuda.html" data-region="islands">Антигуа и Барбуда</a>
-        <a href="/america/argentina.html" data-region="america">Аргентина</a>
-        <a href="/europe/armenia.html" data-region="europe">Армения</a>
-        <a href="/asia/afghanistan.html" data-region="asia">Афганистан</a>
-      </div>
-      <div>
-        <h3>Б</h3>
-        <a href="/islands/bahamas.html" data-region="islands">Багамские Острова</a>
-        <a href="/asia/bangladesh.html" data-region="asia">Бангладеш</a>
-        <a href="/islands/barbados.html" data-region="islands">Барбадос</a>
-        <a href="/asia/bahrain.html" data-region="asia">Бахрейн</a>
-        <a href="/europe/belarus.html" data-region="europe">Белоруссия</a>
-        <a href="/america/belize.html" data-region="america">Белиз</a>
-        <a href="/europe/belgium.html" data-region="europe">Бельгия</a>
-        <a href="/africa/benin.html" data-region="africa">Бенин</a>
-        <a href="/europe/bulgaria.html" data-region="europe">Болгария</a>
-        <a href="/america/bolivia.html" data-region="america">Боливия</a>
-        <a href="/europe/bosnia-and-herzegovina.html" data-region="europe">Босния и Герцеговина</a>
-        <a href="/africa/botswana.html" data-region="africa">Ботсвана</a>
-        <a href="/america/brazil.html" data-region="america">Бразилия</a>
-        <a href="/asia/brunei.html" data-region="asia">Бруней</a>
-        <a href="/africa/burkina-faso.html" data-region="africa">Буркина-Фасо</a>
-        <a href="/africa/burundi.html" data-region="africa">Бурунди</a>
-        <a href="/asia/bhutan.html" data-region="asia">Бутан</a>
-      </div>
-      <div>
-        <h3>В</h3>
-        <a href="/islands/vanuatu.html" data-region="islands">Вануату</a>
-        <a href="/europe/united-kingdom.html" data-region="europe">Великобритания</a>
-        <a href="/europe/hungary.html" data-region="europe">Венгрия</a>
-        <a href="/america/venezuela.html" data-region="america">Венесуэла</a>
-        <a href="/asia/timor-leste.html" data-region="asia">Восточный Тимор</a>
-        <a href="/asia/vietnam.html" data-region="asia">Вьетнам</a>
-      </div>
-      <div>
-        <h3>Г</h3>
-        <a href="/africa/gabon.html" data-region="africa">Габон</a>
-        <a href="/islands/haiti.html" data-region="islands">Гаити</a>
-        <a href="/america/guyana.html" data-region="america">Гайана</a>
-        <a href="/africa/gambia.html" data-region="africa">Гамбия</a>
-        <a href="/africa/ghana.html" data-region="africa">Гана</a>
-        <a href="/america/guatemala.html" data-region="america">Гватемала</a>
-        <a href="/africa/guinea.html" data-region="africa">Гвинея</a>
-        <a href="/africa/guinea-bissau.html" data-region="africa">Гвинея-Бисау</a>
-        <a href="/europe/germany.html" data-region="europe">Германия</a>
-        <a href="/america/honduras.html" data-region="america">Гондурас</a>
-        <a href="/islands/grenada.html" data-region="islands">Гренада</a>
-        <a href="/europe/greece.html" data-region="europe">Греция</a>
-        <a href="/europe/georgia.html" data-region="europe">Грузия</a>
-      </div>
-      <div>
-        <h3>Д</h3>
-        <a href="/europe/denmark.html" data-region="europe">Дания</a>
-        <a href="/africa/djibouti.html" data-region="africa">Джибути</a>
-        <a href="/islands/dominica.html" data-region="islands">Доминика</a>
-        <a href="/islands/dominican-republic.html" data-region="islands">Доминикана</a>
-      </div>
-      <div>
-        <h3>Е</h3>
-        <a href="/africa/egypt.html" data-region="africa">Египет</a>
-      </div>
-      <div>
-        <h3>З</h3>
-        <a href="/africa/zambia.html" data-region="africa">Замбия</a>
-        <a href="/africa/zimbabwe.html" data-region="africa">Зимбабве</a>
-      </div>
-      <div>
-        <h3>И</h3>
-        <a href="/asia/israel.html" data-region="asia">Израиль</a>
-        <a href="/asia/india.html" data-region="asia">Индия</a>
-        <a href="/asia/indonesia.html" data-region="asia">Индонезия</a>
-        <a href="/asia/jordan.html" data-region="asia">Иордания</a>
-        <a href="/asia/iraq.html" data-region="asia">Ирак</a>
-        <a href="/asia/iran.html" data-region="asia">Иран</a>
-        <a href="/europe/ireland.html" data-region="europe">Ирландия</a>
-        <a href="/europe/iceland.html" data-region="europe">Исландия</a>
-        <a href="/europe/spain.html" data-region="europe">Испания</a>
-        <a href="/europe/italy.html" data-region="europe">Италия</a>
-      </div>
-      <div>
-        <h3>К</h3>
-        <a href="/africa/cabo-verde.html" data-region="africa">Кабо-Верде</a>
-        <a href="/asia/kazakhstan.html" data-region="asia">Казахстан</a>
-        <a href="/asia/cambodia.html" data-region="asia">Камбоджа</a>
-        <a href="/africa/cameroon.html" data-region="africa">Камерун</a>
-        <a href="/america/canada.html" data-region="america">Канада</a>
-        <a href="/asia/qatar.html" data-region="asia">Катар</a>
-        <a href="/africa/kenya.html" data-region="africa">Кения</a>
-        <a href="/europe/cyprus.html" data-region="europe">Кипр</a>
-        <a href="/asia/kyrgyzstan.html" data-region="asia">Киргизия</a>
-        <a href="/islands/kiribati.html" data-region="islands">Кирибати</a>
-        <a href="/asia/china.html" data-region="asia">Китай</a>
-        <a href="/america/colombia.html" data-region="america">Колумбия</a>
-      </div>
-      <div>
-        <h3>Л</h3>
-        <a href="/asia/laos.html" data-region="asia">Лаос</a>
-        <a href="/europe/latvia.html" data-region="europe">Латвия</a>
-        <a href="/africa/lesotho.html" data-region="africa">Лесото</a>
-        <a href="/africa/liberia.html" data-region="africa">Либерия</a>
-        <a href="/asia/lebanon.html" data-region="asia">Ливан</a>
-        <a href="/africa/libya.html" data-region="africa">Ливия</a>
-        <a href="/europe/lithuania.html" data-region="europe">Литва</a>
-        <a href="/europe/liechtenstein.html" data-region="europe">Лихтенштейн</a>
-        <a href="/europe/luxembourg.html" data-region="europe">Люксембург</a>
-      </div>
-      <div>
-        <h3>М</h3>
-        <a href="/islands/mauritius.html" data-region="islands">Маврикий</a>
-        <a href="/africa/mauritania.html" data-region="africa">Мавритания</a>
-        <a href="/africa/madagascar.html" data-region="africa">Мадагаскар</a>
-        <a href="/africa/malawi.html" data-region="africa">Малави</a>
-        <a href="/asia/malaysia.html" data-region="asia">Малайзия</a>
-        <a href="/africa/mali.html" data-region="africa">Мали</a>
-        <a href="/islands/maldives.html" data-region="islands">Мальдивы</a>
-        <a href="/europe/malta.html" data-region="europe">Мальта</a>
-        <a href="/africa/morocco.html" data-region="africa">Марокко</a>
-        <a href="/america/mexico.html" data-region="america">Мексика</a>
-      </div>
-      <div>
-        <h3>Н</h3>
-        <a href="/africa/namibia.html" data-region="africa">Намибия</a>
-        <a href="/islands/nauru.html" data-region="islands">Науру</a>
-        <a href="/asia/nepal.html" data-region="asia">Непал</a>
-        <a href="/africa/niger.html" data-region="africa">Нигер</a>
-        <a href="/africa/nigeria.html" data-region="africa">Нигерия</a>
-        <a href="/europe/netherlands.html" data-region="europe">Нидерланды</a>
-        <a href="/america/nicaragua.html" data-region="america">Никарагуа</a>
-        <a href="/islands/new-zealand.html" data-region="islands">Новая Зеландия</a>
-        <a href="/europe/norway.html" data-region="europe">Норвегия</a>
-      </div>
-      <div>
-        <h3>О</h3>
-        <a href="/asia/united-arab-emirates.html" data-region="asia">ОАЭ</a>
-        <a href="/asia/oman.html" data-region="asia">Оман</a>
-      </div>
-      <div>
-        <h3>П</h3>
-        <a href="/asia/pakistan.html" data-region="asia">Пакистан</a>
-        <a href="/islands/palau.html" data-region="islands">Палау</a>
-        <a href="/america/panama.html" data-region="america">Панама</a>
-        <a href="/islands/papua-new-guinea.html" data-region="islands">Папуа - Новая Гвинея</a>
-        <a href="/america/paraguay.html" data-region="america">Парагвай</a>
-        <a href="/america/peru.html" data-region="america">Перу</a>
-        <a href="/europe/poland.html" data-region="europe">Польша</a>
-        <a href="/europe/portugal.html" data-region="europe">Португалия</a>
-      </div>
-      <div>
-        <h3>Р</h3>
-        <a href="/europe/russia.html" data-region="europe">Россия</a>
-        <a href="/africa/rwanda.html" data-region="africa">Руанда</a>
-        <a href="/europe/romania.html" data-region="europe">Румыния</a>
-      </div>
-      <div>
-        <h3>С</h3>
-        <a href="/america/el-salvador.html" data-region="america">Сальвадор</a>
-        <a href="/islands/samoa.html" data-region="islands">Самоа</a>
-        <a href="/europe/san-marino.html" data-region="europe">Сан-Марино</a>
-        <a href="/asia/saudi-arabia.html" data-region="asia">Саудовская Аравия</a>
-        <a href="/islands/seychelles.html" data-region="islands">Сейшелы</a>
-        <a href="/africa/senegal.html" data-region="africa">Сенегал</a>
-        <a href="/europe/serbia.html" data-region="europe">Сербия</a>
-        <a href="/asia/singapore.html" data-region="asia">Сингапур</a>
-        <a href="/asia/syria.html" data-region="asia">Сирия</a>
-        <a href="/europe/slovakia.html" data-region="europe">Словакия</a>
-        <a href="/europe/slovenia.html" data-region="europe">Словения</a>
-        <a href="/america/usa.html" data-region="america">США</a>
-      </div>
-      <div>
-        <h3>Т</h3>
-        <a href="/asia/tajikistan.html" data-region="asia">Таджикистан</a>
-        <a href="/asia/thailand.html" data-region="asia">Таиланд</a>
-        <a href="/africa/tanzania.html" data-region="africa">Танзания</a>
-        <a href="/africa/togo.html" data-region="africa">Того</a>
-        <a href="/islands/tonga.html" data-region="islands">Тонга</a>
-        <a href="/america/trinidad-and-tobago.html" data-region="america">Тринидад и Тобаго</a>
-        <a href="/islands/tuvalu.html" data-region="islands">Тувалу</a>
-        <a href="/africa/tunisia.html" data-region="africa">Тунис</a>
-        <a href="/asia/turkmenistan.html" data-region="asia">Туркмения</a>
-        <a href="/asia/turkey.html" data-region="asia">Турция</a>
-      </div>
-      <div>
-        <h3>У</h3>
-        <a href="/africa/uganda.html" data-region="africa">Уганда</a>
-        <a href="/asia/uzbekistan.html" data-region="asia">Узбекистан</a>
-        <a href="/europe/ukraine.html" data-region="europe">Украина</a>
-        <a href="/america/uruguay.html" data-region="america">Уругвай</a>
-      </div>
-      <div>
-        <h3>Ф</h3>
-        <a href="/islands/fiji.html" data-region="islands">Фиджи</a>
-        <a href="/islands/philippines.html" data-region="islands">Филиппины</a>
-        <a href="/europe/finland.html" data-region="europe">Финляндия</a>
-        <a href="/europe/france.html" data-region="europe">Франция</a>
-      </div>
-      <div>
-        <h3>Х</h3>
-        <a href="/europe/croatia.html" data-region="europe">Хорватия</a>
-      </div>
-      <div>
-        <h3>Ч</h3>
-        <a href="/africa/chad.html" data-region="africa">Чад</a>
-        <a href="/europe/montenegro.html" data-region="europe">Черногория</a>
-        <a href="/europe/czechia.html" data-region="europe">Чехия</a>
-        <a href="/america/chile.html" data-region="america">Чили</a>
-      </div>
-      <div>
-        <h3>Ш</h3>
-        <a href="/europe/switzerland.html" data-region="europe">Швейцария</a>
-        <a href="/europe/sweden.html" data-region="europe">Швеция</a>
-        <a href="/asia/sri-lanka.html" data-region="asia">Шри-Ланка</a>
-      </div>
-      <div>
-        <h3>Э</h3>
-        <a href="/america/ecuador.html" data-region="america">Эквадор</a>
-        <a href="/africa/eritrea.html" data-region="africa">Эритрея</a>
-        <a href="/africa/eswatini.html" data-region="africa">Эсватини</a>
-        <a href="/europe/estonia.html" data-region="europe">Эстония</a>
-        <a href="/africa/ethiopia.html" data-region="africa">Эфиопия</a>
-      </div>
-      <div>
-        <h3>Ю</h3>
-        <a href="/africa/south-africa.html" data-region="africa">ЮАР</a>
-        <a href="/africa/south-sudan.html" data-region="africa">Южный Судан</a>
-      </div>
-      <div>
-        <h3>Я</h3>
-        <a href="/america/jamaica.html" data-region="america">Ямайка</a>
-        <a href="/asia/japan.html" data-region="asia">Япония</a>
-      </div>
-      <button type="button">Свернуть</button>
+      <article class="filter-country__filter">
+        <h3 class="visually-hidden">Выбор страны</h3>
+        <fieldset class="filter-country__letters-wrapper" id="country-selection">
+          <legend class="visually-hidden">Побуквенный переключатель стран</legend>
+          <label class="visually-hidden" for="country-selection">Побуквенный переключатель стран</label>
+          <div class="filter-country__letters">
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-a" checked><label class="filter-country__letter" for="letter-a">А</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-b"><label class="filter-country__letter" for="letter-b">Б</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-v"><label class="filter-country__letter" for="letter-v">В</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-g"><label class="filter-country__letter" for="letter-g">Г</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-d"><label class="filter-country__letter" for="letter-d">Д</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-ye"><label class="filter-country__letter" for="letter-ye">Е</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-z"><label class="filter-country__letter" for="letter-z">З</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-i"><label class="filter-country__letter" for="letter-i">И</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-k"><label class="filter-country__letter" for="letter-k">К</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-l"><label class="filter-country__letter" for="letter-l">Л</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-m"><label class="filter-country__letter" for="letter-m">М</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-n"><label class="filter-country__letter" for="letter-n">Н</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-o"><label class="filter-country__letter" for="letter-o">О</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-p"><label class="filter-country__letter" for="letter-p">П</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-r"><label class="filter-country__letter" for="letter-r">Р</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-s"><label class="filter-country__letter" for="letter-s">С</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-t"><label class="filter-country__letter" for="letter-t">Т</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-u"><label class="filter-country__letter" for="letter-u">У</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-f"><label class="filter-country__letter" for="letter-f">Ф</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-kh"><label class="filter-country__letter" for="letter-kh">Х</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-ch"><label class="filter-country__letter" for="letter-ch">Ч</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-sh"><label class="filter-country__letter" for="letter-sh">Ш</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-e"><label class="filter-country__letter" for="letter-e">Э</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-yu"><label class="filter-country__letter" for="letter-yu">Ю</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-ya"><label class="filter-country__letter" for="letter-ya">Я</label>
+          </div>
+        </fieldset>
+        <div class="filter-country__countries-wrapper">
+          <div class="filter-country__countries" data-country-letter="a">
+            <h4 class="filter-country__letter-title">А</h4>
+            <a href="/islands/australia.html" data-region="islands">Австралия</a>
+            <a href="/europe/austria.html" data-region="europe">Австрия</a>
+            <a href="/asia/azerbaijan.html" data-region="asia">Азербайджан</a>
+            <a href="/europe/albania.html" data-region="europe">Албания</a>
+            <a href="/africa/algeria.html" data-region="africa">Алжир</a>
+            <a href="/africa/angola.html" data-region="africa">Ангола</a>
+            <a href="/europe/andorra.html" data-region="europe">Андорра</a>
+            <a href="/islands/antigua-and-barbuda.html" data-region="islands">Антигуа и Барбуда</a>
+            <a href="/america/argentina.html" data-region="america">Аргентина</a>
+            <a href="/europe/armenia.html" data-region="europe">Армения</a>
+            <a href="/asia/afghanistan.html" data-region="asia">Афганистан</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="b">
+            <h4 class="filter-country__letter-title">Б</h4>
+            <a href="/islands/bahamas.html" data-region="islands">Багамские Острова</a>
+            <a href="/asia/bangladesh.html" data-region="asia">Бангладеш</a>
+            <a href="/islands/barbados.html" data-region="islands">Барбадос</a>
+            <a href="/asia/bahrain.html" data-region="asia">Бахрейн</a>
+            <a href="/europe/belarus.html" data-region="europe">Белоруссия</a>
+            <a href="/america/belize.html" data-region="america">Белиз</a>
+            <a href="/europe/belgium.html" data-region="europe">Бельгия</a>
+            <a href="/africa/benin.html" data-region="africa">Бенин</a>
+            <a href="/europe/bulgaria.html" data-region="europe">Болгария</a>
+            <a href="/america/bolivia.html" data-region="america">Боливия</a>
+            <a href="/europe/bosnia-and-herzegovina.html" data-region="europe">Босния и Герцеговина</a>
+            <a href="/africa/botswana.html" data-region="africa">Ботсвана</a>
+            <a href="/america/brazil.html" data-region="america">Бразилия</a>
+            <a href="/asia/brunei.html" data-region="asia">Бруней</a>
+            <a href="/africa/burkina-faso.html" data-region="africa">Буркина-Фасо</a>
+            <a href="/africa/burundi.html" data-region="africa">Бурунди</a>
+            <a href="/asia/bhutan.html" data-region="asia">Бутан</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="v">
+            <h4 class="filter-country__letter-title">В</h4>
+            <a href="/islands/vanuatu.html" data-region="islands">Вануату</a>
+            <a href="/europe/united-kingdom.html" data-region="europe">Великобритания</a>
+            <a href="/europe/hungary.html" data-region="europe">Венгрия</a>
+            <a href="/america/venezuela.html" data-region="america">Венесуэла</a>
+            <a href="/asia/timor-leste.html" data-region="asia">Восточный Тимор</a>
+            <a href="/asia/vietnam.html" data-region="asia">Вьетнам</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="g">
+            <h4 class="filter-country__letter-title">Г</h4>
+            <a href="/africa/gabon.html" data-region="africa">Габон</a>
+            <a href="/islands/haiti.html" data-region="islands">Гаити</a>
+            <a href="/america/guyana.html" data-region="america">Гайана</a>
+            <a href="/africa/gambia.html" data-region="africa">Гамбия</a>
+            <a href="/africa/ghana.html" data-region="africa">Гана</a>
+            <a href="/america/guatemala.html" data-region="america">Гватемала</a>
+            <a href="/africa/guinea.html" data-region="africa">Гвинея</a>
+            <a href="/africa/guinea-bissau.html" data-region="africa">Гвинея-Бисау</a>
+            <a href="/europe/germany.html" data-region="europe">Германия</a>
+            <a href="/america/honduras.html" data-region="america">Гондурас</a>
+            <a href="/islands/grenada.html" data-region="islands">Гренада</a>
+            <a href="/europe/greece.html" data-region="europe">Греция</a>
+            <a href="/europe/georgia.html" data-region="europe">Грузия</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="d">
+            <h4 class="filter-country__letter-title">Д</h4>
+            <a href="/europe/denmark.html" data-region="europe">Дания</a>
+            <a href="/africa/djibouti.html" data-region="africa">Джибути</a>
+            <a href="/islands/dominica.html" data-region="islands">Доминика</a>
+            <a href="/islands/dominican-republic.html" data-region="islands">Доминикана</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="ye">
+            <h4 class="filter-country__letter-title">Е</h4>
+            <a href="/africa/egypt.html" data-region="africa">Египет</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="z">
+            <h4 class="filter-country__letter-title">З</h4>
+            <a href="/africa/zambia.html" data-region="africa">Замбия</a>
+            <a href="/africa/zimbabwe.html" data-region="africa">Зимбабве</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="i">
+            <h4 class="filter-country__letter-title">И</h4>
+            <a href="/asia/israel.html" data-region="asia">Израиль</a>
+            <a href="/asia/india.html" data-region="asia">Индия</a>
+            <a href="/asia/indonesia.html" data-region="asia">Индонезия</a>
+            <a href="/asia/jordan.html" data-region="asia">Иордания</a>
+            <a href="/asia/iraq.html" data-region="asia">Ирак</a>
+            <a href="/asia/iran.html" data-region="asia">Иран</a>
+            <a href="/europe/ireland.html" data-region="europe">Ирландия</a>
+            <a href="/europe/iceland.html" data-region="europe">Исландия</a>
+            <a href="/europe/spain.html" data-region="europe">Испания</a>
+            <a href="/europe/italy.html" data-region="europe">Италия</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="k">
+            <h4 class="filter-country__letter-title">К</h4>
+            <a href="/africa/cabo-verde.html" data-region="africa">Кабо-Верде</a>
+            <a href="/asia/kazakhstan.html" data-region="asia">Казахстан</a>
+            <a href="/asia/cambodia.html" data-region="asia">Камбоджа</a>
+            <a href="/africa/cameroon.html" data-region="africa">Камерун</a>
+            <a href="/america/canada.html" data-region="america">Канада</a>
+            <a href="/asia/qatar.html" data-region="asia">Катар</a>
+            <a href="/africa/kenya.html" data-region="africa">Кения</a>
+            <a href="/europe/cyprus.html" data-region="europe">Кипр</a>
+            <a href="/asia/kyrgyzstan.html" data-region="asia">Киргизия</a>
+            <a href="/islands/kiribati.html" data-region="islands">Кирибати</a>
+            <a href="/asia/china.html" data-region="asia">Китай</a>
+            <a href="/america/colombia.html" data-region="america">Колумбия</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="l">
+            <h4 class="filter-country__letter-title">Л</h4>
+            <a href="/asia/laos.html" data-region="asia">Лаос</a>
+            <a href="/europe/latvia.html" data-region="europe">Латвия</a>
+            <a href="/africa/lesotho.html" data-region="africa">Лесото</a>
+            <a href="/africa/liberia.html" data-region="africa">Либерия</a>
+            <a href="/asia/lebanon.html" data-region="asia">Ливан</a>
+            <a href="/africa/libya.html" data-region="africa">Ливия</a>
+            <a href="/europe/lithuania.html" data-region="europe">Литва</a>
+            <a href="/europe/liechtenstein.html" data-region="europe">Лихтенштейн</a>
+            <a href="/europe/luxembourg.html" data-region="europe">Люксембург</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="m">
+            <h4 class="filter-country__letter-title">М</h4>
+            <a href="/islands/mauritius.html" data-region="islands">Маврикий</a>
+            <a href="/africa/mauritania.html" data-region="africa">Мавритания</a>
+            <a href="/africa/madagascar.html" data-region="africa">Мадагаскар</a>
+            <a href="/africa/malawi.html" data-region="africa">Малави</a>
+            <a href="/asia/malaysia.html" data-region="asia">Малайзия</a>
+            <a href="/africa/mali.html" data-region="africa">Мали</a>
+            <a href="/islands/maldives.html" data-region="islands">Мальдивы</a>
+            <a href="/europe/malta.html" data-region="europe">Мальта</a>
+            <a href="/africa/morocco.html" data-region="africa">Марокко</a>
+            <a href="/america/mexico.html" data-region="america">Мексика</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="n">
+            <h4 class="filter-country__letter-title">Н</h4>
+            <a href="/africa/namibia.html" data-region="africa">Намибия</a>
+            <a href="/islands/nauru.html" data-region="islands">Науру</a>
+            <a href="/asia/nepal.html" data-region="asia">Непал</a>
+            <a href="/africa/niger.html" data-region="africa">Нигер</a>
+            <a href="/africa/nigeria.html" data-region="africa">Нигерия</a>
+            <a href="/europe/netherlands.html" data-region="europe">Нидерланды</a>
+            <a href="/america/nicaragua.html" data-region="america">Никарагуа</a>
+            <a href="/islands/new-zealand.html" data-region="islands">Новая Зеландия</a>
+            <a href="/europe/norway.html" data-region="europe">Норвегия</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="o">
+            <h4 class="filter-country__letter-title">О</h4>
+            <a href="/asia/united-arab-emirates.html" data-region="asia">ОАЭ</a>
+            <a href="/asia/oman.html" data-region="asia">Оман</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="p">
+            <h4 class="filter-country__letter-title">П</h4>
+            <a href="/asia/pakistan.html" data-region="asia">Пакистан</a>
+            <a href="/islands/palau.html" data-region="islands">Палау</a>
+            <a href="/america/panama.html" data-region="america">Панама</a>
+            <a href="/islands/papua-new-guinea.html" data-region="islands">Папуа - Новая Гвинея</a>
+            <a href="/america/paraguay.html" data-region="america">Парагвай</a>
+            <a href="/america/peru.html" data-region="america">Перу</a>
+            <a href="/europe/poland.html" data-region="europe">Польша</a>
+            <a href="/europe/portugal.html" data-region="europe">Португалия</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="r">
+            <h4 class="filter-country__letter-title">Р</h4>
+            <a href="/europe/russia.html" data-region="europe">Россия</a>
+            <a href="/africa/rwanda.html" data-region="africa">Руанда</a>
+            <a href="/europe/romania.html" data-region="europe">Румыния</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="s">
+            <h4 class="filter-country__letter-title">С</h4>
+            <a href="/america/el-salvador.html" data-region="america">Сальвадор</a>
+            <a href="/islands/samoa.html" data-region="islands">Самоа</a>
+            <a href="/europe/san-marino.html" data-region="europe">Сан-Марино</a>
+            <a href="/asia/saudi-arabia.html" data-region="asia">Саудовская Аравия</a>
+            <a href="/islands/seychelles.html" data-region="islands">Сейшелы</a>
+            <a href="/africa/senegal.html" data-region="africa">Сенегал</a>
+            <a href="/europe/serbia.html" data-region="europe">Сербия</a>
+            <a href="/asia/singapore.html" data-region="asia">Сингапур</a>
+            <a href="/asia/syria.html" data-region="asia">Сирия</a>
+            <a href="/europe/slovakia.html" data-region="europe">Словакия</a>
+            <a href="/europe/slovenia.html" data-region="europe">Словения</a>
+            <a href="/america/usa.html" data-region="america">США</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="t">
+            <h4 class="filter-country__letter-title">Т</h4>
+            <a href="/asia/tajikistan.html" data-region="asia">Таджикистан</a>
+            <a href="/asia/thailand.html" data-region="asia">Таиланд</a>
+            <a href="/africa/tanzania.html" data-region="africa">Танзания</a>
+            <a href="/africa/togo.html" data-region="africa">Того</a>
+            <a href="/islands/tonga.html" data-region="islands">Тонга</a>
+            <a href="/america/trinidad-and-tobago.html" data-region="america">Тринидад и Тобаго</a>
+            <a href="/islands/tuvalu.html" data-region="islands">Тувалу</a>
+            <a href="/africa/tunisia.html" data-region="africa">Тунис</a>
+            <a href="/asia/turkmenistan.html" data-region="asia">Туркмения</a>
+            <a href="/asia/turkey.html" data-region="asia">Турция</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="u">
+            <h4 class="filter-country__letter-title">У</h4>
+            <a href="/africa/uganda.html" data-region="africa">Уганда</a>
+            <a href="/asia/uzbekistan.html" data-region="asia">Узбекистан</a>
+            <a href="/europe/ukraine.html" data-region="europe">Украина</a>
+            <a href="/america/uruguay.html" data-region="america">Уругвай</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="f">
+            <h4 class="filter-country__letter-title">Ф</h4>
+            <a href="/islands/fiji.html" data-region="islands">Фиджи</a>
+            <a href="/islands/philippines.html" data-region="islands">Филиппины</a>
+            <a href="/europe/finland.html" data-region="europe">Финляндия</a>
+            <a href="/europe/france.html" data-region="europe">Франция</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="kh">
+            <h4 class="filter-country__letter-title">Х</h4>
+            <a href="/europe/croatia.html" data-region="europe">Хорватия</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="ch">
+            <h4 class="filter-country__letter-title">Ч</h4>
+            <a href="/africa/chad.html" data-region="africa">Чад</a>
+            <a href="/europe/montenegro.html" data-region="europe">Черногория</a>
+            <a href="/europe/czechia.html" data-region="europe">Чехия</a>
+            <a href="/america/chile.html" data-region="america">Чили</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="sh">
+            <h4 class="filter-country__letter-title">Ш</h4>
+            <a href="/europe/switzerland.html" data-region="europe">Швейцария</a>
+            <a href="/europe/sweden.html" data-region="europe">Швеция</a>
+            <a href="/asia/sri-lanka.html" data-region="asia">Шри-Ланка</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="e">
+            <h4 class="filter-country__letter-title">Э</h4>
+            <a href="/america/ecuador.html" data-region="america">Эквадор</a>
+            <a href="/africa/eritrea.html" data-region="africa">Эритрея</a>
+            <a href="/africa/eswatini.html" data-region="africa">Эсватини</a>
+            <a href="/europe/estonia.html" data-region="europe">Эстония</a>
+            <a href="/africa/ethiopia.html" data-region="africa">Эфиопия</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="yu">
+            <h4 class="filter-country__letter-title">Ю</h4>
+            <a href="/africa/south-africa.html" data-region="africa">ЮАР</a>
+            <a href="/africa/south-sudan.html" data-region="africa">Южный Судан</a>
+          </div>
+          <div class="filter-country__countries hidden" data-country-letter="ya">
+            <h4 class="filter-country__letter-title">Я</h4>
+            <a href="/america/jamaica.html" data-region="america">Ямайка</a>
+            <a href="/asia/japan.html" data-region="asia">Япония</a>
+          </div>
+        </div>
+      </article>
+      <a class="filter-country__button">
+        <svg class="filter-country__button-icon" width="12" height="12"><use xlink:href="#icon-close"></use></svg>Свернуть
+      </a>
     </section>
     <div>
       <form action="" method="POST">
@@ -446,17 +500,80 @@
       </section>
     </div>
   </main>
-  <footer>
-    <a href="" aria-label="Логотип Погнали"></a>
-    <div>
-      <a href="" aria-label="Страницы Погнали на Фейсбуке"></a>
-      <a href="" aria-label="Страницы Погнали во ВКонтакте"></a>
-      <a href="" aria-label="Страницы Погнали в Инстаграме"></a>
+  <footer class="page-footer">
+    <a class="page-footer__logo" href="index.html" aria-label="Логотип Погнали"></a>
+    <div class="page-footer__menu footer-menu">
+      <a class="footer-menu__item footer-menu__item--facebook" href="#" aria-label="Страница Погнали на Фейсбуке">
+        <svg width="11" height="21"><use xlink:href="#icon-fb"></use></svg>
+      </a>
+      <a class="footer-menu__item footer-menu__item--vkontakte" href="#" aria-label="Страница Погнали во ВКонтакте">
+        <svg width="22" height="11"><use xlink:href="#icon-vk"></use></svg>
+      </a>
+      <a class="footer-menu__item footer-menu__item--insta" href="#" aria-label="Страница Погнали в Инстаграме">
+        <svg width="16" height="16"><use xlink:href="#icon-insta"></use></svg>
+      </a>
     </div>
-    <div>
-      <p>Разработано</p>
-      <a href="" aria-label="Логотип HTML Academy"></a>
+    <div class="page-footer__copyright">
+      <p class="page-footer__copy">Разработано</p>
+      <a class="page-footer__academy" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTML Academy">
+        <svg width="27" height="34"><use xlink:href="#logo-academy"></use></svg>
+      </a>
     </div>
   </footer>
+  <svg style="display: none;">
+    <symbol id="icon-minus" viewBox="0 0 14 2">
+      <path d="M0 0h14v2H0z"/>
+    </symbol>
+    <symbol id="icon-plus" viewBox="0 0 14 14">
+      <path d="M8 6V0H6v6H0v2h6v6h2V8h6V6z"/>
+    </symbol>
+    <symbol id="month-arrow-left" viewBox="0 0 18 34">
+      <path d="M3.6 17l14-14.4c.6-.6.6-1.6 0-2.1-.6-.6-1.5-.6-2.1 0L.4 15.9c-.6.6-.6 1.6 0 2.1l15.1 15.5c.3.3.7.4 1 .4s.8-.1 1-.4c.6-.6.6-1.6 0-2.1L3.6 17z"/>
+    </symbol>
+    <symbol id="month-arrow-right" viewBox="0 0 18 34">
+      <path d="M14.4 17L.4 2.6C-.1 2-.1 1 .4.4 1-.2 1.9-.2 2.5.4l15.1 15.5c.6.6.6 1.6 0 2.1L2.5 33.6c-.3.3-.7.4-1 .4s-.8-.1-1-.4c-.6-.6-.6-1.6 0-2.1L14.4 17z"/>
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 9 9">
+      <path d="M8 1L1 8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M1 1L8 8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="level-percent" viewBox="0 0 100 100">
+      <circle r="48" cx="50" cy="50" fill="none" stroke="#ff8d30"></circle>
+    </symbol>
+    <symbol id="icon-plane" viewBox="0 0 19 21">
+      <path d="M17.622.016c-.823.185-1.649.37-1.956.88l-2.378 4.483L.518 8.252 0 9.685l9.772.874-1.658 3.882-3.706.833-.93 1.526 2.673.274.305 1.248c.137.442.616.738 1.025.646l1.236-.278L10.149 21l.93-1.526-.914-3.742 2.683-3.236 5.12 8.501L19 19.89 15.85 6.996l2.893-4.16c.31-.51.108-1.34-.096-2.175-.101-.413-.616-.737-1.025-.645z" fill="#161c35"/>
+    </symbol>
+    <symbol id="icon-bus" viewBox="0 0 19 21">
+      <path d="M4.75 14.25c0-.414-.155-.768-.464-1.06a1.57 1.57 0 00-1.12-.44c-.436 0-.81.146-1.119.44-.31.292-.464.646-.464 1.06 0 .414.155.768.464 1.06.31.293.683.44 1.12.44.437 0 .81-.146 1.12-.44.308-.292.463-.646.463-1.06zm12.667 0c0-.414-.155-.768-.464-1.06a1.57 1.57 0 00-1.12-.44c-.437 0-.81.146-1.12.44-.308.292-.463.646-.463 1.06 0 .414.155.768.464 1.06.31.293.682.44 1.12.44.436 0 .81-.146 1.119-.44.31-.292.464-.646.464-1.06zm-.57-4.64l-.89-4.5a.788.788 0 00-.78-.61H3.823a.788.788 0 00-.779.61l-.89 4.5a.713.713 0 00.173.62c.156.18.358.27.606.27h13.136c.248 0 .45-.09.606-.27a.713.713 0 00.174-.62zm-2.795-7.172a.529.529 0 00-.173-.399.59.59 0 00-.42-.164H5.541a.59.59 0 00-.42.164.528.528 0 00-.174.398c0 .157.058.29.173.399a.59.59 0 00.42.164h7.917a.59.59 0 00.421-.164.529.529 0 00.173-.398zM19 10.934V18h-1.583v1.5c0 .414-.155.768-.464 1.06a1.57 1.57 0 01-1.12.44c-.437 0-.81-.146-1.12-.44a1.408 1.408 0 01-.463-1.06V18h-9.5v1.5c0 .414-.155.768-.464 1.06a1.57 1.57 0 01-1.12.44 1.57 1.57 0 01-1.119-.44 1.408 1.408 0 01-.464-1.06V18H0v-7.066c0-.875.103-1.746.31-2.614L1.582 3c.075-.61.477-1.145 1.206-1.605C3.52.934 4.468.585 5.634.352 6.801.117 8.09 0 9.5 0c1.41 0 2.699.117 3.866.352 1.166.234 2.115.582 2.845 1.043.73.46 1.132.996 1.206 1.605l1.298 5.32c.19.797.285 1.668.285 2.614z" fill="#161c35"/>
+    </symbol>
+    <symbol id="icon-bicycle" viewBox="0 0 24 21">
+      <g>
+        <path d="M19.071 21a4.857 4.857 0 01-2.738-.848 5.01 5.01 0 01-1.815-2.258 5.13 5.13 0 01-.28-2.907c.19-.976.659-1.872 1.348-2.576a4.898 4.898 0 012.524-1.377 4.834 4.834 0 012.847.286c.9.381 1.67 1.026 2.212 1.854a5.107 5.107 0 01-.615 6.35A4.883 4.883 0 0119.071 21zm0-8.313c-.636 0-1.257.193-1.786.554-.528.36-.94.873-1.183 1.472-.244.6-.307 1.26-.183 1.896.124.636.43 1.221.88 1.68.449.459 1.021.771 1.645.898.623.127 1.27.062 1.857-.187a3.229 3.229 0 001.443-1.208 3.33 3.33 0 00-.401-4.142 3.185 3.185 0 00-2.272-.963zM4.928 21a4.857 4.857 0 01-2.738-.848 5.01 5.01 0 01-1.815-2.258 5.129 5.129 0 01-.28-2.907c.19-.976.66-1.872 1.349-2.576a4.898 4.898 0 012.523-1.377 4.834 4.834 0 012.847.286c.901.381 1.67 1.026 2.212 1.854a5.107 5.107 0 01-.614 6.35A4.883 4.883 0 014.928 21zm0-8.313c-.635 0-1.257.193-1.785.554-.529.36-.94.873-1.184 1.472-.243.6-.307 1.26-.183 1.896.124.636.43 1.221.88 1.68.45.459 1.022.771 1.645.898.624.127 1.27.062 1.857-.187a3.23 3.23 0 001.443-1.208 3.33 3.33 0 00-.4-4.142 3.185 3.185 0 00-2.273-.963zM15.428 3.5a1.678 1.678 0 001.215-.513c.16-.163.286-.357.372-.57.085-.213.128-.442.127-.672a1.752 1.752 0 00-.493-1.238A1.66 1.66 0 0015.439 0a1.684 1.684 0 00-1.214.509 1.752 1.752 0 00-.506 1.236 1.782 1.782 0 00.498 1.239 1.712 1.712 0 001.21.516z" fill="#161C35"/>
+        <path d="M17.976 7h-2.344a.21.21 0 01-.188-.114l-1.7-3.18a1.685 1.685 0 00-.505-.597 1.642 1.642 0 00-1.482-.238 1.655 1.655 0 00-.659.41l-3.742 3.85a1.8 1.8 0 00-.499 1.225c0 .952.675 1.291.991 1.482 1.527.898 2.602 1.555 3.192 1.92a.216.216 0 01.103.186v3.78c0 .471.355.875.816.899a.843.843 0 00.632-.24.874.874 0 00.266-.633v-4.703a.889.889 0 00-.356-.711l-1.983-1.455a.218.218 0 01-.088-.157.222.222 0 01.057-.171l2.25-2.45a.215.215 0 01.183-.068.211.211 0 01.161.111l1.17 2.154a.844.844 0 00.75.45H18a.84.84 0 00.621-.27.878.878 0 00-.645-1.48z" fill="#161C35"/>
+      </g>
+    </symbol>
+    <symbol id="icon-run" viewBox="0 0 20 21">
+      <path d="M15.35 4.349a2.184 2.184 0 002.193-2.175C17.543.974 16.561 0 15.35 0a2.184 2.184 0 00-2.193 2.174c0 1.201.982 2.175 2.193 2.175zM14.01 9.75c.25.373.612.659 1.033.82.421.162.883.19 1.321.083l3.636-.9-.53-2.11-3.635.901-1.512-2.247a2.205 2.205 0 00-1.395-.928L8.711 4.53a2.207 2.207 0 00-1.394.179c-.432.21-.782.555-.997.981L4.502 9.297l1.961.973 1.818-3.607 2.157.429-5.576 9.216H0v2.174h4.862a2.21 2.21 0 001.88-1.056l2.103-3.474 5.667 1.124L16.503 21l2.08-.688-1.99-5.923a2.179 2.179 0 00-.63-.943 2.207 2.207 0 00-1.022-.503l-3.332-.66 1.943-3.211.457.679z" fill="#161C35"/>
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 16 15">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C5.15 0 2.293.478 1.257 1.431.397 2.221.11 3.62.013 4.503c0 0-.013.088-.013.125 0 .347.3.625.667.625.043 0 1.646-.122 2.613-.197.023-.003.047-.006.07-.012.36-.01.65-.285.65-.625l.003-1.231c0-.382.33-.688.737-.688h6.52c.407 0 .737.306.737.688L12 4.418c0 .341.29.616.65.626.023.006.047.01.07.012.967.075 2.57.197 2.613.197.367 0 .667-.278.667-.625 0-.037-.013-.125-.013-.125-.097-.884-.383-2.281-1.244-3.072C13.707.478 10.85 0 8 0zm0 8.125c-.737 0-1.333.56-1.333 1.25s.596 1.25 1.333 1.25 1.333-.56 1.333-1.25S8.737 8.125 8 8.125zM7 5.312v-.78c0-.432-.373-.782-.833-.782-.46 0-.834.35-.834.781v.781L.837 9.816c-.31.284-.504.68-.504 1.118v1.254c0 .69.597 1.25 1.334 1.25H2v.78c0 .432.373.782.833.782.46 0 .834-.35.834-.781v-.781h8.666v.78c0 .432.373.782.834.782.46 0 .833-.35.833-.781v-.781h.333c.737 0 1.333-.56 1.333-1.25v-1.254c0-.437-.193-.834-.503-1.118l-4.496-4.504v-.78c0-.432-.374-.782-.834-.782-.46 0-.833.35-.833.781v.781H7zm1 1.563c1.473 0 2.667 1.119 2.667 2.5s-1.194 2.5-2.667 2.5c-1.473 0-2.667-1.119-2.667-2.5s1.194-2.5 2.667-2.5z"/>
+    </symbol>
+    <symbol id="icon-email" viewBox="0 0 19 13">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.662 10.625L12.16 6.5l4.502-4.125-.614-.656-6.548 6-6.548-6-.614.656L6.84 6.5l-4.502 4.125.614.656L7.505 7.11 9.5 8.938l1.995-1.829 4.553 4.172.614-.656zM1.521 0C.683 0 0 .727 0 1.62v9.76C0 12.275.676 13 1.523 13h15.954c.841 0 1.523-.727 1.523-1.62V1.62C19 .725 18.324 0 17.477 0H1.523z"/>
+    </symbol>
+    <symbol id="icon-fb" viewBox="0 0 11 21">
+      <path d="M7.8 21H2.2v-9.8H0V6.4h2.1c-.1-2.2.3-3.8 1.3-4.9C4.2.6 5.5.1 7.1 0H11v4.7H7.9c-.1.2-.2.8-.2 1.7H11v4.8H7.8V21zm-4.4-1.1h3.1v-9.8h3.2V7.5H6.5v-.6c0-1.5 0-2.9.8-3.4l.2-.1h2.3V1.1H7.1c-1.2.1-2.2.5-2.8 1.2-.8.9-1.1 2.5-.9 4.6l.1.6H1.2v2.6h2.2v9.8z" fill="#192144"/>
+    </symbol>
+    <symbol id="icon-insta" viewBox="0 0 23 23">
+      <path d="M17 1.5c2.5 0 4.5 2 4.5 4.5v11c0 2.5-2 4.5-4.5 4.5H6c-2.5 0-4.5-2-4.5-4.5V6c0-2.5 2-4.5 4.5-4.5h11zM17 0H6C2.7 0 0 2.7 0 6v11c0 3.3 2.7 6 6 6h11c3.3 0 6-2.7 6-6V6c0-3.3-2.7-6-6-6z" fill="#192144"/>
+      <path d="M11.5 7.1c2.4 0 4.4 2 4.4 4.4 0 2.4-2 4.4-4.4 4.4-2.4 0-4.4-2-4.4-4.4 0-2.4 2-4.4 4.4-4.4zm0-1.5c-3.3 0-5.9 2.7-5.9 5.9s2.7 5.9 5.9 5.9 5.9-2.7 5.9-5.9-2.6-5.9-5.9-5.9zM17.6 6.7a1.3 1.3 0 100-2.6 1.3 1.3 0 000 2.6z" fill="#192144"/>
+    </symbol>
+    <symbol id="icon-vk" viewBox="0 0 30 16">
+      <path d="M23.884 16c-.4 0-1.2-.101-2.1-.608-.6-.405-1.2-1.012-1.8-1.519-.4-.405-1.2-1.215-1.4-1.215-.3.101-.499.912-.499 1.62 0 .102 0 .81-.5 1.216-.4.405-1.1.506-1.2.506h-1.9c-.999 0-4.398-.203-7.397-3.038C3.388 9.519.289 3.038.089 2.734c-.1-.506-.2-1.215.2-1.62s1.1-.506 1.4-.506h4.199c.1 0 .6.1 1 .303.4.203.6.71.6.71s.6 1.417 1.5 2.733c1.299 2.026 1.899 2.532 2.099 2.633.2-.405.3-1.721.2-2.936 0-.507-.1-1.114-.3-1.317-.1-.101-.4-.304-.8-.304l-.7-.607c-.1-.71.6-1.215 1.1-1.418.7-.304 1.8-.405 3.1-.405h.699c1.2 0 1.6.101 2.1.203 1.699.405 1.599 1.721 1.599 3.341V5.671c0 .405 0 1.013.1 1.316.2-.1.9-.709 2.1-2.531.8-1.215 1.4-2.532 1.499-2.836.2-.405.6-.911 1.6-.911H28.083c1 0 1.6.304 1.799.911.3.608.2 1.722-2.4 4.658-.4.406-.7.81-1 1.114-.599.71-1.199 1.418-1.199 1.62.1.102.7.608 1.3 1.115 1.5 1.215 2.5 2.329 3 3.139.499.81.399 1.316.299 1.721-.4.912-1.6 1.013-1.9 1.013h-4.099zm-5.3-4.962c.9 0 1.7.81 2.5 1.62.5.507 1 1.013 1.5 1.317.7.405 1.3.405 1.4.405h3.899c.2 0 .4-.102.5-.102 0 0 0-.1-.1-.202-.4-.709-1.4-1.722-2.7-2.734-1.2-1.013-1.8-1.52-1.9-2.228-.1-.81.5-1.418 1.6-2.734.3-.304.6-.71 1-1.114 1.6-1.823 2-2.633 2.1-3.038H23.082c-.2.405-.8 1.823-1.599 3.038-1.9 2.835-2.8 3.24-3.399 3.24-.2 0-.4 0-.6-.1-1-.609-1-1.824-.9-2.836v-.405-1.722c.1-1.721 0-1.721-.4-1.823-.4-.101-.7-.101-1.9-.202h-.699c-.6 0-1.3 0-1.9.101l.3.304c.6.709.6 2.025.6 2.228.1 1.62.1 3.848-1 4.354-.2.101-.4.101-.6.101-.9 0-1.899-.911-3.398-3.341-.8-1.216-1.5-2.735-1.5-2.836l-.1-.101c-.1 0-.2-.101-.3-.101H1.689h-.1c.6 1.215 3.4 6.683 6.498 9.62 2.7 2.531 5.799 2.633 6.399 2.633h1.9s.2-.102.3-.102v-.1c0-.305 0-2.634 1.599-3.039.1-.101.2-.101.3-.101z" fill="#192144"/>
+    </symbol>
+    <symbol id="logo-academy" viewBox="0 0 27 34">
+      <path d="M13.6 0h-.2L0 1.4V26l13.5 8L27 26V1.4L13.6 0zm5.7 16.8l-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8L25 13.5l-4.5 2.6-7.1-4.2v1.4l5.9 3.5zM1.9 15.1l11.4 6.8v1l-8-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.2-4.9V17l3.4-2v10l-11.6 6.9-11.4-7v-9.8zm0-3v-9l11.6-1.2 11.6 1.2v9L13.5 5.3v-.1h-.2v.1L1.9 12.1z" fill="#192144"/>
+    </symbol>
+  </svg>
 </body>
 </html>
