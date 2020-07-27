@@ -52,9 +52,8 @@
       </div>
       <article class="filter-country__filter hidden">
         <h3 class="visually-hidden">Выбор страны</h3>
-        <fieldset class="filter-country__letters-wrapper" id="country-selection">
+        <fieldset class="filter-country__letters-wrapper">
           <legend class="visually-hidden">Побуквенный переключатель стран</legend>
-          <label class="visually-hidden" for="country-selection">Побуквенный переключатель стран</label>
           <div class="filter-country__letters">
             <input class="visually-hidden" type="radio" name="country-letter" id="letter-a" checked><label class="filter-country__letter" for="letter-a">А</label>
             <input class="visually-hidden" type="radio" name="country-letter" id="letter-b"><label class="filter-country__letter" for="letter-b">Б</label>
@@ -331,7 +330,7 @@
     </section>
     <form class="perfect-travelmate" action="https://echo.htmlacademy.ru/" method="post">
       <h2 class="perfect-travelmate__heading">Подберите идеального попутчика</h2>
-      <fieldset class="perfect-travelmate__fieldset">
+      <fieldset class="perfect-travelmate__fieldset perfect-travelmate__fieldset--rolled">
         <legend class="visually-hidden">Хобби</legend>
         <a class="perfect-travelmate__title">Хобби</a>
         <div class="perfect-travelmate__input-wrapper">
@@ -349,7 +348,7 @@
           <input class="visually-hidden" type="checkbox" name="music-eurodance" id="music-eurodance"><label class="perfect-travelmate__label" for="music-eurodance">Евроденс</label>
         </div>
       </fieldset>
-      <fieldset class="perfect-travelmate__fieldset">
+      <fieldset class="perfect-travelmate__fieldset perfect-travelmate__fieldset--rolled">
         <legend class="visually-hidden">Еда</legend>
         <a class="perfect-travelmate__title">Еда</a>
         <div class="perfect-travelmate__input-wrapper">
@@ -361,7 +360,7 @@
       <fieldset class="perfect-travelmate__fieldset">
         <legend class="visually-hidden">Транспорт</legend>
         <a class="perfect-travelmate__title">Транспорт</a>
-        <div class="tags-transport__transportation transportation">
+        <div class="perfect-travelmate__input-wrapper transportation perfect-travelmate__transportation">
           <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-avia" id="transportation-avia" checked>
           <label class="transportation__label transportation__label--avia" for="transportation-avia" aria-label="Кнопка передвижения на самолете" data-transport="Авиаперелет">
             <svg height="16"><use xlink:href="#icon-plane"></use></svg>
@@ -383,15 +382,21 @@
       <fieldset class="perfect-travelmate__fieldset">
         <legend class="visually-hidden">Левел</legend>
         <a class="perfect-travelmate__title">Левел</a>
-        <div>
-          <div></div>
-        </div>
-        <div>
-          <input type="text" value="30">
-          <input type="text" value="100">
+        <div class="perfect-travelmate__input-wrapper travelmate-range">
+          <div class="travelmate-range__inputs-wrapper">
+            <input class="travelmate-range__input travelmate-range__input--min" type="text" value="30">
+            <input class="travelmate-range__input travelmate-range__input--max" type="text" value="100">
+          </div>
+          <div class="travelmate-range__range-wrapper">
+            <div class="travelmate-range__row">
+              <div class="travelmate-range__row travelmate-range__row--inner"></div>
+            </div>
+            <a class="travelmate-range__button travelmate-range__button--left" aria-label="Ползунок для задания минимального уровня"></a>
+            <a class="travelmate-range__button travelmate-range__button--right" aria-label="Ползунок для задания максимального уровня"></a>
+          </div>
         </div>
       </fieldset>
-      <button type="submit">Показать</button>
+      <button class="perfect-travelmate__button" type="submit">Показать</button>
     </form>
     <div>
       <section>
