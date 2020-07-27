@@ -398,16 +398,19 @@
       </fieldset>
       <button class="perfect-travelmate__button" type="submit">Показать</button>
     </form>
+
     <section class="potential-travelmates-list">
       <h2 class="visually-hidden">Список потенциальных попутчиков</h2>
       <article class="potential-travelmates-list__item potential-travelmate">
-        <picture class="potential-travelmate__photo">
-          <img src="/img/firsova-mobile@1x.jpg" alt="Таня Фирсова - фотография" width="285" height="285">
-        </picture>
-        <h3 class="potential-travelmate__name">Таня Фирсова</h3>
-        <a class="potential-travelmate__likes" href="" aria-label="Количество лайков">1,5 М</a>
-        <p>#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-        <div>
+        <a class="potential-travelmate__photo" href="" title="Таня Фирсова - перейти в профиль">
+          <picture>
+            <img src="/img/firsova-mobile@1x.jpg" alt="Таня Фирсова - фотография" width="285" height="285">
+          </picture>
+        </a>
+        <h3 class="potential-travelmate__name"><a href="" title="Таня Фирсова - перейти в профиль">Таня Фирсова</a></h3>
+        <div class="potential-travelmate__likes"><a class="potential-travelmate__like-heart" aria-label="Поставить лайк"></a>1,5 М</div>
+        <p class="potential-travelmate__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+        <div class="potential-travelmate__wish">
           <p>хочет посетить:</p>
           <ul>
             <li>Шри-ланка</li>
@@ -415,65 +418,87 @@
             <li>Сейшелы</li>
           </ul>
         </div>
-        <div>
+        <div class="potential-travelmate__transport">
           <p>транспорт:</p>
-          <div>
-            <span aria-label="На самолете"></span>
-            <span aria-label="На автобусе"></span>
-            <span aria-label="На велосипеде"></span>
-            <span aria-label="Бегом"></span>
+          <div class="perfect-travelmate__input-wrapper transportation perfect-travelmate__transportation">
+            <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-avia" id="transportation-avia" checked>
+            <label class="transportation__label transportation__label--avia" for="transportation-avia" aria-label="Кнопка передвижения на самолете" data-transport="Авиаперелет">
+              <svg height="16"><use xlink:href="#icon-plane"></use></svg>
+            </label>
+            <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bus" id="transportation-bus" checked>
+            <label class="transportation__label transportation__label--bus" for="transportation-bus" aria-label="Кнопка передвижения на автотранспорте" data-transport="Автотранспорт">
+              <svg height="16"><use xlink:href="#icon-bus"></use></svg>
+            </label>
+            <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bicycle" id="transportation-bicycle">
+            <label class="transportation__label transportation__label--bicycle" for="transportation-bicycle" aria-label="Кнопка передвижения на велосипеде" data-transport="Велосипед">
+              <svg height="16"><use xlink:href="#icon-bicycle"></use></svg>
+            </label>
+            <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-foot" id="transportation-foot" checked>
+            <label class="transportation__label transportation__label--foot" for="transportation-foot" aria-label="Кнопка передвижения пешком" data-transport="Пешком">
+              <svg height="16"><use xlink:href="#icon-run"></use></svg>
+            </label>
           </div>
         </div>
-        <div>
-          <span>99</span>
-          <span>level</span>
+        <div class="potential-travelmate__mark mark profile-header__mark">
+          <svg class="mark__indicator" width="100" height="100"><use xlink:href="#level-percent"></use></svg>
+          <span class="mark__number">99</span>
+          <span class="mark__level">level</span>
         </div>
-        <a href="">Позвать!</a>
+        <a class="potential-travelmate__invite" href="">Позвать!</a>
       </article>
+
       <article class="potential-travelmates-list__item potential-travelmate">
-        <img src="/img/demin-mobile@1x.jpg" alt="Петя Демин - фотография" width="285" height="285">
+        <a href="" title="Петя Демин - перейти в профиль">
+          <picture class="potential-travelmate__photo">
+            <img src="/img/demin-mobile@1x.jpg" alt="Петя Демин - фотография" width="285" height="285">
+          </picture>
+        </a>
+        <h3 class="potential-travelmate__name"><a href="" title="Петя Демин - перейти в профиль">Петя Демин</a></h3>
+        <p>#бургер #бар #футбол #концерт #крафт</p>
         <div>
-          <h3>Петя Демин</h3>
-          <p>
-            <a href="">#бургер</a>
-            <a href="">#бар</a>
-            <a href="">#футбол</a>
-            <a href="">#концерт</a>
-            <a href="">#крафт</a>
-          </p>
+          <p>хочет посетить:</p>
+          <ul>
+            <li>Бельгия</li>
+            <li>Чехия</li>
+          </ul>
         </div>
-        <ul>
-          <li>Бельгия</li>
-          <li>Чехия</li>
-        </ul>
         <div>
           <a href="">Позвать!</a>
           <a href="" aria-label="Количество лайков">1500</a>
         </div>
         <div>
-          <div>
-            <span aria-label="На самолете"></span>
-            <span aria-label="На автобусе"></span>
-            <span aria-label="На велосипеде"></span>
-            <span aria-label="Бегом"></span>
-          </div>
-          <div>
-            <span>80</span>
-            <span>level</span>
+          <p>транспорт:</p>
+          <div class="perfect-travelmate__input-wrapper transportation perfect-travelmate__transportation">
+            <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-avia" id="transportation-avia" checked>
+            <label class="transportation__label transportation__label--avia" for="transportation-avia" aria-label="Кнопка передвижения на самолете" data-transport="Авиаперелет">
+              <svg height="16"><use xlink:href="#icon-plane"></use></svg>
+            </label>
+            <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bus" id="transportation-bus" checked>
+            <label class="transportation__label transportation__label--bus" for="transportation-bus" aria-label="Кнопка передвижения на автотранспорте" data-transport="Автотранспорт">
+              <svg height="16"><use xlink:href="#icon-bus"></use></svg>
+            </label>
+            <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bicycle" id="transportation-bicycle">
+            <label class="transportation__label transportation__label--bicycle" for="transportation-bicycle" aria-label="Кнопка передвижения на велосипеде" data-transport="Велосипед">
+              <svg height="16"><use xlink:href="#icon-bicycle"></use></svg>
+            </label>
+            <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-foot" id="transportation-foot" checked>
+            <label class="transportation__label transportation__label--foot" for="transportation-foot" aria-label="Кнопка передвижения пешком" data-transport="Пешком">
+              <svg height="16"><use xlink:href="#icon-run"></use></svg>
+            </label>
           </div>
         </div>
+        <div class="mark profile-header__mark">
+          <svg class="mark__indicator" width="100" height="100"><use xlink:href="#level-percent"></use></svg>
+          <span class="mark__number">99</span>
+          <span class="mark__level">level</span>
+        </div>
+        <a href="">Позвать!</a>
       </article>
       <article class="potential-travelmates-list__item potential-travelmate">
         <img src="/img/smolov-mobile@1x.jpg" alt="Марк Смолов - фотография" width="285" height="285">
         <div>
           <h3>Марк Смолов</h3>
-          <p>
-            <a href="">#рэп</a>
-            <a href="">#тату</a>
-            <a href="">#хайпбист</a>
-            <a href="">#кроссовки</a>
-            <a href="">#суприм</a>
-          </p>
+          <p>#рэп #тату #хайпбист #кроссовки #суприм</p>
         </div>
         <ul>
           <li>США</li>
@@ -501,12 +526,7 @@
         <img src="/img/rogovaya-mobile@1x.jpg" alt="Лариса Роговая - фотография" width="285" height="285">
         <div>
           <h3>Лариса Роговая</h3>
-          <p>
-            <a href="">#образование</a>
-            <a href="">#карьера</a>
-            <a href="">#учеба</a>
-            <a href="">#линкедин</a>
-          </p>
+          <p>#образование #карьера #учеба #линкедин</p>
         </div>
         <ul>
           <li>Великобритания</li>
