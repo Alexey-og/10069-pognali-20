@@ -2236,6 +2236,17 @@ stroke-dasharray: 241px 60px;
 .travelmate-range__button--right {
   right: 0%; }
 
+.potential-travelmates-list {
+  margin: 0 25px 46px; }
+
+.potential-travelmates-list__item {
+  margin-bottom: 10px; }
+
+.potential-travelmate {
+  padding: 15px 20px 20px;
+  border-radius: 20px;
+  background-color: #ffffff; }
+
 /*  Modals  */
 .business-rates {
   display: flex;
