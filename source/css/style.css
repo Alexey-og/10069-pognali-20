@@ -2244,15 +2244,11 @@ stroke-dasharray: 241px 60px;
 
 .potential-travelmate {
   display: grid;
-  grid-template-columns: 100px 100px 70px;
+  grid-template-columns: 104px 91px 75px;
   grid-template-rows: 60px 30px 50px 130px 80px 65px;
   border-radius: 20px;
   background-color: #ffffff;
   color: #000000; }
-
-.potential-travelmate a {
-  text-decoration: none;
-  font: inherit; }
 
 .potential-travelmate__photo {
   grid-column: 1 / 2;
@@ -2267,13 +2263,31 @@ stroke-dasharray: 241px 60px;
   margin-right: 16px; }
 
 .potential-travelmate__name {
+  position: relative;
   grid-column: 2 / 4;
   grid-row: 1 / 2;
-  margin: 15px 22px 0 0;
-  padding-right: 30px;
+  margin: 13px 22px 8px 0; }
+  .potential-travelmate__name::after {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 9px; }
+  .potential-travelmate__name--online::after {
+    background-color: #81e31e; }
+  .potential-travelmate__name--offline::after {
+    background-color: #f97676; }
+
+.potential-travelmate__surname {
+  display: block; }
+
+.potential-travelmate__name a {
   font-weight: bold;
   font-size: 20px;
   line-height: 20px;
+  text-decoration: none;
   color: #1d2e5b; }
 
 .potential-travelmate__likes {
@@ -2294,27 +2308,222 @@ stroke-dasharray: 241px 60px;
   content: "";
   top: -7px;
   left: -37px;
-  background-color: #e2e5f2; }
+  background-color: #e2e5f2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 12px 10px;
+  background-image: url("/img/heart.svg"); }
+  .potential-travelmate__like-heart--active {
+    background-color: #f9eaea;
+    background-image: url("/img/heart-active.svg"); }
 
 .potential-travelmate__tags {
-  grid-column: 1 / 3;
-  grid-row: 3 / 4; }
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+  margin: 6px 55px 5px 25px;
+  font-size: 15px;
+  line-height: 18px;
+  color: #444444; }
+
+.potential-travelmate__wish-wrapper {
+  grid-column: 1 / 4;
+  grid-row: 4 / 5;
+  margin-top: 5px; }
+
+.potential-travelmate__wish-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 0 19px 26px;
+  font-size: 15px;
+  line-height: 15px;
+  background-color: #ffffff;
+  color: #444444; }
+  .potential-travelmate__wish-title::before, .potential-travelmate__wish-title::after {
+    content: "";
+    width: 10px;
+    height: 1px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+    background-color: #edeff6; }
+  .potential-travelmate__wish-title::before {
+    position: absolute;
+    left: -26px;
+    width: 15px;
+    margin-right: 11px; }
+  .potential-travelmate__wish-title::after {
+    margin-left: 11px; }
+
+.potential-travelmate__wish-countris {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px; }
 
 .potential-travelmate__wish {
-  grid-column: 1 / 4;
-  grid-row: 4 / 5; }
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 40px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #1d2e5b; }
+  .potential-travelmate__wish::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 26px 18px; }
+  .potential-travelmate__wish--sri-lanka::before {
+    background-image: url("/img/flag-sri-lanka.svg"); }
+  .potential-travelmate__wish--thailand::before {
+    background-image: url("/img/flag-thailand.svg"); }
+  .potential-travelmate__wish--seychelles::before {
+    background-image: url("/img/flag-seychelles.svg"); }
+  .potential-travelmate__wish--belgium::before {
+    background-image: url("/img/flag-belgium.svg"); }
+  .potential-travelmate__wish--czechia::before {
+    background-image: url("/img/flag-czechia.svg"); }
+  .potential-travelmate__wish--usa::before {
+    background-image: url("/img/flag-usa.svg"); }
+  .potential-travelmate__wish--australia::before {
+    background-image: url("/img/flag-australia.svg"); }
+  .potential-travelmate__wish--dominica::before {
+    background-image: url("/img/flag-dominica.svg"); }
+  .potential-travelmate__wish--united-kingdom::before {
+    background-image: url("/img/flag-united-kingdom.svg"); }
+  .potential-travelmate__wish--germany::before {
+    background-image: url("/img/flag-germany.svg"); }
 
-.potential-travelmate__transport {
+.potential-travelmate__transport-wrapper {
   grid-column: 1 / 3;
   grid-row: 5 / 6; }
 
-.potential-travelmate__mark {
+.potential-travelmate__transport-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 0 19px 26px;
+  font-size: 15px;
+  line-height: 15px;
+  background-color: #ffffff;
+  color: #444444; }
+  .potential-travelmate__transport-title::before, .potential-travelmate__transport-title::after {
+    content: "";
+    width: 10px;
+    height: 1px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+    background-color: #edeff6; }
+  .potential-travelmate__transport-title::before {
+    position: absolute;
+    left: -25px;
+    width: 15px;
+    margin-right: 11px; }
+  .potential-travelmate__transport-title::after {
+    margin-left: 11px; }
+
+.potential-travelmate__transport-list {
+  display: flex;
+  margin-left: 22px; }
+
+.potential-travelmate__transport {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #edeff6; }
+  .potential-travelmate__transport--on {
+    fill: #1d2e5b; }
+  .potential-travelmate__transport--off {
+    fill-opacity: 0.15; }
+
+.potential-travelmate__mark-wrapper {
   grid-column: 3 / 4;
   grid-row: 5 / 6; }
 
+.potential-travelmate__mark-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 0 11px 14px;
+  font-size: 15px;
+  line-height: 15px;
+  background-color: #ffffff;
+  color: #444444; }
+  .potential-travelmate__mark-title::after {
+    content: "";
+    width: 10px;
+    height: 1px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin-left: 8px;
+    margin-top: 2px;
+    background-color: #edeff6; }
+
+.potential-travelmate__mark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 10px; }
+
+.potential-travelmate__mark-indicator {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 45px;
+  height: 45px;
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-dashoffset: 38px; }
+  .potential-travelmate__mark-indicator--99 {
+    stroke-dasharray: 133px 5px; }
+  .potential-travelmate__mark-indicator--80 {
+    stroke-dasharray: 110px 28px; }
+  .potential-travelmate__mark-indicator--25 {
+    stroke-dasharray: 35px 108px; }
+  .potential-travelmate__mark-indicator--50 {
+    stroke-dasharray: 69px 69px; }
+
+.potential-travelmate__mark-number {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  color: #1d2e5b; }
+
 .potential-travelmate__invite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   grid-column: 1 / 4;
-  grid-row: 6 / 7; }
+  grid-row: 6 / 7;
+  height: 40px;
+  margin: 3px 20px 22px;
+  border-radius: 25px;
+  background-color: #ffd74b;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #161c35; }
 
 /*  Modals  */
 .business-rates {
