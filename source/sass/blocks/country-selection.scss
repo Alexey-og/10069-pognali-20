@@ -1,0 +1,139 @@
+.country-selection {
+  @include top-radius(4px);
+
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 16px rgba(#d4d9eb, 0.25);
+  background: $color-white;
+  z-index: 2;
+
+  &::after {
+    @include circle(24px);
+
+    position: absolute;
+    content: "";
+    right: -12px;
+    top: -12px;
+    background-color: $color-white;
+    z-index: 1;
+  }
+}
+
+.country-selection__header {
+  @include top-radius(4px);
+
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 8px 5px 17px;
+  min-height: 42px;
+  background-color: $color-button-blue;
+  z-index: 3;
+}
+
+.country-selection__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $color-white;
+}
+
+.country-selection__close {
+  @include flex-center;
+
+  width: 26px;
+  height: 26px;
+  border: none;
+  background-color: transparent;
+  stroke: $color-white;
+  stroke-opacity: 0.7;
+  cursor: pointer;
+
+  &:hover {
+    stroke-opacity: 1;
+  }
+
+  &:active {
+    stroke-opacity: 0.1;
+  }
+}
+
+.country-selection__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.country-selection__letters {
+  display: grid;
+  grid-template-columns: repeat(5, 44px);
+  border-right: 1px solid #cbced9;
+}
+
+.country-selection__letters input:checked + .country-selection__letter {
+  border-color: #1d2e5b;
+  background-color: #1d2e5b;
+  color: $color-white;
+}
+
+.country-selection__letter {
+  @include flex-center;
+
+  height: 40px;
+  border-left: 1px solid #cbced9;
+  border-bottom: 1px solid #cbced9;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $color-button-blue;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-basic-blue-light;
+  }
+
+  &:active {
+    border-color: #1d2e5b;
+    background-color: #1d2e5b;
+    color: $color-white;
+  }
+}
+
+.country-selection__countries-wrapper {
+  @include bottom-radius(4px);
+
+  padding: 19px 19px 27px 19px;
+  border: 1px solid #cbced9;
+  border-top: none;
+  background-color: $color-white;
+}
+
+.country-selection__countries {
+  display: flex;
+  flex-direction: column;
+}
+
+.country-selection__countries a {
+  margin-bottom: 5px;
+  font-weight: normal;
+  color: $color-grey-44;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-button-blue;
+  }
+
+  &:active {
+    color: rgba($color-button-blue, 0.3);
+  }
+}

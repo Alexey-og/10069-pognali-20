@@ -1,0 +1,11 @@
+.planned-trips {
+  @include top-radius(30px);
+
+  position: relative;
+  padding: 25px 25px 60px 25px;
+  background-color: $color-special-blue-light;
+}
+
+.planned-trips__item {
+  margin-bottom: 10px;
+}

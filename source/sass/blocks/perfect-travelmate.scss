@@ -1,0 +1,144 @@
+.perfect-travelmate {
+  background-color: $color-basic-yellow;
+  border-radius: 20px;
+  margin: 0 25px 28px;
+  padding: 25px 25px 22px;
+}
+
+.perfect-travelmate__heading {
+  margin: 0 40px 23px 0;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: $color-button-blue;
+}
+
+.perfect-travelmate__fieldset {
+  margin: 0 0 9px 0;
+  padding: 0;
+  border: none;
+}
+
+.perfect-travelmate__fieldset--rolled {
+  & .perfect-travelmate__title::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='5' viewBox='0 0 10 5' fill='%23192144' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 5L0 0H10L5 5Z'/%3E%3C/svg%3E");
+  }
+
+  & .perfect-travelmate__input-wrapper {
+    display: none;
+  }
+}
+
+.perfect-travelmate__title {
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-top: 1px solid #f3c72b;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $color-button-blue;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 10px;
+    height: 5px;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='5' viewBox='0 0 10 5' fill='%23192144' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 0L0 5H10L5 0Z'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 10px 5px;
+  }
+}
+
+.perfect-travelmate__input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.perfect-travelmate__label {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 27px;
+  font-size: 15px;
+  line-height: 18px;
+  color: $color-black;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+  }
+
+  &::before {
+    border-radius: 4px;
+    background-color: $color-white;
+  }
+
+  &::after {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 8px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.perfect-travelmate__input-wrapper input:checked + .perfect-travelmate__label {
+  &::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M12 0L3.8 8 0 4.3v4L3.8 12 12 4z' fill='%23161c35'/%3E%3C/svg%3E");
+  }
+}
+
+.perfect-travelmate__transportation {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.perfect-travelmate__button {
+  @include flex-center;
+
+  width: calc(100% + 10px);
+  flex-grow: 1;
+  min-height: 40px;
+  margin-left: -5px;
+  margin-right: -5px;
+  padding: 10px 20px;
+  border-width: 0;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
+  text-transform: uppercase;
+  background-color: $color-white;
+  color: $color-basic-blue;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 3px 6px rgba($color-black, 0.14);
+  }
+
+  &:active {
+    background-color: #f3c72b;
+    color: rgba(#161c35, 0.3);
+  }
+}

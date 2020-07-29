@@ -1,0 +1,143 @@
+.step-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  color: $color-button-blue;
+}
+
+.step-inputs__item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.step-inputs__label {
+  font-weight: 500;
+  font-size: 16px;
+  margin-right: auto;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: $color-button-blue;
+  order: 1;
+}
+
+.step-inputs__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+  height: 43px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+  order: 3;
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:active {
+    border-color: $color-basic-blue;
+  }
+}
+
+.step-inputs__button,
+.step-inputs__input {
+  border: none;
+  background-color: transparent;
+}
+
+.step-inputs__button {
+  @include flex-center;
+
+  width: 60px;
+  fill: #cccccc;
+  cursor: pointer;
+
+  &--minus {
+    padding: 10px 30px 10px 13px;
+  }
+
+  &--plus {
+    padding: 10px 13px 10px 30px;
+  }
+
+  &:hover {
+    fill: #959bb2;
+  }
+
+  &:active {
+    fill: $color-basic-blue;
+  }
+}
+
+.step-inputs__input {
+  width: 100px;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-button-blue;
+}
+
+.step-inputs__unit {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba($color-button-blue, 0.3);
+  margin-left: auto;
+  order: 2;
+}
+
+.step-inputs__kids-possible {
+  position: relative;
+  padding-left: 40px;
+  font-size: 15px;
+  line-height: 15px;
+  color: $color-button-blue;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 26px;
+  }
+
+  &::before {
+    border: 1px solid #cbced9;
+    border-radius: 4px;
+  }
+
+  &::after {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 8px;
+  }
+
+  &:hover::before {
+    border-color: #959bb2;
+  }
+
+  &:active::before {
+    border-color: $color-button-blue-light;
+    background-color: $color-button-blue-light;
+  }
+}
+
+.step-inputs__kids input:checked + .step-inputs__kids-possible {
+  &::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M12 0L3.8 8 0 4.3v4L3.8 12 12 4z' fill='%23161c35'/%3E%3C/svg%3E");
+  }
+
+  &:active::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M12 0L3.8 8 0 4.3v4L3.8 12 12 4z' fill='%23161c35' fill-opacity='0.3'/%3E%3C/svg%3E");
+  }
+}

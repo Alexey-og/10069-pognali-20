@@ -1,17 +1,11 @@
 .transportation {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
+  @include flex-center;
 }
 
 .transportation__label {
   @include circle(31px);
+  @include flex-center;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0 1px 0 0;
   background-color: $color-white;
   fill: $color-grey-d9;
@@ -19,7 +13,7 @@
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0px 2px 6px rgba($color-basic-blue, 0.17);
+    box-shadow: 0 2px 6px rgba($color-basic-blue, 0.17);
     fill: $color-grey-b2;
   }
 
@@ -30,7 +24,7 @@
   }
 }
 
-.transportation__checkbox:checked + .transportation__label  {
+.transportation__checkbox:checked + .transportation__label {
   fill: $color-button-blue;
   fill-opacity: 1;
 

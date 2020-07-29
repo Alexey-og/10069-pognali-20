@@ -60,9 +60,8 @@ stroke-dasharray: 241px 60px;
 }
 
 .profile-header__change-photo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
+
   width: 100%;
   min-height: 40px;
   border-radius: 20px;
@@ -73,4 +72,13 @@ stroke-dasharray: 241px 60px;
   text-transform: uppercase;
   color: $color-basic-blue;
   cursor: pointer;
+
+  &:hover {
+    background-color: #d1d7e9;
+  }
+
+  &:active {
+    background-color: $color-special-blue-light;
+    color: rgba($color-basic-blue, 0.3);
+  }
 }

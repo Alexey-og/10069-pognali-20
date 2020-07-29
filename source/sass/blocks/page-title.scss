@@ -1,10 +1,12 @@
 .page-title {
   @include bottom-radius;
 
+  position: relative;
   display: inline-block;
   vertical-align: bottom;
   width: 100%;
   min-height: 70px;
   padding: 26px 25px 0;
   background-color: $color-basic-blue;
+  z-index: 3;
 }

@@ -34,11 +34,11 @@
   font-size: 36px;
   line-height: 40px;
   text-align: center;
-  color: var(--basic-white);
+  color: $color-white;
 }
 
 .promo__citation {
-  background-color: var(--basic-blue);
+  background-color: $color-basic-blue;
   min-height: 285px;
   padding: 50px 100px 100px 50px;
 }
@@ -56,5 +56,5 @@
 .promo__steps {
   position: relative;
   height: 279px;
-  background-color: var(--basic-blue-dark);
+  background-color: $color-basic-blue-dark;
 }

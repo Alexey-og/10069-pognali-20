@@ -1,9 +1,8 @@
 .header-contacts__phone {
+  @include circle(40px);
+
   position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--special-orange);
+  background-color: $color-special-orange;
 
   &::before {
     position: absolute;
@@ -18,7 +17,7 @@
   }
 
   &:hover {
-    background-color: var(--button-orange-hover);
+    background-color: $color-button-orange-hover;
   }
 
   &:active::before {
@@ -27,11 +26,10 @@
 }
 
 .header-contacts__email {
+  @include circle(40px);
+
   position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--special-yellow-dark);
+  background-color: $color-special-yellow-dark;
 
   &::before {
     position: absolute;
@@ -46,7 +44,7 @@
   }
 
   &:hover {
-    background-color: var(--special-orange);
+    background-color: $color-special-orange;
   }
 
   &:active::before {
@@ -55,9 +53,8 @@
 }
 
 .header-contacts__login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
+
   min-width: 190px;
   min-height: 40px;
   border-radius: 25px;
@@ -66,11 +63,11 @@
   line-height: 20px;
   text-transform: uppercase;
   text-decoration: none;
-  background-color: var(--basic-yellow);
-  color: var(--basic-blue);
+  background-color: $color-basic-yellow;
+  color: $color-basic-blue;
 
   &:hover {
-    background-color: var(--special-yellow-dark);
+    background-color: $color-special-yellow-dark;
   }
 
   &:active {

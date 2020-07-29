@@ -21,11 +21,9 @@
 
   &::before {
     @include circle(34px);
+    @include flex-center;
 
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     right: -44px;
     top: 3px;
     font-size: 16px;
