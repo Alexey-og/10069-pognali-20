@@ -1,0 +1,16 @@
+.header-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 45px;
+  padding-bottom: 55px;
+}
+
+.header-menu--item {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-special-blue;
+}

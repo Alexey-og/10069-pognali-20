@@ -3,49 +3,164 @@
   background-color: $color-basic-blue;
 }
 
+.page-header__drop-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  flex-direction: column;
+  width: 100%;
+  min-height: 568px;
+  padding-top: 73px;
+  background-color: $color-white;
+  z-index: 50;
+
+  .page-header--dropped &,
+  .page-header--no-js & {
+    display: flex;
+  }
+}
+
 .page-header__top {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  min-width: 320px;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 25px;
   min-height: 73px;
+  order: 1;
 }
 
 .page-header__logo {
   display: flex;
   width: 96px;
   height: 60px;
-  background-image: url("../img/logo-mobile-white@1x.png");
+  background-image: url("/img/logo-mobile-white@1x.png");
   background-repeat: no-repeat;
   background-position: left center;
   background-size: contain;
   z-index: 100;
+
+  .page-header--dropped &,
+  .page-header--no-js & {
+    background-image: url("/img/logo-mobile-blue@1x.png");
+  }
 }
 
 .page-header__button {
   position: relative;
   width: 25px;
   height: 19px;
-  border: 0;
-  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/img/icon-menu-mobile.svg");
+  background-size: 25px 11px;
+  cursor: pointer;
   z-index: 100;
 
-  &::before,
-  &::after {
-    position: absolute;
-    content: "";
-    left: 0;
-    width: 25px;
-    height: 3px;
-    border-radius: 1.5px;
-    background-color: $color-white;
+  .page-header--dropped & {
+    background-image: url("/img/icon-mobile-close.svg");
+    background-size: 18px 18px;
   }
+
+  .page-header--no-js & {
+    background-image: none;
+  }
+}
+
+.page-header__menu {
+  order: 2;
+}
+
+.page-header__contacts {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+  margin-bottom: 40px;
+  order: 4;
+}
+
+.page-header__phone,
+.page-header__email {
+  position: relative;
+  padding-left: 61px;
+  text-decoration: none;
 
   &::before {
-    bottom: 4px;
+    @include circle (45px);
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background-color: #121936;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
-  &::after {
-    bottom: 12px;
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-header__phone::before {
+  background-image: url("/img/icon-tel.svg");
+}
+
+.page-header__email::before {
+  background-image: url("/img/icon-email.svg");
+}
+
+.page-header__contacts-text {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: $color-special-blue;
+}
+
+.page-header__login {
+  @include flex-center;
+  min-height: 50px;
+  margin: 0 25px 40px 25px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  background: $color-basic-yellow;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-basic-blue;
+  order: 3;
+
+  &:hover {
+    background-color: $color-special-yellow-dark;
+  }
+
+  &:active {
+    color: rgba($color-basic-blue, 0.3);
+  }
+}
+
+.page-header__social {
+  justify-content: center;
+  order: 5;
+}
+
+.page-header__social .social__icon {
+  background: none;
+
+  &:hover {
+    background: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    fill-opacity: 0.3;
   }
 }

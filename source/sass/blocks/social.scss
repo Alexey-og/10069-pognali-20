@@ -1,8 +1,8 @@
-.footer-menu {
+.social {
   display: flex;
 }
 
-.footer-menu__item {
+.social__icon {
   @include circle(45px);
   @include flex-center;
 

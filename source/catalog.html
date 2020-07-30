@@ -3,32 +3,40 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>HTML Academy: Попутчики</title>
   </head>
 <body>
-  <header class="page-header">
-    <div class="page-header__menu">
-      <div class="page-header__top container">
-        <a class="page-header__logo" href="index.html">
-          <span class="visually-hidden">Погнали?</span>
-        </a>
-        <button class="page-header__button page-header__menu-show" type="button" aria-label="Кнопка показа меню"></button>
-      </div>
-      <!--
-      <div>
-        <a href="#" aria-label=""></a>
-        <a href="#" aria-label=""></a>
-        <a href="#">Авторизация</a>
-      </div> -->
+  <header class="page-header page-header--no-js">
+    <div class="page-header__top">
+      <a class="page-header__logo" href="index.html">
+        <span class="visually-hidden">Погнали?</span>
+      </a>
+      <a class="page-header__button" type="button" aria-label="Кнопка показа меню"></a>
     </div>
-    <!-- <div class="mobile-menu">
-      <nav>
-        <a>О сервисе</a>
-        <a href="form.html">Направления</a>
-        <a href="catalog.html">Попутчики</a>
+    <div class="page-header__drop-menu">
+      <nav class="page-header__menu header-menu">
+        <a class="header-menu--item" href="index.html">О сервисе</a>
+        <a class="header-menu--item" href="form.html">Направления</a>
+        <a class="header-menu--item">Попутчики</a>
       </nav>
-    </div> -->
+      <div class="page-header__contacts">
+        <a class="page-header__phone" href="#"><span class="page-header__contacts-text">8 800 555-86-28</span></a>
+        <a class="page-header__email" href="mailto:mail@htmlacademy.ru"><span class="page-header__contacts-text">mail@htmlacademy.ru</span></a>
+      </div>
+      <a class="page-header__login" href="#">Авторизация</a>
+      <div class="social page-header__social">
+        <a class="social__icon" href="#" aria-label="Страница Погнали на Фейсбуке">
+          <svg width="11" height="21"><use xlink:href="#icon-fb"></use></svg>
+        </a>
+        <a class="social__icon" href="#" aria-label="Страница Погнали во ВКонтакте">
+          <svg width="22" height="11"><use xlink:href="#icon-vk"></use></svg>
+        </a>
+        <a class="social__icon" href="#" aria-label="Страница Погнали в Инстаграме">
+          <svg width="16" height="16"><use xlink:href="#icon-insta"></use></svg>
+        </a>
+      </div>
+    </div>
   </header>
   <main>
     <div class="page-title">

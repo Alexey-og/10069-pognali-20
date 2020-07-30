@@ -31,12 +31,18 @@ $color-user-status-offline: #f97676;
 $color-header-blue: #182044;
 
 
+/*  Media Queries  */
+
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+
 /*  Mixins  */
 
 @mixin background-center {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
 }
 
 @mixin bottom-radius ($radius: 30px) {
