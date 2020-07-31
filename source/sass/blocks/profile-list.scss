@@ -45,10 +45,18 @@
   }
 }
 
-.profile-list__button {
+.profile-list__show {
   font-weight: bold;
   font-size: 16px;
   line-height: 16px;
   text-decoration: none;
   color: $color-basic-blue-dark;
+
+  &:hover {
+    color: rgba($color-basic-blue-dark, 0.7);
+  }
+
+  &:active {
+    color: rgba($color-basic-blue-dark, 0.3);
+  }
 }

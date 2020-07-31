@@ -830,12 +830,16 @@ textarea {
   .profile-list__item:nth-child(3)::before {
     background-color: #ffd74b; }
 
-.profile-list__button {
+.profile-list__show {
   font-weight: bold;
   font-size: 16px;
   line-height: 16px;
   text-decoration: none;
   color: #192144; }
+  .profile-list__show:hover {
+    color: rgba(25, 33, 68, 0.7); }
+  .profile-list__show:active {
+    color: rgba(25, 33, 68, 0.3); }
 
 .interested {
   border-bottom-left-radius: 30px;
@@ -972,7 +976,7 @@ textarea {
 
 .pognali-location__address {
   position: relative;
-  margin: 0;
+  margin: 0 0 32px 0;
   padding-left: 60px;
   font-weight: bold;
   font-size: 16px;
@@ -2740,21 +2744,27 @@ stroke-dasharray: 241px 60px;
   .business-rates__item:last-child {
     border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
 
-.business-rates__button {
+.business-rates__close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  height: 59px;
-  padding: 0;
+  min-height: 59px;
+  padding: 10px 15px;
   border: none;
+  background-color: #f3f4f8;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
+  text-decoration: none;
   color: #1d2e5b;
   cursor: pointer; }
-  .business-rates__button:hover {
+  .business-rates__close:hover {
     background-color: #dfe3f0; }
-  .business-rates__button:active {
+  .business-rates__close:active {
     color: rgba(29, 46, 91, 0.3); }
 
 .hidden {
