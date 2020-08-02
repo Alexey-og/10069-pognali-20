@@ -10,7 +10,8 @@ html {
 
 body {
   position: relative;
-  width: 320px;   /*  Потом заменить!  */
+  min-width: 320px;
+  max-width: 1440px;
   min-height: 100%;
   margin: 0 auto;
   background-color: $color-basic-blue-light;

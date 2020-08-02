@@ -1,10 +1,16 @@
 .promo {
   position: relative;
+  padding-top: 73px;
+  background-color: #161c35;
   background-image: url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center top -73px;
   background-size: contain;
   z-index: 10;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 132px;
+  }
 }
 
 .promo__illustration {

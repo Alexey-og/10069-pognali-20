@@ -42,8 +42,8 @@ html {
 
 body {
   position: relative;
-  width: 320px;
-  /*  Потом заменить!  */
+  min-width: 320px;
+  max-width: 1440px;
   min-height: 100%;
   margin: 0 auto;
   background-color: #edeff6;
@@ -137,45 +137,73 @@ textarea {
   transform: translate(-50%, -50%); }
 
 .page-header {
-  position: relative;
-  background-color: #161c35; }
-
-.page-header__drop-menu {
-  display: none;
   position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
   left: 0;
   top: 0;
-  flex-direction: column;
   width: 100%;
-  min-height: 568px;
-  padding-top: 73px;
-  background-color: #ffffff;
+  min-height: 73px;
+  padding: 0 25px 0;
+  background-color: #161c35;
   z-index: 50; }
-  .page-header--dropped .page-header__drop-menu,
-  .page-header--no-js .page-header__drop-menu {
-    display: flex; }
+  .page-header--dropped, .page-header--no-js {
+    background-color: #ffffff; }
+  @media screen and (min-width: 768px) {
+    .page-header {
+      padding: 0 40px 0; } }
+  @media screen and (min-width: 1440px) {
+    .page-header {
+      padding: 0 60px 0; } }
 
 .page-header__top {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 25px;
-  padding-right: 25px;
-  min-height: 73px;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
   order: 1; }
+  @media screen and (min-width: 768px) {
+    .page-header__top {
+      width: 50%;
+      min-height: 132px; } }
+  @media screen and (min-width: 1440px) {
+    .page-header__top {
+      width: 200px;
+      min-height: 110px;
+      margin-right: 40px; } }
 
 .page-header__logo {
   display: flex;
   width: 96px;
-  height: 60px;
+  height: 23px;
+  margin-right: auto;
   background-image: url("/img/logo-mobile-white@1x.png");
   background-repeat: no-repeat;
   background-position: left center;
   background-size: contain;
   z-index: 100; }
+  @media screen and (min-width: 768px) {
+    .page-header__logo {
+      width: 166px;
+      height: 60px;
+      background-image: url("/img/logo-tablet-white@1x.png"); } }
+  @media screen and (min-width: 1440px) {
+    .page-header__logo {
+      width: 200px;
+      height: 60px;
+      background-image: url("/img/logo-desktop-white@1x.png"); } }
   .page-header--dropped .page-header__logo,
   .page-header--no-js .page-header__logo {
     background-image: url("/img/logo-mobile-blue@1x.png"); }
+    @media screen and (min-width: 768px) {
+      .page-header--dropped .page-header__logo,
+      .page-header--no-js .page-header__logo {
+        background-image: url("/img/logo-tablet-blue@1x.png"); } }
 
 .page-header__button {
   position: relative;
@@ -192,16 +220,88 @@ textarea {
     background-size: 18px 18px; }
   .page-header--no-js .page-header__button {
     background-image: none; }
+  @media screen and (min-width: 1440px) {
+    .page-header__button {
+      display: none; } }
 
 .page-header__menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 48px;
+  margin-bottom: 60px;
   order: 2; }
+  @media screen and (min-width: 768px) {
+    .page-header__menu {
+      align-items: flex-start;
+      margin-top: 51px;
+      margin-bottom: 132px;
+      order: 3; } }
+  @media screen and (min-width: 1440px) {
+    .page-header__menu {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      width: auto;
+      margin: 0 auto 0 0;
+      padding-left: 105px;
+      order: 2; }
+      .page-header__menu::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60px;
+        height: 2px;
+        background-color: #ffffff; } }
+
+.page-header--no-js .page-header__menu,
+.page-header--dropped .page-header__menu {
+  display: flex; }
+
+.page-header__menu-item {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #192144; }
+  @media screen and (min-width: 768px) {
+    .page-header__menu-item {
+      font-size: 60px;
+      line-height: 71px; } }
+  @media screen and (min-width: 1440px) {
+    .page-header__menu-item {
+      padding-right: 33px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #ffffff; } }
 
 .page-header__contacts {
-  display: flex;
+  display: none;
   flex-direction: column;
-  margin-left: 25px;
+  width: 100%;
   margin-bottom: 40px;
   order: 4; }
+  @media screen and (min-width: 768px) {
+    .page-header__contacts {
+      margin-bottom: 129px; } }
+  @media screen and (min-width: 1440px) {
+    .page-header__contacts {
+      display: flex;
+      flex-direction: row;
+      width: auto;
+      margin: 0;
+      order: 3; } }
+
+.page-header--no-js .page-header__contacts,
+.page-header--dropped .page-header__contacts {
+  display: flex; }
 
 .page-header__phone,
 .page-header__email {
@@ -221,18 +321,58 @@ textarea {
     background-color: #121936;
     background-position: center;
     background-repeat: no-repeat; }
+    @media screen and (min-width: 768px) {
+      .page-header__phone::before,
+      .page-header__email::before {
+        width: 68px;
+        height: 68px;
+        border-radius: 50%; } }
+    @media screen and (min-width: 1440px) {
+      .page-header__phone::before,
+      .page-header__email::before {
+        width: 50px;
+        height: 50px; } }
   .page-header__phone:hover,
   .page-header__email:hover {
     opacity: 0.6; }
   .page-header__phone:active,
   .page-header__email:active {
     opacity: 0.3; }
+  @media screen and (min-width: 768px) {
+    .page-header__phone,
+    .page-header__email {
+      padding-left: 91px; } }
+  @media screen and (min-width: 1440px) {
+    .page-header__phone,
+    .page-header__email {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      padding: 0; } }
 
 .page-header__phone::before {
-  background-image: url("/img/icon-tel.svg"); }
+  background-image: url("/img/icon-tel.svg");
+  background-size: 16px 15px; }
+  @media screen and (min-width: 768px) {
+    .page-header__phone::before {
+      background-size: 24px 22px; } }
+  @media screen and (min-width: 1440px) {
+    .page-header__phone::before {
+      background-image: url("/img/icon-call.svg");
+      background-color: #ff8d30;
+      background-size: 18px 18px; } }
 
 .page-header__email::before {
-  background-image: url("/img/icon-email.svg"); }
+  background-image: url("/img/icon-email.svg");
+  background-size: 18px 12px; }
+  @media screen and (min-width: 768px) {
+    .page-header__email::before {
+      background-size: 28px 19px; } }
+  @media screen and (min-width: 1440px) {
+    .page-header__email::before {
+      background-image: url("/img/icon-mail.svg");
+      background-color: #ffbd30;
+      background-size: 16px 14px; } }
 
 .page-header__contacts-text {
   font-weight: bold;
@@ -240,14 +380,21 @@ textarea {
   line-height: 45px;
   text-transform: uppercase;
   color: #192144; }
+  @media screen and (min-width: 768px) {
+    .page-header__contacts-text {
+      font-size: 28px;
+      line-height: 68px; } }
+  @media screen and (min-width: 1440px) {
+    .page-header__contacts-text {
+      display: none; } }
 
 .page-header__login {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  width: 100%;
   min-height: 50px;
-  margin: 0 25px 40px 25px;
+  margin: 0 0 40px;
   padding: 10px 15px;
   border-radius: 25px;
   background: #ffd74b;
@@ -262,18 +409,76 @@ textarea {
     background-color: #ffbd30; }
   .page-header__login:active {
     color: rgba(22, 28, 53, 0.3); }
+  @media screen and (min-width: 768px) {
+    .page-header__login {
+      display: flex;
+      width: 188px;
+      min-height: 50px;
+      margin: 0 0 0 auto;
+      order: 2; } }
+  @media screen and (min-width: 1440px) {
+    .page-header__login {
+      margin: 0;
+      order: 4; } }
+
+.page-header--no-js .page-header__login,
+.page-header--dropped .page-header__login {
+  display: flex; }
 
 .page-header__social {
+  display: none;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 41px;
   order: 5; }
+  @media screen and (min-width: 768px) {
+    .page-header__social {
+      justify-content: flex-start;
+      margin-left: 26px;
+      margin-bottom: 92px; } }
 
-.page-header__social .social__icon {
-  background: none; }
-  .page-header__social .social__icon:hover {
-    background: none;
+.page-header--no-js .page-header__social,
+.page-header--dropped .page-header__social {
+  display: flex; }
+
+.page-header__social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-right: 26px; }
+  .page-header__social-icon:hover {
     opacity: 0.6; }
-  .page-header__social .social__icon:active {
+  .page-header__social-icon:active {
     fill-opacity: 0.3; }
+
+.page-header__social-icon:last-child {
+  padding-right: 0; }
+
+.page-header__icon-fb {
+  width: 11px;
+  height: 21px; }
+  @media screen and (min-width: 768px) {
+    .page-header__icon-fb {
+      width: 14px;
+      height: 28px; } }
+
+.page-header__icon-vk {
+  width: 23px;
+  height: 12px; }
+  @media screen and (min-width: 768px) {
+    .page-header__icon-vk {
+      width: 31px;
+      height: 16px; } }
+
+.page-header__icon-insta {
+  width: 18px;
+  height: 18px; }
+  @media screen and (min-width: 768px) {
+    .page-header__icon-insta {
+      width: 24px;
+      height: 24px; } }
 
 .page-footer {
   border-top-left-radius: 30px;
@@ -322,28 +527,19 @@ textarea {
 .page-footer__academy {
   height: 34px; }
 
-.header-menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 45px;
-  padding-bottom: 55px; }
-
-.header-menu--item {
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 35px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #192144; }
-
+/* @import "blocks/header-menu.scss"; */
 .promo {
   position: relative;
+  padding-top: 73px;
+  background-color: #161c35;
   background-image: url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center top -73px;
   background-size: contain;
   z-index: 10; }
+  @media screen and (min-width: 768px) {
+    .promo {
+      padding-top: 132px; } }
 
 .promo__illustration {
   position: relative;
