@@ -1,18 +1,26 @@
 .steps {
   position: relative;
-  top: -80px;
+  min-height: 279px;
+  min-width: 270px;
+  margin: 0;
+  padding: 0;
   counter-reset: steps;
 
   @media screen and (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    top: -140px;
+    min-width: 688px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    min-width: 1320px;
+    min-height: 107px;
   }
 }
 
 .steps__item {
   position: relative;
-  padding: 22px 70px 42px 24px;
+  padding: 22px 80px 42px 24px;
   border-radius: 10px;
   font-weight: bold;
   font-size: 18px;
@@ -29,6 +37,12 @@
     line-height: 24px;
   }
 
+  @media screen and (min-width: $desktop-width) {
+    width: 25%;
+    min-height: 107px;
+    padding: 30px 100px 10px 30px;
+  }
+
   &::before {
     position: absolute;
     counter-increment: steps;
@@ -39,9 +53,18 @@
 
     @media screen and (min-width: $tablet-width) {
       left: 33px;
-      top: 90px;
+      top: auto;
+      bottom: 23px;
       font-size: 30px;
       line-height: 30px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      left: auto;
+      right: 63px;
+      top: 30px;
+      font-size: 24px;
+      line-height: 24px;
     }
   }
 
@@ -49,7 +72,11 @@
     margin-top: -20px;
 
     @media screen and (min-width: $tablet-width) {
-      margin: 0;
+      margin-top: 0;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      margin-top: 0;
     }
   }
 
@@ -58,6 +85,10 @@
 
     @media screen and (min-width: $tablet-width) {
       padding-bottom: 55px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      padding-bottom: 0;
     }
   }
 
@@ -68,6 +99,11 @@
       width: calc(50% + 30px);
       border-radius: 20px 0 0 0;
     }
+
+    @media screen and (min-width: $desktop-width) {
+      width: calc(25% + 30px);
+      border-radius: 20px 0 0 20px;
+    }
   }
 
   &:nth-child(2) {
@@ -76,6 +112,12 @@
     @media screen and (min-width: $tablet-width) {
       margin-left: -30px;
       border-radius: 20px 20px 0 0;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      width: calc(25% + 30px);
+      margin-left: -30px;
+      border-radius: 20px 0 0 20px;
     }
   }
 
@@ -86,6 +128,12 @@
       width: calc(50% + 30px);
       border-radius: 0 0 0 20px;
     }
+
+    @media screen and (min-width: $desktop-width) {
+      width: calc(25% + 30px);
+      margin-left: -30px;
+      border-radius: 20px 0 0 20px;
+    }
   }
 
   &:nth-child(4) {
@@ -95,5 +143,14 @@
       margin-left: -30px;
       border-radius: 0 0 20px 20px;
     }
+
+    @media screen and (min-width: $desktop-width) {
+      margin-left: -30px;
+      border-radius: 20px;
+    }
   }
+}
+
+.steps__item:nth-child(4)::before {
+  right: 33px;
 }

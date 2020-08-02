@@ -57,6 +57,10 @@ body {
     body {
       font-size: 28px;
       line-height: 33px; } }
+  @media screen and (min-width: 1440px) {
+    body {
+      font-size: 28px;
+      line-height: 33px; } }
 
 img {
   max-width: 100%;
@@ -159,7 +163,8 @@ textarea {
       background-color: #182044; } }
   @media screen and (min-width: 1440px) {
     .page-header {
-      padding: 0 60px 0; } }
+      padding: 0 60px 0;
+      background-color: #161c35; } }
   .page-header--dropped, .page-header--no-js {
     background-color: #ffffff; }
     @media screen and (min-width: 768px) {
@@ -549,20 +554,37 @@ textarea {
   position: relative;
   padding-top: 73px;
   background-color: #161c35;
-  background-image: url("../img/globe-back-mobile@1x.jpg");
+  background-image: url("../img/globe-back-mobile@2x.jpg");
   background-repeat: no-repeat;
-  background-position: left top;
+  background-position: left center;
   background-size: contain;
-  z-index: 10;
-  outline: 1px solid red; }
+  z-index: 10; }
   @media screen and (min-width: 768px) {
     .promo {
-      height: 994px;
+      min-height: 994px;
       padding-top: 132px;
       background-color: #182044;
       background-image: url("../img/globe-back-tablet@1x.jpg");
-      background-position: center top 382px;
+      background-position: center bottom;
       background-size: auto 612px; } }
+  @media screen and (min-width: 1440px) {
+    .promo {
+      min-height: 750px;
+      padding-top: 110px;
+      background-color: #161c35;
+      background-image: url("../img/globe-back-desktop@1x.jpg"); } }
+  .promo::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 285px;
+    background-color: #161c35;
+    z-index: -1; }
+    @media screen and (min-width: 768px) {
+      .promo::after {
+        display: none; } }
 
 .promo__illustration {
   position: relative;
@@ -570,14 +592,20 @@ textarea {
   padding-top: 21px;
   background-image: url("../img/traveller-illustration-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: left 80px bottom;
+  background-position: right 40% bottom;
   background-size: 192px 255px; }
   @media screen and (min-width: 768px) {
     .promo__illustration {
       height: 862px;
       background-image: url("../img/traveller-illustration-tablet@1x.png");
-      background-position: right 111px bottom 140px;
+      background-position: right 26% bottom 140px;
       background-size: 372px 451px; } }
+  @media screen and (min-width: 1440px) {
+    .promo__illustration {
+      height: 640px;
+      background-image: url("../img/traveller-illustration-desktop@1x.png");
+      background-position: right 405px top;
+      background-size: 431px 640px; } }
 
 .promo__buttons {
   position: absolute;
@@ -590,6 +618,9 @@ textarea {
   min-height: 40px;
   padding: 0 25px; }
   @media screen and (min-width: 768px) {
+    .promo__buttons {
+      display: none; } }
+  @media screen and (min-width: 1440px) {
     .promo__buttons {
       display: none; } }
 
@@ -660,52 +691,95 @@ textarea {
       padding: 0 60px;
       font-size: 60px;
       line-height: 70px; } }
+  @media screen and (min-width: 1440px) {
+    .promo__slogan {
+      width: 420px;
+      margin: 82px 0 0 127px;
+      padding: 0;
+      text-align: left; } }
 
 .promo__citation {
-  background-color: #161c35;
+  width: 170px;
   min-height: 285px;
-  padding: 50px 100px 100px 50px; }
+  padding-top: 48px;
+  margin-left: 50px; }
   @media screen and (min-width: 768px) {
     .promo__citation {
       position: absolute;
       content: "";
-      left: 72px;
+      left: 10%;
       top: 458px;
       width: 270px;
+      margin-left: 0;
       padding: 0;
       background-color: transparent; } }
+  @media screen and (min-width: 1440px) {
+    .promo__citation {
+      left: auto;
+      right: 83px;
+      top: 220px;
+      width: 265px; } }
 
 .promo__quote,
 .promo__author {
-  margin: 0; }
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px; }
+
+@media screen and (min-width: 768px) {
+  .promo__quote {
+    font-size: 28px;
+    line-height: 33px; } }
 
 .promo__author {
   margin-top: 15px;
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 25px; }
+  font-weight: bold; }
   @media screen and (min-width: 768px) {
     .promo__author {
-      margin-top: 40px; } }
+      margin-top: 45px;
+      font-size: 21px;
+      line-height: 25px; } }
 
 .promo__steps {
-  position: relative;
-  height: 279px;
-  background-color: #192144; }
+  position: absolute;
+  content: "";
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -238px;
+  padding-left: 25px;
+  padding-right: 25px; }
+  @media screen and (min-width: 768px) {
+    .promo__steps {
+      bottom: -140px;
+      padding-left: 40px;
+      padding-right: 40px; } }
+  @media screen and (min-width: 1440px) {
+    .promo__steps {
+      top: auto;
+      bottom: 30px;
+      padding-left: 60px;
+      padding-right: 60px; } }
 
 .steps {
   position: relative;
-  top: -80px;
+  min-height: 279px;
+  min-width: 270px;
+  margin: 0;
+  padding: 0;
   counter-reset: steps; }
   @media screen and (min-width: 768px) {
     .steps {
       display: flex;
       flex-wrap: wrap;
-      top: -140px; } }
+      min-width: 688px; } }
+  @media screen and (min-width: 1440px) {
+    .steps {
+      min-width: 1320px;
+      min-height: 107px; } }
 
 .steps__item {
   position: relative;
-  padding: 22px 70px 42px 24px;
+  padding: 22px 80px 42px 24px;
   border-radius: 10px;
   font-weight: bold;
   font-size: 18px;
@@ -720,6 +794,11 @@ textarea {
       border-radius: 20px;
       font-size: 24px;
       line-height: 24px; } }
+  @media screen and (min-width: 1440px) {
+    .steps__item {
+      width: 25%;
+      min-height: 107px;
+      padding: 30px 100px 10px 30px; } }
   .steps__item::before {
     position: absolute;
     counter-increment: steps;
@@ -730,43 +809,78 @@ textarea {
     @media screen and (min-width: 768px) {
       .steps__item::before {
         left: 33px;
-        top: 90px;
+        top: auto;
+        bottom: 23px;
         font-size: 30px;
         line-height: 30px; } }
+    @media screen and (min-width: 1440px) {
+      .steps__item::before {
+        left: auto;
+        right: 63px;
+        top: 30px;
+        font-size: 24px;
+        line-height: 24px; } }
   .steps__item:not(:first-child) {
     margin-top: -20px; }
     @media screen and (min-width: 768px) {
       .steps__item:not(:first-child) {
-        margin: 0; } }
+        margin-top: 0; } }
+    @media screen and (min-width: 1440px) {
+      .steps__item:not(:first-child) {
+        margin-top: 0; } }
   .steps__item:last-child {
     padding-bottom: 22px; }
     @media screen and (min-width: 768px) {
       .steps__item:last-child {
         padding-bottom: 55px; } }
+    @media screen and (min-width: 1440px) {
+      .steps__item:last-child {
+        padding-bottom: 0; } }
   .steps__item:nth-child(1) {
     background-color: #ff8d30; }
     @media screen and (min-width: 768px) {
       .steps__item:nth-child(1) {
         width: calc(50% + 30px);
         border-radius: 20px 0 0 0; } }
+    @media screen and (min-width: 1440px) {
+      .steps__item:nth-child(1) {
+        width: calc(25% + 30px);
+        border-radius: 20px 0 0 20px; } }
   .steps__item:nth-child(2) {
     background-color: #ffa530; }
     @media screen and (min-width: 768px) {
       .steps__item:nth-child(2) {
         margin-left: -30px;
         border-radius: 20px 20px 0 0; } }
+    @media screen and (min-width: 1440px) {
+      .steps__item:nth-child(2) {
+        width: calc(25% + 30px);
+        margin-left: -30px;
+        border-radius: 20px 0 0 20px; } }
   .steps__item:nth-child(3) {
     background-color: #ffbd30; }
     @media screen and (min-width: 768px) {
       .steps__item:nth-child(3) {
         width: calc(50% + 30px);
         border-radius: 0 0 0 20px; } }
+    @media screen and (min-width: 1440px) {
+      .steps__item:nth-child(3) {
+        width: calc(25% + 30px);
+        margin-left: -30px;
+        border-radius: 20px 0 0 20px; } }
   .steps__item:nth-child(4) {
     background-color: #ffd74b; }
     @media screen and (min-width: 768px) {
       .steps__item:nth-child(4) {
         margin-left: -30px;
         border-radius: 0 0 20px 20px; } }
+    @media screen and (min-width: 1440px) {
+      .steps__item:nth-child(4) {
+        margin-left: -30px;
+        border-radius: 20px; } }
+
+.steps__item:nth-child(4)::before {
+  right: 33px; }
 
 .about-service {
   border-bottom-left-radius: 30px;

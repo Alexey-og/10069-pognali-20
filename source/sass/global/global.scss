@@ -26,6 +26,11 @@ body {
     font-size: 28px;
     line-height: 33px;
   }
+
+  @media screen and (min-width: $desktop-width) {
+    font-size: 28px;
+    line-height: 33px;
+  }
 }
 
 img {

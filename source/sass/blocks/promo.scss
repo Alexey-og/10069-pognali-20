@@ -1,21 +1,42 @@
 .promo {
   position: relative;
   padding-top: 73px;
-  background-color: #161c35;
-  background-image: url("../img/globe-back-mobile@1x.jpg");
+  background-color: $color-basic-blue;
+  background-image: url("../img/globe-back-mobile@2x.jpg");
   background-repeat: no-repeat;
-  background-position: left top;
+  background-position: left center;
   background-size: contain;
   z-index: 10;
-  outline: 1px solid red;
 
   @media screen and (min-width: $tablet-width) {
-    height: 994px;
+    min-height: 994px;
     padding-top: 132px;
     background-color: $color-header-blue;
     background-image: url("../img/globe-back-tablet@1x.jpg");
-    background-position: center top 382px;
+    background-position: center bottom;
     background-size: auto 612px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    min-height: 750px;
+    padding-top: 110px;
+    background-color: $color-basic-blue;
+    background-image: url("../img/globe-back-desktop@1x.jpg");
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 285px;
+    background-color: $color-basic-blue;
+    z-index: -1;
+
+    @media screen and (min-width: $tablet-width) {
+      display: none;
+    }
   }
 }
 
@@ -25,14 +46,21 @@
   padding-top: 21px;
   background-image: url("../img/traveller-illustration-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: left 80px bottom;
+  background-position: right 40% bottom;
   background-size: 192px 255px;
 
   @media screen and (min-width: $tablet-width) {
     height: 862px;
     background-image: url("../img/traveller-illustration-tablet@1x.png");
-    background-position: right 111px bottom 140px;
+    background-position: right 26% bottom 140px;
     background-size: 372px 451px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    height: 640px;
+    background-image: url("../img/traveller-illustration-desktop@1x.png");
+    background-position: right 405px top;
+    background-size: 431px 640px;
   }
 }
 
@@ -48,6 +76,10 @@
   padding: 0 25px;
 
   @media screen and (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media screen and (min-width: $desktop-width) {
     display: none;
   }
 }
@@ -134,42 +166,84 @@
     font-size: 60px;
     line-height: 70px;
   }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 420px;
+    margin: 82px 0 0 127px;
+    padding: 0;
+    text-align: left;
+  }
 }
 
 .promo__citation {
-  background-color: $color-basic-blue;
+  width: 170px;
   min-height: 285px;
-  padding: 50px 100px 100px 50px;
+  padding-top: 48px;
+  margin-left: 50px;
 
   @media screen and (min-width: $tablet-width) {
     position: absolute;
     content: "";
-    left: 72px;
+    left: 10%;
     top: 458px;
     width: 270px;
+    margin-left: 0;
     padding: 0;
     background-color: transparent;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    left: auto;
+    right: 83px;
+    top: 220px;
+    width: 265px;
   }
 }
 
 .promo__quote,
 .promo__author {
   margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.promo__quote {
+  @media screen and (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+  }
 }
 
 .promo__author {
   margin-top: 15px;
   font-weight: bold;
-  font-size: 21px;
-  line-height: 25px;
 
   @media screen and (min-width: $tablet-width) {
-    margin-top: 40px;
+    margin-top: 45px;
+    font-size: 21px;
+    line-height: 25px;
   }
 }
 
 .promo__steps {
-  position: relative;
-  height: 279px;
-  background-color: $color-basic-blue-dark;
+  position: absolute;
+  content: "";
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -238px;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  @media screen and (min-width: $tablet-width) {
+    bottom: -140px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    top: auto;
+    bottom: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
