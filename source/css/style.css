@@ -113,6 +113,14 @@ textarea {
   font-size: 24px;
   line-height: 24px;
   color: #ff8d30; }
+  @media screen and (min-width: 768px) {
+    .heading-2 {
+      margin: 0 0 40px 0;
+      font-size: 45px;
+      line-height: 45px; } }
+  @media screen and (min-width: 1440px) {
+    .heading-2 {
+      margin: 0 0 57px 0; } }
 
 .button {
   display: flex;
@@ -756,7 +764,7 @@ textarea {
   @media screen and (min-width: 1440px) {
     .promo__steps {
       top: auto;
-      bottom: 30px;
+      bottom: 123px;
       padding-left: 60px;
       padding-right: 60px; } }
 
@@ -887,16 +895,61 @@ textarea {
   border-bottom-right-radius: 30px;
   position: relative;
   min-height: 353px;
-  padding: 33px 60px 60px 49px;
+  padding: 310px 60px 60px 49px;
   background-color: #192144;
-  background-image: url("../img/about-mobile@2x.png"), url("data:image/svg+xml,%3Csvg width='132' height='132' viewBox='0 0 132 132' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20C0 8.9543 8.95431 0 20 0H108.637C121.54 0 132 8.95431 132 20V112C132 123.046 121.54 132 108.637 132H20C8.9543 132 0 123.046 0 112V20Z' fill='%23141B3B'/%3E%3C/svg%3E");
-  background-position: center top, left -19px top;
+  background-image: url("../img/about-mobile@1x.png"), url("data:image/svg+xml,%3Csvg width='132' height='132' viewBox='0 0 132 132' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20C0 8.9543 8.95431 0 20 0H108.637C121.54 0 132 8.95431 132 20V112C132 123.046 121.54 132 108.637 132H20C8.9543 132 0 123.046 0 112V20Z' fill='%23141B3B'/%3E%3C/svg%3E");
+  background-position: right 8px top 279px, left -19px top 279px;
   background-repeat: no-repeat;
-  background-size: contain, 132px 132px;
+  background-size: 292px 352px, 132px 132px;
   z-index: 9; }
+  @media screen and (min-width: 768px) {
+    .about-service {
+      min-height: 921px;
+      padding: 278px 50% 0 74px;
+      background-image: url("../img/about-tablet@1x.png"), url("data:image/svg+xml,%3Csvg width='688' height='212' viewBox='0 0 688 212' fill='%23141b3b' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='688' height='212' rx='20'/%3E%3C/svg%3E");
+      background-position: right 8px top 285px, left 40px top 237px;
+      background-size: 376px 548px, 688px 212px; } }
+  @media screen and (min-width: 1440px) {
+    .about-service {
+      min-height: 750px;
+      padding: 132px 45% 0 130px;
+      background-image: url("../img/about-desktop@1x.png"), url("data:image/svg+xml,%3Csvg width='212' height='212' viewBox='0 0 212 212' fill='%23141b3b' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='212' height='212' rx='20'/%3E%3C/svg%3E");
+      background-position: right 60px top 85px, left 60px top 70px;
+      background-size: 630px 665px, 212px 212px; } }
 
 .about-service__description {
   margin: 0 0 20px 0; }
+  @media screen and (min-width: 768px) {
+    .about-service__description {
+      margin: 0 0 31px 0; } }
+  @media screen and (min-width: 1440px) {
+    .about-service__description {
+      margin: 0 0 38px 0; } }
+
+.about-service__description strong {
+  display: block; }
+  @media screen and (min-width: 768px) {
+    .about-service__description strong {
+      font-size: 21px;
+      line-height: 24px; } }
+  @media screen and (min-width: 1440px) {
+    .about-service__description strong {
+      width: 440px; } }
+
+.about-service__button {
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .about-service__button {
+      display: flex;
+      width: 276px;
+      min-height: 80px;
+      margin-top: 50px;
+      padding-right: 55px;
+      font-size: 24px;
+      line-height: 24px; } }
+  @media screen and (min-width: 1440px) {
+    .about-service__button {
+      margin-top: 85px; } }
 
 .countries {
   border-bottom-left-radius: 30px;
