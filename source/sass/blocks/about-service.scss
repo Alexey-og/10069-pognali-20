@@ -18,6 +18,8 @@
   z-index: 9;
 
   @media screen and (min-width: $tablet-width) {
+    @include bottom-radius(60px);
+
     min-height: 921px;
     padding: 278px 50% 0 74px;
     background-image:
