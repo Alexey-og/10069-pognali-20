@@ -10,7 +10,7 @@ html {
 
 body {
   position: relative;
-  min-width: 320px;
+  width: $mobile-width;
   max-width: 1440px;
   min-height: 100%;
   margin: 0 auto;
@@ -23,11 +23,13 @@ body {
   color: $color-white;
 
   @media screen and (min-width: $tablet-width) {
+    width: $tablet-width;
     font-size: 28px;
     line-height: 33px;
   }
 
   @media screen and (min-width: $desktop-width) {
+    width: $desktop-width;
     font-size: 28px;
     line-height: 33px;
   }

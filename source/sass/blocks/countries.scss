@@ -11,17 +11,36 @@
     @include bottom-radius(60px);
 
     margin-top: -60px;
-    padding: 150px 75px 80px;
+    padding: 138px 75px 80px;
     background-image:
       url("/img/flags-back@1x.png"),
       url("data:image/svg+xml,%3Csvg width='141' height='141' viewBox='0 0 141 141' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='141' height='141' rx='20' fill='%23e2e5f2'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position:
-      right 40px top 156px,
-      left 40px top 482px;
+      right 40px top 136px,
+      left 40px top 464px;
     background-size:
       289px 575px,
       141px 141px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 218px 130px 138px;
+    background-position:
+      right 60px top 147px,
+      left 60px top 150px;
+    background-size:
+      289px 575px,
+      141px 141px;
+  }
+}
+
+.countries__info {
+  @media screen and (min-width: $desktop-width) {
+    order: 2;
   }
 }
 
@@ -39,7 +58,38 @@
 
   @media screen and (min-width: $tablet-width) {
     width: 345px;
+    margin: 0 0 98px 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
     margin: 0;
-    margin-bottom: 105px;
+    padding-bottom: 100px;
+  }
+}
+
+.countries__list {
+  @media screen and (min-width: $desktop-width) {
+    padding-right: 172px;
+    order: 1;
+  }
+}
+
+.countries__button {
+  margin-top: 25px;
+  min-height: 62px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-top: 44px;
+    min-height: 82px;
+    padding: 10px 70px 10px 33px;
+    border-radius: 20px;
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 275px;
+    min-height: 80px;
+    margin: -80px 0 auto 732px;
+    order: 3;
   }
 }

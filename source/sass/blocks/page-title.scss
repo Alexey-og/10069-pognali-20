@@ -9,4 +9,13 @@
   padding: 26px 25px 0;
   background-color: $color-basic-blue;
   z-index: 3;
+
+  @media screen and (min-width: $tablet-width) {
+    min-height: 351px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    display: flex;
+    padding: 161px 520px 0 126px;
+  }
 }

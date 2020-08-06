@@ -1,35 +1,64 @@
 .country {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   margin-bottom: 10px;
   border-radius: 10px;
+  width: 270px;
   min-height: 190px;
-  background-position: center top;
+  background-position: left top;
   background-repeat: no-repeat;
   background-size: contain;
 
-  &--thailand {
-    background-image: url("../img/thailand-mobile@2x.jpg");
+  @media screen and (min-width: $tablet-width) {
+    flex-direction: row;
+    border-radius: 20px;
+    width: 616px;
+    min-height: 140px;
+    background-position: right top;
 
-    & .country__description::before {
-      background-image: url("../img/flag-thailand.svg");
+    &:last-of-type::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 94px;
+      background-image: url("/img/fade-country.png");
+      background-repeat: repeat-x;
+      background-size: 100% 94px;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 559px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &--thailand {
+    background-image: url("/img/thailand-mobile@1x.jpg");
+
+    @media screen and (min-width: $tablet-width) {
+      background-image: url("/img/thailand-desktop@1x.jpg");
     }
   }
 
   &--france {
-    background-image: url("../img/france-mobile@2x.jpg");
+    background-image: url("/img/france-mobile@1x.jpg");
 
-    & .country__description::before {
-      background-image: url("../img/flag-france.svg");
+    @media screen and (min-width: $tablet-width) {
+      background-image: url("/img/france-desktop@1x.jpg");
     }
   }
 
   &--czechia {
-    background-image: url("../img/czech-mobile@2x.jpg");
+    background-image: url("/img/czechia-mobile@1x.jpg");
 
-    & .country__description::before {
-      background-image: url("../img/flag-czechia.svg");
+    @media screen and (min-width: $tablet-width) {
+      background-image: url("/img/czechia-desktop@1x.jpg");
     }
   }
 }
@@ -38,21 +67,51 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
+  margin: 100px 0 0 0;
   padding: 26px 24px 0;
   min-height: 90px;
   border-radius: 10px;
   background-color: $color-white;
 
-  &::before {
-    @include background-center;
+  @media screen and (min-width: $tablet-width) {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 185px 0 0;
+    padding: 30px 0 27px 29px;
+    border-radius: 20px 0 0 20px;
+  }
+}
 
-    position: absolute;
-    content: "";
-    left: 25px;
-    top: -13px;
-    width: 35px;
-    height: 24px;
+.country__description::before {
+  @include background-center;
+
+  position: absolute;
+  content: "";
+  left: 25px;
+  top: -13px;
+  width: 35px;
+  height: 24px;
+  background-size: 35px 24px;
+
+  .country--thailand & {
+    background-image: url("../img/flag-thailand.svg");
+  }
+
+  .country--france & {
+    background-image: url("../img/flag-france.svg");
+  }
+
+  .country--czechia & {
+    background-image: url("../img/flag-czechia.svg");
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    left: auto;
+    right: -35px;
+    top: 17px;
+    width: 70px;
+    height: 47px;
+    background-size: 70px 47px;
   }
 }
 
@@ -66,8 +125,12 @@
   padding-bottom: 2px;
   font-weight: bold;
   font-size: 21px;
-  line-height: 21px;
+  line-height: 1;
   color: $color-black;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 24px;
+  }
 }
 
 .country__slogan {
@@ -75,26 +138,39 @@
   margin: 0;
   font-weight: 500;
   font-size: 16px;
-  line-height: 18px;
-  color: $color-special-grey;
+  line-height: 1;
+  color: $color-grey-44;
   opacity: 0.3;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 100%;
+    font-size: 20px;
+  }
 }
 
 .country__users {
   position: relative;
+  height: 20px;
   margin: 0;
-  padding-left: 20px;
+  padding-left: 19px;
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
   color: $color-basic-blue;
   opacity: 0.3;
 
+  @media screen and (min-width: $tablet-width) {
+    height: 20px;
+    padding-left: 31px;
+    font-size: 20px;
+  }
+
   &::before {
     position: absolute;
     content: "";
     left: 0;
-    top: 2px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 14px;
     height: 14px;
     background-image: url("../img/icon-user.svg");
@@ -102,5 +178,11 @@
     background-repeat: no-repeat;
     background-size: 12px 12px;
     opacity: 0.3;
+
+    @media screen and (min-width: $tablet-width) {
+      width: 24px;
+      height: 24px;
+      background-size: 22px 22px;
+    }
   }
 }

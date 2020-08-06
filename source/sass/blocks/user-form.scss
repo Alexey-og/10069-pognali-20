@@ -1,5 +1,14 @@
 .user-form {
   position: relative;
+  padding-top: 73px;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 132px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-top: 0;
+  }
 }
 
 .user-form .heading-2 {
