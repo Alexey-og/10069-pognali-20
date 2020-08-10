@@ -45,17 +45,12 @@
 
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 1rf min-content;
+    grid-template-rows: min-content min-content;
     padding: 190px 30px 104px 30px;
     background-position:
       left 60px top 130px,
       left 547px top 194px,
       left 190px top 446px;
-    background-repeat: no-repeat;
-    background-size:
-      212px 212px,
-      143px 143px,
-      285px 285px;
   }
 }
 
@@ -82,7 +77,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 0 ;
+    padding: 0;
   }
 }
 
