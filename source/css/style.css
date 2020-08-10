@@ -1832,11 +1832,12 @@ textarea {
   text-transform: uppercase;
   color: #ffd74b;
   fill: #ffd74b; }
-  .contacts__item:not(:last-child) {
-    margin-right: 110px; }
   @media screen and (min-width: 768px) {
     .contacts__item {
       font-size: 28px; } }
+  @media screen and (min-width: 1440px) {
+    .contacts__item:not(:last-child) {
+      margin-right: 110px; } }
 
 .contacts__item:hover {
   color: #ffbd30;
@@ -1877,48 +1878,124 @@ textarea {
         width: 28px;
         height: 19px; } }
 
-.pognali-location {
+.location {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   position: relative;
+  display: flex;
+  flex-direction: column;
   margin-top: -30px;
   padding: 60px 25px 35px 25px;
   background-color: #ffd74b;
   z-index: 4; }
+  @media screen and (min-width: 768px) {
+    .location {
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+      margin-top: -60px;
+      padding: 108px 75px 84px 75px; } }
+  @media screen and (min-width: 1440px) {
+    .location {
+      flex-direction: row;
+      align-items: center;
+      padding: 115px 75px 55px 283px; } }
 
-.pognali-location__address {
+.location__address {
+  display: flex;
+  align-items: center;
+  margin-bottom: 33px; }
+  @media screen and (min-width: 768px) {
+    .location__address {
+      margin-bottom: 43px; } }
+  @media screen and (min-width: 1440px) {
+    .location__address {
+      margin: 0 147px 0 0; } }
+
+.location__icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  margin-right: 16px;
+  background-color: #121936; }
+  @media screen and (min-width: 768px) {
+    .location__icon {
+      width: 68px;
+      height: 68px;
+      margin-right: 26px; } }
+  @media screen and (min-width: 1440px) {
+    .location__icon {
+      width: 90px;
+      height: 90px;
+      margin-right: 31px; } }
+
+.location__icon svg {
+  width: 16px;
+  height: 21px; }
+  @media screen and (min-width: 768px) {
+    .location__icon svg {
+      width: 24px;
+      height: 32px; } }
+  @media screen and (min-width: 1440px) {
+    .location__icon svg {
+      width: 32px;
+      height: 42px; } }
+
+.location__address-text {
   position: relative;
-  margin: 0 0 32px 0;
-  padding-left: 60px;
+  margin: 0;
+  padding: 0;
   font-weight: bold;
   font-size: 16px;
   line-height: 22px;
   text-transform: uppercase;
   color: #1d2e5b; }
-  .pognali-location__address::before {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    background-color: #121936;
-    background-image: url("../img/icon-location.svg");
-    background-position: center;
-    background-repeat: no-repeat; }
+  @media screen and (min-width: 768px) {
+    .location__address-text {
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 28px;
+      text-transform: uppercase;
+      color: #1d2e5b; } }
 
-.pognali-location__button {
+.location__button {
+  min-height: 62px;
   border: 3px solid #192144;
   box-sizing: border-box;
-  border-radius: 10px; }
-  .pognali-location__button:hover {
+  border-radius: 10px;
+  background-position: right 19px top 50%;
+  background-repeat: no-repeat;
+  background-size: 12px 12px; }
+  @media screen and (min-width: 768px) {
+    .location__button {
+      min-height: 80px;
+      border-radius: 20px;
+      padding-left: 36px;
+      font-size: 24px;
+      background-position: right 33px center; } }
+  @media screen and (min-width: 1440px) {
+    .location__button {
+      padding-left: 35px;
+      padding-right: 62px;
+      background-position: right 31px center; } }
+  .location__button:hover {
     background: #192144;
     background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 5.50001L0 11V0L10 5.50001Z' /%3E%3C/svg%3E");
-    background-position: right 23px top 50%;
+    background-position: right 19px top 50%;
     background-repeat: no-repeat;
+    background-size: 12px 12px;
     color: #ffffff; }
-  .pognali-location__button:active {
+    @media screen and (min-width: 768px) {
+      .location__button:hover {
+        background-position: right 33px center; } }
+    @media screen and (min-width: 1440px) {
+      .location__button:hover {
+        background-position: right 31px center; } }
+  .location__button:active {
     background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='%23ffffff' fill-opacity='0.3' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 5.50001L0 11V0L10 5.50001Z' /%3E%3C/svg%3E");
     color: rgba(255, 255, 255, 0.3); }
 

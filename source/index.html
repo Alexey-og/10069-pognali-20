@@ -205,10 +205,15 @@
           mail@htmlacademy.ru</a>
       </div>
     </section>
-    <section class="pognali-location">
+    <section class="location">
       <h2 class="visually-hidden">Офис "Погнали?" на карте</h2>
-      <p class="pognali-location__address">ул. Большая Конюшенная,&nbsp;19/8</p>
-      <a class="button pognali-location__button" href="#">Проложить маршрут</a>
+      <div class="location__address">
+        <span class="location__icon">
+          <svg width="16" height="21"><use xlink:href="#icon-location"></use></svg>
+        </span>
+        <p class="location__address-text">ул. Большая Конюшенная,&nbsp;19/8</p>
+      </div>
+      <a class="button location__button" href="#">Проложить маршрут</a>
     </section>
     <section class="pognali-map">
       <div aria-label="Интерактивная карта с офисом Погнали"></div>
@@ -254,6 +259,10 @@
   <svg style="display: none;">
     <symbol id="level-percent" viewBox="0 0 60 60">
       <circle r="28" cx="30" cy="30" fill="none" stroke="#FF8D30" stroke-width="4" stroke-dashoffset="44px"></circle>
+    </symbol>
+    <symbol id="icon-location" viewBox="0 0 16 21">
+      <path d="M8 5C6.385 5 5 6.385 5 8s1.385 3 3 3 3-1.385 3-3-1.385-3-3-3zm0 4.038A1.034 1.034 0 016.962 8c0-.577.461-1.038 1.038-1.038S9.038 7.423 9.038 8 8.577 9.038 8 9.038z" fill="#FFD74B"/>
+      <path d="M8.098 0C3.69 0 0 3.5 0 7.9c0 5.1 3.895 7.3 4.716 8.3 2.05 2.4 2.152 4.8 3.28 4.8 1.128 0 1.23-2.4 3.28-4.8.82-1 4.716-3.2 4.716-8.3.205-4.4-3.486-7.9-7.894-7.9zm0 13.1c-2.972 0-5.433-2.4-5.433-5.3s2.46-5.3 5.433-5.3 5.434 2.4 5.434 5.3-2.46 5.3-5.434 5.3z" fill="#FFD74B"/>
     </symbol>
     <symbol id="icon-plane" viewBox="0 0 19 21">
       <path d="M17.622.016c-.823.185-1.649.37-1.956.88l-2.378 4.483L.518 8.252 0 9.685l9.772.874-1.658 3.882-3.706.833-.93 1.526 2.673.274.305 1.248c.137.442.616.738 1.025.646l1.236-.278L10.149 21l.93-1.526-.914-3.742 2.683-3.236 5.12 8.501L19 19.89 15.85 6.996l2.893-4.16c.31-.51.108-1.34-.096-2.175-.101-.413-.616-.737-1.025-.645z" fill="#161C35"/>

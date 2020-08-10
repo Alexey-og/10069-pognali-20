@@ -25,12 +25,14 @@
   color: $color-basic-yellow;
   fill: $color-basic-yellow;
 
-  &:not(:last-child) {
-    margin-right: 110px;
-  }
-
   @media screen and (min-width: $tablet-width) {
     font-size: 28px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    &:not(:last-child) {
+      margin-right: 110px;
+    }
   }
 }
 
