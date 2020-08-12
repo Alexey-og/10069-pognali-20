@@ -215,10 +215,12 @@
       </div>
       <a class="button location__button" href="#">Проложить маршрут</a>
     </section>
-    <section class="pognali-map">
-      <div aria-label="Интерактивная карта с офисом Погнали"></div>
+    <section class="map">
+      <div class="map__interactive" aria-label="Интерактивная карта с офисом Погнали"></div>
       <picture>
-        <img src="img/map-mobile.jpg" alt="Карта с местоположением офиса Погнали" width="320" height="546">
+        <source media="(min-width: 1440px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg">
+        <img class="map__static" src="img/map-mobile@1x.jpg" alt="Карта с местоположением офиса Погнали" width="320" height="546">
       </picture>
     </section>
   </main>
@@ -227,13 +229,13 @@
     <a class="page-footer__logo" aria-label="Логотип Погнали"></a>
     <div class="page-footer__menu social">
       <a class="social__icon" href="#" aria-label="Страница Погнали на Фейсбуке">
-        <svg width="11" height="21"><use xlink:href="#icon-fb"></use></svg>
+        <svg class="social__fb" width="11" height="21"><use xlink:href="#icon-fb"></use></svg>
       </a>
       <a class="social__icon" href="#" aria-label="Страница Погнали во ВКонтакте">
-        <svg width="22" height="11"><use xlink:href="#icon-vk"></use></svg>
+        <svg class="social__vk" width="22" height="12"><use xlink:href="#icon-vk"></use></svg>
       </a>
       <a class="social__icon" href="#" aria-label="Страница Погнали в Инстаграме">
-        <svg width="16" height="16"><use xlink:href="#icon-insta"></use></svg>
+        <svg class="social__insta" width="17" height="17"><use xlink:href="#icon-insta"></use></svg>
       </a>
     </div>
     <div class="page-footer__copyright">
@@ -254,7 +256,6 @@
     </ul>
     <a class="business-rates__close" href="">Закрыть окно</a>
   </section>
-
 
   <svg style="display: none;">
     <symbol id="level-percent" viewBox="0 0 60 60">

@@ -12,19 +12,51 @@
   padding: 37px 25px 5px 25px;
   background-color: $color-white;
   z-index: 5;
+
+  @media screen and (min-width: $tablet-width) {
+    @include top-radius(60px);
+
+    flex-direction: row;
+    justify-content: center;
+    min-height: 140px;
+    margin-top: -60px;
+    padding: 46px 40px 32px 40px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    min-height: 154px;
+    padding: 43px 60px 43px 60px;
+  }
 }
 
 .page-footer__logo {
+  flex-shrink: 0;
   width: 96px;
   height: 18px;
-  background-image: url("../img/logo-mobile-blue@1x.png");
+  background-image: url("/img/logo-mobile-blue@1x.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 164px;
+    height: 60px;
+    margin-right: 30px;
+    background-image: url("/img/logo-tablet-blue@1x.png");
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 200px;
+    background-image: url("/img/logo-desktop-blue@1x.png");
+  }
 }
 
 .page-footer__menu {
   margin: 37px 0;
+
+  @media screen and (min-width: $tablet-width) {
+    margin: 0 auto;
+  }
 }
 
 .page-footer__copyright {
@@ -34,6 +66,14 @@
   width: 100%;
   padding-top: 13px;
   border-top: 1px solid $color-grey-f2;
+
+  @media screen and (min-width: $tablet-width) {
+    justify-content: flex-end;
+    width: auto;
+    margin-left: 39px;
+    padding: 0;
+    border-top: none;
+  }
 
   &:hover {
     opacity: 0.6;
@@ -47,10 +87,24 @@
 .page-footer__copy {
   margin: 0;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 1;
   color: $color-grey-44;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+    padding-bottom: 9px;
+  }
 }
 
 .page-footer__academy {
+  width: 27px;
   height: 34px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-left: 24px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-left: 25px;
+  }
 }
