@@ -1,0 +1,143 @@
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 1;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+}
+
+.filter-header__title {
+  position: relative;
+  margin: 0;
+  padding-left: 27px;
+  font: inherit;
+  color: $color-basic-blue-dark;
+
+  @media screen and (min-width: $tablet-width) {
+    display: none;
+    order: 1;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    display: flex;
+    margin-right: 30px;
+    padding-left: 45px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 10px;
+    background-image: url("/img/icon-filter.svg");
+    background-size: 15px 10px;
+
+    @media screen and (min-width: $desktop-width) {
+      width: 23px;
+      height: 15px;
+      background-size: 23px 15px;
+    }
+  }
+}
+
+.filter-header__title span {
+  display: none;
+
+  @media screen and (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.filter-header__regions {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 35px 25px 25px 25px;
+
+  @media screen and (min-width: $tablet-width) {
+    flex-direction: row;
+    width: auto;
+    margin: 0;
+    order: 2;
+  }
+}
+
+.filter-header__region {
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: $color-basic-blue-dark;
+  opacity: 0.3;
+
+  @media screen and (min-width: $tablet-width) {
+    margin: 0 28px 0 0;
+    font-size: 20px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--current {
+    opacity: 1;
+  }
+}
+
+.filter-header__conditions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: $color-basic-blue-dark;
+  cursor: pointer;
+
+  @media screen and (min-width: $tablet-width) {
+    order: 3;
+  }
+}
+
+.filter-header__expand {
+  display: none;
+
+  @media screen and (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.filter-header__collapse {
+  display: none;
+}
+
+.filter-header__icon {
+  display: inline-flex;
+  width: 20px;
+  height: 18px;
+  margin-left: 25px;
+  background-image: url("/img/icon-dots.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 17px 3px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 30px;
+    height: 24px;
+    background-size: 30px 6px;
+  }
+}

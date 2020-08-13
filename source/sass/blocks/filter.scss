@@ -1,0 +1,133 @@
+.filter {
+  @include bottom-radius(30px);
+
+  position: absolute;
+
+  width: 100%;
+  min-height: 85px;
+  margin: -30px 0 21px;
+  padding: 47px 25px 15px 22px;
+  background-color: #e2e5f2;
+  z-index: 2;
+
+  @media screen and (min-width: $tablet-width) {
+    @include bottom-radius(60px);
+
+    min-height: 199px;
+    margin: -60px 0 43px;
+    padding: 120px 73px 60px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 120px 120px 60px 80px;
+  }
+}
+
+.filter__filter {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.filter__letters-wrapper {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.filter__letters {
+  display: grid;
+  grid-template-columns: repeat(5, 45px);
+  border-top: 1px solid #cbced9;
+  border-left: 1px solid #cbced9;
+  background-color: $color-white;
+}
+
+.filter__letters input:checked + .filter__letter {
+  border-color: #1d2e5b;
+  background-color: #1d2e5b;
+  color: $color-white;
+}
+
+.filter__letter {
+  @include flex-center;
+
+  height: 42px;
+  border-right: 1px solid #cbced9;
+  border-bottom: 1px solid #cbced9;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: $color-button-blue;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-basic-blue-light;
+  }
+
+  &:active {
+    border-color: #1d2e5b;
+    background-color: #1d2e5b;
+    background-clip: padding-box;
+    color: $color-white;
+  }
+}
+
+.filter__countries-wrapper {
+  margin-bottom: 28px;
+  padding-top: 15px;
+  background-color: transparent;
+}
+
+.filter__countries {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__countries a {
+  font-weight: normal;
+  color: $color-grey-44;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-button-blue;
+  }
+
+  &:active {
+    color: rgba($color-button-blue, 0.3);
+  }
+}
+
+.filter__letter-title {
+  display: none;
+}
+
+.filter__button {
+  @include flex-center;
+
+  width: 100%;
+  min-height: 40px;
+  border-radius: 20px;
+  background-color: #d6daed;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-special-blue;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #c8cee8;
+  }
+
+  &:active {
+    color: rgba($color-special-blue, 0.3);
+    stroke-opacity: 0.3;
+  }
+}
+
+.filter__button-icon {
+  margin-right: 12px;
+  stroke: $color-special-blue;
+}
