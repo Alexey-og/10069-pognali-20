@@ -9,7 +9,7 @@
   min-height: 143px;
   padding: 75px 25px 15px;
   background-color: $color-basic-blue;
-  z-index: 3;
+  z-index: 7;
 
   @media screen and (min-width: $tablet-width) {
     @include bottom-radius(60px);

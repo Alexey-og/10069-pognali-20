@@ -15,6 +15,8 @@
 
 .filter-header__title {
   position: relative;
+  display: flex;
+  align-items: center;
   margin: 0;
   padding-left: 27px;
   font: inherit;
@@ -59,13 +61,14 @@
 }
 
 .filter-header__regions {
+  display: none;
   flex-grow: 1;
-  display: flex;
   flex-direction: column;
   width: 100%;
   margin: 35px 25px 25px 25px;
 
   @media screen and (min-width: $tablet-width) {
+    display: flex;
     flex-direction: row;
     width: auto;
     margin: 0;
@@ -101,43 +104,50 @@
   }
 }
 
-.filter-header__conditions {
+.filter-header__collapse,
+.filter-header__expand {
   display: flex;
+  justify-content: flex-end;
   flex-wrap: wrap;
   align-items: center;
   color: $color-basic-blue-dark;
-  cursor: pointer;
 
   @media screen and (min-width: $tablet-width) {
     order: 3;
   }
 }
 
-.filter-header__expand {
+.filter-header__expand-text,
+.filter-header__collapse-text {
   display: none;
+}
 
+.filter-header__expand-text {
   @media screen and (min-width: $tablet-width) {
-    display: block;
+    display: flex;
   }
 }
 
-.filter-header__collapse {
+.filter-header__collapse-icon {
   display: none;
+  width: 14px;
+  height: 14px;
+  stroke: $color-basic-blue-dark;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
+    margin-left: 62px;
+  }
 }
 
-.filter-header__icon {
-  display: inline-flex;
-  width: 20px;
-  height: 18px;
-  margin-left: 25px;
-  background-image: url("/img/icon-dots.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 17px 3px;
+.filter-header__expand-icon {
+  width: 17px;
+  height: 3px;
 
   @media screen and (min-width: $tablet-width) {
     width: 30px;
-    height: 24px;
-    background-size: 30px 6px;
+    height: 6px;
+    margin-left: 25px;
   }
 }

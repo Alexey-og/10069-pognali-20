@@ -2,13 +2,14 @@
   @include bottom-radius(30px);
 
   position: absolute;
-
+  flex-direction: column;
+  flex-wrap: wrap;
   width: 100%;
   min-height: 85px;
   margin: -30px 0 21px;
-  padding: 47px 25px 15px 22px;
+  padding: 47px 25px 15px;
   background-color: #e2e5f2;
-  z-index: 2;
+  z-index: 5;
 
   @media screen and (min-width: $tablet-width) {
     @include bottom-radius(60px);
@@ -19,33 +20,66 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 120px 120px 60px 80px;
+    position: relative;
+    padding: 120px 60px 60px 60px;
   }
 }
 
-.filter__filter {
+.filter a {
+  cursor: pointer;
+}
+
+.filter__wrapper {
+  display: none;
+  flex-direction: column;
   padding-left: 25px;
   padding-right: 25px;
+
+  @media screen and (min-width: $tablet-width) {
+    flex-direction: row;
+    margin-top: 60px;
+    margin-bottom: 70px;
+    padding: 0;
+  }
 }
 
 .filter__letters-wrapper {
   margin: 0;
   padding: 0;
   border: none;
+
+  @media screen and (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .filter__letters {
   display: grid;
   grid-template-columns: repeat(5, 45px);
+  grid-template-rows: min-content;
   border-top: 1px solid #cbced9;
   border-left: 1px solid #cbced9;
   background-color: $color-white;
+
+  @media screen and (min-width: $tablet-width) {
+    grid-template-columns: repeat(5, 50px);
+    grid-template-rows: 55px;
+    column-gap: 28px;
+    row-gap: 30px;
+    border: none;
+    background-color: transparent;
+  }
 }
 
 .filter__letters input:checked + .filter__letter {
   border-color: #1d2e5b;
   background-color: #1d2e5b;
   color: $color-white;
+
+  @media screen and (min-width: $tablet-width) {
+    background-color: transparent;
+    color: $color-basic-blue-dark;
+  }
 }
 
 .filter__letter {
@@ -56,13 +90,29 @@
   border-bottom: 1px solid #cbced9;
   font-weight: 500;
   font-size: 14px;
-  line-height: 14px;
+  line-height: 1;
   text-transform: uppercase;
   color: $color-button-blue;
   cursor: pointer;
 
+  @media screen and (min-width: $tablet-width) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 50px;
+    border: none;
+    font-weight: bold;
+    font-size: 60px;
+    text-transform: uppercase;
+    color: rgba($color-basic-blue-dark, 0.3);
+  }
+
   &:hover {
     background-color: $color-basic-blue-light;
+
+    @media screen and (min-width: $tablet-width) {
+      background-color: transparent;
+      color: rgba($color-basic-blue-dark, 0.6);
+    }
   }
 
   &:active {
@@ -70,6 +120,11 @@
     background-color: #1d2e5b;
     background-clip: padding-box;
     color: $color-white;
+
+    @media screen and (min-width: $tablet-width) {
+      background-color: transparent;
+      color: $color-basic-blue-dark;
+    }
   }
 }
 
@@ -77,17 +132,42 @@
   margin-bottom: 28px;
   padding-top: 15px;
   background-color: transparent;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-left: 90px;
+    padding-top: 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .filter__countries {
   display: flex;
   flex-direction: column;
+
+  @media screen and (min-width: $desktop-width) {
+    display: flex;
+    width: 20%;
+    margin-bottom: 50px;
+  }
 }
 
 .filter__countries a {
   font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
   color: $color-grey-44;
   text-decoration: none;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &:hover {
     color: $color-button-blue;
@@ -100,22 +180,41 @@
 
 .filter__letter-title {
   display: none;
+
+  @media screen and (min-width: $desktop-width) {
+    display: flex;
+    margin: 0 0 30px 0;
+    font-size: 60px;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: #192144;
+  }
 }
 
-.filter__button {
-  @include flex-center;
-
+.filter__close-button {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
   min-height: 40px;
+  margin-bottom: 13px;
   border-radius: 20px;
   background-color: #d6daed;
   font-weight: bold;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $color-special-blue;
   cursor: pointer;
+
+  @media screen and (min-width: $tablet-width) {
+    margin: 20px 0 20px;
+    min-height: 100px;
+    font-size: 20px;
+    letter-spacing: 0;
+  }
 
   &:hover {
     background-color: #c8cee8;
@@ -127,7 +226,43 @@
   }
 }
 
-.filter__button-icon {
+.filter__close-icon {
+  width: 14px;
+  height: 14px;
   margin-right: 12px;
   stroke: $color-special-blue;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
+    margin-right: 18px;
+  }
+}
+
+
+/*  Стили для отображения фильтра по странам  */
+
+.filter--expand .filter-header__title-colon,
+.filter--expand .filter-header__collapse-icon,
+.filter--expand .filter__wrapper,
+.filter--expand .filter-header__regions,
+.filter--expand .filter__close-button {
+  display: flex;
+}
+
+.filter--expand .filter-header__expand {
+  display: none;
+}
+
+
+.filter--expand .filter-header__collapse-text {
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.filter--expand {
+  @media screen and (min-width: $tablet-width) {
+    background-color: transparent;
+  }
 }
