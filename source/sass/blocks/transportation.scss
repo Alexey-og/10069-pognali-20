@@ -12,6 +12,15 @@
   fill-opacity: 0.15;
   cursor: pointer;
 
+  @media screen and (min-width: $tablet-width) {
+    width: 43px;
+    height: 43px;
+  }
+
+  @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
+    margin: 0;
+  }
+
   &:hover {
     box-shadow: 0 2px 6px rgba($color-basic-blue, 0.17);
     fill: $color-grey-b2;
@@ -40,4 +49,36 @@
 .transportation__checkbox:focus + .transportation__label {
   outline-style: auto;
   outline-width: 1px;
+}
+
+.transportation__label--avia svg {
+  height: 15px;
+
+  @media screen and (min-width: $tablet-width) {
+    height: 20px;
+  }
+}
+
+.transportation__label--bus svg {
+  height: 16px;
+
+  @media screen and (min-width: $tablet-width) {
+    height: 22px;
+  }
+}
+
+.transportation__label--bicycle svg {
+  height: 12px;
+
+  @media screen and (min-width: $tablet-width) {
+    height: 17px;
+  }
+}
+
+.transportation__label--foot svg {
+  height: 13px;
+
+  @media screen and (min-width: $tablet-width) {
+    height: 18px;
+  }
 }

@@ -62,9 +62,9 @@
   background-color: $color-white;
 
   @media screen and (min-width: $tablet-width) {
-    grid-template-columns: repeat(5, 50px);
+    grid-template-columns: repeat(5, 30px);
     grid-template-rows: 55px;
-    column-gap: 28px;
+    column-gap: 48px;
     row-gap: 30px;
     border: none;
     background-color: transparent;
@@ -96,8 +96,7 @@
   cursor: pointer;
 
   @media screen and (min-width: $tablet-width) {
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
     height: 50px;
     border: none;
     font-weight: bold;
@@ -147,13 +146,17 @@
 }
 
 .filter__countries {
-  display: flex;
+  display: none;
   flex-direction: column;
 
   @media screen and (min-width: $desktop-width) {
     display: flex;
     width: 20%;
     margin-bottom: 50px;
+  }
+
+  &--active {
+    display: flex;
   }
 }
 
@@ -254,7 +257,6 @@
   display: none;
 }
 
-
 .filter--expand .filter-header__collapse-text {
   @media screen and (min-width: $tablet-width) {
     display: flex;
@@ -262,7 +264,20 @@
 }
 
 .filter--expand {
-  @media screen and (min-width: $tablet-width) {
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 68px;
     background-color: transparent;
+  }
+}
+
+.filter--expand .filter__wrapper {
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.filter--expand .filter__close-button {
+  @media screen and (min-width: $desktop-width) {
+    margin-top: 10px;
   }
 }

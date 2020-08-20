@@ -1,0 +1,278 @@
+.travelmate-filter {
+  background-color: $color-basic-yellow;
+  border-radius: 20px;
+  margin-bottom: 28px;
+  padding: 25px 25px 22px;
+
+  @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
+    margin-bottom: 40px;
+    padding: 37px 35px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 285px;
+    margin-left: 84px;
+    padding: 46px 45px 48px 48px;
+  }
+}
+
+.travelmate-filter__heading {
+  margin: 0;
+  padding: 0 40px 23px 0;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: $color-button-blue;
+
+  @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
+    padding-bottom: 38px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 30px;
+  }
+}
+
+.travelmate-filter__item {
+  margin: 0 0 9px 0;
+  padding: 0;
+  border: none;
+
+  @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
+    margin-bottom: 25px;
+  }
+}
+
+.travelmate-filter__item--rolled {
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+
+  & .travelmate-filter__title {
+    margin-bottom: 0;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  & .travelmate-filter__title::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='5' viewBox='0 0 10 5' fill='%23192144' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 5L0 0H10L5 5Z'/%3E%3C/svg%3E");
+  }
+
+  & .travelmate-filter__inputs {
+    display: none;
+  }
+}
+
+.travelmate-filter__item:first-of-type {
+  @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
+    padding-top: 34px;
+    border-top: 1px solid #f3c72b;
+  }
+}
+
+.travelmate-filter__item:last-of-type {
+  @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
+    margin-bottom: 36px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid #f3c72b;
+  }
+}
+
+.travelmate-filter__container {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.travelmate-filter__title {
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-top: 1px solid #f3c72b;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $color-button-blue;
+  cursor: pointer;
+
+  @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
+    font-size: 20px;
+    min-width: 128px;
+    padding: 0;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 13px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-top: none;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 10px;
+    height: 5px;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='5' viewBox='0 0 10 5' fill='%23192144' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 0L0 5H10L5 0Z'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 10px 5px;
+
+    @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
+      display: none;
+    }
+  }
+}
+
+.travelmate-filter__title-colon {
+  display: none;
+
+  @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
+    display: block;
+  }
+}
+
+.travelmate-filter__inputs {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
+    flex-direction: row;
+  }
+}
+
+.travelmate-filter__label {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 27px;
+  font-size: 15px;
+  line-height: 18px;
+  color: $color-black;
+  cursor: pointer;
+
+  @media screen and (min-width: $tablet-width) {
+    min-width: 170px;
+    padding-left: 36px;
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
+    margin: 0;
+    padding-right: 10px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 16px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+
+    @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &::before {
+    border-radius: 4px;
+    background-color: $color-white;
+  }
+
+  &::after {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 8px;
+
+    @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
+      background-size: 11px;
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.travelmate-filter__label:last-child {
+  @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
+    min-width: 150px;
+    margin-right: 0;
+    padding-right: 0;
+  }
+}
+
+.travelmate-filter__inputs input:checked + .travelmate-filter__label {
+  &::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M12 0L3.8 8 0 4.3v4L3.8 12 12 4z' fill='%23161c35'/%3E%3C/svg%3E");
+  }
+}
+
+.travelmate-filter__transportation {
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-bottom: 11px;
+
+  @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
+    padding-bottom: 0;
+  }
+}
+
+.travelmate-filter__button {
+  @include flex-center;
+
+  width: calc(100% + 10px);
+  flex-grow: 1;
+  min-height: 40px;
+  margin-left: -5px;
+  margin-right: -5px;
+  padding: 10px 20px;
+  border-width: 0;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 1;
+  text-transform: uppercase;
+  background-color: $color-white;
+  color: $color-basic-blue;
+  cursor: pointer;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 100%;
+    min-height: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 20px;
+  }
+
+  &:hover {
+    box-shadow: 0 3px 6px rgba($color-black, 0.14);
+  }
+
+  &:active {
+    background-color: #f3c72b;
+    color: rgba(#161c35, 0.3);
+  }
+}

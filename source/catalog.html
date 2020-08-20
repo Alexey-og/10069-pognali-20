@@ -41,7 +41,7 @@
       <h1 class="heading-1">Попутчики</h1>
       <a class="page-title__to-main" href="index.html">На главную</a>
     </div>
-    <section class="filter filter--expand">
+    <section class="filter">
       <div class="filter__header filter-header">
         <h2 class="filter-header__title">Фильтрация по странам<span class="filter-header__title-colon">:</span></h2>
         <a class="filter-header__collapse">
@@ -93,7 +93,7 @@
           </div>
         </fieldset>
         <div class="filter__countries-wrapper">
-          <div class="filter__countries filter__countries--a" data-country-letter="a">
+          <div class="filter__countries filter__countries--a filter__countries--active" data-country-letter="a">
             <h4 class="filter__letter-title">А</h4>
             <a href="/islands/australia.html" data-region="islands">Австралия</a>
             <a href="/europe/austria.html" data-region="europe">Австрия</a>
@@ -338,294 +338,318 @@
         <svg class="filter__close-icon" width="12" height="12"><use xlink:href="#icon-close"></use></svg>Свернуть
       </a>
     </section>
-    <form class="perfect-travelmate" action="https://echo.htmlacademy.ru/" method="post">
-      <h2 class="perfect-travelmate__heading">Подберите идеального попутчика</h2>
-      <fieldset class="perfect-travelmate__fieldset perfect-travelmate__fieldset--rolled">
-        <legend class="visually-hidden">Хобби</legend>
-        <a class="perfect-travelmate__title">Хобби</a>
-        <div class="perfect-travelmate__input-wrapper">
-          <input class="visually-hidden" type="checkbox" name="hobby-gym" id="hobby-gym" checked><label class="perfect-travelmate__label" for="hobby-gym">Спортзал</label>
-          <input class="visually-hidden" type="checkbox" name="hobby-hookah" id="hobby-hookah"><label class="perfect-travelmate__label" for="hobby-hookah">Кальян</label>
-          <input class="visually-hidden" type="checkbox" name="hobby-sofa" id="hobby-sofa"><label class="perfect-travelmate__label" for="hobby-sofa">Диван</label>
-        </div>
-      </fieldset>
-      <fieldset class="perfect-travelmate__fieldset">
-        <legend class="visually-hidden">Музыка</legend>
-        <a class="perfect-travelmate__title">Музыка</a>
-        <div class="perfect-travelmate__input-wrapper">
-          <input class="visually-hidden" type="checkbox" name="music-hard-rock" id="music-hard-rock" checked><label class="perfect-travelmate__label" for="music-hard-rock">Тяжелый рок</label>
-          <input class="visually-hidden" type="checkbox" name="music-russian-rap" id="music-russian-rap" checked><label class="perfect-travelmate__label" for="music-russian-rap">Русский рэп</label>
-          <input class="visually-hidden" type="checkbox" name="music-eurodance" id="music-eurodance"><label class="perfect-travelmate__label" for="music-eurodance">Евроденс</label>
-        </div>
-      </fieldset>
-      <fieldset class="perfect-travelmate__fieldset perfect-travelmate__fieldset--rolled">
-        <legend class="visually-hidden">Еда</legend>
-        <a class="perfect-travelmate__title">Еда</a>
-        <div class="perfect-travelmate__input-wrapper">
-          <input class="visually-hidden" type="checkbox" name="food-meat" id="food-meat" checked><label class="perfect-travelmate__label" for="food-meat">Мясоед</label>
-          <input class="visually-hidden" type="checkbox" name="food-healthy-diet" id="food-healthy-diet"><label class="perfect-travelmate__label" for="food-healthy-diet">Сидит на ПП</label>
-          <input class="visually-hidden" type="checkbox" name="food-vegan" id="food-vegan"><label class="perfect-travelmate__label" for="food-vegan">Веган-сыроед</label>
-        </div>
-      </fieldset>
-      <fieldset class="perfect-travelmate__fieldset">
-        <legend class="visually-hidden">Транспорт</legend>
-        <a class="perfect-travelmate__title">Транспорт</a>
-        <div class="perfect-travelmate__input-wrapper transportation perfect-travelmate__transportation">
-          <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-avia" id="transportation-avia" checked>
-          <label class="transportation__label transportation__label--avia" for="transportation-avia" aria-label="Кнопка передвижения на самолете" data-transport="Авиаперелет">
-            <svg height="16"><use xlink:href="#icon-plane"></use></svg>
-          </label>
-          <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bus" id="transportation-bus" checked>
-          <label class="transportation__label transportation__label--bus" for="transportation-bus" aria-label="Кнопка передвижения на автотранспорте" data-transport="Автотранспорт">
-            <svg height="16"><use xlink:href="#icon-bus"></use></svg>
-          </label>
-          <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bicycle" id="transportation-bicycle">
-          <label class="transportation__label transportation__label--bicycle" for="transportation-bicycle" aria-label="Кнопка передвижения на велосипеде" data-transport="Велосипед">
-            <svg height="16"><use xlink:href="#icon-bicycle"></use></svg>
-          </label>
-          <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-foot" id="transportation-foot" checked>
-          <label class="transportation__label transportation__label--foot" for="transportation-foot" aria-label="Кнопка передвижения пешком" data-transport="Пешком">
-            <svg height="16"><use xlink:href="#icon-run"></use></svg>
-          </label>
-        </div>
-      </fieldset>
-      <fieldset class="perfect-travelmate__fieldset">
-        <legend class="visually-hidden">Левел</legend>
-        <a class="perfect-travelmate__title">Левел</a>
-        <div class="perfect-travelmate__input-wrapper travelmate-range">
-          <div class="travelmate-range__inputs-wrapper">
-            <input class="travelmate-range__input travelmate-range__input--min" type="text" value="30">
-            <input class="travelmate-range__input travelmate-range__input--max" type="text" value="100">
-          </div>
-          <div class="travelmate-range__range-wrapper">
-            <div class="travelmate-range__row">
-              <div class="travelmate-range__row travelmate-range__row--inner"></div>
+    <div class="travelmates-wrapper">
+      <form class="travelmate-filter" action="https://echo.htmlacademy.ru/" method="post">
+        <h2 class="travelmate-filter__heading">Подберите идеального попутчика</h2>
+        <fieldset class="travelmate-filter__item travelmate-filter__item--rolled">
+          <legend class="visually-hidden">Хобби</legend>
+          <div class="travelmate-filter__container">
+            <a class="travelmate-filter__title">Хобби<span class="travelmate-filter__title-colon">:</span></a>
+            <div class="travelmate-filter__inputs">
+              <input class="visually-hidden" type="checkbox" name="hobby-gym" id="hobby-gym" checked><label class="travelmate-filter__label" for="hobby-gym">Спортзал</label>
+              <input class="visually-hidden" type="checkbox" name="hobby-hookah" id="hobby-hookah"><label class="travelmate-filter__label" for="hobby-hookah">Кальян</label>
+              <input class="visually-hidden" type="checkbox" name="hobby-sofa" id="hobby-sofa"><label class="travelmate-filter__label" for="hobby-sofa">Диван</label>
             </div>
-            <a class="travelmate-range__button travelmate-range__button--left" aria-label="Ползунок для задания минимального уровня"></a>
-            <a class="travelmate-range__button travelmate-range__button--right" aria-label="Ползунок для задания максимального уровня"></a>
           </div>
-        </div>
-      </fieldset>
-      <button class="perfect-travelmate__button" type="submit">Показать</button>
-    </form>
+        </fieldset>
+        <fieldset class="travelmate-filter__item">
+          <legend class="visually-hidden">Музыка</legend>
+          <div class="travelmate-filter__container">
+            <a class="travelmate-filter__title">Музыка<span class="travelmate-filter__title-colon">:</span></a>
+            <div class="travelmate-filter__inputs">
+              <input class="visually-hidden" type="checkbox" name="music-hard-rock" id="music-hard-rock" checked><label class="travelmate-filter__label" for="music-hard-rock">Тяжелый рок</label>
+              <input class="visually-hidden" type="checkbox" name="music-russian-rap" id="music-russian-rap"><label class="travelmate-filter__label" for="music-russian-rap">Русский рэп</label>
+              <input class="visually-hidden" type="checkbox" name="music-eurodance" id="music-eurodance"><label class="travelmate-filter__label" for="music-eurodance">Евроденс</label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="travelmate-filter__item travelmate-filter__item--rolled">
+          <legend class="visually-hidden">Еда</legend>
+          <div class="travelmate-filter__container">
+            <a class="travelmate-filter__title">Еда<span class="travelmate-filter__title-colon">:</span></a>
+            <div class="travelmate-filter__inputs">
+              <input class="visually-hidden" type="checkbox" name="food-meat" id="food-meat" checked><label class="travelmate-filter__label" for="food-meat">Мясоед</label>
+              <input class="visually-hidden" type="checkbox" name="food-healthy-diet" id="food-healthy-diet"><label class="travelmate-filter__label" for="food-healthy-diet">Сидит на ПП</label>
+              <input class="visually-hidden" type="checkbox" name="food-vegan" id="food-vegan"><label class="travelmate-filter__label" for="food-vegan">Веган-сыроед</label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="travelmate-filter__item">
+          <legend class="visually-hidden">Транспорт</legend>
+          <div class="travelmate-filter__container">
+            <a class="travelmate-filter__title">Транспорт<span class="travelmate-filter__title-colon">:</span></a>
+            <div class="travelmate-filter__inputs transportation travelmate-filter__transportation">
+              <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-avia" id="transportation-avia" checked>
+              <label class="transportation__label transportation__label--avia" for="transportation-avia" aria-label="Кнопка передвижения на самолете" data-transport="Авиаперелет">
+                <svg height="16"><use xlink:href="#icon-plane"></use></svg>
+              </label>
+              <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bus" id="transportation-bus" checked>
+              <label class="transportation__label transportation__label--bus" for="transportation-bus" aria-label="Кнопка передвижения на автотранспорте" data-transport="Автотранспорт">
+                <svg height="16"><use xlink:href="#icon-bus"></use></svg>
+              </label>
+              <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bicycle" id="transportation-bicycle">
+              <label class="transportation__label transportation__label--bicycle" for="transportation-bicycle" aria-label="Кнопка передвижения на велосипеде" data-transport="Велосипед">
+                <svg height="16"><use xlink:href="#icon-bicycle"></use></svg>
+              </label>
+              <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-foot" id="transportation-foot" checked>
+              <label class="transportation__label transportation__label--foot" for="transportation-foot" aria-label="Кнопка передвижения пешком" data-transport="Пешком">
+                <svg height="16"><use xlink:href="#icon-run"></use></svg>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="travelmate-filter__item">
+          <legend class="visually-hidden">Левел</legend>
+          <div class="travelmate-filter__container">
+            <a class="travelmate-filter__title">Левел<span class="travelmate-filter__title-colon">:</span></a>
+            <div class="travelmate-filter__inputs travelmate-range">
+              <div class="travelmate-range__inputs-wrapper">
+                <input class="travelmate-range__input travelmate-range__input--min" type="text" value="30">
+                <input class="travelmate-range__input travelmate-range__input--max" type="text" value="100">
+              </div>
+              <div class="travelmate-range__range-wrapper">
+                <div class="travelmate-range__row">
+                  <div class="travelmate-range__row travelmate-range__row--inner"></div>
+                </div>
+                <a class="travelmate-range__button travelmate-range__button--left" aria-label="Ползунок для задания минимального уровня"></a>
+                <a class="travelmate-range__button travelmate-range__button--right" aria-label="Ползунок для задания максимального уровня"></a>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <button class="travelmate-filter__button" type="submit">Показать</button>
+      </form>
 
-    <section class="potential-travelmates-list">
-      <h2 class="visually-hidden">Список потенциальных попутчиков</h2>
-      <article class="potential-travelmates-list__item potential-travelmate">
-        <a class="potential-travelmate__photo" href="" title="Таня Фирсова - перейти в профиль">
-          <picture>
-            <img src="/img/firsova-mobile@1x.jpg" width="285" height="285" alt="Таня Фирсова - фотография">
-          </picture>
-        </a>
-        <h3 class="potential-travelmate__name potential-travelmate__name--offline">
-          <a href="" title="Таня Фирсова - перейти в профиль">Таня <span class="potential-travelmate__surname">Фирсова</span></a>
-        </h3>
-        <div class="potential-travelmate__likes"><a class="potential-travelmate__like-heart potential-travelmate__like-heart--active" aria-label="Поставить лайк"></a>1,5 М</div>
-        <p class="potential-travelmate__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-        <div class="potential-travelmate__wish-wrapper">
-          <p class="potential-travelmate__wish-title">хочет посетить:</p>
-          <div class="potential-travelmate__wish-countris">
-            <span class="potential-travelmate__wish potential-travelmate__wish--sri-lanka">Шри-ланка</span>
-            <span class="potential-travelmate__wish potential-travelmate__wish--thailand">Таиланд</span>
-            <span class="potential-travelmate__wish potential-travelmate__wish--seychelles">Сейшелы</span>
+      <section class="potential-travelmates">
+        <h2 class="visually-hidden">Список потенциальных попутчиков</h2>
+        <article class="potential-travelmates__item travelmate-card">
+          <a href="" title="Таня Фирсова - перейти в профиль">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg">
+              <img class="travelmate-card__photo" src="img/firsova-mobile@1x.jpg" width="285" height="285" alt="Таня Фирсова - фотография">
+            </picture>
+          </a>
+          <h3 class="travelmate-card__name travelmate-card__name--offline">
+            <a href="" title="Таня Фирсова - перейти в профиль">Таня <span class="travelmate-card__surname">Фирсова</span></a>
+          </h3>
+          <div class="travelmate-card__likes"><a class="travelmate-card__heart travelmate-card__heart--active" aria-label="Поставить лайк"></a>1,5 М</div>
+          <p class="travelmate-card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+          <div class="travelmate-card__wish-wrapper">
+            <p class="travelmate-card__wish-title">хочет посетить:</p>
+            <div class="travelmate-card__wish-countries">
+              <span class="travelmate-card__wish travelmate-card__wish--sri-lanka">Шри-ланка</span>
+              <span class="travelmate-card__wish travelmate-card__wish--thailand">Таиланд</span>
+              <span class="travelmate-card__wish travelmate-card__wish--seychelles">Сейшелы</span>
+            </div>
+          </div>
+          <div class="travelmate-card__transport-wrapper">
+            <p class="travelmate-card__transport-title">транспорт:</p>
+            <div class="travelmate-card__transport-list">
+              <span class="travelmate-card__transport travelmate-card__transport--on">
+                <svg class="travelmate-card__icon-plane" width="13" height="14"><use xlink:href="#icon-plane"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--off">
+                <svg class="travelmate-card__icon-bus" width="13" height="14"><use xlink:href="#icon-bus"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--off">
+                <svg class="travelmate-card__icon-bicycle" width="16" height="14"><use xlink:href="#icon-bicycle"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--off">
+                <svg class="travelmate-card__icon-run" width="13" height="14"><use xlink:href="#icon-run"></use></svg>
+              </span>
+            </div>
+          </div>
+          <div class="travelmate-card__mark-wrapper">
+            <p class="travelmate-card__mark-title">левел:</p>
+            <div class="travelmate-card__mark">
+              <svg class="travelmate-card__mark-indicator travelmate-card__mark-indicator--99" width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
+                <circle r="16" cx="50%" cy="50%" fill="none" stroke="#ff8d30"></circle>
+              </svg>
+              <span class="travelmate-card__mark-number">99</span>
+              <span class="travelmate-card__mark-level">level</span>
+            </div>
+          </div>
+          <a class="travelmate-card__invite" href="">Позвать!</a>
+        </article>
+        <article class="potential-travelmates__item travelmate-card">
+          <a href="" title="Петя Демин - перейти в профиль">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg">
+              <img class="travelmate-card__photo" src="img/demin-mobile@1x.jpg" width="285" height="285" alt="Петя Демин - фотография">
+            </picture>
+          </a>
+          <h3 class="travelmate-card__name travelmate-card__name--offline">
+            <a href="" title="Петя Демин - перейти в профиль">Петя <span class="travelmate-card__surname">Демин</span></a>
+          </h3>
+          <div class="travelmate-card__likes"><a class="travelmate-card__heart" aria-label="Поставить лайк"></a>1500</div>
+          <p class="travelmate-card__tags">#бургер #бар #футбол #концерт #крафт</p>
+          <div class="travelmate-card__wish-wrapper">
+            <p class="travelmate-card__wish-title">хочет посетить:</p>
+            <div class="travelmate-card__wish-countries">
+              <span class="travelmate-card__wish travelmate-card__wish--belgium">Бельгия</span>
+              <span class="travelmate-card__wish travelmate-card__wish--czechia">Чехия</span>
+            </div>
+          </div>
+          <div class="travelmate-card__transport-wrapper">
+            <p class="travelmate-card__transport-title">транспорт:</p>
+            <div class="travelmate-card__transport-list">
+              <span class="travelmate-card__transport travelmate-card__transport--on">
+                <svg class="travelmate-card__icon-plane" width="13" height="14"><use xlink:href="#icon-plane"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--on">
+                <svg class="travelmate-card__icon-bus" width="13" height="14"><use xlink:href="#icon-bus"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--on">
+                <svg class="travelmate-card__icon-bicycle" width="16" height="14"><use xlink:href="#icon-bicycle"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--off">
+                <svg class="travelmate-card__icon-run" width="13" height="14"><use xlink:href="#icon-run"></use></svg>
+              </span>
+            </div>
+          </div>
+          <div class="travelmate-card__mark-wrapper">
+            <p class="travelmate-card__mark-title">левел:</p>
+            <div class="travelmate-card__mark">
+              <svg class="travelmate-card__mark-indicator travelmate-card__mark-indicator--80" width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
+                <circle r="16" cx="50%" cy="50%" fill="none" stroke="#ff8d30"></circle>
+              </svg>
+              <span class="travelmate-card__mark-number">80</span>
+              <span class="travelmate-card__mark-level">level</span>
+            </div>
+          </div>
+          <a class="travelmate-card__invite" href="">Позвать!</a>
+        </article>
+        <article class="potential-travelmates__item travelmate-card">
+          <a href="" title="Марк Смолов - перейти в профиль">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg">
+              <img class="travelmate-card__photo" src="img/smolov-mobile@1x.jpg" width="285" height="285" alt="Марк Смолов - фотография">
+            </picture>
+          </a>
+          <h3 class="travelmate-card__name travelmate-card__name--offline">
+            <a href="" title="Марк Смолов - перейти в профиль">Марк <span class="travelmate-card__surname">Смолов</span></a>
+          </h3>
+          <div class="travelmate-card__likes"><a class="travelmate-card__heart" aria-label="Поставить лайк"></a>170</div>
+          <p class="travelmate-card__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+          <div class="travelmate-card__wish-wrapper">
+            <p class="travelmate-card__wish-title">хочет посетить:</p>
+            <div class="travelmate-card__wish-countries">
+              <span class="travelmate-card__wish travelmate-card__wish--usa">США</span>
+              <span class="travelmate-card__wish travelmate-card__wish--australia">Австралия</span>
+              <span class="travelmate-card__wish travelmate-card__wish--dominica">Доминика</span>
+            </div>
+          </div>
+          <div class="travelmate-card__transport-wrapper">
+            <p class="travelmate-card__transport-title">транспорт:</p>
+            <div class="travelmate-card__transport-list">
+              <span class="travelmate-card__transport travelmate-card__transport--on">
+                <svg class="travelmate-card__icon-plane" width="13" height="14"><use xlink:href="#icon-plane"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--off">
+                <svg class="travelmate-card__icon-bus" width="13" height="14"><use xlink:href="#icon-bus"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--on">
+                <svg class="travelmate-card__icon-bicycle" width="16" height="14"><use xlink:href="#icon-bicycle"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--off">
+                <svg class="travelmate-card__icon-run" width="13" height="14"><use xlink:href="#icon-run"></use></svg>
+              </span>
+            </div>
+          </div>
+          <div class="travelmate-card__mark-wrapper">
+            <p class="travelmate-card__mark-title">левел:</p>
+            <div class="travelmate-card__mark">
+              <svg class="travelmate-card__mark-indicator travelmate-card__mark-indicator--25" width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
+                <circle r="16" cx="50%" cy="50%" fill="none" stroke="#ff8d30"></circle>
+              </svg>
+              <span class="travelmate-card__mark-number">25</span>
+              <span class="travelmate-card__mark-level">level</span>
+            </div>
+          </div>
+          <a class="travelmate-card__invite" href="">Позвать!</a>
+        </article>
+        <article class="potential-travelmates__item travelmate-card">
+          <a href="" title="Лариса Роговая - перейти в профиль">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg">
+              <img class="travelmate-card__photo" src="img/rogovaya-mobile@1x.jpg" width="285" height="285" alt="Лариса Роговая - фотография">
+            </picture>
+          </a>
+          <h3 class="travelmate-card__name travelmate-card__name--online">
+            <a href="" title="Лариса Роговая - перейти в профиль">Лариса <span class="travelmate-card__surname">Роговая</span></a>
+          </h3>
+          <div class="travelmate-card__likes"><a class="travelmate-card__heart" aria-label="Поставить лайк"></a>23</div>
+          <p class="travelmate-card__tags">#образование #карьера #учеба #линкедин</p>
+          <div class="travelmate-card__wish-wrapper">
+            <p class="travelmate-card__wish-title">хочет посетить:</p>
+            <div class="travelmate-card__wish-countries">
+              <span class="travelmate-card__wish travelmate-card__wish--united-kingdom">Великобритания</span>
+            <span class="travelmate-card__wish travelmate-card__wish--germany">Германия</span>
+            </div>
+          </div>
+          <div class="travelmate-card__transport-wrapper">
+            <p class="travelmate-card__transport-title">транспорт:</p>
+            <div class="travelmate-card__transport-list">
+              <span class="travelmate-card__transport travelmate-card__transport--on">
+                <svg class="travelmate-card__icon-plane" width="13" height="14"><use xlink:href="#icon-plane"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--on">
+                <svg class="travelmate-card__icon-bus" width="13" height="14"><use xlink:href="#icon-bus"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--off">
+                <svg class="travelmate-card__icon-bicycle" width="16" height="14"><use xlink:href="#icon-bicycle"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--off">
+                <svg class="travelmate-card__icon-run" width="13" height="14"><use xlink:href="#icon-run"></use></svg>
+              </span>
+            </div>
+          </div>
+          <div class="travelmate-card__mark-wrapper">
+            <p class="travelmate-card__mark-title">левел:</p>
+            <div class="travelmate-card__mark">
+              <svg class="travelmate-card__mark-indicator travelmate-card__mark-indicator--50" width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
+                <circle r="16" cx="50%" cy="50%" fill="none" stroke="#ff8d30"></circle>
+              </svg>
+              <span class="travelmate-card__mark-number">50</span>
+              <span class="travelmate-card__mark-level">level</span>
+            </div>
+          </div>
+          <a class="travelmate-card__invite" href="">Позвать!</a>
+        </article>
+        <div class="potential-travelmates__show-more">
+          <a class="potential-travelmates__show" href="">Показать еще</a>
+        </div>
+        <div class="potential-travelmates__pagination">
+          <div class="potential-travelmates__pages">
+            <a class="potential-travelmates__page potential-travelmates__page--current">1</a>
+            <a class="potential-travelmates__page" href="">2</a>
+            <a class="potential-travelmates__page" href="">3</a>
+            <a class="potential-travelmates__page" href="">4</a>
+          </div>
+          <div class="potential-travelmates__arrows">
+            <a class="potential-travelmates__arrow potential-travelmates__arrow--left" href=""><span class="visually-hidden">Посмотреть следующую страницу</span></a>
+            <a class="potential-travelmates__arrow potential-travelmates__arrow--right" href=""><span class="visually-hidden">Посмотреть следующую страницу</span></a>
           </div>
         </div>
-        <div class="potential-travelmate__transport-wrapper">
-          <p class="potential-travelmate__transport-title">транспорт:</p>
-          <div class="potential-travelmate__transport-list">
-            <span class="potential-travelmate__transport potential-travelmate__transport--on">
-              <svg width="13" height="14"><use xlink:href="#icon-plane"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--off">
-              <svg width="13" height="14"><use xlink:href="#icon-bus"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--off">
-              <svg width="16" height="14"><use xlink:href="#icon-bicycle"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--off">
-              <svg width="13" height="14"><use xlink:href="#icon-run"></use></svg>
-            </span>
-          </div>
-        </div>
-        <div class="potential-travelmate__mark-wrapper">
-          <p class="potential-travelmate__mark-title">левел:</p>
-          <div class="potential-travelmate__mark">
-            <svg class="potential-travelmate__mark-indicator potential-travelmate__mark-indicator--99" width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
-              <circle r="21" cx="50%" cy="50%" fill="none" stroke="#ff8d30"></circle>
-            </svg>
-            <span class="potential-travelmate__mark-number">99</span>
-          </div>
-        </div>
-        <a class="potential-travelmate__invite" href="">Позвать!</a>
-      </article>
-      <article class="potential-travelmates-list__item potential-travelmate">
-        <a class="potential-travelmate__photo" href="" title="Петя Демин - перейти в профиль">
-          <picture>
-            <img src="/img/demin-mobile@1x.jpg" width="285" height="285" alt="Петя Демин - фотография">
-          </picture>
-        </a>
-        <h3 class="potential-travelmate__name potential-travelmate__name--offline">
-          <a href="" title="Петя Демин - перейти в профиль">Петя <span class="potential-travelmate__surname">Демин</span></a>
-        </h3>
-        <div class="potential-travelmate__likes"><a class="potential-travelmate__like-heart" aria-label="Поставить лайк"></a>1500</div>
-        <p class="potential-travelmate__tags">#бургер #бар #футбол #концерт #крафт</p>
-        <div class="potential-travelmate__wish-wrapper">
-          <p class="potential-travelmate__wish-title">хочет посетить:</p>
-          <div class="potential-travelmate__wish-countris">
-            <span class="potential-travelmate__wish potential-travelmate__wish--belgium">Бельгия</span>
-            <span class="potential-travelmate__wish potential-travelmate__wish--czechia">Чехия</span>
-          </div>
-        </div>
-        <div class="potential-travelmate__transport-wrapper">
-          <p class="potential-travelmate__transport-title">транспорт:</p>
-          <div class="potential-travelmate__transport-list">
-            <span class="potential-travelmate__transport potential-travelmate__transport--on">
-              <svg width="13" height="14"><use xlink:href="#icon-plane"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--on">
-              <svg width="13" height="14"><use xlink:href="#icon-bus"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--off">
-              <svg width="16" height="14"><use xlink:href="#icon-bicycle"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--on">
-              <svg width="13" height="14"><use xlink:href="#icon-run"></use></svg>
-            </span>
-          </div>
-        </div>
-        <div class="potential-travelmate__mark-wrapper">
-          <p class="potential-travelmate__mark-title">левел:</p>
-          <div class="potential-travelmate__mark">
-            <svg class="potential-travelmate__mark-indicator potential-travelmate__mark-indicator--80" width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
-              <circle r="21" cx="50%" cy="50%" fill="none" stroke="#ff8d30"></circle>
-            </svg>
-            <span class="potential-travelmate__mark-number">80</span>
-          </div>
-        </div>
-        <a class="potential-travelmate__invite" href="">Позвать!</a>
-      </article>
-      <article class="potential-travelmates-list__item potential-travelmate">
-        <a class="potential-travelmate__photo" href="" title="Марк Смолов - перейти в профиль">
-          <picture>
-            <img src="/img/smolov-mobile@1x.jpg" width="285" height="285" alt="Марк Смолов - фотография">
-          </picture>
-        </a>
-        <h3 class="potential-travelmate__name potential-travelmate__name--offline">
-          <a href="" title="Марк Смолов - перейти в профиль">Марк <span class="potential-travelmate__surname">Смолов</span></a>
-        </h3>
-        <div class="potential-travelmate__likes"><a class="potential-travelmate__like-heart" aria-label="Поставить лайк"></a>170</div>
-        <p class="potential-travelmate__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
-        <div class="potential-travelmate__wish-wrapper">
-          <p class="potential-travelmate__wish-title">хочет посетить:</p>
-          <div class="potential-travelmate__wish-countris">
-            <span class="potential-travelmate__wish potential-travelmate__wish--usa">США</span>
-            <span class="potential-travelmate__wish potential-travelmate__wish--australia">Австралия</span>
-            <span class="potential-travelmate__wish potential-travelmate__wish--dominica">Доминика</span>
-          </div>
-        </div>
-        <div class="potential-travelmate__transport-wrapper">
-          <p class="potential-travelmate__transport-title">транспорт:</p>
-          <div class="potential-travelmate__transport-list">
-            <span class="potential-travelmate__transport potential-travelmate__transport--on">
-              <svg width="13" height="14"><use xlink:href="#icon-plane"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--off">
-              <svg width="13" height="14"><use xlink:href="#icon-bus"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--on">
-              <svg width="16" height="14"><use xlink:href="#icon-bicycle"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--off">
-              <svg width="13" height="14"><use xlink:href="#icon-run"></use></svg>
-            </span>
-          </div>
-        </div>
-        <div class="potential-travelmate__mark-wrapper">
-          <p class="potential-travelmate__mark-title">левел:</p>
-          <div class="potential-travelmate__mark">
-            <svg class="potential-travelmate__mark-indicator potential-travelmate__mark-indicator--25" width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
-              <circle r="21" cx="50%" cy="50%" fill="none" stroke="#ff8d30"></circle>
-            </svg>
-            <span class="potential-travelmate__mark-number">25</span>
-          </div>
-        </div>
-        <a class="potential-travelmate__invite" href="">Позвать!</a>
-      </article>
-      <article class="potential-travelmates-list__item potential-travelmate">
-        <a class="potential-travelmate__photo" href="" title="Лариса Роговая - перейти в профиль">
-          <picture>
-            <img src="/img/rogovaya-mobile@1x.jpg" width="285" height="285" alt="Лариса Роговая - фотография">
-          </picture>
-        </a>
-        <h3 class="potential-travelmate__name potential-travelmate__name--online">
-          <a href="" title="Лариса Роговая - перейти в профиль">Лариса <span class="potential-travelmate__surname">Роговая</span></a>
-        </h3>
-        <div class="potential-travelmate__likes"><a class="potential-travelmate__like-heart" aria-label="Поставить лайк"></a>23</div>
-        <p class="potential-travelmate__tags">#образование #карьера #учеба #линкедин</p>
-        <div class="potential-travelmate__wish-wrapper">
-          <p class="potential-travelmate__wish-title">хочет посетить:</p>
-          <div class="potential-travelmate__wish-countris">
-            <span class="potential-travelmate__wish potential-travelmate__wish--united-kingdom">Великобритания</span>
-          <span class="potential-travelmate__wish potential-travelmate__wish--germany">Германия</span>
-          </div>
-        </div>
-        <div class="potential-travelmate__transport-wrapper">
-          <p class="potential-travelmate__transport-title">транспорт:</p>
-          <div class="potential-travelmate__transport-list">
-            <span class="potential-travelmate__transport potential-travelmate__transport--on">
-              <svg width="13" height="14"><use xlink:href="#icon-plane"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--on">
-              <svg width="13" height="14"><use xlink:href="#icon-bus"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--off">
-              <svg width="16" height="14"><use xlink:href="#icon-bicycle"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--off">
-              <svg width="13" height="14"><use xlink:href="#icon-run"></use></svg>
-            </span>
-          </div>
-        </div>
-        <div class="potential-travelmate__mark-wrapper">
-          <p class="potential-travelmate__mark-title">левел:</p>
-          <div class="potential-travelmate__mark">
-            <svg class="potential-travelmate__mark-indicator  potential-travelmate__mark-indicator--50" width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
-              <circle r="21" cx="50%" cy="50%" fill="none" stroke="#ff8d30"></circle>
-            </svg>
-            <span class="potential-travelmate__mark-number">50</span>
-          </div>
-        </div>
-        <a class="potential-travelmate__invite" href="">Позвать!</a>
-      </article>
-      <div class="potential-travelmates-list__show-more">
-        <a class="potential-travelmates-list__show" href="">Показать еще</a>
-      </div>
-      <div class="potential-travelmates-list__pagination">
-        <div class="potential-travelmates-list__pages">
-          <a class="potential-travelmates-list__page" href="">1</a>
-          <a class="potential-travelmates-list__page" href="">2</a>
-          <a class="potential-travelmates-list__page" href="">3</a>
-          <a class="potential-travelmates-list__page" href="">4</a>
-        </div>
-        <div class="potential-travelmates-list__arrows">
-          <a class="potential-travelmates-list__arrow potential-travelmates-list__arrow--left" href=""><span class="visually-hidden">Посмотреть следующую страницу</span></a>
-          <a class="potential-travelmates-list__arrow potential-travelmates-list__arrow--right" href=""><span class="visually-hidden">Посмотреть следующую страницу</span></a>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
 
   <footer class="page-footer">
     <a class="page-footer__logo" href="index.html" aria-label="Логотип Погнали"></a>
     <div class="page-footer__menu social">
       <a class="social__icon" href="#" aria-label="Страница Погнали на Фейсбуке">
-        <svg width="11" height="21"><use xlink:href="#icon-fb"></use></svg>
+        <svg class="social__fb" width="11" height="21"><use xlink:href="#icon-fb"></use></svg>
       </a>
       <a class="social__icon" href="#" aria-label="Страница Погнали во ВКонтакте">
-        <svg width="22" height="11"><use xlink:href="#icon-vk"></use></svg>
+        <svg class="social__vk" width="22" height="12"><use xlink:href="#icon-vk"></use></svg>
       </a>
       <a class="social__icon" href="#" aria-label="Страница Погнали в Инстаграме">
-        <svg width="16" height="16"><use xlink:href="#icon-insta"></use></svg>
+        <svg class="social__insta" width="17" height="17"><use xlink:href="#icon-insta"></use></svg>
       </a>
     </div>
     <div class="page-footer__copyright">

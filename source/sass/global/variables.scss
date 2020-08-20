@@ -56,6 +56,14 @@ $desktop-width: 1440px;
   border-radius: 50%;
 }
 
+@mixin mark-indicator($procent) {
+  $circumference: 100px;
+  $arc: $circumference * $procent / 100;
+  $gap: $circumference - $arc;
+
+  stroke-dasharray: $arc $gap;
+}
+
 @mixin flex-center {
   display: flex;
   justify-content: center;

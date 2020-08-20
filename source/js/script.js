@@ -11,16 +11,18 @@ var filterExpand = document.querySelector(".filter-header__expand");
 var filterCollapse = document.querySelector(".filter-header__collapse");
 var filterCloseButton = document.querySelector(".filter__close-button");
 
-var filterLetter = document.querySelectorAll(".filter__letter");
+/* var travelmateFilterItem = document.querySelector(".travelmate-filter__item");
+var travelmateFilterTitle = document.querySelector(".travelmate-filter__title"); */
+
+/* var filterLetter = document.querySelectorAll(".filter__letter");
 var filterCountries = document.querySelectorAll(".filter__countries");
-var filterLetters = document.querySelector(".filter__letters");
+var filterLetters = document.querySelector(".filter__letters"); */
 
 
 pageHeader.classList.remove("page-header--no-js");
 
 pageHeaderButton.addEventListener("click", function (evt) {
   evt.preventDefault();
-
   pageHeader.classList.toggle("page-header--dropped");
 });
 
@@ -58,6 +60,11 @@ if (filterCloseButton) {
     filter.classList.remove("filter--expand");
   });
 }
+
+/* travelmateFilterTitle.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  travelmateFilterItem.classList.toggle("travelmate-filter__item--rolled");
+}); */
 
 
 /* if (filterLetters) {
