@@ -1,9 +1,9 @@
 .user-form {
   position: relative;
-  padding-top: 73px;
+  margin-top: -30px;
 
   @media screen and (min-width: $tablet-width) {
-    padding-top: 132px;
+    margin-top: -60px;
   }
 
   @media screen and (min-width: $desktop-width) {

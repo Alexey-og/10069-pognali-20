@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <title>HTML Academy: Направления</title>
 </head>
 <body>
@@ -37,35 +37,37 @@
     </div>
   </header>
   <main>
+    <div class="page-title">
+      <h1 class="heading-1">Направления</h1>
+    </div>
     <form class="user-form" action="https://echo.htmlacademy.ru/" method="post">
-      <div class="page-title">
-        <h1 class="heading-1">Направления</h1>
-      </div>
-      <section class="profile-header">
-        <div class="mark profile-header__mark">
+      <div class="profile">
+        <div class="mark profile__mark">
           <svg class="mark__indicator" width="100" height="100"><use xlink:href="#level-percent"></use></svg>
           <span class="mark__number">80</span>
           <span class="mark__level">level</span>
         </div>
-        <div class="profile-header__photo">
+        <div class="profile__photo-wrapper">
           <picture>
-            <img src="img/demin-mobile@1x.jpg" alt="Петя Демин - фотография" width="100" height="100">
+            <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg">
+            <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg">
+            <img class="profile__photo" src="img/demin-mobile@1x.jpg" alt="Петя Демин - фотография" width="100" height="100">
           </picture>
+          <label class="profile__photo-button">
+            <input class="visually-hidden" type="file">Фото
+          </label>
         </div>
-        <label class="profile-header__change-photo">
-          <input class="visually-hidden" type="file">
-          <span class="visually-hidden">Сменить </span>фото
+        <label class="profile__change-photo">
+          <input class="visually-hidden" type="file">Сменить фото
         </label>
-      </section>
-      <div class="tags-transport">
-        <fieldset class="tags-transport__item tags-transport__item--tags">
-          <legend class="tags-transport__title">тэги</legend>
-          <textarea class="tags-transport__tags" name="tags-list" id="tags-list" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+        <fieldset class="profile__tags-wrapper">
+          <legend class="profile__tags-title">тэги</legend>
+          <textarea class="profile__tags" name="tags-list" id="tags-list" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
           <label class="visually-hidden" for="tags-list" aria-label="Список тегов пользователя"></label>
         </fieldset>
-        <fieldset class="tags-transport__item">
-          <legend class="tags-transport__title">транспорт</legend>
-          <div class="tags-transport__transportation transportation">
+        <fieldset class="profile__transport-wrapper">
+          <legend class="profile__transport-title">транспорт</legend>
+          <div class="profile__transport transportation">
             <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-avia" id="transportation-avia" checked>
             <label class="transportation__label transportation__label--avia" for="transportation-avia" aria-label="Кнопка передвижения на самолете" data-transport="Авиаперелет">
               <svg height="16"><use xlink:href="#icon-plane"></use></svg>

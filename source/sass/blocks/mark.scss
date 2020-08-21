@@ -7,6 +7,11 @@
   align-items: center;
   background-color: rgba($color-black, 0.6);
   color: $color-white;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 94px;
+    height: 94px;
+  }
 }
 
 .mark__indicator {
@@ -16,6 +21,11 @@
   top: 0;
   width: 60px;
   height: 60px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 94px;
+    height: 94px;
+  }
 }
 
 .mark__indicator--80 {
@@ -30,14 +40,16 @@
 /*  Сдвиг дуги - stroke-dashoffset="44px"  */
 
 .mark__number {
+  padding-bottom: 1px;
   font-weight: bold;
   font-size: 24px;
   line-height: 24px;
-  border-bottom: 1px solid rgba($color-white, 0.3);
 }
 
 .mark__level {
   position: relative;
+  padding: 4px 10px 0;
+  border-top: 1px solid rgba($color-white, 0.3);
   font-size: 14px;
   line-height: 14px;
 }
