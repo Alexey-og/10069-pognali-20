@@ -6,7 +6,7 @@
   z-index: 7;
 
   @media screen and (min-width: $tablet-width) {
-    padding: 125px 75px 120px;
+    padding: 125px 75px 90px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -269,7 +269,7 @@
 
   @media screen and (min-width: $tablet-width) {
     width: 308px;
-    min-height: 94px;
+    height: 94px;
     order: 2;
   }
 

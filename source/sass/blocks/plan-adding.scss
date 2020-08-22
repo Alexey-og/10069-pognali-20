@@ -5,6 +5,10 @@
   margin-top: -30px;
   padding: 30px 25px 73px;
   background-color: #d4d9eb;
+
+  @media screen and (min-width: $desktop-width) {
+    margin-top: -60px;
+  }
 }
 
 .plan-adding__header {
