@@ -1,12 +1,62 @@
 .page-title {
-  @include bottom-radius;
+  @include bottom-radius(30px);
 
   position: relative;
-  display: inline-block;
-  vertical-align: bottom;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   width: 100%;
-  min-height: 70px;
-  padding: 26px 25px 0;
+  min-height: 143px;
+  padding: 75px 25px 15px;
   background-color: $color-basic-blue;
-  z-index: 3;
+  z-index: 7;
+
+  @media screen and (min-width: $tablet-width) {
+    @include bottom-radius(60px);
+
+    min-height: 350px;
+    padding: 140px 74px 73px 77px;
+    background-color: $color-header-blue;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 140px 123px 73px 126px;
+    background-color: $color-basic-blue;
+  }
+}
+
+.page-title__to-main {
+  position: relative;
+  display: none;
+
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+    margin-bottom: 13px;
+    padding-right: 60px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: $color-white;
+
+    &::after {
+      position: absolute;
+      content: "";
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 32px;
+      height: 16px;
+      background-image: url("/img/icon-arrow-bend.svg");
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

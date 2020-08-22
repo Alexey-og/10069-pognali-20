@@ -1,90 +1,100 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>HTML Academy: Попутчики</title>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>HTML Academy: Попутчики</title>
+</head>
 <body>
-  <header class="page-header">
-    <div class="page-header__menu">
-      <div class="page-header__top container">
-        <a class="page-header__logo" href="index.html">
-          <span class="visually-hidden">Погнали?</span>
-        </a>
-        <button class="page-header__button page-header__menu-show" type="button" aria-label="Кнопка показа меню"></button>
-      </div>
-      <!--
-      <div>
-        <a href="#" aria-label=""></a>
-        <a href="#" aria-label=""></a>
-        <a href="#">Авторизация</a>
-      </div> -->
+  <header class="page-header page-header--no-js">
+    <div class="page-header__top">
+      <a class="page-header__logo" href="index.html">
+        <span class="visually-hidden">Погнали?</span>
+      </a>
+      <a class="page-header__button" type="button" aria-label="Кнопка показа меню"></a>
     </div>
-    <!-- <div class="mobile-menu">
-      <nav>
-        <a>О сервисе</a>
-        <a href="form.html">Направления</a>
-        <a href="catalog.html">Попутчики</a>
-      </nav>
-    </div> -->
+    <nav class="page-header__menu">
+      <a class="page-header__menu-item" href="index.html">О сервисе</a>
+      <a class="page-header__menu-item" href="form.html">Направления</a>
+      <a class="page-header__menu-item">Попутчики</a>
+    </nav>
+    <div class="page-header__contacts">
+      <a class="page-header__phone" href="#"><span class="page-header__contacts-text">8 800 555-86-28</span></a>
+      <a class="page-header__email" href="mailto:mail@htmlacademy.ru"><span class="page-header__contacts-text">mail@htmlacademy.ru</span></a>
+    </div>
+    <a class="page-header__login" href="#">Авторизация</a>
+    <div class="page-header__social">
+      <a class="page-header__social-icon" href="#" aria-label="Страница Погнали на Фейсбуке">
+        <svg class="page-header__icon-fb" width="11" height="21"><use xlink:href="#icon-fb"></use></svg>
+      </a>
+      <a class="page-header__social-icon" href="#" aria-label="Страница Погнали во ВКонтакте">
+        <svg class="page-header__icon-vk" width="22" height="11"><use xlink:href="#icon-vk"></use></svg>
+      </a>
+      <a class="page-header__social-icon" href="#" aria-label="Страница Погнали в Инстаграме">
+        <svg class="page-header__icon-insta" width="16" height="16"><use xlink:href="#icon-insta"></use></svg>
+      </a>
+    </div>
   </header>
   <main>
     <div class="page-title">
       <h1 class="heading-1">Попутчики</h1>
-      <a class="hidden" href="index.html">На главную</a>
+      <a class="page-title__to-main" href="index.html">На главную</a>
     </div>
-    <section class="filter-country">
-      <div class="filter-country__header">
-        <h2 class="filter-country__title">Фильтрация по странам<span class="hidden">:</span></h2>
-        <div class="filter-country__regions hidden">
-          <a class="filter-country__region filter-country__region--current" href="/europe.html" data-region="europe">Европа</a>
-          <a class="filter-country__region" href="/asia.html" data-region="asia">Азия</a>
-          <a class="filter-country__region" href="/america.html" data-region="america">Америка</a>
-          <a class="filter-country__region hidden" href="/africa.html" data-region="africa">Африка</a>
-          <a class="filter-country__region" href="/islands.html" data-region="islands">Острова</a>
-        </div>
-        <a class="filter-country__close" href="">
-          <span class="hidden">Свернуть</span>
-          <span class="filter-country__close-icon"></span>
+    <section class="filter">
+      <div class="filter__header filter-header">
+        <h2 class="filter-header__title">Фильтрация по странам<span class="filter-header__title-colon">:</span></h2>
+        <a class="filter-header__collapse">
+          <span class="filter-header__collapse-text">Свернуть</span>
+          <svg class="filter-header__collapse-icon" width="14" height="14"><use xlink:href="#icon-close"></use></svg>
         </a>
+        <a class="filter-header__expand">
+          <span class="filter-header__expand-text">Показать все</span>
+          <svg class="filter-header__expand-icon" width="17" height="3"><use xlink:href="#icon-dots"></use></svg>
+        </a>
+        <div class="filter-header__regions">
+          <a class="filter-header__region filter-header__region--current" href="/europe.html" data-region="europe">Европа</a>
+          <a class="filter-header__region" href="/asia.html" data-region="asia">Азия</a>
+          <a class="filter-header__region" href="/america.html" data-region="america">Америка</a>
+          <a class="filter-header__region hidden" href="/africa.html" data-region="africa">Африка</a>
+          <a class="filter-header__region" href="/islands.html" data-region="islands">Острова</a>
+        </div>
       </div>
-      <article class="filter-country__filter hidden">
+      <article class="filter__wrapper">
         <h3 class="visually-hidden">Выбор страны</h3>
-        <fieldset class="filter-country__letters-wrapper">
+        <fieldset class="filter__letters-wrapper">
           <legend class="visually-hidden">Побуквенный переключатель стран</legend>
-          <div class="filter-country__letters">
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-a" checked><label class="filter-country__letter" for="letter-a">А</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-b"><label class="filter-country__letter" for="letter-b">Б</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-v"><label class="filter-country__letter" for="letter-v">В</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-g"><label class="filter-country__letter" for="letter-g">Г</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-d"><label class="filter-country__letter" for="letter-d">Д</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-ye"><label class="filter-country__letter" for="letter-ye">Е</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-z"><label class="filter-country__letter" for="letter-z">З</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-i"><label class="filter-country__letter" for="letter-i">И</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-k"><label class="filter-country__letter" for="letter-k">К</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-l"><label class="filter-country__letter" for="letter-l">Л</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-m"><label class="filter-country__letter" for="letter-m">М</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-n"><label class="filter-country__letter" for="letter-n">Н</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-o"><label class="filter-country__letter" for="letter-o">О</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-p"><label class="filter-country__letter" for="letter-p">П</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-r"><label class="filter-country__letter" for="letter-r">Р</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-s"><label class="filter-country__letter" for="letter-s">С</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-t"><label class="filter-country__letter" for="letter-t">Т</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-u"><label class="filter-country__letter" for="letter-u">У</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-f"><label class="filter-country__letter" for="letter-f">Ф</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-kh"><label class="filter-country__letter" for="letter-kh">Х</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-ch"><label class="filter-country__letter" for="letter-ch">Ч</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-sh"><label class="filter-country__letter" for="letter-sh">Ш</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-e"><label class="filter-country__letter" for="letter-e">Э</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-yu"><label class="filter-country__letter" for="letter-yu">Ю</label>
-            <input class="visually-hidden" type="radio" name="country-letter" id="letter-ya"><label class="filter-country__letter" for="letter-ya">Я</label>
+          <div class="filter__letters">
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-a" checked><label class="filter__letter" for="letter-a" data-country-letter="a">А</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-b"><label class="filter__letter" for="letter-b" data-country-letter="b">Б</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-v"><label class="filter__letter" for="letter-v" data-country-letter="v">В</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-g"><label class="filter__letter" for="letter-g" data-country-letter="g">Г</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-d"><label class="filter__letter" for="letter-d" data-country-letter="d">Д</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-ye"><label class="filter__letter" for="letter-ye" data-country-letter="ye">Е</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-z"><label class="filter__letter" for="letter-z" data-country-letter="z">З</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-i"><label class="filter__letter" for="letter-i" data-country-letter="i">И</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-k"><label class="filter__letter" for="letter-k" data-country-letter="k">К</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-l"><label class="filter__letter" for="letter-l" data-country-letter="l">Л</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-m"><label class="filter__letter" for="letter-m" data-country-letter="m">М</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-n"><label class="filter__letter" for="letter-n" data-country-letter="n">Н</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-o"><label class="filter__letter" for="letter-o" data-country-letter="o">О</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-p"><label class="filter__letter" for="letter-p" data-country-letter="p">П</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-r"><label class="filter__letter" for="letter-r" data-country-letter="r">Р</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-s"><label class="filter__letter" for="letter-s" data-country-letter="s">С</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-t"><label class="filter__letter" for="letter-t" data-country-letter="t">Т</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-u"><label class="filter__letter" for="letter-u" data-country-letter="u">У</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-f"><label class="filter__letter" for="letter-f" data-country-letter="f">Ф</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-kh"><label class="filter__letter" for="letter-kh" data-country-letter="kh">Х</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-ch"><label class="filter__letter" for="letter-ch" data-country-letter="ch">Ч</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-sh"><label class="filter__letter" for="letter-sh" data-country-letter="sh">Ш</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-e"><label class="filter__letter" for="letter-e" data-country-letter="e">Э</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-yu"><label class="filter__letter" for="letter-yu" data-country-letter="yu">Ю</label>
+            <input class="visually-hidden" type="radio" name="country-letter" id="letter-ya"><label class="filter__letter" for="letter-ya" data-country-letter="ya">Я</label>
           </div>
         </fieldset>
-        <div class="filter-country__countries-wrapper">
-          <div class="filter-country__countries" data-country-letter="a">
-            <h4 class="filter-country__letter-title">А</h4>
+        <div class="filter__countries-wrapper">
+          <div class="filter__countries filter__countries--a filter__countries--active" data-country-letter="a">
+            <h4 class="filter__letter-title">А</h4>
             <a href="/islands/australia.html" data-region="islands">Австралия</a>
             <a href="/europe/austria.html" data-region="europe">Австрия</a>
             <a href="/asia/azerbaijan.html" data-region="asia">Азербайджан</a>
@@ -97,8 +107,8 @@
             <a href="/europe/armenia.html" data-region="europe">Армения</a>
             <a href="/asia/afghanistan.html" data-region="asia">Афганистан</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="b">
-            <h4 class="filter-country__letter-title">Б</h4>
+          <div class="filter__countries filter__countries--b" data-country-letter="b">
+            <h4 class="filter__letter-title">Б</h4>
             <a href="/islands/bahamas.html" data-region="islands">Багамские Острова</a>
             <a href="/asia/bangladesh.html" data-region="asia">Бангладеш</a>
             <a href="/islands/barbados.html" data-region="islands">Барбадос</a>
@@ -117,8 +127,8 @@
             <a href="/africa/burundi.html" data-region="africa">Бурунди</a>
             <a href="/asia/bhutan.html" data-region="asia">Бутан</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="v">
-            <h4 class="filter-country__letter-title">В</h4>
+          <div class="filter__countries filter__countries--v" data-country-letter="v">
+            <h4 class="filter__letter-title">В</h4>
             <a href="/islands/vanuatu.html" data-region="islands">Вануату</a>
             <a href="/europe/united-kingdom.html" data-region="europe">Великобритания</a>
             <a href="/europe/hungary.html" data-region="europe">Венгрия</a>
@@ -126,8 +136,8 @@
             <a href="/asia/timor-leste.html" data-region="asia">Восточный Тимор</a>
             <a href="/asia/vietnam.html" data-region="asia">Вьетнам</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="g">
-            <h4 class="filter-country__letter-title">Г</h4>
+          <div class="filter__countries filter__countries--g" data-country-letter="g">
+            <h4 class="filter__letter-title">Г</h4>
             <a href="/africa/gabon.html" data-region="africa">Габон</a>
             <a href="/islands/haiti.html" data-region="islands">Гаити</a>
             <a href="/america/guyana.html" data-region="america">Гайана</a>
@@ -142,24 +152,24 @@
             <a href="/europe/greece.html" data-region="europe">Греция</a>
             <a href="/europe/georgia.html" data-region="europe">Грузия</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="d">
-            <h4 class="filter-country__letter-title">Д</h4>
+          <div class="filter__countries filter__countries--d" data-country-letter="d">
+            <h4 class="filter__letter-title">Д</h4>
             <a href="/europe/denmark.html" data-region="europe">Дания</a>
             <a href="/africa/djibouti.html" data-region="africa">Джибути</a>
             <a href="/islands/dominica.html" data-region="islands">Доминика</a>
             <a href="/islands/dominican-republic.html" data-region="islands">Доминикана</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="ye">
-            <h4 class="filter-country__letter-title">Е</h4>
+          <div class="filter__countries filter__countries--ye" data-country-letter="ye">
+            <h4 class="filter__letter-title">Е</h4>
             <a href="/africa/egypt.html" data-region="africa">Египет</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="z">
-            <h4 class="filter-country__letter-title">З</h4>
+          <div class="filter__countries filter__countries--z" data-country-letter="z">
+            <h4 class="filter__letter-title">З</h4>
             <a href="/africa/zambia.html" data-region="africa">Замбия</a>
             <a href="/africa/zimbabwe.html" data-region="africa">Зимбабве</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="i">
-            <h4 class="filter-country__letter-title">И</h4>
+          <div class="filter__countries filter__countries--i" data-country-letter="i">
+            <h4 class="filter__letter-title">И</h4>
             <a href="/asia/israel.html" data-region="asia">Израиль</a>
             <a href="/asia/india.html" data-region="asia">Индия</a>
             <a href="/asia/indonesia.html" data-region="asia">Индонезия</a>
@@ -171,8 +181,8 @@
             <a href="/europe/spain.html" data-region="europe">Испания</a>
             <a href="/europe/italy.html" data-region="europe">Италия</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="k">
-            <h4 class="filter-country__letter-title">К</h4>
+          <div class="filter__countries filter__countries--k" data-country-letter="k">
+            <h4 class="filter__letter-title">К</h4>
             <a href="/africa/cabo-verde.html" data-region="africa">Кабо-Верде</a>
             <a href="/asia/kazakhstan.html" data-region="asia">Казахстан</a>
             <a href="/asia/cambodia.html" data-region="asia">Камбоджа</a>
@@ -186,8 +196,8 @@
             <a href="/asia/china.html" data-region="asia">Китай</a>
             <a href="/america/colombia.html" data-region="america">Колумбия</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="l">
-            <h4 class="filter-country__letter-title">Л</h4>
+          <div class="filter__countries filter__countries--l" data-country-letter="l">
+            <h4 class="filter__letter-title">Л</h4>
             <a href="/asia/laos.html" data-region="asia">Лаос</a>
             <a href="/europe/latvia.html" data-region="europe">Латвия</a>
             <a href="/africa/lesotho.html" data-region="africa">Лесото</a>
@@ -198,8 +208,8 @@
             <a href="/europe/liechtenstein.html" data-region="europe">Лихтенштейн</a>
             <a href="/europe/luxembourg.html" data-region="europe">Люксембург</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="m">
-            <h4 class="filter-country__letter-title">М</h4>
+          <div class="filter__countries filter__countries--m" data-country-letter="m">
+            <h4 class="filter__letter-title">М</h4>
             <a href="/islands/mauritius.html" data-region="islands">Маврикий</a>
             <a href="/africa/mauritania.html" data-region="africa">Мавритания</a>
             <a href="/africa/madagascar.html" data-region="africa">Мадагаскар</a>
@@ -211,8 +221,8 @@
             <a href="/africa/morocco.html" data-region="africa">Марокко</a>
             <a href="/america/mexico.html" data-region="america">Мексика</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="n">
-            <h4 class="filter-country__letter-title">Н</h4>
+          <div class="filter__countries filter__countries--n" data-country-letter="n">
+            <h4 class="filter__letter-title">Н</h4>
             <a href="/africa/namibia.html" data-region="africa">Намибия</a>
             <a href="/islands/nauru.html" data-region="islands">Науру</a>
             <a href="/asia/nepal.html" data-region="asia">Непал</a>
@@ -223,13 +233,13 @@
             <a href="/islands/new-zealand.html" data-region="islands">Новая Зеландия</a>
             <a href="/europe/norway.html" data-region="europe">Норвегия</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="o">
-            <h4 class="filter-country__letter-title">О</h4>
+          <div class="filter__countries filter__countries--o" data-country-letter="o">
+            <h4 class="filter__letter-title">О</h4>
             <a href="/asia/united-arab-emirates.html" data-region="asia">ОАЭ</a>
             <a href="/asia/oman.html" data-region="asia">Оман</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="p">
-            <h4 class="filter-country__letter-title">П</h4>
+          <div class="filter__countries filter__countries--p" data-country-letter="p">
+            <h4 class="filter__letter-title">П</h4>
             <a href="/asia/pakistan.html" data-region="asia">Пакистан</a>
             <a href="/islands/palau.html" data-region="islands">Палау</a>
             <a href="/america/panama.html" data-region="america">Панама</a>
@@ -239,14 +249,14 @@
             <a href="/europe/poland.html" data-region="europe">Польша</a>
             <a href="/europe/portugal.html" data-region="europe">Португалия</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="r">
-            <h4 class="filter-country__letter-title">Р</h4>
+          <div class="filter__countries filter__countries--r" data-country-letter="r">
+            <h4 class="filter__letter-title">Р</h4>
             <a href="/europe/russia.html" data-region="europe">Россия</a>
             <a href="/africa/rwanda.html" data-region="africa">Руанда</a>
             <a href="/europe/romania.html" data-region="europe">Румыния</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="s">
-            <h4 class="filter-country__letter-title">С</h4>
+          <div class="filter__countries filter__countries--s" data-country-letter="s">
+            <h4 class="filter__letter-title">С</h4>
             <a href="/america/el-salvador.html" data-region="america">Сальвадор</a>
             <a href="/islands/samoa.html" data-region="islands">Самоа</a>
             <a href="/europe/san-marino.html" data-region="europe">Сан-Марино</a>
@@ -260,8 +270,8 @@
             <a href="/europe/slovenia.html" data-region="europe">Словения</a>
             <a href="/america/usa.html" data-region="america">США</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="t">
-            <h4 class="filter-country__letter-title">Т</h4>
+          <div class="filter__countries filter__countries--t" data-country-letter="t">
+            <h4 class="filter__letter-title">Т</h4>
             <a href="/asia/tajikistan.html" data-region="asia">Таджикистан</a>
             <a href="/asia/thailand.html" data-region="asia">Таиланд</a>
             <a href="/africa/tanzania.html" data-region="africa">Танзания</a>
@@ -273,348 +283,373 @@
             <a href="/asia/turkmenistan.html" data-region="asia">Туркмения</a>
             <a href="/asia/turkey.html" data-region="asia">Турция</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="u">
-            <h4 class="filter-country__letter-title">У</h4>
+          <div class="filter__countries filter__countries--u" data-country-letter="u">
+            <h4 class="filter__letter-title">У</h4>
             <a href="/africa/uganda.html" data-region="africa">Уганда</a>
             <a href="/asia/uzbekistan.html" data-region="asia">Узбекистан</a>
             <a href="/europe/ukraine.html" data-region="europe">Украина</a>
             <a href="/america/uruguay.html" data-region="america">Уругвай</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="f">
-            <h4 class="filter-country__letter-title">Ф</h4>
+          <div class="filter__countries filter__countries--f" data-country-letter="f">
+            <h4 class="filter__letter-title">Ф</h4>
             <a href="/islands/fiji.html" data-region="islands">Фиджи</a>
             <a href="/islands/philippines.html" data-region="islands">Филиппины</a>
             <a href="/europe/finland.html" data-region="europe">Финляндия</a>
             <a href="/europe/france.html" data-region="europe">Франция</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="kh">
-            <h4 class="filter-country__letter-title">Х</h4>
+          <div class="filter__countries filter__countries--kh" data-country-letter="kh">
+            <h4 class="filter__letter-title">Х</h4>
             <a href="/europe/croatia.html" data-region="europe">Хорватия</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="ch">
-            <h4 class="filter-country__letter-title">Ч</h4>
+          <div class="filter__countries filter__countries--ch" data-country-letter="ch">
+            <h4 class="filter__letter-title">Ч</h4>
             <a href="/africa/chad.html" data-region="africa">Чад</a>
             <a href="/europe/montenegro.html" data-region="europe">Черногория</a>
             <a href="/europe/czechia.html" data-region="europe">Чехия</a>
             <a href="/america/chile.html" data-region="america">Чили</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="sh">
-            <h4 class="filter-country__letter-title">Ш</h4>
+          <div class="filter__countries filter__countries--sh" data-country-letter="sh">
+            <h4 class="filter__letter-title">Ш</h4>
             <a href="/europe/switzerland.html" data-region="europe">Швейцария</a>
             <a href="/europe/sweden.html" data-region="europe">Швеция</a>
             <a href="/asia/sri-lanka.html" data-region="asia">Шри-Ланка</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="e">
-            <h4 class="filter-country__letter-title">Э</h4>
+          <div class="filter__countries filter__countries--e" data-country-letter="e">
+            <h4 class="filter__letter-title">Э</h4>
             <a href="/america/ecuador.html" data-region="america">Эквадор</a>
             <a href="/africa/eritrea.html" data-region="africa">Эритрея</a>
             <a href="/africa/eswatini.html" data-region="africa">Эсватини</a>
             <a href="/europe/estonia.html" data-region="europe">Эстония</a>
             <a href="/africa/ethiopia.html" data-region="africa">Эфиопия</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="yu">
-            <h4 class="filter-country__letter-title">Ю</h4>
+          <div class="filter__countries filter__countries--yu" data-country-letter="yu">
+            <h4 class="filter__letter-title">Ю</h4>
             <a href="/africa/south-africa.html" data-region="africa">ЮАР</a>
             <a href="/africa/south-sudan.html" data-region="africa">Южный Судан</a>
           </div>
-          <div class="filter-country__countries hidden" data-country-letter="ya">
-            <h4 class="filter-country__letter-title">Я</h4>
+          <div class="filter__countries filter__countries--ya" data-country-letter="ya">
+            <h4 class="filter__letter-title">Я</h4>
             <a href="/america/jamaica.html" data-region="america">Ямайка</a>
             <a href="/asia/japan.html" data-region="asia">Япония</a>
           </div>
         </div>
       </article>
-      <a class="filter-country__button hidden">
-        <svg class="filter-country__button-icon" width="12" height="12"><use xlink:href="#icon-close"></use></svg>Свернуть
+      <a class="filter__close-button">
+        <svg class="filter__close-icon" width="12" height="12"><use xlink:href="#icon-close"></use></svg>Свернуть
       </a>
     </section>
-    <form class="perfect-travelmate" action="https://echo.htmlacademy.ru/" method="post">
-      <h2 class="perfect-travelmate__heading">Подберите идеального попутчика</h2>
-      <fieldset class="perfect-travelmate__fieldset perfect-travelmate__fieldset--rolled">
-        <legend class="visually-hidden">Хобби</legend>
-        <a class="perfect-travelmate__title">Хобби</a>
-        <div class="perfect-travelmate__input-wrapper">
-          <input class="visually-hidden" type="checkbox" name="hobby-gym" id="hobby-gym" checked><label class="perfect-travelmate__label" for="hobby-gym">Спортзал</label>
-          <input class="visually-hidden" type="checkbox" name="hobby-hookah" id="hobby-hookah"><label class="perfect-travelmate__label" for="hobby-hookah">Кальян</label>
-          <input class="visually-hidden" type="checkbox" name="hobby-sofa" id="hobby-sofa"><label class="perfect-travelmate__label" for="hobby-sofa">Диван</label>
-        </div>
-      </fieldset>
-      <fieldset class="perfect-travelmate__fieldset">
-        <legend class="visually-hidden">Музыка</legend>
-        <a class="perfect-travelmate__title">Музыка</a>
-        <div class="perfect-travelmate__input-wrapper">
-          <input class="visually-hidden" type="checkbox" name="music-hard-rock" id="music-hard-rock" checked><label class="perfect-travelmate__label" for="music-hard-rock">Тяжелый рок</label>
-          <input class="visually-hidden" type="checkbox" name="music-russian-rap" id="music-russian-rap" checked><label class="perfect-travelmate__label" for="music-russian-rap">Русский рэп</label>
-          <input class="visually-hidden" type="checkbox" name="music-eurodance" id="music-eurodance"><label class="perfect-travelmate__label" for="music-eurodance">Евроденс</label>
-        </div>
-      </fieldset>
-      <fieldset class="perfect-travelmate__fieldset perfect-travelmate__fieldset--rolled">
-        <legend class="visually-hidden">Еда</legend>
-        <a class="perfect-travelmate__title">Еда</a>
-        <div class="perfect-travelmate__input-wrapper">
-          <input class="visually-hidden" type="checkbox" name="food-meat" id="food-meat" checked><label class="perfect-travelmate__label" for="food-meat">Мясоед</label>
-          <input class="visually-hidden" type="checkbox" name="food-healthy-diet" id="food-healthy-diet"><label class="perfect-travelmate__label" for="food-healthy-diet">Сидит на ПП</label>
-          <input class="visually-hidden" type="checkbox" name="food-vegan" id="food-vegan"><label class="perfect-travelmate__label" for="food-vegan">Веган-сыроед</label>
-        </div>
-      </fieldset>
-      <fieldset class="perfect-travelmate__fieldset">
-        <legend class="visually-hidden">Транспорт</legend>
-        <a class="perfect-travelmate__title">Транспорт</a>
-        <div class="perfect-travelmate__input-wrapper transportation perfect-travelmate__transportation">
-          <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-avia" id="transportation-avia" checked>
-          <label class="transportation__label transportation__label--avia" for="transportation-avia" aria-label="Кнопка передвижения на самолете" data-transport="Авиаперелет">
-            <svg height="16"><use xlink:href="#icon-plane"></use></svg>
-          </label>
-          <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bus" id="transportation-bus" checked>
-          <label class="transportation__label transportation__label--bus" for="transportation-bus" aria-label="Кнопка передвижения на автотранспорте" data-transport="Автотранспорт">
-            <svg height="16"><use xlink:href="#icon-bus"></use></svg>
-          </label>
-          <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bicycle" id="transportation-bicycle">
-          <label class="transportation__label transportation__label--bicycle" for="transportation-bicycle" aria-label="Кнопка передвижения на велосипеде" data-transport="Велосипед">
-            <svg height="16"><use xlink:href="#icon-bicycle"></use></svg>
-          </label>
-          <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-foot" id="transportation-foot" checked>
-          <label class="transportation__label transportation__label--foot" for="transportation-foot" aria-label="Кнопка передвижения пешком" data-transport="Пешком">
-            <svg height="16"><use xlink:href="#icon-run"></use></svg>
-          </label>
-        </div>
-      </fieldset>
-      <fieldset class="perfect-travelmate__fieldset">
-        <legend class="visually-hidden">Левел</legend>
-        <a class="perfect-travelmate__title">Левел</a>
-        <div class="perfect-travelmate__input-wrapper travelmate-range">
-          <div class="travelmate-range__inputs-wrapper">
-            <input class="travelmate-range__input travelmate-range__input--min" type="text" value="30">
-            <input class="travelmate-range__input travelmate-range__input--max" type="text" value="100">
-          </div>
-          <div class="travelmate-range__range-wrapper">
-            <div class="travelmate-range__row">
-              <div class="travelmate-range__row travelmate-range__row--inner"></div>
+    <div class="travelmates-wrapper">
+      <form class="travelmate-filter" action="https://echo.htmlacademy.ru/" method="post">
+        <h2 class="travelmate-filter__heading">Подберите идеального попутчика</h2>
+        <fieldset class="travelmate-filter__item travelmate-filter__item--rolled">
+          <legend class="visually-hidden">Хобби</legend>
+          <div class="travelmate-filter__container">
+            <a class="travelmate-filter__title">Хобби<span class="travelmate-filter__title-colon">:</span></a>
+            <div class="travelmate-filter__inputs">
+              <input class="visually-hidden" type="checkbox" name="hobby-gym" id="hobby-gym" checked><label class="travelmate-filter__label" for="hobby-gym">Спортзал</label>
+              <input class="visually-hidden" type="checkbox" name="hobby-hookah" id="hobby-hookah"><label class="travelmate-filter__label" for="hobby-hookah">Кальян</label>
+              <input class="visually-hidden" type="checkbox" name="hobby-sofa" id="hobby-sofa"><label class="travelmate-filter__label" for="hobby-sofa">Диван</label>
             </div>
-            <a class="travelmate-range__button travelmate-range__button--left" aria-label="Ползунок для задания минимального уровня"></a>
-            <a class="travelmate-range__button travelmate-range__button--right" aria-label="Ползунок для задания максимального уровня"></a>
           </div>
-        </div>
-      </fieldset>
-      <button class="perfect-travelmate__button" type="submit">Показать</button>
-    </form>
+        </fieldset>
+        <fieldset class="travelmate-filter__item">
+          <legend class="visually-hidden">Музыка</legend>
+          <div class="travelmate-filter__container">
+            <a class="travelmate-filter__title">Музыка<span class="travelmate-filter__title-colon">:</span></a>
+            <div class="travelmate-filter__inputs">
+              <input class="visually-hidden" type="checkbox" name="music-hard-rock" id="music-hard-rock" checked><label class="travelmate-filter__label" for="music-hard-rock">Тяжелый рок</label>
+              <input class="visually-hidden" type="checkbox" name="music-russian-rap" id="music-russian-rap"><label class="travelmate-filter__label" for="music-russian-rap">Русский рэп</label>
+              <input class="visually-hidden" type="checkbox" name="music-eurodance" id="music-eurodance"><label class="travelmate-filter__label" for="music-eurodance">Евроденс</label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="travelmate-filter__item travelmate-filter__item--rolled">
+          <legend class="visually-hidden">Еда</legend>
+          <div class="travelmate-filter__container">
+            <a class="travelmate-filter__title">Еда<span class="travelmate-filter__title-colon">:</span></a>
+            <div class="travelmate-filter__inputs">
+              <input class="visually-hidden" type="checkbox" name="food-meat" id="food-meat" checked><label class="travelmate-filter__label" for="food-meat">Мясоед</label>
+              <input class="visually-hidden" type="checkbox" name="food-healthy-diet" id="food-healthy-diet"><label class="travelmate-filter__label" for="food-healthy-diet">Сидит на ПП</label>
+              <input class="visually-hidden" type="checkbox" name="food-vegan" id="food-vegan"><label class="travelmate-filter__label" for="food-vegan">Веган-сыроед</label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="travelmate-filter__item">
+          <legend class="visually-hidden">Транспорт</legend>
+          <div class="travelmate-filter__container">
+            <a class="travelmate-filter__title">Транспорт<span class="travelmate-filter__title-colon">:</span></a>
+            <div class="travelmate-filter__inputs transportation travelmate-filter__transportation">
+              <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-avia" id="transportation-avia" checked>
+              <label class="transportation__label transportation__label--avia" for="transportation-avia" aria-label="Кнопка передвижения на самолете" data-transport="Авиаперелет">
+                <svg height="16"><use xlink:href="#icon-plane"></use></svg>
+              </label>
+              <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bus" id="transportation-bus" checked>
+              <label class="transportation__label transportation__label--bus" for="transportation-bus" aria-label="Кнопка передвижения на автотранспорте" data-transport="Автотранспорт">
+                <svg height="16"><use xlink:href="#icon-bus"></use></svg>
+              </label>
+              <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bicycle" id="transportation-bicycle">
+              <label class="transportation__label transportation__label--bicycle" for="transportation-bicycle" aria-label="Кнопка передвижения на велосипеде" data-transport="Велосипед">
+                <svg height="16"><use xlink:href="#icon-bicycle"></use></svg>
+              </label>
+              <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-foot" id="transportation-foot" checked>
+              <label class="transportation__label transportation__label--foot" for="transportation-foot" aria-label="Кнопка передвижения пешком" data-transport="Пешком">
+                <svg height="16"><use xlink:href="#icon-run"></use></svg>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="travelmate-filter__item">
+          <legend class="visually-hidden">Левел</legend>
+          <div class="travelmate-filter__container">
+            <a class="travelmate-filter__title">Левел<span class="travelmate-filter__title-colon">:</span></a>
+            <div class="travelmate-filter__inputs travelmate-range">
+              <div class="travelmate-range__inputs-wrapper">
+                <input class="travelmate-range__input travelmate-range__input--min" type="text" value="30">
+                <input class="travelmate-range__input travelmate-range__input--max" type="text" value="100">
+              </div>
+              <div class="travelmate-range__range-wrapper">
+                <div class="travelmate-range__row">
+                  <div class="travelmate-range__row travelmate-range__row--inner"></div>
+                </div>
+                <a class="travelmate-range__button travelmate-range__button--left" aria-label="Ползунок для задания минимального уровня"></a>
+                <a class="travelmate-range__button travelmate-range__button--right" aria-label="Ползунок для задания максимального уровня"></a>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <button class="travelmate-filter__button" type="submit">Показать</button>
+      </form>
 
-    <section class="potential-travelmates-list">
-      <h2 class="visually-hidden">Список потенциальных попутчиков</h2>
-      <article class="potential-travelmates-list__item potential-travelmate">
-        <a class="potential-travelmate__photo" href="" title="Таня Фирсова - перейти в профиль">
-          <picture>
-            <img src="/img/firsova-mobile@1x.jpg" width="285" height="285" alt="Таня Фирсова - фотография">
-          </picture>
-        </a>
-        <h3 class="potential-travelmate__name potential-travelmate__name--offline">
-          <a href="" title="Таня Фирсова - перейти в профиль">Таня <span class="potential-travelmate__surname">Фирсова</span></a>
-        </h3>
-        <div class="potential-travelmate__likes"><a class="potential-travelmate__like-heart potential-travelmate__like-heart--active" aria-label="Поставить лайк"></a>1,5 М</div>
-        <p class="potential-travelmate__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-        <div class="potential-travelmate__wish-wrapper">
-          <p class="potential-travelmate__wish-title">хочет посетить:</p>
-          <div class="potential-travelmate__wish-countris">
-            <span class="potential-travelmate__wish potential-travelmate__wish--sri-lanka">Шри-ланка</span>
-            <span class="potential-travelmate__wish potential-travelmate__wish--thailand">Таиланд</span>
-            <span class="potential-travelmate__wish potential-travelmate__wish--seychelles">Сейшелы</span>
+      <section class="potential-travelmates">
+        <h2 class="visually-hidden">Список потенциальных попутчиков</h2>
+        <article class="potential-travelmates__item travelmate-card">
+          <a href="" title="Таня Фирсова - перейти в профиль">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg">
+              <img class="travelmate-card__photo" src="img/firsova-mobile@1x.jpg" width="285" height="285" alt="Таня Фирсова - фотография">
+            </picture>
+          </a>
+          <h3 class="travelmate-card__name travelmate-card__name--offline">
+            <a href="" title="Таня Фирсова - перейти в профиль">Таня <span class="travelmate-card__surname">Фирсова</span></a>
+          </h3>
+          <div class="travelmate-card__likes"><a class="travelmate-card__heart travelmate-card__heart--active" aria-label="Поставить лайк"></a>1,5 М</div>
+          <p class="travelmate-card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+          <div class="travelmate-card__wish-wrapper">
+            <p class="travelmate-card__wish-title">хочет посетить:</p>
+            <div class="travelmate-card__wish-countries">
+              <span class="travelmate-card__wish travelmate-card__wish--sri-lanka">Шри-ланка</span>
+              <span class="travelmate-card__wish travelmate-card__wish--thailand">Таиланд</span>
+              <span class="travelmate-card__wish travelmate-card__wish--seychelles">Сейшелы</span>
+            </div>
+          </div>
+          <div class="travelmate-card__transport-wrapper">
+            <p class="travelmate-card__transport-title">транспорт:</p>
+            <div class="travelmate-card__transport-list">
+              <span class="travelmate-card__transport travelmate-card__transport--on">
+                <svg class="travelmate-card__icon-plane" width="13" height="14"><use xlink:href="#icon-plane"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--off">
+                <svg class="travelmate-card__icon-bus" width="13" height="14"><use xlink:href="#icon-bus"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--off">
+                <svg class="travelmate-card__icon-bicycle" width="16" height="14"><use xlink:href="#icon-bicycle"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--off">
+                <svg class="travelmate-card__icon-run" width="13" height="14"><use xlink:href="#icon-run"></use></svg>
+              </span>
+            </div>
+          </div>
+          <div class="travelmate-card__mark-wrapper">
+            <p class="travelmate-card__mark-title">левел:</p>
+            <div class="travelmate-card__mark">
+              <svg class="travelmate-card__mark-indicator travelmate-card__mark-indicator--99" width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
+                <circle r="16" cx="50%" cy="50%" fill="none" stroke="#ff8d30"></circle>
+              </svg>
+              <span class="travelmate-card__mark-number">99</span>
+              <span class="travelmate-card__mark-level">level</span>
+            </div>
+          </div>
+          <a class="travelmate-card__invite" href="">Позвать!</a>
+        </article>
+        <article class="potential-travelmates__item travelmate-card">
+          <a href="" title="Петя Демин - перейти в профиль">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg">
+              <img class="travelmate-card__photo" src="img/demin-mobile@1x.jpg" width="285" height="285" alt="Петя Демин - фотография">
+            </picture>
+          </a>
+          <h3 class="travelmate-card__name travelmate-card__name--offline">
+            <a href="" title="Петя Демин - перейти в профиль">Петя <span class="travelmate-card__surname">Демин</span></a>
+          </h3>
+          <div class="travelmate-card__likes"><a class="travelmate-card__heart" aria-label="Поставить лайк"></a>1500</div>
+          <p class="travelmate-card__tags">#бургер #бар #футбол #концерт #крафт</p>
+          <div class="travelmate-card__wish-wrapper">
+            <p class="travelmate-card__wish-title">хочет посетить:</p>
+            <div class="travelmate-card__wish-countries">
+              <span class="travelmate-card__wish travelmate-card__wish--belgium">Бельгия</span>
+              <span class="travelmate-card__wish travelmate-card__wish--czechia">Чехия</span>
+            </div>
+          </div>
+          <div class="travelmate-card__transport-wrapper">
+            <p class="travelmate-card__transport-title">транспорт:</p>
+            <div class="travelmate-card__transport-list">
+              <span class="travelmate-card__transport travelmate-card__transport--on">
+                <svg class="travelmate-card__icon-plane" width="13" height="14"><use xlink:href="#icon-plane"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--on">
+                <svg class="travelmate-card__icon-bus" width="13" height="14"><use xlink:href="#icon-bus"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--on">
+                <svg class="travelmate-card__icon-bicycle" width="16" height="14"><use xlink:href="#icon-bicycle"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--off">
+                <svg class="travelmate-card__icon-run" width="13" height="14"><use xlink:href="#icon-run"></use></svg>
+              </span>
+            </div>
+          </div>
+          <div class="travelmate-card__mark-wrapper">
+            <p class="travelmate-card__mark-title">левел:</p>
+            <div class="travelmate-card__mark">
+              <svg class="travelmate-card__mark-indicator travelmate-card__mark-indicator--80" width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
+                <circle r="16" cx="50%" cy="50%" fill="none" stroke="#ff8d30"></circle>
+              </svg>
+              <span class="travelmate-card__mark-number">80</span>
+              <span class="travelmate-card__mark-level">level</span>
+            </div>
+          </div>
+          <a class="travelmate-card__invite" href="">Позвать!</a>
+        </article>
+        <article class="potential-travelmates__item travelmate-card">
+          <a href="" title="Марк Смолов - перейти в профиль">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg">
+              <img class="travelmate-card__photo" src="img/smolov-mobile@1x.jpg" width="285" height="285" alt="Марк Смолов - фотография">
+            </picture>
+          </a>
+          <h3 class="travelmate-card__name travelmate-card__name--offline">
+            <a href="" title="Марк Смолов - перейти в профиль">Марк <span class="travelmate-card__surname">Смолов</span></a>
+          </h3>
+          <div class="travelmate-card__likes"><a class="travelmate-card__heart" aria-label="Поставить лайк"></a>170</div>
+          <p class="travelmate-card__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+          <div class="travelmate-card__wish-wrapper">
+            <p class="travelmate-card__wish-title">хочет посетить:</p>
+            <div class="travelmate-card__wish-countries">
+              <span class="travelmate-card__wish travelmate-card__wish--usa">США</span>
+              <span class="travelmate-card__wish travelmate-card__wish--australia">Австралия</span>
+              <span class="travelmate-card__wish travelmate-card__wish--dominica">Доминика</span>
+            </div>
+          </div>
+          <div class="travelmate-card__transport-wrapper">
+            <p class="travelmate-card__transport-title">транспорт:</p>
+            <div class="travelmate-card__transport-list">
+              <span class="travelmate-card__transport travelmate-card__transport--on">
+                <svg class="travelmate-card__icon-plane" width="13" height="14"><use xlink:href="#icon-plane"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--off">
+                <svg class="travelmate-card__icon-bus" width="13" height="14"><use xlink:href="#icon-bus"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--on">
+                <svg class="travelmate-card__icon-bicycle" width="16" height="14"><use xlink:href="#icon-bicycle"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--off">
+                <svg class="travelmate-card__icon-run" width="13" height="14"><use xlink:href="#icon-run"></use></svg>
+              </span>
+            </div>
+          </div>
+          <div class="travelmate-card__mark-wrapper">
+            <p class="travelmate-card__mark-title">левел:</p>
+            <div class="travelmate-card__mark">
+              <svg class="travelmate-card__mark-indicator travelmate-card__mark-indicator--25" width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
+                <circle r="16" cx="50%" cy="50%" fill="none" stroke="#ff8d30"></circle>
+              </svg>
+              <span class="travelmate-card__mark-number">25</span>
+              <span class="travelmate-card__mark-level">level</span>
+            </div>
+          </div>
+          <a class="travelmate-card__invite" href="">Позвать!</a>
+        </article>
+        <article class="potential-travelmates__item travelmate-card">
+          <a href="" title="Лариса Роговая - перейти в профиль">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg">
+              <img class="travelmate-card__photo" src="img/rogovaya-mobile@1x.jpg" width="285" height="285" alt="Лариса Роговая - фотография">
+            </picture>
+          </a>
+          <h3 class="travelmate-card__name travelmate-card__name--online">
+            <a href="" title="Лариса Роговая - перейти в профиль">Лариса <span class="travelmate-card__surname">Роговая</span></a>
+          </h3>
+          <div class="travelmate-card__likes"><a class="travelmate-card__heart" aria-label="Поставить лайк"></a>23</div>
+          <p class="travelmate-card__tags">#образование #карьера #учеба #линкедин</p>
+          <div class="travelmate-card__wish-wrapper">
+            <p class="travelmate-card__wish-title">хочет посетить:</p>
+            <div class="travelmate-card__wish-countries">
+              <span class="travelmate-card__wish travelmate-card__wish--united-kingdom">Великобритания</span>
+            <span class="travelmate-card__wish travelmate-card__wish--germany">Германия</span>
+            </div>
+          </div>
+          <div class="travelmate-card__transport-wrapper">
+            <p class="travelmate-card__transport-title">транспорт:</p>
+            <div class="travelmate-card__transport-list">
+              <span class="travelmate-card__transport travelmate-card__transport--on">
+                <svg class="travelmate-card__icon-plane" width="13" height="14"><use xlink:href="#icon-plane"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--on">
+                <svg class="travelmate-card__icon-bus" width="13" height="14"><use xlink:href="#icon-bus"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--off">
+                <svg class="travelmate-card__icon-bicycle" width="16" height="14"><use xlink:href="#icon-bicycle"></use></svg>
+              </span>
+              <span class="travelmate-card__transport travelmate-card__transport--off">
+                <svg class="travelmate-card__icon-run" width="13" height="14"><use xlink:href="#icon-run"></use></svg>
+              </span>
+            </div>
+          </div>
+          <div class="travelmate-card__mark-wrapper">
+            <p class="travelmate-card__mark-title">левел:</p>
+            <div class="travelmate-card__mark">
+              <svg class="travelmate-card__mark-indicator travelmate-card__mark-indicator--50" width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
+                <circle r="16" cx="50%" cy="50%" fill="none" stroke="#ff8d30"></circle>
+              </svg>
+              <span class="travelmate-card__mark-number">50</span>
+              <span class="travelmate-card__mark-level">level</span>
+            </div>
+          </div>
+          <a class="travelmate-card__invite" href="">Позвать!</a>
+        </article>
+        <div class="potential-travelmates__show-more">
+          <a class="potential-travelmates__show" href="">Показать еще</a>
+        </div>
+        <div class="potential-travelmates__pagination">
+          <div class="potential-travelmates__pages">
+            <a class="potential-travelmates__page potential-travelmates__page--current">1</a>
+            <a class="potential-travelmates__page" href="">2</a>
+            <a class="potential-travelmates__page" href="">3</a>
+            <a class="potential-travelmates__page" href="">4</a>
+          </div>
+          <div class="potential-travelmates__arrows">
+            <a class="potential-travelmates__arrow potential-travelmates__arrow--left" href=""><span class="visually-hidden">Посмотреть следующую страницу</span></a>
+            <a class="potential-travelmates__arrow potential-travelmates__arrow--right" href=""><span class="visually-hidden">Посмотреть следующую страницу</span></a>
           </div>
         </div>
-        <div class="potential-travelmate__transport-wrapper">
-          <p class="potential-travelmate__transport-title">транспорт:</p>
-          <div class="potential-travelmate__transport-list">
-            <span class="potential-travelmate__transport potential-travelmate__transport--on">
-              <svg width="13" height="14"><use xlink:href="#icon-plane"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--off">
-              <svg width="13" height="14"><use xlink:href="#icon-bus"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--off">
-              <svg width="16" height="14"><use xlink:href="#icon-bicycle"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--off">
-              <svg width="13" height="14"><use xlink:href="#icon-run"></use></svg>
-            </span>
-          </div>
-        </div>
-        <div class="potential-travelmate__mark-wrapper">
-          <p class="potential-travelmate__mark-title">левел:</p>
-          <div class="potential-travelmate__mark">
-            <svg class="potential-travelmate__mark-indicator potential-travelmate__mark-indicator--99" width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
-              <circle r="21" cx="50%" cy="50%" fill="none" stroke="#ff8d30"></circle>
-            </svg>
-            <span class="potential-travelmate__mark-number">99</span>
-          </div>
-        </div>
-        <a class="potential-travelmate__invite" href="">Позвать!</a>
-      </article>
-      <article class="potential-travelmates-list__item potential-travelmate">
-        <a class="potential-travelmate__photo" href="" title="Петя Демин - перейти в профиль">
-          <picture>
-            <img src="/img/demin-mobile@1x.jpg" width="285" height="285" alt="Петя Демин - фотография">
-          </picture>
-        </a>
-        <h3 class="potential-travelmate__name potential-travelmate__name--offline">
-          <a href="" title="Петя Демин - перейти в профиль">Петя <span class="potential-travelmate__surname">Демин</span></a>
-        </h3>
-        <div class="potential-travelmate__likes"><a class="potential-travelmate__like-heart" aria-label="Поставить лайк"></a>1500</div>
-        <p class="potential-travelmate__tags">#бургер #бар #футбол #концерт #крафт</p>
-        <div class="potential-travelmate__wish-wrapper">
-          <p class="potential-travelmate__wish-title">хочет посетить:</p>
-          <div class="potential-travelmate__wish-countris">
-            <span class="potential-travelmate__wish potential-travelmate__wish--belgium">Бельгия</span>
-            <span class="potential-travelmate__wish potential-travelmate__wish--czechia">Чехия</span>
-          </div>
-        </div>
-        <div class="potential-travelmate__transport-wrapper">
-          <p class="potential-travelmate__transport-title">транспорт:</p>
-          <div class="potential-travelmate__transport-list">
-            <span class="potential-travelmate__transport potential-travelmate__transport--on">
-              <svg width="13" height="14"><use xlink:href="#icon-plane"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--on">
-              <svg width="13" height="14"><use xlink:href="#icon-bus"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--off">
-              <svg width="16" height="14"><use xlink:href="#icon-bicycle"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--on">
-              <svg width="13" height="14"><use xlink:href="#icon-run"></use></svg>
-            </span>
-          </div>
-        </div>
-        <div class="potential-travelmate__mark-wrapper">
-          <p class="potential-travelmate__mark-title">левел:</p>
-          <div class="potential-travelmate__mark">
-            <svg class="potential-travelmate__mark-indicator potential-travelmate__mark-indicator--80" width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
-              <circle r="21" cx="50%" cy="50%" fill="none" stroke="#ff8d30"></circle>
-            </svg>
-            <span class="potential-travelmate__mark-number">80</span>
-          </div>
-        </div>
-        <a class="potential-travelmate__invite" href="">Позвать!</a>
-      </article>
-      <article class="potential-travelmates-list__item potential-travelmate">
-        <a class="potential-travelmate__photo" href="" title="Марк Смолов - перейти в профиль">
-          <picture>
-            <img src="/img/smolov-mobile@1x.jpg" width="285" height="285" alt="Марк Смолов - фотография">
-          </picture>
-        </a>
-        <h3 class="potential-travelmate__name potential-travelmate__name--offline">
-          <a href="" title="Марк Смолов - перейти в профиль">Марк <span class="potential-travelmate__surname">Смолов</span></a>
-        </h3>
-        <div class="potential-travelmate__likes"><a class="potential-travelmate__like-heart" aria-label="Поставить лайк"></a>170</div>
-        <p class="potential-travelmate__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
-        <div class="potential-travelmate__wish-wrapper">
-          <p class="potential-travelmate__wish-title">хочет посетить:</p>
-          <div class="potential-travelmate__wish-countris">
-            <span class="potential-travelmate__wish potential-travelmate__wish--usa">США</span>
-            <span class="potential-travelmate__wish potential-travelmate__wish--australia">Австралия</span>
-            <span class="potential-travelmate__wish potential-travelmate__wish--dominica">Доминика</span>
-          </div>
-        </div>
-        <div class="potential-travelmate__transport-wrapper">
-          <p class="potential-travelmate__transport-title">транспорт:</p>
-          <div class="potential-travelmate__transport-list">
-            <span class="potential-travelmate__transport potential-travelmate__transport--on">
-              <svg width="13" height="14"><use xlink:href="#icon-plane"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--off">
-              <svg width="13" height="14"><use xlink:href="#icon-bus"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--on">
-              <svg width="16" height="14"><use xlink:href="#icon-bicycle"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--off">
-              <svg width="13" height="14"><use xlink:href="#icon-run"></use></svg>
-            </span>
-          </div>
-        </div>
-        <div class="potential-travelmate__mark-wrapper">
-          <p class="potential-travelmate__mark-title">левел:</p>
-          <div class="potential-travelmate__mark">
-            <svg class="potential-travelmate__mark-indicator potential-travelmate__mark-indicator--25" width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
-              <circle r="21" cx="50%" cy="50%" fill="none" stroke="#ff8d30"></circle>
-            </svg>
-            <span class="potential-travelmate__mark-number">25</span>
-          </div>
-        </div>
-        <a class="potential-travelmate__invite" href="">Позвать!</a>
-      </article>
-      <article class="potential-travelmates-list__item potential-travelmate">
-        <a class="potential-travelmate__photo" href="" title="Лариса Роговая - перейти в профиль">
-          <picture>
-            <img src="/img/rogovaya-mobile@1x.jpg" width="285" height="285" alt="Лариса Роговая - фотография">
-          </picture>
-        </a>
-        <h3 class="potential-travelmate__name potential-travelmate__name--online">
-          <a href="" title="Лариса Роговая - перейти в профиль">Лариса <span class="potential-travelmate__surname">Роговая</span></a>
-        </h3>
-        <div class="potential-travelmate__likes"><a class="potential-travelmate__like-heart" aria-label="Поставить лайк"></a>23</div>
-        <p class="potential-travelmate__tags">#образование #карьера #учеба #линкедин</p>
-        <div class="potential-travelmate__wish-wrapper">
-          <p class="potential-travelmate__wish-title">хочет посетить:</p>
-          <div class="potential-travelmate__wish-countris">
-            <span class="potential-travelmate__wish potential-travelmate__wish--united-kingdom">Великобритания</span>
-          <span class="potential-travelmate__wish potential-travelmate__wish--germany">Германия</span>
-          </div>
-        </div>
-        <div class="potential-travelmate__transport-wrapper">
-          <p class="potential-travelmate__transport-title">транспорт:</p>
-          <div class="potential-travelmate__transport-list">
-            <span class="potential-travelmate__transport potential-travelmate__transport--on">
-              <svg width="13" height="14"><use xlink:href="#icon-plane"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--on">
-              <svg width="13" height="14"><use xlink:href="#icon-bus"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--off">
-              <svg width="16" height="14"><use xlink:href="#icon-bicycle"></use></svg>
-            </span>
-            <span class="potential-travelmate__transport potential-travelmate__transport--off">
-              <svg width="13" height="14"><use xlink:href="#icon-run"></use></svg>
-            </span>
-          </div>
-        </div>
-        <div class="potential-travelmate__mark-wrapper">
-          <p class="potential-travelmate__mark-title">левел:</p>
-          <div class="potential-travelmate__mark">
-            <svg class="potential-travelmate__mark-indicator  potential-travelmate__mark-indicator--50" width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
-              <circle r="21" cx="50%" cy="50%" fill="none" stroke="#ff8d30"></circle>
-            </svg>
-            <span class="potential-travelmate__mark-number">50</span>
-          </div>
-        </div>
-        <a class="potential-travelmate__invite" href="">Позвать!</a>
-      </article>
-      <div class="potential-travelmates-list__show-more">
-        <a class="potential-travelmates-list__show" href="">Показать еще</a>
-      </div>
-      <div class="potential-travelmates-list__pagination">
-        <div class="potential-travelmates-list__pages">
-          <a class="potential-travelmates-list__page" href="">1</a>
-          <a class="potential-travelmates-list__page" href="">2</a>
-          <a class="potential-travelmates-list__page" href="">3</a>
-          <a class="potential-travelmates-list__page" href="">4</a>
-        </div>
-        <div class="potential-travelmates-list__arrows">
-          <a class="potential-travelmates-list__arrow potential-travelmates-list__arrow--left" href=""><span class="visually-hidden">Посмотреть следующую страницу</span></a>
-          <a class="potential-travelmates-list__arrow potential-travelmates-list__arrow--right" href=""><span class="visually-hidden">Посмотреть следующую страницу</span></a>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
+
   <footer class="page-footer">
     <a class="page-footer__logo" href="index.html" aria-label="Логотип Погнали"></a>
-    <div class="page-footer__menu footer-menu">
-      <a class="footer-menu__item footer-menu__item--facebook" href="#" aria-label="Страница Погнали на Фейсбуке">
-        <svg width="11" height="21"><use xlink:href="#icon-fb"></use></svg>
+    <div class="page-footer__menu social">
+      <a class="social__icon" href="#" aria-label="Страница Погнали на Фейсбуке">
+        <svg class="social__fb" width="11" height="21"><use xlink:href="#icon-fb"></use></svg>
       </a>
-      <a class="footer-menu__item footer-menu__item--vkontakte" href="#" aria-label="Страница Погнали во ВКонтакте">
-        <svg width="22" height="11"><use xlink:href="#icon-vk"></use></svg>
+      <a class="social__icon" href="#" aria-label="Страница Погнали во ВКонтакте">
+        <svg class="social__vk" width="22" height="12"><use xlink:href="#icon-vk"></use></svg>
       </a>
-      <a class="footer-menu__item footer-menu__item--insta" href="#" aria-label="Страница Погнали в Инстаграме">
-        <svg width="16" height="16"><use xlink:href="#icon-insta"></use></svg>
+      <a class="social__icon" href="#" aria-label="Страница Погнали в Инстаграме">
+        <svg class="social__insta" width="17" height="17"><use xlink:href="#icon-insta"></use></svg>
       </a>
     </div>
     <div class="page-footer__copyright">
@@ -624,7 +659,11 @@
       </a>
     </div>
   </footer>
+
   <svg style="display: none;">
+    <symbol id="icon-dots" viewBox="0 0 27 5">
+      <path fill="#192144" d="M2.5 5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM13.5 5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM24.5 5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"/>
+    </symbol>
     <symbol id="icon-minus" viewBox="0 0 14 2">
       <path d="M0 0h14v2H0z"/>
     </symbol>
@@ -679,5 +718,8 @@
       <path d="M13.6 0h-.2L0 1.4V26l13.5 8L27 26V1.4L13.6 0zm5.7 16.8l-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8L25 13.5l-4.5 2.6-7.1-4.2v1.4l5.9 3.5zM1.9 15.1l11.4 6.8v1l-8-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.2-4.9V17l3.4-2v10l-11.6 6.9-11.4-7v-9.8zm0-3v-9l11.6-1.2 11.6 1.2v9L13.5 5.3v-.1h-.2v.1L1.9 12.1z" fill="#192144"/>
     </symbol>
   </svg>
+
+  <script src="./js/script.js"></script>
+
 </body>
 </html>

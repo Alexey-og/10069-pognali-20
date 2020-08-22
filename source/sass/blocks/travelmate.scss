@@ -2,8 +2,33 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  width: 270px;
+  min-height: 428px;
   margin: 0 0 10px;
   border-radius: 10px;
+  overflow: hidden;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 285px;
+    min-height: 483px;
+    margin-right: 50px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin: 0 30px 30px 30px;
+  }
+}
+
+.travelmate:last-of-type {
+  margin-bottom: 0;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-right: 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-right: 30px;
+  }
 }
 
 .travelmate__photo {
@@ -11,6 +36,18 @@
 
   width: 270px;
   height: 270px;
+
+  @media screen and (min-width: $tablet-width) {
+    @include top-radius(20px);
+
+    width: 285px;
+    height: 285px;
+  }
+
+  .travelmate:hover & {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+  }
 }
 
 .travelmate__info {
@@ -67,15 +104,19 @@
 .travelmate__name {
   position: relative;
   display: block;
-  margin: 13px 0;
+  margin: 13px 0 23px 0;
   padding-left: 16px;
   padding-right: 16px;
   width: auto;
   font-weight: bold;
   font-size: 21px;
-  line-height: 21px;
+  line-height: 1;
   text-align: center;
   color: $color-button-blue;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 24px;
+  }
 
   &::before {
     @include circle(6px);
@@ -97,16 +138,26 @@
 
 .travelmate__tags {
   margin: 0;
-  width: 180px;
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: 16px;
   line-height: 18px;
   text-align: center;
   color: $color-special-grey;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 23px;
+  }
 }
 
 .travelmate__transport {
   padding-top: 16px;
   padding-bottom: 16px;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-bottom: 24px;
+  }
 }
 
 .travelmate__mark {

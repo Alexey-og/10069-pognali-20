@@ -1,51 +1,423 @@
 .page-header {
-  position: relative;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 73px;
+  padding: 0 25px 0;
   background-color: $color-basic-blue;
+  z-index: 50;
+
+  @media screen and (min-width: $tablet-width) {
+    padding: 0 40px 0;
+    background-color: $color-header-blue;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 17px 60px 0;
+    background-color: $color-basic-blue;
+  }
+
+  &--dropped,
+  &--no-js {
+    background-color: $color-white;
+
+    @media screen and (min-width: $tablet-width) {
+      background-color: $color-white;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      background-color: $color-white;
+    }
+  }
 }
 
 .page-header__top {
+  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  min-width: 320px;
-  min-height: 73px;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  order: 1;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 50%;
+    min-height: 132px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 200px;
+    min-height: 110px;
+    margin-right: 40px;
+  }
 }
 
 .page-header__logo {
   display: flex;
   width: 96px;
-  height: 60px;
-  background-image: url("../img/logo-mobile-white@1x.png");
+  height: 23px;
+  margin-right: auto;
+  background-image: url("/img/logo-mobile-white@1x.png");
   background-repeat: no-repeat;
   background-position: left center;
   background-size: contain;
   z-index: 100;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 166px;
+    height: 60px;
+    background-image: url("/img/logo-tablet-white@1x.png");
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 200px;
+    height: 60px;
+    background-image: url("/img/logo-desktop-white@1x.png");
+  }
+
+  .page-header--dropped &,
+  .page-header--no-js & {
+    background-image: url("/img/logo-mobile-blue@1x.png");
+
+    @media screen and (min-width: $tablet-width) {
+      background-image: url("/img/logo-tablet-blue@1x.png");
+    }
+  }
 }
 
 .page-header__button {
   position: relative;
   width: 25px;
   height: 19px;
-  border: 0;
-  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/img/icon-menu-mobile.svg");
+  background-size: 25px 11px;
+  cursor: pointer;
   z-index: 100;
 
-  &::before,
-  &::after {
-    position: absolute;
-    content: "";
-    left: 0;
-    width: 25px;
-    height: 3px;
-    border-radius: 1.5px;
-    background-color: $color-white;
+  .page-header--dropped & {
+    background-image: url("/img/icon-mobile-close.svg");
+    background-size: 18px 18px;
   }
+
+  .page-header--no-js & {
+    background-image: none;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.page-header__menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 48px;
+  margin-bottom: 60px;
+  order: 2;
+
+  @media screen and (min-width: $tablet-width) {
+    align-items: flex-start;
+    margin-top: 51px;
+    margin-bottom: 132px;
+    order: 3;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin: 0 auto 0 0;
+    padding-left: 105px;
+    order: 2;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 60px;
+      height: 2px;
+      background-color: $color-white;
+    }
+  }
+}
+
+.page-header--no-js .page-header__menu,
+.page-header--dropped .page-header__menu {
+  display: flex;
+}
+
+.page-header__menu-item {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-special-blue;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 71px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-right: 33px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-white;
+  }
+}
+
+.page-header__contacts {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 40px;
+  order: 4;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 129px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin: 0;
+    order: 3;
+  }
+}
+
+.page-header--no-js .page-header__contacts,
+.page-header--dropped .page-header__contacts {
+  display: flex;
+}
+
+.page-header__phone,
+.page-header__email {
+  position: relative;
+  padding-left: 61px;
+  text-decoration: none;
 
   &::before {
-    bottom: 4px;
+    @include circle (45px);
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background-color: #121936;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: $tablet-width) {
+      @include circle (68px);
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      width: 50px;
+      height: 50px;
+    }
   }
 
-  &::after {
-    bottom: 12px;
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    padding-left: 91px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    @include circle (50px);
+
+    padding: 0;
+  }
+}
+
+.page-header__phone::before {
+  background-image: url("/img/icon-tel.svg");
+  background-size: 16px 15px;
+
+  @media screen and (min-width: $tablet-width) {
+    background-size: 24px 22px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    background-image: url("/img/icon-call.svg");
+    background-color: $color-special-orange;
+    background-size: 18px 18px;
+  }
+}
+
+.page-header__email::before {
+  background-image: url("/img/icon-email.svg");
+  background-size: 18px 12px;
+
+  @media screen and (min-width: $tablet-width) {
+    background-size: 28px 19px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    background-image: url("/img/icon-mail.svg");
+    background-color: $color-special-yellow-dark;
+    background-size: 16px 14px;
+  }
+}
+
+.page-header__contacts-text {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: $color-special-blue;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 68px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.page-header__login {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 50px;
+  margin: 0 0 40px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  background: $color-basic-yellow;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-basic-blue;
+  order: 3;
+
+  &:hover {
+    background-color: $color-special-yellow-dark;
+  }
+
+  &:active {
+    color: rgba($color-basic-blue, 0.3);
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+    width: 188px;
+    min-height: 50px;
+    margin: 0 0 0 auto;
+    order: 2;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin: 0;
+    order: 4;
+  }
+}
+
+.page-header--no-js .page-header__login,
+.page-header--dropped .page-header__login {
+  display: flex;
+}
+
+.page-header__social {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 41px;
+  order: 5;
+
+  @media screen and (min-width: $tablet-width) {
+    justify-content: flex-start;
+    margin-left: 26px;
+    margin-bottom: 92px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.page-header--no-js .page-header__social,
+.page-header--dropped .page-header__social {
+  display: flex;
+
+  @media screen and (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.page-header__social-icon {
+  @include flex-center;
+
+  padding-right: 26px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    fill-opacity: 0.3;
+  }
+}
+
+.page-header__social-icon:last-child {
+  padding-right: 0;
+}
+
+.page-header__icon-fb {
+  width: 11px;
+  height: 21px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 14px;
+    height: 28px;
+  }
+}
+
+.page-header__icon-vk {
+  width: 23px;
+  height: 12px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 31px;
+    height: 16px;
+  }
+}
+
+.page-header__icon-insta {
+  width: 18px;
+  height: 18px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 24px;
+    height: 24px;
   }
 }

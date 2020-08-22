@@ -1,0 +1,15 @@
+.travelmates-wrapper {
+  margin: 76px 25px 76px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin: 182px 40px 122px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 60px 135px;
+  }
+}

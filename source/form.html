@@ -3,63 +3,71 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <title>HTML Academy: Направления</title>
 </head>
 <body>
-  <header class="page-header">
-    <div class="page-header__menu">
-      <div class="page-header__top container">
-        <a class="page-header__logo" href="index.html">
-          <span class="visually-hidden">Погнали?</span>
-        </a>
-        <button class="page-header__button page-header__menu-show" type="button" aria-label="Кнопка показа меню"></button>
-      </div>
-      <!--
-      <div>
-        <a href="#" aria-label=""></a>
-        <a href="#" aria-label=""></a>
-        <a href="#">Авторизация</a>
-      </div> -->
+  <header class="page-header page-header--no-js">
+    <div class="page-header__top">
+      <a class="page-header__logo" href="index.html">
+        <span class="visually-hidden">Погнали?</span>
+      </a>
+      <a class="page-header__button" type="button" aria-label="Кнопка показа меню"></a>
     </div>
-    <!-- <div class="mobile-menu">
-      <nav>
-        <a>О сервисе</a>
-        <a href="form.html">Направления</a>
-        <a href="catalog.html">Попутчики</a>
-      </nav>
-    </div> -->
+    <nav class="page-header__menu">
+      <a class="page-header__menu-item" href="index.html">О сервисе</a>
+      <a class="page-header__menu-item">Направления</a>
+      <a class="page-header__menu-item" href="catalog.html">Попутчики</a>
+    </nav>
+    <div class="page-header__contacts">
+      <a class="page-header__phone" href="#"><span class="page-header__contacts-text">8 800 555-86-28</span></a>
+      <a class="page-header__email" href="mailto:mail@htmlacademy.ru"><span class="page-header__contacts-text">mail@htmlacademy.ru</span></a>
+    </div>
+    <a class="page-header__login" href="#">Авторизация</a>
+    <div class="page-header__social">
+      <a class="page-header__social-icon" href="#" aria-label="Страница Погнали на Фейсбуке">
+        <svg class="page-header__icon-fb" width="11" height="21"><use xlink:href="#icon-fb"></use></svg>
+      </a>
+      <a class="page-header__social-icon" href="#" aria-label="Страница Погнали во ВКонтакте">
+        <svg class="page-header__icon-vk" width="22" height="11"><use xlink:href="#icon-vk"></use></svg>
+      </a>
+      <a class="page-header__social-icon" href="#" aria-label="Страница Погнали в Инстаграме">
+        <svg class="page-header__icon-insta" width="16" height="16"><use xlink:href="#icon-insta"></use></svg>
+      </a>
+    </div>
   </header>
   <main>
+    <div class="page-title">
+      <h1 class="heading-1">Направления</h1>
+    </div>
     <form class="user-form" action="https://echo.htmlacademy.ru/" method="post">
-      <div class="page-title">
-        <h1 class="heading-1">Направления</h1>
-      </div>
-      <section class="profile-header">
-        <div class="mark profile-header__mark">
+      <div class="profile">
+        <div class="mark profile__mark">
           <svg class="mark__indicator" width="100" height="100"><use xlink:href="#level-percent"></use></svg>
           <span class="mark__number">80</span>
           <span class="mark__level">level</span>
         </div>
-        <div class="profile-header__photo">
+        <div class="profile__photo-wrapper">
           <picture>
-            <img src="img/demin-mobile@1x.jpg" alt="Петя Демин - фотография" width="100" height="100">
+            <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg">
+            <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg">
+            <img class="profile__photo" src="img/demin-mobile@1x.jpg" alt="Петя Демин - фотография" width="100" height="100">
           </picture>
+          <label class="profile__photo-button">
+            <input class="visually-hidden" type="file">Фото
+          </label>
         </div>
-        <label class="profile-header__change-photo">
-          <input class="visually-hidden" type="file">
-          <span class="visually-hidden">Сменить </span>фото
+        <label class="profile__change-photo">
+          <input class="visually-hidden" type="file">Сменить фото
         </label>
-      </section>
-      <div class="tags-transport">
-        <fieldset class="tags-transport__item tags-transport__item--tags">
-          <legend class="tags-transport__title">тэги</legend>
-          <textarea class="tags-transport__tags" name="tags-list" id="tags-list" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+        <fieldset class="profile__tags-wrapper">
+          <legend class="profile__tags-title">тэги</legend>
+          <textarea class="profile__tags" name="tags-list" id="tags-list" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
           <label class="visually-hidden" for="tags-list" aria-label="Список тегов пользователя"></label>
         </fieldset>
-        <fieldset class="tags-transport__item">
-          <legend class="tags-transport__title">транспорт</legend>
-          <div class="tags-transport__transportation transportation">
+        <fieldset class="profile__transport-wrapper">
+          <legend class="profile__transport-title">транспорт</legend>
+          <div class="profile__transport transportation">
             <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-avia" id="transportation-avia" checked>
             <label class="transportation__label transportation__label--avia" for="transportation-avia" aria-label="Кнопка передвижения на самолете" data-transport="Авиаперелет">
               <svg height="16"><use xlink:href="#icon-plane"></use></svg>
@@ -577,15 +585,15 @@
 
   <footer class="page-footer">
     <a class="page-footer__logo" href="index.html" aria-label="Логотип Погнали"></a>
-    <div class="page-footer__menu footer-menu">
-      <a class="footer-menu__item footer-menu__item--facebook" href="#" aria-label="Страница Погнали на Фейсбуке">
-        <svg width="11" height="21"><use xlink:href="#icon-fb"></use></svg>
+    <div class="page-footer__menu social">
+      <a class="social__icon" href="#" aria-label="Страница Погнали на Фейсбуке">
+        <svg class="social__fb" width="11" height="21"><use xlink:href="#icon-fb"></use></svg>
       </a>
-      <a class="footer-menu__item footer-menu__item--vkontakte" href="#" aria-label="Страница Погнали во ВКонтакте">
-        <svg width="22" height="11"><use xlink:href="#icon-vk"></use></svg>
+      <a class="social__icon" href="#" aria-label="Страница Погнали во ВКонтакте">
+        <svg class="social__vk" width="22" height="12"><use xlink:href="#icon-vk"></use></svg>
       </a>
-      <a class="footer-menu__item footer-menu__item--insta" href="#" aria-label="Страница Погнали в Инстаграме">
-        <svg width="16" height="16"><use xlink:href="#icon-insta"></use></svg>
+      <a class="social__icon" href="#" aria-label="Страница Погнали в Инстаграме">
+        <svg class="social__insta" width="17" height="17"><use xlink:href="#icon-insta"></use></svg>
       </a>
     </div>
     <div class="page-footer__copyright">
@@ -651,6 +659,8 @@
       <path d="M13.6 0h-.2L0 1.4V26l13.5 8L27 26V1.4L13.6 0zm5.7 16.8l-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8L25 13.5l-4.5 2.6-7.1-4.2v1.4l5.9 3.5zM1.9 15.1l11.4 6.8v1l-8-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.2-4.9V17l3.4-2v10l-11.6 6.9-11.4-7v-9.8zm0-3v-9l11.6-1.2 11.6 1.2v9L13.5 5.3v-.1h-.2v.1L1.9 12.1z" fill="#192144"/>
     </symbol>
   </svg>
+
+  <script src="./js/script.js"></script>
 
 </body>
 </html>

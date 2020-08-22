@@ -20,9 +20,7 @@
 @import "blocks/modal.scss";
 @import "blocks/page-header.scss";
 @import "blocks/page-footer.scss";
-@import "blocks/mobile-menu.scss";
 @import "blocks/promo.scss";
-@import "blocks/header-contacts.scss";
 @import "blocks/steps.scss";
 @import "blocks/about-service.scss";
 @import "blocks/countries.scss";
@@ -32,16 +30,16 @@
 @import "blocks/transport-by.scss";
 @import "blocks/mark.scss";
 @import "blocks/add-profile.scss";
-@import "blocks/profile-list.scss";
 @import "blocks/interested.scss";
 @import "blocks/contacts.scss";
-@import "blocks/pognali-location.scss";
-@import "blocks/pognali-map.scss";
-@import "blocks/footer-menu.scss";
+@import "blocks/location.scss";
+@import "blocks/map.scss";
+@import "blocks/social.scss";
 @import "blocks/user-form.scss";
 @import "blocks/page-title.scss";
-@import "blocks/profile-header.scss";
-@import "blocks/tags-transport.scss";
+@import "blocks/profile.scss";
+/* @import "blocks/profile-header.scss"; */
+/* @import "blocks/tags-transport.scss"; */
 @import "blocks/transportation.scss";
 @import "blocks/planned-trips.scss";
 @import "blocks/trip.scss";
@@ -53,11 +51,13 @@
 @import "blocks/desired-countries.scss";
 @import "blocks/country-selection.scss";
 @import "blocks/entertainments.scss";
-@import "blocks/filter-country.scss";
-@import "blocks/perfect-travelmate.scss";
+@import "blocks/filter-header.scss";
+@import "blocks/filter.scss";
+@import "blocks/travelmates-wrapper.scss";
+@import "blocks/travelmate-filter.scss";
 @import "blocks/travelmate-range.scss";
-@import "blocks/potential-travelmates-list.scss";
-@import "blocks/potential-travelmate.scss";
+@import "blocks/potential-travelmates.scss";
+@import "blocks/travelmate-card.scss";
 
 
 /*  Modals  */

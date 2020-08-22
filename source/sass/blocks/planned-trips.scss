@@ -2,8 +2,13 @@
   @include top-radius(30px);
 
   position: relative;
+  margin-top: -30px;
   padding: 25px 25px 60px 25px;
   background-color: $color-special-blue-light;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-top: -60px;
+  }
 }
 
 .planned-trips__item {
