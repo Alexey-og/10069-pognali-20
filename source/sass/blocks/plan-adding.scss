@@ -6,6 +6,10 @@
   padding: 30px 25px 73px;
   background-color: #d4d9eb;
 
+  @media screen and (min-width: $tablet-width) {
+    padding: 49px 75px 123px;
+  }
+
   @media screen and (min-width: $desktop-width) {
     margin-top: -60px;
   }
@@ -16,10 +20,18 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 34px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 58px;
+  }
 }
 
-.plan-adding__header .heading-2 {
+.plan-adding__title {
   margin-bottom: 0;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 36px;
+  }
 }
 
 .plan-adding__dots {
@@ -28,6 +40,14 @@
   display: flex;
   justify-content: flex-end;
   margin: 0 18px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin: 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .plan-adding__dot {
@@ -35,6 +55,12 @@
 
   margin-left: 16px;
   background-color: rgba($color-button-blue, 0.3);
+
+  @media screen and (min-width: $tablet-width) {
+    width: 6px;
+    height: 6px;
+    margin-left: 29px;
+  }
 
   &--current {
     background-color: $color-button-blue;

@@ -2,34 +2,92 @@
   display: flex;
   flex-wrap: wrap;
   color: $color-button-blue;
+
+  @media screen and (min-width: $desktop-width) {
+    padding-top: 30px;
+    border-top: 1px solid #e1e3e9;
+  }
 }
 
 .step-inputs__item {
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 1;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 25px;
+    border-top: 1px solid #e1e3e9;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
+.step-inputs__item--travelmates {
+  @media screen and (min-width: $tablet-width) {
+    order: 1;
+  }
+}
+
+.step-inputs__item--duration {
+  @media screen and (min-width: $tablet-width) {
+    order: 3;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-top: 14px;
+    margin-right: 245px;
+  }
 }
 
 .step-inputs__label {
+  margin-right: auto;
   font-weight: 500;
   font-size: 16px;
-  margin-right: auto;
-  line-height: 16px;
+  line-height: 1;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: $color-button-blue;
   order: 1;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 27%;
+    margin-right: 25px;
+    line-height: 70px;
+    letter-spacing: 0;
+    order: 1;
+  }
 }
 
 .step-inputs__wrapper {
   display: flex;
   justify-content: space-between;
-  width: 220px;
+  width: 100%;
   height: 43px;
   margin-top: 8px;
   margin-bottom: 20px;
   border: 1px solid #cbced9;
   border-radius: 4px;
   order: 3;
+
+  @media screen and (min-width: $tablet-width) {
+    height: 70px;
+    margin-top: 24px;
+    margin-bottom: 25px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 180px;
+    margin: 0;
+    order: 2;
+  }
 
   &:hover {
     border-color: #959bb2;
@@ -47,26 +105,93 @@
 }
 
 .step-inputs__button {
-  @include flex-center;
-
-  width: 60px;
-  fill: #cccccc;
+  position: relative;
+  width: 50px;
+  padding: 10px;
   cursor: pointer;
 
-  &--minus {
-    padding: 10px 30px 10px 13px;
+  @media screen and (min-width: $tablet-width) {
+    width: 80px;
   }
 
-  &--plus {
-    padding: 10px 13px 10px 30px;
+  @media screen and (min-width: $desktop-width) {
+    width: 80px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $color-grey-cc;
+  }
+
+  &::before {
+    width: 14px;
+    height: 2px;
+
+    @media screen and (min-width: $tablet-width) {
+      width: 20px;
+    }
   }
 
   &:hover {
-    fill: #959bb2;
+    &::before,
+    &::after {
+      background-color: #959bb2;
+    }
   }
 
   &:active {
-    fill: $color-basic-blue;
+    &::before,
+    &::after {
+      background-color: $color-basic-blue;
+    }
+  }
+}
+
+.step-inputs__button--minus {
+  &::before {
+    left: 13px;
+
+    @media screen and (min-width: $tablet-width) {
+      left: 22px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      left: 19px;
+    }
+  }
+}
+
+.step-inputs__button--plus {
+  &::before {
+    right: 13px;
+
+    @media screen and (min-width: $tablet-width) {
+      right: 22px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      right: 19px;
+    }
+  }
+
+  &::after {
+    right: 19px;
+    width: 2px;
+    height: 14px;
+
+    @media screen and (min-width: $tablet-width) {
+      right: 31px;
+      height: 20px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      right: 29px;
+      height: 20px;
+    }
   }
 }
 
@@ -75,30 +200,72 @@
   padding: 10px;
   font-weight: 500;
   font-size: 15px;
-  line-height: 15px;
+  line-height: 1;
   text-align: center;
   text-transform: uppercase;
   color: $color-button-blue;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 60px;
+  }
 }
 
 .step-inputs__unit {
   font-weight: 500;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 1;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: rgba($color-button-blue, 0.3);
   margin-left: auto;
   order: 2;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+    letter-spacing: 0.08em;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-left: 35px;
+    line-height: 70px;
+    order: 3;
+  }
+}
+
+.step-inputs__kids {
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 30px;
+    order: 2;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .step-inputs__kids-possible {
   position: relative;
   padding-left: 40px;
   font-size: 15px;
-  line-height: 15px;
+  line-height: 1;
   color: $color-button-blue;
   cursor: pointer;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-left: 59px;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    line-height: 70px;
+  }
 
   &::before,
   &::after {
@@ -109,6 +276,11 @@
     transform: translateY(-50%);
     width: 26px;
     height: 26px;
+
+    @media screen and (min-width: $tablet-width) {
+      width: 36px;
+      height: 36px;
+    }
   }
 
   &::before {
@@ -120,6 +292,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 8px;
+
+    @media screen and (min-width: $tablet-width) {
+      background-size: 11px;
+    }
   }
 
   &:hover::before {

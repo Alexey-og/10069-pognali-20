@@ -6,15 +6,132 @@
   &--calendar {
     padding-bottom: 25px;
   }
+
+  @media screen and (min-width: $tablet-width) {
+    padding: 48px 43px 54px;
+    border-radius: 30px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 100px 160px 106px;
+  }
+}
+
+.plan-step__header {
+  display: flex;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 38px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 53px;
+  }
+}
+
+.plan-step__title {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 16px 0;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1;
+  color: $color-button-blue;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 35px;
+    font-size: 36px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.plan-step__title span {
+  margin-right: 0.5em;
+}
+
+.plan-step__description {
+  margin: 0;
+  color: $color-grey-44;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.plan-step__steps-list {
+  @include list-reset;
+
+  display: none;
+
+  @media screen and (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    margin-left: 195px;
+  }
+}
+
+.plan-step__step {
+  position: relative;
+  display: inline-flex;
+  margin-bottom: 25px;
+  padding-left: 42px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba($color-black, 0.6);
+
+  &::before {
+    @include circle(6px);
+
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba($color-button-blue, 0.3);
+  }
+}
+
+.plan-step__step:last-of-type {
+  margin-bottom: 0;
+}
+
+.plan-step__step--current {
+  @media screen and (min-width: $desktop-width) {
+    color: $color-black;
+
+    &::before {
+      background-color: $color-button-blue;
+    }
+  }
 }
 
 .plan-step__inputs,
 .plan-step__countries {
   margin: 0 0 25px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 35px;
+  }
 }
 
 .plan-step__calendar {
   margin-bottom: 25px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 47px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 57px;
+  }
 }
 
 .plan-step__entertainments {
@@ -34,16 +151,38 @@
   padding: 7px;
   border-width: 0;
   border-radius: 20px;
-  background-image: none;
   font-size: 17px;
   line-height: 20px;
   text-transform: uppercase;
   color: $color-button-blue;
 
-  &:hover,
-  &:active {
+  @media screen and (max-width: 768px) {
     background-image: none;
+
+    &:hover,
+    &:active {
+      background-image: none;
+    }
   }
+
+  @media screen and (min-width: $tablet-width) {
+    justify-content: flex-start;
+    width: 284px;
+    min-height: 80px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 20px 33px;
+    background-position: right 37px top 50%;
+    font-size: 24px;
+    text-transform: none;
+  }
+
+  /* &:active {
+    @media screen and (min-width: $tablet-width) {
+      color: rgba($color-button-blue, 0.3);
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='%231d2e5b' fill-opacity='0.3' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 5.50001L0 11V0L10 5.50001Z' /%3E%3C/svg%3E");
+    }
+  } */
 }
 
 .plan-step__back {

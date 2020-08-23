@@ -2669,6 +2669,9 @@ textarea {
   margin-top: -30px;
   padding: 30px 25px 73px;
   background-color: #d4d9eb; }
+  @media screen and (min-width: 768px) {
+    .plan-adding {
+      padding: 49px 75px 123px; } }
   @media screen and (min-width: 1440px) {
     .plan-adding {
       margin-top: -60px; } }
@@ -2678,9 +2681,15 @@ textarea {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 34px; }
+  @media screen and (min-width: 768px) {
+    .plan-adding__header {
+      margin-bottom: 58px; } }
 
-.plan-adding__header .heading-2 {
+.plan-adding__title {
   margin-bottom: 0; }
+  @media screen and (min-width: 768px) {
+    .plan-adding__title {
+      font-size: 36px; } }
 
 .plan-adding__dots {
   list-style-type: none;
@@ -2689,6 +2698,12 @@ textarea {
   display: flex;
   justify-content: flex-end;
   margin: 0 18px; }
+  @media screen and (min-width: 768px) {
+    .plan-adding__dots {
+      margin: 0; } }
+  @media screen and (min-width: 1440px) {
+    .plan-adding__dots {
+      display: none; } }
 
 .plan-adding__dot {
   width: 5px;
@@ -2696,6 +2711,11 @@ textarea {
   border-radius: 50%;
   margin-left: 16px;
   background-color: rgba(29, 46, 91, 0.3); }
+  @media screen and (min-width: 768px) {
+    .plan-adding__dot {
+      width: 6px;
+      height: 6px;
+      margin-left: 29px; } }
   .plan-adding__dot--current {
     background-color: #1d2e5b; }
 
@@ -2708,13 +2728,109 @@ textarea {
   background-color: #ffffff; }
   .plan-step--calendar {
     padding-bottom: 25px; }
+  @media screen and (min-width: 768px) {
+    .plan-step {
+      padding: 48px 43px 54px;
+      border-radius: 30px; } }
+  @media screen and (min-width: 1440px) {
+    .plan-step {
+      padding: 100px 160px 106px; } }
+
+.plan-step__header {
+  display: flex;
+  margin-bottom: 20px; }
+  @media screen and (min-width: 768px) {
+    .plan-step__header {
+      margin-bottom: 38px; } }
+  @media screen and (min-width: 1440px) {
+    .plan-step__header {
+      margin-bottom: 53px; } }
+
+.plan-step__title {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 16px 0;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1;
+  color: #1d2e5b; }
+  @media screen and (min-width: 768px) {
+    .plan-step__title {
+      margin-bottom: 35px;
+      font-size: 36px; } }
+  @media screen and (min-width: 1440px) {
+    .plan-step__title {
+      flex-direction: row; } }
+
+.plan-step__title span {
+  margin-right: 0.5em; }
+
+.plan-step__description {
+  margin: 0;
+  color: #444444; }
+  @media screen and (min-width: 768px) {
+    .plan-step__description {
+      font-size: 20px;
+      line-height: 24px; } }
+
+.plan-step__steps-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: none; }
+  @media screen and (min-width: 1440px) {
+    .plan-step__steps-list {
+      display: flex;
+      flex-direction: column;
+      margin-left: 195px; } }
+
+.plan-step__step {
+  position: relative;
+  display: inline-flex;
+  margin-bottom: 25px;
+  padding-left: 42px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6); }
+  .plan-step__step::before {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(29, 46, 91, 0.3); }
+
+.plan-step__step:last-of-type {
+  margin-bottom: 0; }
+
+@media screen and (min-width: 1440px) {
+  .plan-step__step--current {
+    color: #000000; }
+    .plan-step__step--current::before {
+      background-color: #1d2e5b; } }
 
 .plan-step__inputs,
 .plan-step__countries {
   margin: 0 0 25px; }
+  @media screen and (min-width: 768px) {
+    .plan-step__inputs,
+    .plan-step__countries {
+      margin-bottom: 35px; } }
 
 .plan-step__calendar {
   margin-bottom: 25px; }
+  @media screen and (min-width: 768px) {
+    .plan-step__calendar {
+      margin-bottom: 47px; } }
+  @media screen and (min-width: 1440px) {
+    .plan-step__calendar {
+      margin-bottom: 57px; } }
 
 .plan-step__entertainments {
   margin: 0 0 22px; }
@@ -2731,13 +2847,32 @@ textarea {
   padding: 7px;
   border-width: 0;
   border-radius: 20px;
-  background-image: none;
   font-size: 17px;
   line-height: 20px;
   text-transform: uppercase;
-  color: #1d2e5b; }
-  .plan-step__button:hover, .plan-step__button:active {
-    background-image: none; }
+  color: #1d2e5b;
+  /* &:active {
+    @media screen and (min-width: $tablet-width) {
+      color: rgba($color-button-blue, 0.3);
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='%231d2e5b' fill-opacity='0.3' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 5.50001L0 11V0L10 5.50001Z' /%3E%3C/svg%3E");
+    }
+  } */ }
+  @media screen and (max-width: 768px) {
+    .plan-step__button {
+      background-image: none; }
+      .plan-step__button:hover, .plan-step__button:active {
+        background-image: none; } }
+  @media screen and (min-width: 768px) {
+    .plan-step__button {
+      justify-content: flex-start;
+      width: 284px;
+      min-height: 80px;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 20px 33px;
+      background-position: right 37px top 50%;
+      font-size: 24px;
+      text-transform: none; } }
 
 .plan-step__back {
   display: flex;
@@ -2812,31 +2947,78 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   color: #1d2e5b; }
+  @media screen and (min-width: 1440px) {
+    .step-inputs {
+      padding-top: 30px;
+      border-top: 1px solid #e1e3e9; } }
 
 .step-inputs__item {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  flex-grow: 1; }
+  @media screen and (min-width: 768px) {
+    .step-inputs__item {
+      padding-top: 25px;
+      border-top: 1px solid #e1e3e9; } }
+  @media screen and (min-width: 1440px) {
+    .step-inputs__item {
+      padding-top: 0;
+      border-top: none; } }
+
+@media screen and (min-width: 768px) {
+  .step-inputs__item--travelmates {
+    order: 1; } }
+
+@media screen and (min-width: 768px) {
+  .step-inputs__item--duration {
+    order: 3; } }
+
+@media screen and (min-width: 1440px) {
+  .step-inputs__item--duration {
+    margin-top: 14px;
+    margin-right: 245px; } }
 
 .step-inputs__label {
+  margin-right: auto;
   font-weight: 500;
   font-size: 16px;
-  margin-right: auto;
-  line-height: 16px;
+  line-height: 1;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #1d2e5b;
   order: 1; }
+  @media screen and (min-width: 768px) {
+    .step-inputs__label {
+      font-size: 20px;
+      letter-spacing: 0.1em; } }
+  @media screen and (min-width: 1440px) {
+    .step-inputs__label {
+      width: 27%;
+      margin-right: 25px;
+      line-height: 70px;
+      letter-spacing: 0;
+      order: 1; } }
 
 .step-inputs__wrapper {
   display: flex;
   justify-content: space-between;
-  width: 220px;
+  width: 100%;
   height: 43px;
   margin-top: 8px;
   margin-bottom: 20px;
   border: 1px solid #cbced9;
   border-radius: 4px;
   order: 3; }
+  @media screen and (min-width: 768px) {
+    .step-inputs__wrapper {
+      height: 70px;
+      margin-top: 24px;
+      margin-bottom: 25px; } }
+  @media screen and (min-width: 1440px) {
+    .step-inputs__wrapper {
+      width: 180px;
+      margin: 0;
+      order: 2; } }
   .step-inputs__wrapper:hover {
     border-color: #959bb2; }
   .step-inputs__wrapper:active {
@@ -2848,49 +3030,125 @@ textarea {
   background-color: transparent; }
 
 .step-inputs__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 60px;
-  fill: #cccccc;
+  position: relative;
+  width: 50px;
+  padding: 10px;
   cursor: pointer; }
-  .step-inputs__button--minus {
-    padding: 10px 30px 10px 13px; }
-  .step-inputs__button--plus {
-    padding: 10px 13px 10px 30px; }
-  .step-inputs__button:hover {
-    fill: #959bb2; }
-  .step-inputs__button:active {
-    fill: #161c35; }
+  @media screen and (min-width: 768px) {
+    .step-inputs__button {
+      width: 80px; } }
+  @media screen and (min-width: 1440px) {
+    .step-inputs__button {
+      width: 80px; } }
+  .step-inputs__button::before, .step-inputs__button::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #cccccc; }
+  .step-inputs__button::before {
+    width: 14px;
+    height: 2px; }
+    @media screen and (min-width: 768px) {
+      .step-inputs__button::before {
+        width: 20px; } }
+  .step-inputs__button:hover::before, .step-inputs__button:hover::after {
+    background-color: #959bb2; }
+  .step-inputs__button:active::before, .step-inputs__button:active::after {
+    background-color: #161c35; }
+
+.step-inputs__button--minus::before {
+  left: 13px; }
+  @media screen and (min-width: 768px) {
+    .step-inputs__button--minus::before {
+      left: 22px; } }
+  @media screen and (min-width: 1440px) {
+    .step-inputs__button--minus::before {
+      left: 19px; } }
+
+.step-inputs__button--plus::before {
+  right: 13px; }
+  @media screen and (min-width: 768px) {
+    .step-inputs__button--plus::before {
+      right: 22px; } }
+  @media screen and (min-width: 1440px) {
+    .step-inputs__button--plus::before {
+      right: 19px; } }
+
+.step-inputs__button--plus::after {
+  right: 19px;
+  width: 2px;
+  height: 14px; }
+  @media screen and (min-width: 768px) {
+    .step-inputs__button--plus::after {
+      right: 31px;
+      height: 20px; } }
+  @media screen and (min-width: 1440px) {
+    .step-inputs__button--plus::after {
+      right: 29px;
+      height: 20px; } }
 
 .step-inputs__input {
   width: 100px;
   padding: 10px;
   font-weight: 500;
   font-size: 15px;
-  line-height: 15px;
+  line-height: 1;
   text-align: center;
   text-transform: uppercase;
   color: #1d2e5b; }
+  @media screen and (min-width: 768px) {
+    .step-inputs__input {
+      font-size: 20px; } }
+  @media screen and (min-width: 1440px) {
+    .step-inputs__input {
+      width: 60px; } }
 
 .step-inputs__unit {
   font-weight: 500;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 1;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: rgba(29, 46, 91, 0.3);
   margin-left: auto;
   order: 2; }
+  @media screen and (min-width: 768px) {
+    .step-inputs__unit {
+      font-size: 20px;
+      letter-spacing: 0.08em; } }
+  @media screen and (min-width: 1440px) {
+    .step-inputs__unit {
+      margin-left: 35px;
+      line-height: 70px;
+      order: 3; } }
+
+@media screen and (min-width: 768px) {
+  .step-inputs__kids {
+    margin-bottom: 30px;
+    order: 2; } }
+
+@media screen and (min-width: 1440px) {
+  .step-inputs__kids {
+    margin-bottom: 0; } }
 
 .step-inputs__kids-possible {
   position: relative;
   padding-left: 40px;
   font-size: 15px;
-  line-height: 15px;
+  line-height: 1;
   color: #1d2e5b;
   cursor: pointer; }
+  @media screen and (min-width: 768px) {
+    .step-inputs__kids-possible {
+      padding-left: 59px;
+      font-weight: 500;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em; } }
+  @media screen and (min-width: 1440px) {
+    .step-inputs__kids-possible {
+      line-height: 70px; } }
   .step-inputs__kids-possible::before, .step-inputs__kids-possible::after {
     position: absolute;
     content: "";
@@ -2899,6 +3157,10 @@ textarea {
     transform: translateY(-50%);
     width: 26px;
     height: 26px; }
+    @media screen and (min-width: 768px) {
+      .step-inputs__kids-possible::before, .step-inputs__kids-possible::after {
+        width: 36px;
+        height: 36px; } }
   .step-inputs__kids-possible::before {
     border: 1px solid #cbced9;
     border-radius: 4px; }
@@ -2906,6 +3168,9 @@ textarea {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 8px; }
+    @media screen and (min-width: 768px) {
+      .step-inputs__kids-possible::after {
+        background-size: 11px; } }
   .step-inputs__kids-possible:hover::before {
     border-color: #959bb2; }
   .step-inputs__kids-possible:active::before {
@@ -2922,17 +3187,29 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 42px;
+  min-height: 42px;
   margin-bottom: 17px;
+  padding: 10px 0;
   border-top: 1px solid #d6d9e6;
   border-bottom: 1px solid #d6d9e6; }
+  @media screen and (min-width: 768px) {
+    .calendar__title {
+      min-height: 86px;
+      margin-bottom: 35px;
+      padding: 20px 0; } }
+  @media screen and (min-width: 1440px) {
+    .calendar__title {
+      margin-bottom: 0; } }
 
 .calendar__month {
   margin: 0;
   font-weight: bold;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 1;
   color: #1d2e5b; }
+  @media screen and (min-width: 768px) {
+    .calendar__month {
+      font-size: 36px; } }
 
 .calendar__arrow {
   display: flex;
@@ -2944,33 +3221,66 @@ textarea {
   .calendar__arrow:active svg {
     fill-opacity: 0.1; }
   .calendar__arrow--previous {
-    justify-content: flex-start; }
+    justify-content: flex-start;
+    margin-left: 17px; }
   .calendar__arrow--next {
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    margin-right: 17px; }
 
 .calendar__arrow svg {
   width: 9px;
   height: 18px;
   fill-opacity: 0.3; }
+  @media screen and (min-width: 768px) {
+    .calendar__arrow svg {
+      width: 18px;
+      height: 34px; } }
 
 .calendar__weekdays {
   display: grid;
   grid-template-columns: repeat(7, 31px); }
+  @media screen and (min-width: 768px) {
+    .calendar__weekdays {
+      grid-template-columns: repeat(7, 76px); } }
+  @media screen and (min-width: 1440px) {
+    .calendar__weekdays {
+      grid-template-columns: repeat(7, 139px); } }
 
 .calendar__weekday {
   height: 30px;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1;
   text-align: center;
   color: #444444; }
+  @media screen and (min-width: 768px) {
+    .calendar__weekday {
+      font-size: 18px; } }
+  @media screen and (min-width: 1440px) {
+    .calendar__weekday {
+      height: 55px;
+      padding-left: 17px;
+      line-height: 55px;
+      text-align: left; } }
   .calendar__weekday--weekend {
     color: #ff5c23; }
+
+.calendar__weekday span {
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .calendar__weekday span {
+      display: inline-block; } }
 
 .calendar__days {
   display: grid;
   grid-template-columns: repeat(7, 31px); }
+  @media screen and (min-width: 768px) {
+    .calendar__days {
+      grid-template-columns: repeat(7, 76px); } }
+  @media screen and (min-width: 1440px) {
+    .calendar__days {
+      grid-template-columns: repeat(7, 139px); } }
 
-.calendar__days input {
+.calendar__input {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -2992,20 +3302,54 @@ textarea {
   background-color: #edeff6;
   font-weight: 500;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1;
   color: #1d2e5b; }
+  @media screen and (min-width: 768px) {
+    .calendar__day {
+      width: 76px;
+      height: 71px;
+      font-size: 18px; } }
+  @media screen and (min-width: 1440px) {
+    .calendar__day {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 139px;
+      height: 71px;
+      padding: 14px 15px;
+      font-weight: normal;
+      font-size: 18px; } }
 
-.calendar__days input:checked + .calendar__day {
+.calendar__checkin,
+.calendar__checkout {
+  display: none; }
+  @media screen and (min-width: 1440px) {
+    .calendar__checkin,
+    .calendar__checkout {
+      display: inline-block;
+      color: #edeff6; } }
+
+.calendar__day-month {
+  display: none; }
+  @media screen and (min-width: 1440px) {
+    .calendar__day-month {
+      display: inline-block; } }
+
+.calendar__input:checked + .calendar__day {
   background-color: #1d2e5b;
   color: #ffffff; }
 
-.calendar__days input:disabled + .calendar__day {
+.calendar__input:disabled + .calendar__day {
   background-color: #ffffff;
   color: rgba(68, 68, 68, 0.3); }
 
-.calendar__days input:not(:disabled) + .calendar__day:hover {
+.calendar__input:not(:disabled) + .calendar__day:hover {
   border: 2px solid #ff5c23;
   cursor: pointer; }
+  @media screen and (min-width: 768px) {
+    .calendar__input:not(:disabled) + .calendar__day:hover {
+      padding: 11px 12px;
+      border-width: 4px; } }
 
 .desired-countries__item {
   position: relative;
