@@ -11,7 +11,10 @@
   }
 
   @media screen and (min-width: $desktop-width) {
+    @include top-radius(60px);
+
     margin-top: -60px;
+    padding: 49px 60px 90px;
   }
 }
 
@@ -69,4 +72,8 @@
 
 .plan-adding__step {
   margin-bottom: 10px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
 }

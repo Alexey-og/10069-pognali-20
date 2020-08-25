@@ -442,21 +442,23 @@ textarea {
   text-decoration: none;
   color: #161c35;
   order: 3; }
-  .page-header__login:hover {
-    background-color: #ffbd30; }
-  .page-header__login:active {
-    color: rgba(22, 28, 53, 0.3); }
   @media screen and (min-width: 768px) {
     .page-header__login {
       display: flex;
       width: 188px;
       min-height: 50px;
       margin: 0 0 0 auto;
+      font-size: 20px;
+      line-height: 20px;
       order: 2; } }
   @media screen and (min-width: 1440px) {
     .page-header__login {
       margin: 0;
       order: 4; } }
+  .page-header__login:hover {
+    background-color: #ffbd30; }
+  .page-header__login:active {
+    color: rgba(22, 28, 53, 0.3); }
 
 .page-header--no-js .page-header__login,
 .page-header--dropped .page-header__login {
@@ -2674,7 +2676,10 @@ textarea {
       padding: 49px 75px 123px; } }
   @media screen and (min-width: 1440px) {
     .plan-adding {
-      margin-top: -60px; } }
+      border-top-left-radius: 60px;
+      border-top-right-radius: 60px;
+      margin-top: -60px;
+      padding: 49px 60px 90px; } }
 
 .plan-adding__header {
   display: flex;
@@ -2721,6 +2726,9 @@ textarea {
 
 .plan-adding__step {
   margin-bottom: 10px; }
+  @media screen and (min-width: 768px) {
+    .plan-adding__step {
+      margin-bottom: 40px; } }
 
 .plan-step {
   padding: 23px 25px 23px;
@@ -2734,7 +2742,8 @@ textarea {
       border-radius: 30px; } }
   @media screen and (min-width: 1440px) {
     .plan-step {
-      padding: 100px 160px 106px; } }
+      padding: 100px 160px 106px;
+      border-radius: 60px; } }
 
 .plan-step__header {
   display: flex;
@@ -2772,6 +2781,9 @@ textarea {
     .plan-step__description {
       font-size: 20px;
       line-height: 24px; } }
+  @media screen and (min-width: 1440px) {
+    .plan-step__description {
+      width: 580px; } }
 
 .plan-step__steps-list {
   list-style-type: none;
@@ -2783,6 +2795,10 @@ textarea {
       display: flex;
       flex-direction: column;
       margin-left: 195px; } }
+  @media screen and (min-width: 1440px) {
+    .plan-step__steps-list {
+      margin-left: auto;
+      margin-right: 45px; } }
 
 .plan-step__step {
   position: relative;
@@ -3383,27 +3399,36 @@ textarea {
       padding: 11px 12px;
       border-width: 4px; } }
 
-@media screen and (min-width: 768px) {
-  .desired-countries {
-    position: relative;
-    padding-top: 42px;
-    border-top: 1px solid #e1e3e9; }
-    .desired-countries::before {
-      position: absolute;
-      content: "";
-      right: 137px;
-      top: 0;
-      width: 1px;
-      height: 100%;
-      background-color: #e1e3e9; }
-    .desired-countries::after {
-      position: absolute;
-      content: "";
-      right: 137px;
-      bottom: -41px;
-      width: 1px;
-      height: 41px;
-      background-image: url("/img/countries-bottom.png"); } }
+.desired-countries {
+  position: relative; }
+  @media screen and (min-width: 768px) {
+    .desired-countries {
+      padding-top: 42px;
+      border-top: 1px solid #e1e3e9; }
+      .desired-countries::before {
+        position: absolute;
+        content: "";
+        right: 137px;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background-color: #e1e3e9; }
+      .desired-countries::after {
+        position: absolute;
+        content: "";
+        right: 137px;
+        bottom: -41px;
+        width: 1px;
+        height: 41px;
+        background-image: url("/img/countries-bottom.png"); } }
+  @media screen and (min-width: 1440px) {
+    .desired-countries {
+      padding-top: 62px; }
+      .desired-countries::before {
+        right: 224px;
+        height: calc(100% + 153px); }
+      .desired-countries::after {
+        display: none; } }
 
 .desired-countries__item {
   position: relative;
@@ -3434,6 +3459,9 @@ textarea {
         right: 130px;
         width: 14px;
         height: 14px; } }
+    @media screen and (min-width: 1440px) {
+      .desired-countries__item::before {
+        right: 217px; } }
   .desired-countries__item::after {
     right: 49px;
     bottom: -16px;
@@ -3504,6 +3532,9 @@ textarea {
       padding: 20px 0 20px 25px;
       font-size: 20px;
       letter-spacing: 0.1em; } }
+  @media screen and (min-width: 1440px) {
+    .desired-countries__name {
+      margin-right: 45px; } }
   .desired-countries__name::before, .desired-countries__name::after {
     position: absolute;
     content: "";
@@ -3550,6 +3581,10 @@ textarea {
       border-color: transparent;
       background-size: 70px 47px;
       background-position: left 25px center; } }
+  @media screen and (min-width: 1440px) {
+    .desired-countries__flag {
+      width: 225px;
+      background-position: left 40px center; } }
   .desired-countries__item--choose .desired-countries__flag,
   .desired-countries__item--add .desired-countries__flag {
     display: none; }
@@ -3651,7 +3686,8 @@ textarea {
   background-color: transparent;
   stroke: #ffffff;
   stroke-opacity: 0.7;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 10; }
   .country-selection__close:hover {
     stroke-opacity: 1; }
   .country-selection__close:active {
@@ -3719,10 +3755,18 @@ textarea {
 .entertainments {
   padding: 0;
   border: none; }
+  @media screen and (min-width: 768px) {
+    .entertainments {
+      padding-top: 37px;
+      padding-right: 30px;
+      border-top: 1px solid #e1e3e9; } }
 
 .entertainments__item {
   position: relative;
   height: 258px; }
+  @media screen and (min-width: 1440px) {
+    .entertainments__item {
+      margin-right: 240px; } }
 
 .entertainments__item:not(:last-child) {
   margin-bottom: 23px; }
@@ -3734,6 +3778,13 @@ textarea {
     width: 2px;
     height: 281px;
     background-color: #1d2e5b; }
+    @media screen and (min-width: 768px) {
+      .entertainments__item:not(:last-child)::before {
+        left: auto;
+        right: -29px; } }
+    @media screen and (min-width: 1440px) {
+      .entertainments__item:not(:last-child)::before {
+        right: -46px; } }
 
 .entertainments__header {
   position: relative;
@@ -3742,6 +3793,9 @@ textarea {
   align-items: center;
   height: 24px;
   margin-bottom: 14px; }
+  @media screen and (min-width: 768px) {
+    .entertainments__header {
+      margin-bottom: 44px; } }
   .entertainments__header::before, .entertainments__header::after {
     position: absolute;
     content: "";
@@ -3752,11 +3806,23 @@ textarea {
     border-radius: 50%;
     top: 9px;
     left: -3px; }
+    @media screen and (min-width: 768px) {
+      .entertainments__header::before {
+        left: auto;
+        right: -35px;
+        width: 14px;
+        height: 14px; } }
+    @media screen and (min-width: 1440px) {
+      .entertainments__header::before {
+        right: -52px; } }
   .entertainments__header::after {
     top: 11px;
     left: -16px;
     width: 16px;
     height: 2px; }
+    @media screen and (min-width: 768px) {
+      .entertainments__header::after {
+        display: none; } }
 
 .entertainments__country {
   position: relative;
@@ -3765,10 +3831,15 @@ textarea {
   padding-left: 10px;
   font-weight: 500;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 1;
   color: #1d2e5b;
   white-space: nowrap;
   overflow: hidden; }
+  @media screen and (min-width: 768px) {
+    .entertainments__country {
+      padding-left: 0;
+      font-weight: bold;
+      font-size: 30px; } }
   .entertainments__country::after {
     position: absolute;
     content: "";
@@ -3780,6 +3851,9 @@ textarea {
     background-position: right;
     background-repeat: repeat-y;
     background-size: 50px 24px; }
+    @media screen and (min-width: 1440px) {
+      .entertainments__country::after {
+        display: none; } }
 
 .entertainments__flag {
   position: relative;
@@ -3789,6 +3863,14 @@ textarea {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 35px 24px; }
+  @media screen and (min-width: 768px) {
+    .entertainments__flag {
+      width: 70px;
+      height: 47px;
+      background-size: 70px 47px; } }
+  @media screen and (min-width: 1440px) {
+    .entertainments__flag {
+      right: -155px; } }
   .entertainments__flag--bosnia {
     background-image: url("/img/flag-bosnia.svg"); }
   .entertainments__flag--czechia {
@@ -3800,14 +3882,33 @@ textarea {
   padding: 11px 14px;
   border: 1px solid #cbced9;
   border-radius: 4px;
+  font-size: 16px;
+  line-height: 22px;
   color: #444444;
   resize: none; }
+  @media screen and (min-width: 768px) {
+    .entertainments__plan {
+      height: 140px;
+      font-size: 20px;
+      line-height: 23px; } }
+  @media screen and (min-width: 1440px) {
+    .entertainments__plan {
+      margin-right: 150px; } }
   .entertainments__plan::-moz-placeholder {
-    color: #444444;
-    opacity: 0.3; }
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba(68, 68, 68, 0.3); }
   .entertainments__plan::placeholder {
-    color: #444444;
-    opacity: 0.3; }
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba(68, 68, 68, 0.3); }
+    @media screen and (min-width: 768px) {
+      .entertainments__plan::-moz-placeholder {
+        font-size: 20px;
+        line-height: 20px; }
+      .entertainments__plan::placeholder {
+        font-size: 20px;
+        line-height: 20px; } }
 
 .filter-header {
   display: flex;

@@ -319,25 +319,27 @@
   color: $color-basic-blue;
   order: 3;
 
-  &:hover {
-    background-color: $color-special-yellow-dark;
-  }
-
-  &:active {
-    color: rgba($color-basic-blue, 0.3);
-  }
-
   @media screen and (min-width: $tablet-width) {
     display: flex;
     width: 188px;
     min-height: 50px;
     margin: 0 0 0 auto;
+    font-size: 20px;
+    line-height: 20px;
     order: 2;
   }
 
   @media screen and (min-width: $desktop-width) {
     margin: 0;
     order: 4;
+  }
+
+  &:hover {
+    background-color: $color-special-yellow-dark;
+  }
+
+  &:active {
+    color: rgba($color-basic-blue, 0.3);
   }
 }
 

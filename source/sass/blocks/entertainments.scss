@@ -1,11 +1,21 @@
 .entertainments {
   padding: 0;
   border: none;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 37px;
+    padding-right: 30px;
+    border-top: 1px solid #e1e3e9;
+  }
 }
 
 .entertainments__item {
   position: relative;
   height: 258px;
+
+  @media screen and (min-width: $desktop-width) {
+    margin-right: 240px;
+  }
 }
 
 .entertainments__item:not(:last-child) {
@@ -19,6 +29,15 @@
     width: 2px;
     height: 281px;
     background-color: $color-button-blue;
+
+    @media screen and (min-width: $tablet-width) {
+      left: auto;
+      right: -29px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      right: -46px;
+    }
   }
 }
 
@@ -29,6 +48,10 @@
   align-items: center;
   height: 24px;
   margin-bottom: 14px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 44px;
+  }
 
   &::before,
   &::after {
@@ -41,6 +64,17 @@
     @include circle(6px);
     top: 9px;
     left: -3px;
+
+    @media screen and (min-width: $tablet-width) {
+      left: auto;
+      right: -35px;
+      width: 14px;
+      height: 14px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      right: -52px;
+    }
   }
 
   &::after {
@@ -48,6 +82,10 @@
     left: -16px;
     width: 16px;
     height: 2px;
+
+    @media screen and (min-width: $tablet-width) {
+      display: none;
+    }
   }
 }
 
@@ -58,10 +96,16 @@
   padding-left: 10px;
   font-weight: 500;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 1;
   color: $color-button-blue;
   white-space: nowrap;
   overflow: hidden;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-left: 0;
+    font-weight: bold;
+    font-size: 30px;
+  }
 
   &::after {
     position: absolute;
@@ -74,6 +118,10 @@
     background-position: right;
     background-repeat: repeat-y;
     background-size: 50px 24px;
+
+    @media screen and (min-width: $desktop-width) {
+      display: none;
+    }
   }
 }
 
@@ -85,6 +133,16 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 35px 24px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 70px;
+    height: 47px;
+    background-size: 70px 47px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    right: -155px;
+  }
 
   &--bosnia {
     background-image: url("/img/flag-bosnia.svg");
@@ -101,11 +159,29 @@
   padding: 11px 14px;
   border: 1px solid #cbced9;
   border-radius: 4px;
+  font-size: 16px;
+  line-height: 22px;
   color: $color-grey-44;
   resize: none;
 
+  @media screen and (min-width: $tablet-width) {
+    height: 140px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-right: 150px;
+  }
+
   &::placeholder {
-    color: $color-grey-44;
-    opacity: 0.3;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba($color-grey-44, 0.3);
+
+    @media screen and (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 }
