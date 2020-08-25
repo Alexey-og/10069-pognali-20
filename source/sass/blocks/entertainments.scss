@@ -114,7 +114,7 @@
     right: -12px;
     width: 50px;
     height: 24px;
-    background-image: url("/img/fade-mobile.png");
+    background-image: url("../img/fade-mobile.png");
     background-position: right;
     background-repeat: repeat-y;
     background-size: 50px 24px;
@@ -145,11 +145,11 @@
   }
 
   &--bosnia {
-    background-image: url("/img/flag-bosnia.svg");
+    background-image: url("../img/flag-bosnia.svg");
   }
 
   &--czechia {
-    background-image: url("/img/flag-czechia.svg");
+    background-image: url("../img/flag-czechia.svg");
   }
 }
 

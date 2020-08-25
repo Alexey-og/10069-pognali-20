@@ -63,7 +63,7 @@
   width: 96px;
   height: 23px;
   margin-right: auto;
-  background-image: url("/img/logo-mobile-white@1x.png");
+  background-image: url("../img/logo-mobile-white@1x.png");
   background-repeat: no-repeat;
   background-position: left center;
   background-size: contain;
@@ -72,21 +72,21 @@
   @media screen and (min-width: $tablet-width) {
     width: 166px;
     height: 60px;
-    background-image: url("/img/logo-tablet-white@1x.png");
+    background-image: url("../img/logo-tablet-white@1x.png");
   }
 
   @media screen and (min-width: $desktop-width) {
     width: 200px;
     height: 60px;
-    background-image: url("/img/logo-desktop-white@1x.png");
+    background-image: url("../img/logo-desktop-white@1x.png");
   }
 
   .page-header--dropped &,
   .page-header--no-js & {
-    background-image: url("/img/logo-mobile-blue@1x.png");
+    background-image: url("../img/logo-mobile-blue@1x.png");
 
     @media screen and (min-width: $tablet-width) {
-      background-image: url("/img/logo-tablet-blue@1x.png");
+      background-image: url("../img/logo-tablet-blue@1x.png");
     }
   }
 }
@@ -97,13 +97,13 @@
   height: 19px;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("/img/icon-menu-mobile.svg");
+  background-image: url("../img/icon-menu-mobile.svg");
   background-size: 25px 11px;
   cursor: pointer;
   z-index: 100;
 
   .page-header--dropped & {
-    background-image: url("/img/icon-mobile-close.svg");
+    background-image: url("../img/icon-mobile-close.svg");
     background-size: 18px 18px;
   }
 
@@ -255,7 +255,7 @@
 }
 
 .page-header__phone::before {
-  background-image: url("/img/icon-tel.svg");
+  background-image: url("../img/icon-tel.svg");
   background-size: 16px 15px;
 
   @media screen and (min-width: $tablet-width) {
@@ -263,14 +263,14 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    background-image: url("/img/icon-call.svg");
+    background-image: url("../img/icon-call.svg");
     background-color: $color-special-orange;
     background-size: 18px 18px;
   }
 }
 
 .page-header__email::before {
-  background-image: url("/img/icon-email.svg");
+  background-image: url("../img/icon-email.svg");
   background-size: 18px 12px;
 
   @media screen and (min-width: $tablet-width) {
@@ -278,7 +278,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    background-image: url("/img/icon-mail.svg");
+    background-image: url("../img/icon-mail.svg");
     background-color: $color-special-yellow-dark;
     background-size: 16px 14px;
   }

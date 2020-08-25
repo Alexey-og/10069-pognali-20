@@ -23,7 +23,7 @@
       bottom: -41px;
       width: 1px;
       height: 41px;
-      background-image: url("/img/countries-bottom.png");
+      background-image: url("../img/countries-bottom.png");
     }
   }
 
@@ -86,7 +86,7 @@
     bottom: -16px;
     width: 7px;
     height: 10px;
-    background-image: url("/img/arrow-down.svg");
+    background-image: url("../img/arrow-down.svg");
 
     @media screen and (min-width: $tablet-width) {
       display: none;
@@ -188,7 +188,7 @@
     right: 0;
     width: 55px;
     height: 32px;
-    background-image: url("/img/fade-mobile.png");
+    background-image: url("../img/fade-mobile.png");
     background-position: right;
     background-repeat: repeat-y;
     background-size: 55px 32px;
@@ -198,7 +198,7 @@
     right: 14px;
     width: 14px;
     height: 7px;
-    background-image: url("/img/dropdown-form.svg");
+    background-image: url("../img/dropdown-form.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 14px 7px;
@@ -247,11 +247,11 @@
   }
 
   &--bosnia {
-    background-image: url("/img/flag-bosnia.svg");
+    background-image: url("../img/flag-bosnia.svg");
   }
 
   &--czechia {
-    background-image: url("/img/flag-czechia.svg");
+    background-image: url("../img/flag-czechia.svg");
   }
 }
 
