@@ -33,7 +33,7 @@
   flex-shrink: 0;
   width: 96px;
   height: 18px;
-  background-image: url("/img/logo-mobile-blue@1x.png");
+  background-image: url("../img/logo-mobile-blue@1x.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -42,12 +42,12 @@
     width: 164px;
     height: 60px;
     margin-right: 30px;
-    background-image: url("/img/logo-tablet-blue@1x.png");
+    background-image: url("../img/logo-tablet-blue@1x.png");
   }
 
   @media screen and (min-width: $desktop-width) {
     width: 200px;
-    background-image: url("/img/logo-desktop-blue@1x.png");
+    background-image: url("../img/logo-desktop-blue@1x.png");
   }
 }
 

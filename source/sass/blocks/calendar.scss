@@ -2,18 +2,33 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 42px;
+  min-height: 42px;
   margin-bottom: 17px;
+  padding: 10px 0;
   border-top: 1px solid #d6d9e6;
   border-bottom: 1px solid #d6d9e6;
+
+  @media screen and (min-width: $tablet-width) {
+    min-height: 86px;
+    margin-bottom: 35px;
+    padding: 20px 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .calendar__month {
   margin: 0;
   font-weight: bold;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 1;
   color: $color-button-blue;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 36px;
+  }
 }
 
 .calendar__arrow {
@@ -32,10 +47,12 @@
 
   &--previous {
     justify-content: flex-start;
+    margin-left: 17px;
   }
 
   &--next {
     justify-content: flex-end;
+    margin-right: 17px;
   }
 }
 
@@ -43,31 +60,71 @@
   width: 9px;
   height: 18px;
   fill-opacity: 0.3;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 18px;
+    height: 34px;
+  }
 }
 
 .calendar__weekdays {
   display: grid;
   grid-template-columns: repeat(7, 31px);
+
+  @media screen and (min-width: $tablet-width) {
+    grid-template-columns: repeat(7, 76px);
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    grid-template-columns: repeat(7, 139px);
+  }
 }
 
 .calendar__weekday {
   height: 30px;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1;
   text-align: center;
-  color: $color-special-grey;
+  color: $color-grey-44;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    height: 55px;
+    padding-left: 17px;
+    line-height: 55px;
+    text-align: left;
+  }
 
   &--weekend {
     color: #ff5c23;
   }
 }
 
+.calendar__weekday span {
+  display: none;
+
+  @media screen and (min-width: $tablet-width) {
+    display: inline-block;
+  }
+}
+
 .calendar__days {
   display: grid;
   grid-template-columns: repeat(7, 31px);
+
+  @media screen and (min-width: $tablet-width) {
+    grid-template-columns: repeat(7, 76px);
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    grid-template-columns: repeat(7, 139px);
+  }
 }
 
-.calendar__days input {
+.calendar__input {
   @include visually-hidden;
 }
 
@@ -81,21 +138,61 @@
   background-color: $color-basic-blue-light;
   font-weight: 500;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1;
   color: $color-button-blue;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 76px;
+    height: 71px;
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 139px;
+    height: 71px;
+    padding: 14px 15px;
+    font-weight: normal;
+    font-size: 18px;
+  }
 }
 
-.calendar__days input:checked + .calendar__day {
+.calendar__checkin,
+.calendar__checkout {
+  display: none;
+
+  @media screen and (min-width: $desktop-width) {
+    display: inline-block;
+    color: $color-basic-blue-light;
+  }
+}
+
+.calendar__day-month {
+  display: none;
+
+  @media screen and (min-width: $desktop-width) {
+    display: inline-block;
+  }
+}
+
+.calendar__input:checked + .calendar__day {
   background-color: $color-button-blue;
   color: $color-white;
 }
 
-.calendar__days input:disabled + .calendar__day {
+.calendar__input:disabled + .calendar__day {
   background-color: $color-white;
   color: rgba($color-grey-44, 0.3);
 }
 
-.calendar__days input:not(:disabled) + .calendar__day:hover {
+.calendar__input:not(:disabled) + .calendar__day:hover {
   border: 2px solid #ff5c23;
   cursor: pointer;
+
+  @media screen and (min-width: $tablet-width) {
+    padding: 11px 12px;
+    border-width: 4px;
+  }
 }

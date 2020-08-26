@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Направления</title>
 </head>
 <body>
@@ -88,77 +88,75 @@
         </fieldset>
       </div>
       <section class="planned-trips">
-        <div class="plan-adding__header">
-          <h2 class="heading-2 planned-trips__title">Мои планы:</h2>
+        <h2 class="heading-2 planned-trips__title">Мои планы:</h2>
+        <div class="planned-trips__item">
+          <div class="planned-trips__header">
+            <p class="planned-trips__number">1.</p>
+            <p class="planned-trips__countries">Франция, Италия</p>
+          </div>
+          <div class="planned-trips__info">
+            <p class="planned-trips__travelmates">3 попутчика</p>
+            <p class="planned-trips__dates">26 мар &mdash; 29 мар</p>
+            <a class="planned-trips__change" href="">изменить</a>
+          </div>
         </div>
-        <div class="planned-trips__item trip">
-          <div class="trip__header">
-            <p class="trip__number">1.</p>
-            <p class="trip__countries">Франция, Италия</p>
+        <div class="planned-trips__item">
+          <div class="planned-trips__header">
+            <p class="planned-trips__number">2.</p>
+            <p class="planned-trips__countries">Таиланд, Индонезия</p>
           </div>
-          <div class="trip__info">
-            <p class="trip__travelmates">3 попутчика</p>
-            <p class="trip__dates">26 мар &mdash; 29 мар</p>
+          <div class="planned-trips__info">
+            <p class="planned-trips__travelmates">1 попутчик</p>
+            <p class="planned-trips__dates">1 июл &mdash; 15 июл</p>
+            <a class="planned-trips__change" href="">изменить</a>
           </div>
-          <a class="trip__change" href="">изменить</a>
-        </div>
-        <div class="planned-trips__item trip">
-          <div class="trip__header">
-            <p class="trip__number">2.</p>
-            <p class="trip__countries">Таиланд, Индонезия</p>
-          </div>
-          <div class="trip__info">
-            <p class="trip__travelmates">1 попутчик</p>
-            <p class="trip__dates">1 июл &mdash; 15 июл</p>
-          </div>
-          <a class="trip__change" href="">изменить</a>
         </div>
       </section>
       <section class="plan-adding">
         <div class="plan-adding__header">
-          <h2 class="heading-2">Добавить план:</h2>
+          <h2 class="heading-2 plan-adding__title">Добавить план:</h2>
           <ul class="plan-adding__dots">
             <li class="plan-adding__dot plan-adding__dot--current"></li>
             <li class="plan-adding__dot"></li>
             <li class="plan-adding__dot"></li>
           </ul>
         </div>
-        <section class="plan-adding__step plan-step plan-step--calendar" id="step-1">
-          <div class="plan-step__header step-header">
-            <div class="step-header__title-wrapper">
-              <h3 class="step-header__title"><span class="step-header__step-number">Шаг 1.</span>Даты пребывания</h3>
-              <p class="step-header__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+        <section class="plan-adding__step plan-step" id="step-1">
+          <div class="plan-step__header">
+            <div class="plan-step__title-wrapper">
+              <h3 class="plan-step__title"><span>Шаг 1.</span>Даты пребывания</h3>
+              <p class="plan-step__description">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать в поездку и ее предполагаемую длительность.</p>
             </div>
-            <ul class="step-header__steps-list">
-              <li class="step-header__step step-header__step--current">Даты</li>
-              <li class="step-header__step">Маршрут</li>
-              <li class="step-header__step">Развлечения</li>
+            <ul class="plan-step__steps-list">
+              <li class="plan-step__step plan-step__step--current">Даты</li>
+              <li class="plan-step__step">Маршрут</li>
+              <li class="plan-step__step">Развлечения</li>
             </ul>
           </div>
           <article class="plan-step__inputs step-inputs">
             <h4 class="visually-hidden">Выбор количества попутчиков и длительности поездки</h4>
-            <div class="step-inputs__item">
+            <div class="step-inputs__item step-inputs__item--travelmates">
               <label class="step-inputs__label" for="travelmates-number">Ищу попутчиков:</label>
               <div class="step-inputs__wrapper">
                 <button class="step-inputs__button step-inputs__button--minus" type="button" aria-label="Уменьшить количество попутчиков">
-                  <svg width="14" height="2"><use xlink:href="#icon-minus"></use></svg>
+                  <svg class="visually-hidden" width="14" height="2"><use xlink:href="#icon-minus"></use></svg>
                 </button>
                 <input class="step-inputs__input" type="text" name="travelmates-number" id="travelmates-number" value="2">
                 <button class="step-inputs__button step-inputs__button--plus" type="button" aria-label="Увеличить количество попутчиков">
-                  <svg width="14" height="14"><use xlink:href="#icon-plus"></use></svg>
+                  <svg class="visually-hidden" width="14" height="14"><use xlink:href="#icon-plus"></use></svg>
                 </button>
               </div>
               <div class="step-inputs__unit">чел.</div>
             </div>
-            <div class="step-inputs__item">
+            <div class="step-inputs__item step-inputs__item--duration">
               <label class="step-inputs__label" for="trip-duration">Длительность:</label>
               <div class="step-inputs__wrapper">
                 <button class="step-inputs__button step-inputs__button--minus" type="button" aria-label="Уменьшить длительность поездки">
-                  <svg width="14" height="2"><use xlink:href="#icon-minus"></use></svg>
+                  <svg class="visually-hidden" width="14" height="2"><use xlink:href="#icon-minus"></use></svg>
                 </button>
                 <input class="step-inputs__input" type="text" name="trip-duration" id="trip-duration" value="2">
                 <button class="step-inputs__button step-inputs__button--plus" type="button" aria-label="Увеличить длительность поездки">
-                  <svg width="14" height="14"><use xlink:href="#icon-plus"></use></svg>
+                  <svg class="visually-hidden" width="14" height="14"><use xlink:href="#icon-plus"></use></svg>
                 </button>
               </div>
               <div class="step-inputs__unit">дн.</div>
@@ -180,72 +178,72 @@
             </div>
             <div class="calendar__list">
               <div class="calendar__weekdays">
-                <div class="calendar__weekday" aria-label="Понедельник">П<span class="mobile-hidden">н</span></div>
-                <div class="calendar__weekday" aria-label="Вторник">В<span class="mobile-hidden">т</span></div>
-                <div class="calendar__weekday" aria-label="Среда">С<span class="mobile-hidden">р</span></div>
-                <div class="calendar__weekday" aria-label="Четверг">Ч<span class="mobile-hidden">т</span></div>
-                <div class="calendar__weekday" aria-label="Пятница">П<span class="mobile-hidden">т</span></div>
-                <div class="calendar__weekday calendar__weekday--weekend" aria-label="Суббота">С<span class="mobile-hidden">б</span></div>
-                <div class="calendar__weekday calendar__weekday--weekend" aria-label="Воскресенье">В<span class="mobile-hidden">с</span></div>
+                <div class="calendar__weekday" aria-label="Понедельник">П<span>н</span></div>
+                <div class="calendar__weekday" aria-label="Вторник">В<span>т</span></div>
+                <div class="calendar__weekday" aria-label="Среда">С<span>р</span></div>
+                <div class="calendar__weekday" aria-label="Четверг">Ч<span>т</span></div>
+                <div class="calendar__weekday" aria-label="Пятница">П<span>т</span></div>
+                <div class="calendar__weekday calendar__weekday--weekend" aria-label="Суббота">С<span>б</span></div>
+                <div class="calendar__weekday calendar__weekday--weekend" aria-label="Воскресенье">В<span>с</span></div>
               </div>
               <div class="calendar__days">
-                <input type="checkbox" name="feb-23" id="feb-23" disabled><label class="calendar__day" for="feb-23">23</label>
-                <input type="checkbox" name="feb-24" id="feb-24" disabled><label class="calendar__day" for="feb-24">24</label>
-                <input type="checkbox" name="feb-25" id="feb-25" disabled><label class="calendar__day" for="feb-25">25</label>
-                <input type="checkbox" name="feb-26" id="feb-26" disabled><label class="calendar__day" for="feb-26">26</label>
-                <input type="checkbox" name="feb-27" id="feb-27" disabled><label class="calendar__day" for="feb-27">27</label>
-                <input type="checkbox" name="feb-28" id="feb-28" disabled><label class="calendar__day" for="feb-28">28</label>
-                <input type="checkbox" name="march-1" id="march-1" disabled><label class="calendar__day" for="march-1">1<span class="mobile-hidden"> мар</span></label>
-                <input type="checkbox" name="march-2" id="march-2" disabled><label class="calendar__day" for="march-2">2</label>
-                <input type="checkbox" name="march-3" id="march-3" disabled><label class="calendar__day" for="march-3">3</label>
-                <input type="checkbox" name="march-4" id="march-4" disabled><label class="calendar__day" for="march-4">4</label>
-                <input type="checkbox" name="march-5" id="march-5" disabled><label class="calendar__day" for="march-5">5</label>
-                <input type="checkbox" name="march-6" id="march-6" disabled><label class="calendar__day" for="march-6">6</label>
-                <input type="checkbox" name="march-7" id="march-7" disabled><label class="calendar__day" for="march-7">7</label>
-                <input type="checkbox" name="march-8" id="march-8" disabled><label class="calendar__day" for="march-8">8</label>
-                <input type="checkbox" name="march-9" id="march-9" disabled><label class="calendar__day" for="march-9">9</label>
-                <input type="checkbox" name="march-10" id="march-10" disabled><label class="calendar__day" for="march-10">10</label>
-                <input type="checkbox" name="march-11" id="march-11" disabled><label class="calendar__day" for="march-11">11</label>
-                <input type="checkbox" name="march-12" id="march-12" disabled><label class="calendar__day" for="march-12">12</label>
-                <input type="checkbox" name="march-13" id="march-13" disabled><label class="calendar__day" for="march-13">13</label>
-                <input type="checkbox" name="march-14" id="march-14" disabled><label class="calendar__day" for="march-14">14</label>
-                <input type="checkbox" name="march-15" id="march-15" disabled><label class="calendar__day" for="march-15">15</label>
-                <input type="checkbox" name="march-16" id="march-16" disabled><label class="calendar__day" for="march-16">16</label>
-                <input type="checkbox" name="march-17" id="march-17" disabled><label class="calendar__day" for="march-17">17</label>
-                <input type="checkbox" name="march-18" id="march-18" disabled><label class="calendar__day" for="march-18">18</label>
-                <input type="checkbox" name="march-19" id="march-19" disabled><label class="calendar__day" for="march-19">19</label>
-                <input type="checkbox" name="march-20" id="march-20" disabled><label class="calendar__day" for="march-20">20</label>
-                <input type="checkbox" name="march-21" id="march-21" disabled><label class="calendar__day" for="march-21">21</label>
-                <input type="checkbox" name="march-22" id="march-22" disabled><label class="calendar__day" for="march-22">22</label>
-                <input type="checkbox" name="march-23" id="march-23" disabled><label class="calendar__day" for="march-23">23</label>
-                <input type="checkbox" name="march-24" id="march-24" disabled><label class="calendar__day" for="march-24">24</label>
-                <input type="checkbox" name="march-25" id="march-25" disabled><label class="calendar__day" for="march-25">25</label>
-                <input type="checkbox" name="march-26" id="march-26" checked><label class="calendar__day" for="march-26">26</label>
-                <input type="checkbox" name="march-27" id="march-27" checked><label class="calendar__day" for="march-27">27</label>
-                <input type="checkbox" name="march-28" id="march-28" checked><label class="calendar__day" for="march-28">28</label>
-                <input type="checkbox" name="march-29" id="march-29"><label class="calendar__day" for="march-29">29</label>
-                <input type="checkbox" name="march-30" id="march-30"><label class="calendar__day" for="march-30">30</label>
-                <input type="checkbox" name="march-31" id="march-31"><label class="calendar__day" for="march-31">31</label>
-                <input type="checkbox" name="april-1" id="april-1"><label class="calendar__day" for="april-1">1<span class="mobile-hidden"> апр</span></label>
-                <input type="checkbox" name="april-2" id="april-2"><label class="calendar__day" for="april-2">2</label>
-                <input type="checkbox" name="april-3" id="april-3"><label class="calendar__day" for="april-3">3</label>
-                <input type="checkbox" name="april-4" id="april-4"><label class="calendar__day" for="april-4">4</label>
-                <input type="checkbox" name="april-5" id="april-5"><label class="calendar__day" for="april-5">5</label>
+                <input class="calendar__input" type="checkbox" name="feb-23" id="feb-23" disabled><label class="calendar__day" for="feb-23">23</label>
+                <input class="calendar__input" type="checkbox" name="feb-24" id="feb-24" disabled><label class="calendar__day" for="feb-24">24</label>
+                <input class="calendar__input" type="checkbox" name="feb-25" id="feb-25" disabled><label class="calendar__day" for="feb-25">25</label>
+                <input class="calendar__input" type="checkbox" name="feb-26" id="feb-26" disabled><label class="calendar__day" for="feb-26">26</label>
+                <input class="calendar__input" type="checkbox" name="feb-27" id="feb-27" disabled><label class="calendar__day" for="feb-27">27</label>
+                <input class="calendar__input" type="checkbox" name="feb-28" id="feb-28" disabled><label class="calendar__day" for="feb-28">28</label>
+                <input class="calendar__input" type="checkbox" name="march-1" id="march-1" disabled><label class="calendar__day" for="march-1">1<span class="mobile-hidden"> мар</span></label>
+                <input class="calendar__input" type="checkbox" name="march-2" id="march-2" disabled><label class="calendar__day" for="march-2">2</label>
+                <input class="calendar__input" type="checkbox" name="march-3" id="march-3" disabled><label class="calendar__day" for="march-3">3</label>
+                <input class="calendar__input" type="checkbox" name="march-4" id="march-4" disabled><label class="calendar__day" for="march-4">4</label>
+                <input class="calendar__input" type="checkbox" name="march-5" id="march-5" disabled><label class="calendar__day" for="march-5">5</label>
+                <input class="calendar__input" type="checkbox" name="march-6" id="march-6" disabled><label class="calendar__day" for="march-6">6</label>
+                <input class="calendar__input" type="checkbox" name="march-7" id="march-7" disabled><label class="calendar__day" for="march-7">7</label>
+                <input class="calendar__input" type="checkbox" name="march-8" id="march-8" disabled><label class="calendar__day" for="march-8">8</label>
+                <input class="calendar__input" type="checkbox" name="march-9" id="march-9" disabled><label class="calendar__day" for="march-9">9</label>
+                <input class="calendar__input" type="checkbox" name="march-10" id="march-10" disabled><label class="calendar__day" for="march-10">10</label>
+                <input class="calendar__input" type="checkbox" name="march-11" id="march-11" disabled><label class="calendar__day" for="march-11">11</label>
+                <input class="calendar__input" type="checkbox" name="march-12" id="march-12" disabled><label class="calendar__day" for="march-12">12</label>
+                <input class="calendar__input" type="checkbox" name="march-13" id="march-13" disabled><label class="calendar__day" for="march-13">13</label>
+                <input class="calendar__input" type="checkbox" name="march-14" id="march-14" disabled><label class="calendar__day" for="march-14">14</label>
+                <input class="calendar__input" type="checkbox" name="march-15" id="march-15" disabled><label class="calendar__day" for="march-15">15</label>
+                <input class="calendar__input" type="checkbox" name="march-16" id="march-16" disabled><label class="calendar__day" for="march-16">16</label>
+                <input class="calendar__input" type="checkbox" name="march-17" id="march-17" disabled><label class="calendar__day" for="march-17">17</label>
+                <input class="calendar__input" type="checkbox" name="march-18" id="march-18" disabled><label class="calendar__day" for="march-18">18</label>
+                <input class="calendar__input" type="checkbox" name="march-19" id="march-19" disabled><label class="calendar__day" for="march-19">19</label>
+                <input class="calendar__input" type="checkbox" name="march-20" id="march-20" disabled><label class="calendar__day" for="march-20">20</label>
+                <input class="calendar__input" type="checkbox" name="march-21" id="march-21" disabled><label class="calendar__day" for="march-21">21</label>
+                <input class="calendar__input" type="checkbox" name="march-22" id="march-22" disabled><label class="calendar__day" for="march-22">22</label>
+                <input class="calendar__input" type="checkbox" name="march-23" id="march-23" disabled><label class="calendar__day" for="march-23">23</label>
+                <input class="calendar__input" type="checkbox" name="march-24" id="march-24" disabled><label class="calendar__day" for="march-24">24</label>
+                <input class="calendar__input" type="checkbox" name="march-25" id="march-25" disabled><label class="calendar__day" for="march-25">25</label>
+                <input class="calendar__input" type="checkbox" name="march-26" id="march-26" checked><label class="calendar__day" for="march-26">26<span class="calendar__checkin">Заезд</span></label>
+                <input class="calendar__input" type="checkbox" name="march-27" id="march-27" checked><label class="calendar__day" for="march-27">27</label>
+                <input class="calendar__input" type="checkbox" name="march-28" id="march-28" checked><label class="calendar__day" for="march-28">28<span class="calendar__checkout">Выезд</span></label>
+                <input class="calendar__input" type="checkbox" name="march-29" id="march-29"><label class="calendar__day" for="march-29">29</label>
+                <input class="calendar__input" type="checkbox" name="march-30" id="march-30"><label class="calendar__day" for="march-30">30</label>
+                <input class="calendar__input" type="checkbox" name="march-31" id="march-31"><label class="calendar__day" for="march-31">31</label>
+                <input class="calendar__input" type="checkbox" name="april-1" id="april-1"><label class="calendar__day" for="april-1"><div>1<span class="calendar__day-month">&nbsp;апр</span></div></label>
+                <input class="calendar__input" type="checkbox" name="april-2" id="april-2"><label class="calendar__day" for="april-2">2</label>
+                <input class="calendar__input" type="checkbox" name="april-3" id="april-3"><label class="calendar__day" for="april-3">3</label>
+                <input class="calendar__input" type="checkbox" name="april-4" id="april-4"><label class="calendar__day" for="april-4">4</label>
+                <input class="calendar__input" type="checkbox" name="april-5" id="april-5"><label class="calendar__day" for="april-5">5</label>
               </div>
             </div>
           </article>
           <a class="button plan-step__button" href="#step-2">Следующий шаг</a>
         </section>
         <section class="plan-adding__step plan-step" id="step-2">
-          <div class="plan-step__header step-header">
-            <div class="step-header__title-wrapper">
-              <h3 class="step-header__title"><span class="step-header__step-number">Шаг 2.</span>Маршрут</h3>
-              <p class="step-header__description">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+          <div class="plan-step__header">
+            <div class="plan-step__title-wrapper">
+              <h3 class="plan-step__title"><span>Шаг 2.</span>Маршрут</h3>
+              <p class="plan-step__description">Укажите страны, которые вы хотели посетить. Это&nbsp;может&nbsp;быть&nbsp;одна&nbsp;или сразу несколько.</p>
             </div>
-            <ul class="step-header__steps-list">
-              <li class="step-header__step">Даты</li>
-              <li class="step-header__step step-header__step--current">Маршрут</li>
-              <li class="step-header__step">Развлечения</li>
+            <ul class="plan-step__steps-list">
+              <li class="plan-step__step">Даты</li>
+              <li class="plan-step__step plan-step__step--current">Маршрут</li>
+              <li class="plan-step__step">Развлечения</li>
             </ul>
           </div>
           <article class="plan-step__countries desired-countries">
@@ -254,28 +252,28 @@
               <a class="desired-countries__name" href="">Босния и Герцеговина</a>
               <div class="desired-countries__flag desired-countries__flag--bosnia"></div>
               <a class="desired-countries__close" aria-label="Удалить выбранную страну">
-                <svg width="9" height="9"><use xlink:href="#icon-close"></use></svg>
+                <svg class="desired-countries__icon-close" width="9" height="9"><use xlink:href="#icon-close"></use></svg>
               </a>
             </div>
             <div class="desired-countries__item">
               <a class="desired-countries__name" href="">Чехия</a>
               <div class="desired-countries__flag desired-countries__flag--czechia">
               <a class="desired-countries__close" aria-label="Удалить выбранную страну">
-                <svg width="9" height="9"><use xlink:href="#icon-close"></use></svg>
+                <svg class="desired-countries__icon-close" width="9" height="9"><use xlink:href="#icon-close"></use></svg>
               </a>
               </div>
             </div>
             <div class="desired-countries__item desired-countries__item--choose">
               <a class="desired-countries__name" href="">Выберите страну</a>
-              <div class="desired-countries__flag hidden"></div>
+              <div class="desired-countries__flag"></div>
               <a class="desired-countries__close" aria-label="Удалить выбранную страну">
-                <svg width="9" height="9"><use xlink:href="#icon-close"></use></svg>
+                <svg class="desired-countries__icon-close" width="9" height="9"><use xlink:href="#icon-close"></use></svg>
               </a>
               <section class="country-selection hidden">
                 <div class="country-selection__header">
                   <h5 class="country-selection__title">Выберите страну</h5>
                   <a class="country-selection__close">
-                    <svg width="8" height="8"><use xlink:href="#icon-close"></use></svg>
+                    <svg class="desired-countries__icon-close" width="8" height="8"><use xlink:href="#icon-close"></use></svg>
                   </a>
                 </div>
                 <fieldset class="country-selection__fieldset">
@@ -528,29 +526,27 @@
             </div>
             <div class="desired-countries__item desired-countries__item--add">
               <a class="desired-countries__name" href="">Добавить страну</a>
-              <div class="desired-countries__flag hidden"></div>
+              <div class="desired-countries__flag"></div>
               <a class="desired-countries__close" aria-label="Удалить выбранную страну">
-                <svg width="9" height="9"><use xlink:href="#icon-close"></use></svg>
+                <svg class="desired-countries__icon-close" width="9" height="9"><use xlink:href="#icon-close"></use></svg>
               </a>
             </div>
           </article>
           <div class="plan-step__buttons">
             <a class="button plan-step__button" href="#step-3">Следующий шаг</a>
-            <div class="plan-step__back">
-              <a class="plan-step__step-back" href="#step-1">На шаг назад</a>
-            </div>
+            <a class="plan-step__step-back" href="#step-1">На шаг назад</a>
           </div>
         </section>
         <section class="plan-adding__step plan-step" id="step-3">
-          <div class="plan-step__header step-header">
-            <div class="step-header__title-wrapper">
-              <h3 class="step-header__title"><span class="step-header__step-number">Шаг 3.</span>Развлечения</h3>
-              <p class="step-header__description">Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+          <div class="plan-step__header">
+            <div class="plan-step__title-wrapper">
+              <h3 class="plan-step__title"><span>Шаг 3.</span>Развлечения</h3>
+              <p class="plan-step__description">Наконец, расскажите о своих планах времяпровождения. Можно&nbsp;писать в свободной форме и ставить тэги.</p>
             </div>
-            <ul class="step-header__steps-list">
-              <li class="step-header__step">Даты</li>
-              <li class="step-header__step">Маршрут</li>
-              <li class="step-header__step step-header__step--current">Развлечения</li>
+            <ul class="plan-step__steps-list">
+              <li class="plan-step__step">Даты</li>
+              <li class="plan-step__step">Маршрут</li>
+              <li class="plan-step__step plan-step__step--current">Развлечения</li>
             </ul>
           </div>
           <fieldset class="plan-step__entertainments entertainments">

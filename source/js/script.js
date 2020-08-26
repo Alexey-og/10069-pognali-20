@@ -11,6 +11,10 @@ var filterExpand = document.querySelector(".filter-header__expand");
 var filterCollapse = document.querySelector(".filter-header__collapse");
 var filterCloseButton = document.querySelector(".filter__close-button");
 
+var countryChooseButton = document.querySelector(".desired-countries__item--choose");
+var countrySelection = document.querySelector(".country-selection");
+var countrySelectionCloseButton = document.querySelector(".country-selection__close");
+
 /* var travelmateFilterItem = document.querySelector(".travelmate-filter__item");
 var travelmateFilterTitle = document.querySelector(".travelmate-filter__title"); */
 
@@ -61,17 +65,16 @@ if (filterCloseButton) {
   });
 }
 
-/* travelmateFilterTitle.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  travelmateFilterItem.classList.toggle("travelmate-filter__item--rolled");
-}); */
-
-
-/* if (filterLetters) {
-  filterLetters.addEventListener("click", function (evt) {
+if (countryChooseButton) {
+  countryChooseButton.addEventListener("click", function (evt) {
     evt.preventDefault();
-    if (evt.target.classList.contains("filter__letter")) {
-      filterCountries[filterLetter[evt.target]].classList.toggle("hidden");
-    };
+    countrySelection.classList.remove("hidden");
   });
-} */
+}
+
+if (countryChooseButton) {
+  countrySelectionCloseButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    countrySelection.classList.add("hidden");
+  });
+}

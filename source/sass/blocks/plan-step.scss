@@ -1,20 +1,154 @@
 .plan-step {
-  padding: 23px 25px 17px;
+  padding: 23px 25px 23px;
   border-radius: 10px;
   background-color: $color-white;
 
   &--calendar {
     padding-bottom: 25px;
   }
+
+  @media screen and (min-width: $tablet-width) {
+    padding: 48px 43px 54px;
+    border-radius: 30px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 100px 160px 106px;
+    border-radius: 60px;
+  }
 }
 
-.plan-step__inputs,
+.plan-step__header {
+  display: flex;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 38px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 53px;
+  }
+}
+
+.plan-step__title {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 16px 0;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1;
+  color: $color-button-blue;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 35px;
+    font-size: 36px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.plan-step__title span {
+  margin-right: 0.5em;
+}
+
+.plan-step__description {
+  margin: 0;
+  color: $color-grey-44;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 580px;
+  }
+}
+
+.plan-step__steps-list {
+  @include list-reset;
+
+  display: none;
+
+  @media screen and (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    margin-left: 195px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-left: auto;
+    margin-right: 45px;
+  }
+}
+
+.plan-step__step {
+  position: relative;
+  display: inline-flex;
+  margin-bottom: 25px;
+  padding-left: 42px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba($color-black, 0.6);
+
+  &::before {
+    @include circle(6px);
+
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba($color-button-blue, 0.3);
+  }
+}
+
+.plan-step__step:last-of-type {
+  margin-bottom: 0;
+}
+
+.plan-step__step--current {
+  @media screen and (min-width: $desktop-width) {
+    color: $color-black;
+
+    &::before {
+      background-color: $color-button-blue;
+    }
+  }
+}
+
+.plan-step__inputs {
+  margin: 0 0 25px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 35px;
+  }
+}
+
 .plan-step__countries {
   margin: 0 0 25px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 50px;
+  }
 }
 
 .plan-step__calendar {
   margin-bottom: 25px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 47px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 57px;
+  }
 }
 
 .plan-step__entertainments {
@@ -24,6 +158,12 @@
 .plan-step__buttons {
   display: flex;
   flex-direction: column;
+
+  @media screen and (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .plan-step__button {
@@ -34,36 +174,69 @@
   padding: 7px;
   border-width: 0;
   border-radius: 20px;
-  background-image: none;
   font-size: 17px;
   line-height: 20px;
   text-transform: uppercase;
   color: $color-button-blue;
 
-  &:hover,
-  &:active {
+  @media screen and (max-width: 768px) {
     background-image: none;
+
+    &:hover,
+    &:active {
+      background-image: none;
+    }
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    justify-content: flex-start;
+    width: 284px;
+    min-height: 80px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 20px 33px;
+    background-position: right 37px top 50%;
+    font-size: 24px;
+    text-transform: none;
   }
 }
 
-.plan-step__back {
-  @include flex-center;
-  margin-top: 17px;
-}
-
 .plan-step__step-back {
+  @include flex-center;
+
+  position: relative;
+  margin-top: 17px;
+  padding-left: 36px;
   font-weight: bold;
   font-size: 17px;
-  line-height: 17px;
+  line-height: 1;
   text-transform: uppercase;
   text-decoration: none;
   color: $color-button-blue;
 
+  @media screen and (min-width: $tablet-width) {
+    margin: 0;
+    font-size: 24px;
+    text-transform: none;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 14px;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 7L12 0V14L0 7Z' fill='%231D2E5B'/%3E%3C/svg%3E");
+      background-size: 12px 14px;
+    }
+  }
+
   &:hover {
-    color: rgba($color-button-blue, 0.7);
+    opacity: 0.7;
   }
 
   &:active {
-    color: rgba($color-button-blue, 0.3);
+    opacity: 0.3;
   }
 }
