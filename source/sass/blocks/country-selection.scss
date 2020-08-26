@@ -8,8 +8,20 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0 2px 16px rgba(#d4d9eb, 0.25);
-  background: $color-white;
+  background-color: $color-white;
   z-index: 2;
+
+  @media screen and (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 575px;
+    box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18);
+    background-color: transparent;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 730px;
+  }
 
   &::after {
     @include circle(24px);
@@ -20,6 +32,10 @@
     top: -12px;
     background-color: $color-white;
     z-index: 1;
+
+    @media screen and (min-width: $tablet-width) {
+      display: none;
+    }
   }
 }
 
@@ -34,16 +50,31 @@
   min-height: 42px;
   background-color: $color-button-blue;
   z-index: 3;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 370px;
+    min-height: 70px;
+    padding: 20px 25px 20px 25px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 730px;
+  }
 }
 
 .country-selection__title {
   margin: 0;
   font-weight: 500;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: $color-white;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+  }
 }
 
 .country-selection__close {
@@ -72,15 +103,46 @@
   padding: 0;
   border: none;
   background-color: transparent;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 370px;
+    padding: 35px 70px 33px 27px;
+    border-right: 1px solid #cbced9;
+    border-bottom-left-radius: 4px;
+    background-color: $color-white;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 490px;
+    padding: 34px 70px 36px 25px;
+  }
 }
 
 .country-selection__letters {
   display: grid;
   grid-template-columns: repeat(5, 44px);
+  width: 220px;
   border-right: 1px solid #cbced9;
+
+  @media screen and (min-width: $tablet-width) {
+    grid-template-columns: repeat(5, 53px);
+    width: 265px;
+    border-top: 1px solid #cbced9;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    grid-template-columns: repeat(5, 60px);
+    column-gap: 16px;
+    row-gap: 14px;
+    border: none;
+  }
 }
 
-.country-selection__letters input:checked + .country-selection__letter {
+.country-selection__input {
+  @include visually-hidden;
+}
+
+.country-selection__input:checked + .country-selection__letter {
   border-color: #1d2e5b;
   background-color: #1d2e5b;
   color: $color-white;
@@ -93,11 +155,21 @@
   border-left: 1px solid #cbced9;
   border-bottom: 1px solid #cbced9;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 1;
   text-transform: uppercase;
   color: $color-button-blue;
   cursor: pointer;
+
+  @media screen and (min-width: $tablet-width) {
+    height: 68px;
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    border: 1px solid #cbced9;
+    border-radius: 4px;
+  }
 
   &:hover {
     background-color: $color-basic-blue-light;
@@ -115,8 +187,18 @@
 
   padding: 19px 19px 27px 19px;
   border: 1px solid #cbced9;
-  border-top: none;
   background-color: $color-white;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 205px;
+    padding: 35px 10px 33px 25px;
+    border: none;
+    border-bottom-right-radius: 4px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 240px;
+  }
 }
 
 .country-selection__countries {
@@ -127,8 +209,16 @@
 .country-selection__countries a {
   margin-bottom: 5px;
   font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
   color: $color-grey-44;
   text-decoration: none;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 9px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 
   &:hover {
     color: $color-button-blue;

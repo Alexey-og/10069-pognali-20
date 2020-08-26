@@ -71,7 +71,11 @@
   }
 }
 
-.filter__letters input:checked + .filter__letter {
+.filter__letter-input {
+  @include visually-hidden;
+}
+
+.filter__letter-input:checked + .filter__letter {
   border-color: #1d2e5b;
   background-color: #1d2e5b;
   color: $color-white;

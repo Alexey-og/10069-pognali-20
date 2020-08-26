@@ -3531,6 +3531,9 @@ textarea {
     background-position: right;
     background-repeat: repeat-y;
     background-size: 55px 32px; }
+    @media screen and (min-width: 768px) {
+      .desired-countries__name::before {
+        display: none; } }
   .desired-countries__name::after {
     right: 14px;
     width: 14px;
@@ -3542,6 +3545,7 @@ textarea {
     opacity: 0.3; }
     @media screen and (min-width: 768px) {
       .desired-countries__name::after {
+        right: 28px;
         width: 16px;
         height: 8px;
         background-size: 18px 8px; } }
@@ -3624,8 +3628,18 @@ textarea {
   display: flex;
   flex-direction: column;
   box-shadow: 0 2px 16px rgba(212, 217, 235, 0.25);
-  background: #ffffff;
+  background-color: #ffffff;
   z-index: 2; }
+  @media screen and (min-width: 768px) {
+    .country-selection {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 575px;
+      box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18);
+      background-color: transparent; } }
+  @media screen and (min-width: 1440px) {
+    .country-selection {
+      width: 730px; } }
   .country-selection::after {
     width: 24px;
     height: 24px;
@@ -3636,6 +3650,9 @@ textarea {
     top: -12px;
     background-color: #ffffff;
     z-index: 1; }
+    @media screen and (min-width: 768px) {
+      .country-selection::after {
+        display: none; } }
 
 .country-selection__header {
   border-top-left-radius: 4px;
@@ -3648,15 +3665,27 @@ textarea {
   min-height: 42px;
   background-color: #1d2e5b;
   z-index: 3; }
+  @media screen and (min-width: 768px) {
+    .country-selection__header {
+      width: 370px;
+      min-height: 70px;
+      padding: 20px 25px 20px 25px; } }
+  @media screen and (min-width: 1440px) {
+    .country-selection__header {
+      width: 730px; } }
 
 .country-selection__title {
   margin: 0;
   font-weight: 500;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: #ffffff; }
+  @media screen and (min-width: 768px) {
+    .country-selection__title {
+      font-size: 20px;
+      letter-spacing: 0.1em; } }
 
 .country-selection__close {
   display: flex;
@@ -3681,13 +3710,47 @@ textarea {
   padding: 0;
   border: none;
   background-color: transparent; }
+  @media screen and (min-width: 768px) {
+    .country-selection__fieldset {
+      width: 370px;
+      padding: 35px 70px 33px 27px;
+      border-right: 1px solid #cbced9;
+      border-bottom-left-radius: 4px;
+      background-color: #ffffff; } }
+  @media screen and (min-width: 1440px) {
+    .country-selection__fieldset {
+      width: 490px;
+      padding: 34px 70px 36px 25px; } }
 
 .country-selection__letters {
   display: grid;
   grid-template-columns: repeat(5, 44px);
+  width: 220px;
   border-right: 1px solid #cbced9; }
+  @media screen and (min-width: 768px) {
+    .country-selection__letters {
+      grid-template-columns: repeat(5, 53px);
+      width: 265px;
+      border-top: 1px solid #cbced9; } }
+  @media screen and (min-width: 1440px) {
+    .country-selection__letters {
+      grid-template-columns: repeat(5, 60px);
+      -moz-column-gap: 16px;
+           column-gap: 16px;
+      row-gap: 14px;
+      border: none; } }
 
-.country-selection__letters input:checked + .country-selection__letter {
+.country-selection__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+.country-selection__input:checked + .country-selection__letter {
   border-color: #1d2e5b;
   background-color: #1d2e5b;
   color: #ffffff; }
@@ -3701,11 +3764,19 @@ textarea {
   border-left: 1px solid #cbced9;
   border-bottom: 1px solid #cbced9;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 1;
   text-transform: uppercase;
   color: #1d2e5b;
   cursor: pointer; }
+  @media screen and (min-width: 768px) {
+    .country-selection__letter {
+      height: 68px;
+      font-size: 20px; } }
+  @media screen and (min-width: 1440px) {
+    .country-selection__letter {
+      border: 1px solid #cbced9;
+      border-radius: 4px; } }
   .country-selection__letter:hover {
     background-color: #edeff6; }
   .country-selection__letter:active {
@@ -3718,8 +3789,16 @@ textarea {
   border-bottom-right-radius: 4px;
   padding: 19px 19px 27px 19px;
   border: 1px solid #cbced9;
-  border-top: none;
   background-color: #ffffff; }
+  @media screen and (min-width: 768px) {
+    .country-selection__countries-wrapper {
+      width: 205px;
+      padding: 35px 10px 33px 25px;
+      border: none;
+      border-bottom-right-radius: 4px; } }
+  @media screen and (min-width: 1440px) {
+    .country-selection__countries-wrapper {
+      width: 240px; } }
 
 .country-selection__countries {
   display: flex;
@@ -3728,8 +3807,15 @@ textarea {
 .country-selection__countries a {
   margin-bottom: 5px;
   font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
   color: #444444;
   text-decoration: none; }
+  @media screen and (min-width: 768px) {
+    .country-selection__countries a {
+      margin-bottom: 9px;
+      font-size: 20px;
+      line-height: 20px; } }
   .country-selection__countries a:hover {
     color: #1d2e5b; }
   .country-selection__countries a:active {
@@ -4082,12 +4168,22 @@ textarea {
       border: none;
       background-color: transparent; } }
 
-.filter__letters input:checked + .filter__letter {
+.filter__letter-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+.filter__letter-input:checked + .filter__letter {
   border-color: #1d2e5b;
   background-color: #1d2e5b;
   color: #ffffff; }
   @media screen and (min-width: 768px) {
-    .filter__letters input:checked + .filter__letter {
+    .filter__letter-input:checked + .filter__letter {
       background-color: transparent;
       color: #192144; } }
 

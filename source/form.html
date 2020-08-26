@@ -264,12 +264,12 @@
               </div>
             </div>
             <div class="desired-countries__item desired-countries__item--choose">
-              <a class="desired-countries__name" href="">Выберите страну</a>
+              <a class="desired-countries__name desired-countries__expand" href="">Выберите страну</a>
               <div class="desired-countries__flag"></div>
               <a class="desired-countries__close" aria-label="Удалить выбранную страну">
                 <svg class="desired-countries__icon-close" width="9" height="9"><use xlink:href="#icon-close"></use></svg>
               </a>
-              <section class="country-selection hidden">
+              <section class="country-selection">
                 <div class="country-selection__header">
                   <h5 class="country-selection__title">Выберите страну</h5>
                   <a class="country-selection__close">
@@ -279,31 +279,31 @@
                 <fieldset class="country-selection__fieldset">
                   <legend class="visually-hidden">Побуквенный переключатель стран</legend>
                   <div class="country-selection__letters">
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-a"><label class="country-selection__letter" for="letter-a">А</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-b"><label class="country-selection__letter" for="letter-b">Б</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-v"><label class="country-selection__letter" for="letter-v">В</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-g"><label class="country-selection__letter" for="letter-g">Г</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-d"><label class="country-selection__letter" for="letter-d">Д</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-ye"><label class="country-selection__letter" for="letter-ye">Е</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-z"><label class="country-selection__letter" for="letter-z">З</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-i"><label class="country-selection__letter" for="letter-i">И</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-k"><label class="country-selection__letter" for="letter-k">К</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-l"><label class="country-selection__letter" for="letter-l">Л</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-m"><label class="country-selection__letter" for="letter-m">М</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-n"><label class="country-selection__letter" for="letter-n">Н</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-o"><label class="country-selection__letter" for="letter-o">О</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-p"><label class="country-selection__letter" for="letter-p">П</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-r"><label class="country-selection__letter" for="letter-r">Р</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-s"><label class="country-selection__letter" for="letter-s">С</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-t"><label class="country-selection__letter" for="letter-t">Т</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-u"><label class="country-selection__letter" for="letter-u">У</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-f"><label class="country-selection__letter" for="letter-f">Ф</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-kh"><label class="country-selection__letter" for="letter-kh">Х</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-ch"><label class="country-selection__letter" for="letter-ch">Ч</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-sh"><label class="country-selection__letter" for="letter-sh">Ш</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-e"><label class="country-selection__letter" for="letter-e">Э</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-yu"><label class="country-selection__letter" for="letter-yu">Ю</label>
-                    <input class="visually-hidden" type="radio" name="country-letter" id="letter-ya"><label class="country-selection__letter" for="letter-ya">Я</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-a" checked><label class="country-selection__letter" for="letter-a">А</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-b"><label class="country-selection__letter" for="letter-b">Б</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-v"><label class="country-selection__letter" for="letter-v">В</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-g"><label class="country-selection__letter" for="letter-g">Г</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-d"><label class="country-selection__letter" for="letter-d">Д</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-ye"><label class="country-selection__letter" for="letter-ye">Е</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-z"><label class="country-selection__letter" for="letter-z">З</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-i"><label class="country-selection__letter" for="letter-i">И</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-k"><label class="country-selection__letter" for="letter-k">К</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-l"><label class="country-selection__letter" for="letter-l">Л</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-m"><label class="country-selection__letter" for="letter-m">М</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-n"><label class="country-selection__letter" for="letter-n">Н</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-o"><label class="country-selection__letter" for="letter-o">О</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-p"><label class="country-selection__letter" for="letter-p">П</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-r"><label class="country-selection__letter" for="letter-r">Р</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-s"><label class="country-selection__letter" for="letter-s">С</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-t"><label class="country-selection__letter" for="letter-t">Т</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-u"><label class="country-selection__letter" for="letter-u">У</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-f"><label class="country-selection__letter" for="letter-f">Ф</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-kh"><label class="country-selection__letter" for="letter-kh">Х</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-ch"><label class="country-selection__letter" for="letter-ch">Ч</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-sh"><label class="country-selection__letter" for="letter-sh">Ш</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-e"><label class="country-selection__letter" for="letter-e">Э</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-yu"><label class="country-selection__letter" for="letter-yu">Ю</label>
+                    <input class="country-selection__input" type="radio" name="country-letter" id="letter-ya"><label class="country-selection__letter" for="letter-ya">Я</label>
                   </div>
                 </fieldset>
                 <div class="country-selection__countries-wrapper">
