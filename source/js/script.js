@@ -24,8 +24,10 @@ var filterLetters = document.querySelector(".filter__letters"); */
 
 
 pageHeader.classList.remove("page-header--no-js");
-countrySelection.classList.add("hidden");
 
+if (countrySelection) {
+  countrySelection.classList.add("hidden");
+}
 
 pageHeaderButton.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -39,10 +41,17 @@ if (businessRatesShow) {
   });
 }
 
-if (businessRatesClose) {
+if (businessRates) {
   businessRatesClose.addEventListener("click", function (evt) {
     evt.preventDefault();
     businessRates.classList.add("hidden");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      businessRates.classList.add("hidden");
+    }
   });
 }
 

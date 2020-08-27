@@ -1681,7 +1681,7 @@ textarea {
   font-size: 16px;
   line-height: 1;
   text-decoration: none;
-  color: #192144; }
+  color: #132576; }
   .add-profile__show:hover {
     color: rgba(25, 33, 68, 0.7); }
   .add-profile__show:active {
@@ -5387,6 +5387,14 @@ textarea {
   background-color: #ffffff;
   box-shadow: 0 2px 8px rgba(29, 46, 91, 0.14);
   z-index: 100; }
+  @media screen and (min-width: 768px) {
+    .business-rates {
+      width: 688px;
+      padding: 50px 0 0 0;
+      box-shadow: 0px 4px 22px rgba(29, 46, 91, 0.18); } }
+  @media screen and (min-width: 1440px) {
+    .business-rates {
+      width: 750px; } }
 
 .business-rates .heading-2 {
   align-self: center;
@@ -5395,8 +5403,13 @@ textarea {
 .business-rates__list {
   margin: 28px 25px 34px;
   padding: 0;
-  list-style-type: none;
-  color: #444444; }
+  list-style-type: none; }
+  @media screen and (min-width: 768px) {
+    .business-rates__list {
+      margin: 50px 90px 50px; } }
+  @media screen and (min-width: 1440px) {
+    .business-rates__list {
+      margin: 50px 60px 50px; } }
 
 .business-rates__item {
   display: flex;
@@ -5405,7 +5418,17 @@ textarea {
   align-items: stretch;
   width: 100%;
   padding: 11px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.05); }
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: #444444; }
+  @media screen and (min-width: 768px) {
+    .business-rates__item {
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 22px;
+      line-height: 33px; } }
   .business-rates__item:last-child {
     border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
 
@@ -5422,11 +5445,16 @@ textarea {
   background-color: #f3f4f8;
   font-weight: bold;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1;
   text-transform: uppercase;
   text-decoration: none;
   color: #1d2e5b;
   cursor: pointer; }
+  @media screen and (min-width: 768px) {
+    .business-rates__close {
+      min-height: 108px;
+      font-size: 24px;
+      text-transform: none; } }
   .business-rates__close:hover {
     background-color: #dfe3f0; }
   .business-rates__close:active {
