@@ -192,6 +192,10 @@
     background-position: right;
     background-repeat: repeat-y;
     background-size: 55px 32px;
+
+    @media screen and (min-width: $tablet-width) {
+      display: none;
+    }
   }
 
   &::after {
@@ -205,6 +209,7 @@
     opacity: 0.3;
 
     @media screen and (min-width: $tablet-width) {
+      right: 28px;
       width: 16px;
       height: 8px;
       background-size: 18px 8px;
