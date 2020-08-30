@@ -24,9 +24,7 @@
       141px 141px;
 
     @media (min-resolution: 2dppx) {
-      background-image:
-      url("../img/flags-back@2x.png"),
-      url("data:image/svg+xml,%3Csvg width='141' height='141' viewBox='0 0 141 141' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='141' height='141' rx='20' fill='%23e2e5f2'/%3E%3C/svg%3E");
+      background-image: url("../img/flags-back@2x.png"), url("data:image/svg+xml,%3Csvg width='141' height='141' viewBox='0 0 141 141' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='141' height='141' rx='20' fill='%23e2e5f2'/%3E%3C/svg%3E");
     }
   }
 
