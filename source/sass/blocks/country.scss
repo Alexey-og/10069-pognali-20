@@ -41,24 +41,48 @@
   &--thailand {
     background-image: url("../img/thailand-mobile@1x.jpg");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/thailand-mobile@2x.jpg");
+    }
+
     @media screen and (min-width: $tablet-width) {
       background-image: url("../img/thailand-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/thailand-desktop@2x.jpg");
+      }
     }
   }
 
   &--france {
     background-image: url("../img/france-mobile@1x.jpg");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/france-mobile@2x.jpg");
+    }
+
     @media screen and (min-width: $tablet-width) {
       background-image: url("../img/france-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/france-desktop@2x.jpg");
+      }
     }
   }
 
   &--czechia {
     background-image: url("../img/czechia-mobile@1x.jpg");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/czechia-mobile@2x.jpg");
+    }
+
     @media screen and (min-width: $tablet-width) {
       background-image: url("../img/czechia-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/czechia-desktop@2x.jpg");
+      }
     }
   }
 }

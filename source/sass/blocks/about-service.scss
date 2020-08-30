@@ -17,6 +17,12 @@
     132px 132px;
   z-index: 9;
 
+  @media (min-resolution: 2dppx) {
+    background-image:
+    url("../img/about-mobile@2x.png"),
+    url("data:image/svg+xml,%3Csvg width='132' height='132' viewBox='0 0 132 132' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20C0 8.9543 8.95431 0 20 0H108.637C121.54 0 132 8.95431 132 20V112C132 123.046 121.54 132 108.637 132H20C8.9543 132 0 123.046 0 112V20Z' fill='%23141B3B'/%3E%3C/svg%3E");
+  }
+
   @media screen and (min-width: $tablet-width) {
     @include bottom-radius(60px);
 
@@ -31,6 +37,12 @@
     background-size:
       376px 548px,
       688px 212px;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+      url("../img/about-tablet@2x.png"),
+      url("data:image/svg+xml,%3Csvg width='688' height='212' viewBox='0 0 688 212' fill='%23141b3b' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='688' height='212' rx='20'/%3E%3C/svg%3E");
+    }
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -45,6 +57,12 @@
     background-size:
       630px 665px,
       212px 212px;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+      url("../img/about-desktop@2x.png"),
+      url("data:image/svg+xml,%3Csvg width='212' height='212' viewBox='0 0 212 212' fill='%23141b3b' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='212' height='212' rx='20'/%3E%3C/svg%3E");
+    }
   }
 }
 

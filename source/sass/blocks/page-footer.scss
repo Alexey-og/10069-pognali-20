@@ -38,16 +38,28 @@
   background-repeat: no-repeat;
   background-size: contain;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/logo-mobile-blue@2x.png");
+  }
+
   @media screen and (min-width: $tablet-width) {
     width: 164px;
     height: 60px;
     margin-right: 30px;
     background-image: url("../img/logo-tablet-blue@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/logo-tablet-blue@2x.png");
+    }
   }
 
   @media screen and (min-width: $desktop-width) {
     width: 200px;
     background-image: url("../img/logo-desktop-blue@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/logo-desktop-blue@2x.png");
+    }
   }
 }
 

@@ -20,6 +20,13 @@
     71px 71px;
   z-index: 7;
 
+  @media (min-resolution: 2dppx) {
+    background-image:
+    url("data:image/svg+xml,%3Csvg width='132' height='132' viewBox='0 0 132 132' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='132' height='132' rx='20' fill='%23141b3b'/%3E%3C/svg%3E"),
+    url("../img/smolov-back-desktop@2x.png"),
+    url("../img/rogovaya-back-mobile@2x.png");
+  }
+
   @media screen and (min-width: $tablet-width) {
     @include bottom-radius(60px);
 
@@ -38,6 +45,13 @@
       212px 212px,
       143px 143px,
       285px 285px;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+      url("data:image/svg+xml,%3Csvg width='212' height='212' viewBox='0 0 212 212' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='212' height='212' rx='20' fill='%23141b3b'/%3E%3C/svg%3E"),
+      url("../img/smolov-back-desktop@2x.png"),
+      url("../img/rogovaya-back-desktop@2x.png");
+    }
   }
 
   @media screen and (min-width: $desktop-width) {

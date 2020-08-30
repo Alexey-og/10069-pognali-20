@@ -58,7 +58,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: 0;
+  margin: -7px 0 0 0;
   min-height: 158px;
   background-color: $color-white;
 }
@@ -68,7 +68,7 @@
 
   position: relative;
   min-height: 25px;
-  margin-top: -11px;
+  margin-top: -12px;
 }
 
 .travelmate__flag {
@@ -108,15 +108,7 @@
   padding-left: 16px;
   padding-right: 16px;
   width: auto;
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 1;
   text-align: center;
-  color: $color-button-blue;
-
-  @media screen and (min-width: $tablet-width) {
-    font-size: 24px;
-  }
 
   &::before {
     @include circle(6px);
@@ -133,6 +125,18 @@
 
   &--online::before {
     background-color: $color-user-status-online;
+  }
+}
+
+.travelmate__link {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 1;
+  text-decoration: none;
+  color: $color-button-blue;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 24px;
   }
 }
 
