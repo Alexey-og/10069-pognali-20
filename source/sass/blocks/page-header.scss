@@ -18,6 +18,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
+
     padding: 17px 60px 0;
     background-color: $color-basic-blue;
   }
@@ -34,6 +35,10 @@
       background-color: $color-white;
     }
   }
+}
+
+.page-header--scroll {
+  position: fixed;
 }
 
 .page-header__top {

@@ -12,7 +12,7 @@
       <a class="page-header__logo">
         <span class="visually-hidden">Погнали?</span>
       </a>
-      <a class="page-header__button" type="button" aria-label="Кнопка показа меню"></a>
+      <a class="page-header__button" aria-label="Кнопка показа меню"></a>
     </div>
     <nav class="page-header__menu">
       <a class="page-header__menu-item">О сервисе</a>
@@ -71,31 +71,54 @@
         <p class="countries__description">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
       </div>
       <div class="countries__list">
-        <article class="country country--thailand">
+
+        <article class="country">
+          <picture class="country__picture">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/thailand-desktop@1x.webp 1x, img/thailand-desktop@2x.webp 2x">
+            <source type="image/webp" srcset="img/thailand-mobile@1x.webp 1x, img/thailand-mobile@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x">
+            <img class="country__img" src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@1x.jpg 1x, img/thailand-mobile@2x.jpg 2x" alt="Тайланд - фотография" width="270" height="110">
+          </picture>
           <div class="country__description">
             <div class="country__name">
-              <h3 class="country__title">Таиланд</h3>
+              <h3 class="country__title">Тайланд</h3>
               <p class="country__slogan">Джунгли зовут!</p>
             </div>
             <p class="country__users">18321</p>
+            <img class="country__flag" src="img/flag-thailand.svg" width="35" height="24" data-label="Тайланд" alt="Флаг Тайланда">
           </div>
         </article>
-        <article class="country country--france">
+        <article class="country">
+          <picture class="country__picture">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/france-desktop@1x.webp 1x, img/france-desktop@2x.webp 2x">
+            <source type="image/webp" srcset="img/france-mobile@1x.webp 1x, img/france-mobile@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x">
+            <img class="country__img" src="img/france-mobile@1x@1x.jpg" srcset="img/france-mobile@1x.jpg 1x, img/france-mobile@2x.jpg 2x" alt="Франция - фотография" width="270" height="110">
+          </picture>
           <div class="country__description">
             <div class="country__name">
               <h3 class="country__title">Франция</h3>
               <p class="country__slogan">Трэ бьен, манифик!</p>
             </div>
             <p class="country__users">12518</p>
+            <img class="country__flag" src="img/flag-france.svg" width="35" height="24" data-label="Франция" alt="Флаг Франции">
           </div>
         </article>
-        <article class="country country--czechia">
+        <article class="country">
+          <picture class="country__picture">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/czechia-desktop@1x.webp 1x, img/czechia-desktop@2x.webp 2x">
+            <source type="image/webp" srcset="img/czechia-mobile@1x.webp 1x, img/czechia-mobile@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/czechia-desktop@1x.jpg 1x, img/czechia-desktop@2x.jpg 2x">
+            <img class="country__img" src="img/czechia-mobile@1x@1x@1x.jpg" srcset="img/czechia-mobile@1x.jpg 1x, img/czechia-mobile@2x.jpg 2x" alt="Чехия - фотография" width="270" height="110">
+          </picture>
           <div class="country__description">
             <div class="country__name">
               <h3 class="country__title">Чехия</h3>
               <p class="country__slogan">Закоулки старой Европы</p>
             </div>
             <p class="country__users">5326</p>
+            <!-- <span class="country__flag"><svg class="tooltip" width="35" height="24" data-label="Чехия"><use xlink:href="#flag-czechia"></use></svg></span> -->
+            <img class="country__flag" src="img/flag-czechia.svg" width="35" height="24" data-label="Чехия" alt="Флаг Чехии">
           </div>
         </article>
       </div>
@@ -109,33 +132,33 @@
       </div>
       <div class="travelmates__list">
         <article class="travelmate">
-          <a href="" title="Таня Фирсова - профиль">
+          <a class="travelmate__photo" href="" title="Таня Фирсова - профиль">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
               <source type="image/webp" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
-              <img class="travelmate__photo" src="img/firsova-tablet@1x.jpg" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x" alt="Таня Фирсова - фотография" width="270" height="270">
+              <img class="travelmate__img" src="img/firsova-tablet@1x.jpg" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x" alt="Таня Фирсова - фотография" width="270" height="270">
             </picture>
           </a>
           <div class="travelmate__info">
             <div class="travelmate__flags">
-              <span class="travelmate__flag travelmate__flag--sri-lanka" aria-label="Флаг Шри-Ланки"></span>
-              <span class="travelmate__flag travelmate__flag--thailand" aria-label="Флаг Тайланда"></span>
-              <span class="travelmate__flag travelmate__flag--seychelles" aria-label="Флаг Сейшелл"></span>
+              <span class="travelmate__flag travelmate__flag--sri-lanka tooltip" data-label="Шри-Ланка"></span>
+              <span class="travelmate__flag travelmate__flag--thailand tooltip" data-label="Тайланд"></span>
+              <span class="travelmate__flag travelmate__flag--seychelles tooltip" data-label="Сейшеллы"></span>
             </div>
             <h3 class="travelmate__name travelmate__name--offline"><a class="travelmate__link" href="" title="Таня Фирсова - профиль">Таня Фирсова</a></h3>
             <p class="travelmate__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
             <div class="travelmate__transport transport-by">
-              <span class="transport-by__item" aria-label="На самолете">
+              <span class="transport-by__item tooltip" data-label="На самолете">
                 <svg width="19" height="21"><use xlink:href="#icon-plane"></use></svg>
               </span>
-              <span class="transport-by__item transport-by__item--off" aria-label="На автобусе">
+              <span class="transport-by__item transport-by__item--off tooltip" data-label="На автобусе">
                 <svg width="19" height="21"><use xlink:href="#icon-bus"></use></svg>
               </span>
-              <span class="transport-by__item transport-by__item--off" aria-label="На велосипеде">
+              <span class="transport-by__item transport-by__item--off tooltip" data-label="На велосипеде">
                 <svg width="24" height="21"><use xlink:href="#icon-bicycle"></use></svg>
               </span>
-              <span class="transport-by__item transport-by__item--off" aria-label="Бегом">
+              <span class="transport-by__item transport-by__item--off tooltip" data-label="Бегом">
                 <svg width="20" height="21"><use xlink:href="#icon-run"></use></svg>
               </span>
             </div>
@@ -147,32 +170,32 @@
           </div>
         </article>
         <article class="travelmate">
-          <a href="" title="Петя Демин - профиль">
+          <a class="travelmate__photo" href="" title="Петя Демин - профиль">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
               <source type="image/webp" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
-              <img class="travelmate__photo" src="img/demin-tablet@1x.jpg" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x" alt="Петя Демин - фотография" width="270" height="270">
+              <img class="travelmate__img" src="img/demin-tablet@1x.jpg" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x" alt="Петя Демин - фотография" width="270" height="270">
             </picture>
           </a>
           <div class="travelmate__info">
             <div class="travelmate__flags">
-              <span class="travelmate__flag travelmate__flag--belgium" aria-label="Флаг Бельгии"></span>
-              <span class="travelmate__flag travelmate__flag--czechia" aria-label="Флаг Чехии"></span>
+              <span class="travelmate__flag travelmate__flag--belgium tooltip" data-label="Бельгия"></span>
+              <span class="travelmate__flag travelmate__flag--czechia tooltip" data-label="Чехия"></span>
             </div>
             <h3 class="travelmate__name travelmate__name--online"><a class="travelmate__link" href="" title="Петя Демин - профиль">Петя Демин</a></h3>
             <p class="travelmate__tags">#бургер #бар #футбол #концерт #крафт</p>
             <div class="travelmate__transport transport-by">
-              <span class="transport-by__item" aria-label="На самолете">
+              <span class="transport-by__item tooltip" data-label="На самолете">
                 <svg width="19" height="21"><use xlink:href="#icon-plane"></use></svg>
               </span>
-              <span class="transport-by__item" aria-label="На автобусе">
+              <span class="transport-by__item tooltip" data-label="На автобусе">
                 <svg width="19" height="21"><use xlink:href="#icon-bus"></use></svg>
               </span>
-              <span class="transport-by__item transport-by__item--off" aria-label="На велосипеде">
+              <span class="transport-by__item transport-by__item--off tooltip" data-label="На велосипеде">
                 <svg width="24" height="21"><use xlink:href="#icon-bicycle"></use></svg>
               </span>
-              <span class="transport-by__item" aria-label="Бегом">
+              <span class="transport-by__item tooltip tooltip" data-label="Бегом">
                 <svg width="20" height="21"><use xlink:href="#icon-run"></use></svg>
               </span>
             </div>
@@ -230,7 +253,8 @@
       <a class="button location__button" href="#">Проложить маршрут</a>
     </section>
     <section class="map">
-      <div class="map__interactive" aria-label="Интерактивная карта с офисом Погнали"></div>
+      <h2 class="visually-hidden">Интерактивная карта с офисом Погнали</h2>
+      <div class="map__interactive"></div>
       <picture>
         <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
         <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
@@ -315,6 +339,11 @@
     </symbol>
     <symbol id="logo-academy" viewBox="0 0 27 34">
       <path d="M13.6 0h-.2L0 1.4V26l13.5 8L27 26V1.4L13.6 0zm5.7 16.8l-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8L25 13.5l-4.5 2.6-7.1-4.2v1.4l5.9 3.5zM1.9 15.1l11.4 6.8v1l-8-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.2-4.9V17l3.4-2v10l-11.6 6.9-11.4-7v-9.8zm0-3v-9l11.6-1.2 11.6 1.2v9L13.5 5.3v-.1h-.2v.1L1.9 12.1z" fill="#192144"/>
+    </symbol>
+    <symbol id="flag-czechia" viewBox="0 0 71 48">
+      <path d="M64.54 0H6.46C4.75 0 3.109.684 1.899 1.903a6.52 6.52 0 00-1.89 4.594v18.019H71V6.496A6.5 6.5 0 0069.107 1.9 6.446 6.446 0 0067.012.492 6.41 6.41 0 0064.54 0z" fill="#F5F5F5"/>
+      <path d="M0 41.503a6.52 6.52 0 001.89 4.594A6.427 6.427 0 006.45 48h58.09c1.71 0 3.351-.684 4.56-1.903a6.52 6.52 0 001.89-4.594V24.516H0v16.987z" fill="#ED5565"/>
+      <path d="M1.937 1.87A6.479 6.479 0 00.508 3.991c-.33.797-.5 1.652-.498 2.515v35.007c0 .872.176 1.735.516 2.537.34.802.837 1.527 1.461 2.13l23.376-21.665L1.937 1.869z" fill="#4758A9"/>
     </symbol>
   </svg>
 

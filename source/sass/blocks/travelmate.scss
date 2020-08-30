@@ -6,7 +6,6 @@
   min-height: 428px;
   margin: 0 0 10px;
   border-radius: 10px;
-  overflow: hidden;
 
   @media screen and (min-width: $tablet-width) {
     width: 285px;
@@ -17,6 +16,10 @@
   @media screen and (min-width: $desktop-width) {
     margin: 0 30px 30px 30px;
   }
+}
+
+.travelmate:hover {
+  box-shadow: 0 4px 9px rgba($color-black, 0.16);
 }
 
 .travelmate:last-of-type {
@@ -31,9 +34,11 @@
   }
 }
 
-.travelmate__photo {
+.travelmate__photo,
+.travelmate__img {
   @include top-radius(10px);
 
+  display: block;
   width: 270px;
   height: 270px;
 
@@ -43,11 +48,15 @@
     width: 285px;
     height: 285px;
   }
+}
 
-  .travelmate:hover & {
-    transform: scale(1.1);
-    transition: transform 0.2s;
-  }
+.travelmate__photo {
+  overflow: hidden;
+}
+
+.travelmate:hover .travelmate__img {
+  transform: scale(1.1);
+  transition: transform 0.2s;
 }
 
 .travelmate__info {
@@ -58,7 +67,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: -7px 0 0 0;
+  margin: 0;
   min-height: 158px;
   background-color: $color-white;
 }

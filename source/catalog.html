@@ -12,7 +12,7 @@
       <a class="page-header__logo" href="index.html">
         <span class="visually-hidden">Погнали?</span>
       </a>
-      <a class="page-header__button" type="button" aria-label="Кнопка показа меню"></a>
+      <a class="page-header__button" aria-label="Кнопка показа меню"></a>
     </div>
     <nav class="page-header__menu">
       <a class="page-header__menu-item" href="index.html">О сервисе</a>
@@ -358,7 +358,7 @@
             <a class="travelmate-filter__title">Музыка<span class="travelmate-filter__title-colon">:</span></a>
             <div class="travelmate-filter__inputs">
               <input class="visually-hidden" type="checkbox" name="music-hard-rock" id="music-hard-rock" checked><label class="travelmate-filter__label" for="music-hard-rock">Тяжелый рок</label>
-              <input class="visually-hidden" type="checkbox" name="music-russian-rap" id="music-russian-rap"><label class="travelmate-filter__label" for="music-russian-rap">Русский рэп</label>
+              <input class="visually-hidden" type="checkbox" name="music-russian-rap" id="music-russian-rap" checked><label class="travelmate-filter__label" for="music-russian-rap">Русский рэп</label>
               <input class="visually-hidden" type="checkbox" name="music-eurodance" id="music-eurodance"><label class="travelmate-filter__label" for="music-eurodance">Евроденс</label>
             </div>
           </div>
@@ -380,19 +380,19 @@
             <a class="travelmate-filter__title">Транспорт<span class="travelmate-filter__title-colon">:</span></a>
             <div class="travelmate-filter__inputs transportation travelmate-filter__transportation">
               <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-avia" id="transportation-avia" checked>
-              <label class="transportation__label transportation__label--avia" for="transportation-avia" aria-label="Кнопка передвижения на самолете" data-transport="Авиаперелет">
+              <label class="transportation__label transportation__label--avia tooltip" for="transportation-avia" aria-label="Кнопка передвижения на самолете" data-label="Авиаперелет">
                 <svg height="16"><use xlink:href="#icon-plane"></use></svg>
               </label>
               <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bus" id="transportation-bus" checked>
-              <label class="transportation__label transportation__label--bus" for="transportation-bus" aria-label="Кнопка передвижения на автотранспорте" data-transport="Автотранспорт">
+              <label class="transportation__label transportation__label--bus tooltip" for="transportation-bus" aria-label="Кнопка передвижения на автотранспорте" data-label="Автотранспорт">
                 <svg height="16"><use xlink:href="#icon-bus"></use></svg>
               </label>
               <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bicycle" id="transportation-bicycle">
-              <label class="transportation__label transportation__label--bicycle" for="transportation-bicycle" aria-label="Кнопка передвижения на велосипеде" data-transport="Велосипед">
+              <label class="transportation__label transportation__label--bicycle tooltip" for="transportation-bicycle" aria-label="Кнопка передвижения на велосипеде" data-label="Велосипед">
                 <svg height="16"><use xlink:href="#icon-bicycle"></use></svg>
               </label>
               <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-foot" id="transportation-foot" checked>
-              <label class="transportation__label transportation__label--foot" for="transportation-foot" aria-label="Кнопка передвижения пешком" data-transport="Пешком">
+              <label class="transportation__label transportation__label--foot tooltip" for="transportation-foot" aria-label="Кнопка передвижения пешком" data-label="Пешком">
                 <svg height="16"><use xlink:href="#icon-run"></use></svg>
               </label>
             </div>
@@ -423,14 +423,14 @@
       <section class="potential-travelmates">
         <h2 class="visually-hidden">Список потенциальных попутчиков</h2>
         <article class="potential-travelmates__item travelmate-card">
-          <a href="" title="Таня Фирсова - перейти в профиль">
+          <a class="travelmate-card__photo" href="" title="Таня Фирсова - перейти в профиль">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
-              <img class="travelmate-card__photo" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@1x.jpg 1x, img/firsova-mobile@2x.jpg 2x" width="285" height="285" alt="Таня Фирсова - фотография">
+              <img class="travelmate-card__img" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@1x.jpg 1x, img/firsova-mobile@2x.jpg 2x" width="285" height="285" alt="Таня Фирсова - фотография">
             </picture>
           </a>
           <h3 class="travelmate-card__name travelmate-card__name--offline">
@@ -441,24 +441,30 @@
           <div class="travelmate-card__wish-wrapper">
             <p class="travelmate-card__wish-title">хочет посетить:</p>
             <div class="travelmate-card__wish-countries">
-              <span class="travelmate-card__wish travelmate-card__wish--sri-lanka">Шри-ланка</span>
-              <span class="travelmate-card__wish travelmate-card__wish--thailand">Таиланд</span>
-              <span class="travelmate-card__wish travelmate-card__wish--seychelles">Сейшелы</span>
+              <div class="travelmate-card__wish">
+                <img class="travelmate-card__flag tooltip" src="img/flag-sri-lanka.svg" width="26" height="18" alt="Флаг Шри-Ланки" data-label="Шри-Ланка">Шри-Ланка
+              </div>
+              <div class="travelmate-card__wish">
+                <img class="travelmate-card__flag tooltip" src="img/flag-thailand.svg" width="26" height="18" alt="Флаг Тайланда" data-label="Тайланд">Тайланд
+              </div>
+              <div class="travelmate-card__wish">
+                <img class="travelmate-card__flag tooltip" src="img/flag-seychelles.svg" width="26" height="18" alt="Флаг Сейшел" data-label="Сейшелы">Сейшелы
+              </div>
             </div>
           </div>
           <div class="travelmate-card__transport-wrapper">
             <p class="travelmate-card__transport-title">транспорт:</p>
             <div class="travelmate-card__transport-list">
-              <span class="travelmate-card__transport travelmate-card__transport--on">
+              <span class="travelmate-card__transport travelmate-card__transport--on tooltip" data-label="На самолете">
                 <svg class="travelmate-card__icon-plane" width="13" height="14"><use xlink:href="#icon-plane"></use></svg>
               </span>
-              <span class="travelmate-card__transport travelmate-card__transport--off">
+              <span class="travelmate-card__transport travelmate-card__transport--off tooltip" data-label="На автобусе">
                 <svg class="travelmate-card__icon-bus" width="13" height="14"><use xlink:href="#icon-bus"></use></svg>
               </span>
-              <span class="travelmate-card__transport travelmate-card__transport--off">
+              <span class="travelmate-card__transport travelmate-card__transport--off tooltip" data-label="На велосипеде">
                 <svg class="travelmate-card__icon-bicycle" width="16" height="14"><use xlink:href="#icon-bicycle"></use></svg>
               </span>
-              <span class="travelmate-card__transport travelmate-card__transport--off">
+              <span class="travelmate-card__transport travelmate-card__transport--off tooltip" data-label="Бегом">
                 <svg class="travelmate-card__icon-run" width="13" height="14"><use xlink:href="#icon-run"></use></svg>
               </span>
             </div>
@@ -476,14 +482,14 @@
           <a class="travelmate-card__invite" href="">Позвать!</a>
         </article>
         <article class="potential-travelmates__item travelmate-card">
-          <a href="" title="Петя Демин - перейти в профиль">
+          <a class="travelmate-card__photo" href="" title="Петя Демин - перейти в профиль">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
-              <img class="travelmate-card__photo" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@1x.jpg 1x, img/demin-mobile@2x.jpg 2x" width="285" height="285" alt="Петя Демин - фотография">
+              <img class="travelmate-card__img" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@1x.jpg 1x, img/demin-mobile@2x.jpg 2x" width="285" height="285" alt="Петя Демин - фотография">
             </picture>
           </a>
           <h3 class="travelmate-card__name travelmate-card__name--offline">
@@ -494,23 +500,27 @@
           <div class="travelmate-card__wish-wrapper">
             <p class="travelmate-card__wish-title">хочет посетить:</p>
             <div class="travelmate-card__wish-countries">
-              <span class="travelmate-card__wish travelmate-card__wish--belgium">Бельгия</span>
-              <span class="travelmate-card__wish travelmate-card__wish--czechia">Чехия</span>
+              <div class="travelmate-card__wish travelmate-card__wish--belgium">
+                <img class="travelmate-card__flag tooltip" src="img/flag-belgium.svg" width="26" height="18" alt="Флаг Бельгии" data-label="Бельгия">Бельгия
+              </div>
+              <div class="travelmate-card__wish travelmate-card__wish--czechia">
+                <img class="travelmate-card__flag tooltip" src="img/flag-czechia.svg" width="26" height="18" alt="Флаг Чехии" data-label="Чехия">Чехия
+              </div>
             </div>
           </div>
           <div class="travelmate-card__transport-wrapper">
             <p class="travelmate-card__transport-title">транспорт:</p>
             <div class="travelmate-card__transport-list">
-              <span class="travelmate-card__transport travelmate-card__transport--on">
+              <span class="travelmate-card__transport travelmate-card__transport--on tooltip" data-label="На самолете">
                 <svg class="travelmate-card__icon-plane" width="13" height="14"><use xlink:href="#icon-plane"></use></svg>
               </span>
-              <span class="travelmate-card__transport travelmate-card__transport--on">
+              <span class="travelmate-card__transport travelmate-card__transport--on tooltip" data-label="На автобусе">
                 <svg class="travelmate-card__icon-bus" width="13" height="14"><use xlink:href="#icon-bus"></use></svg>
               </span>
-              <span class="travelmate-card__transport travelmate-card__transport--on">
+              <span class="travelmate-card__transport travelmate-card__transport--on tooltip" data-label="На велосипеде">
                 <svg class="travelmate-card__icon-bicycle" width="16" height="14"><use xlink:href="#icon-bicycle"></use></svg>
               </span>
-              <span class="travelmate-card__transport travelmate-card__transport--off">
+              <span class="travelmate-card__transport travelmate-card__transport--off tooltip" data-label="Бегом">
                 <svg class="travelmate-card__icon-run" width="13" height="14"><use xlink:href="#icon-run"></use></svg>
               </span>
             </div>
@@ -528,14 +538,14 @@
           <a class="travelmate-card__invite" href="">Позвать!</a>
         </article>
         <article class="potential-travelmates__item travelmate-card">
-          <a href="" title="Марк Смолов - перейти в профиль">
+          <a class="travelmate-card__photo" href="" title="Марк Смолов - перейти в профиль">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
-              <img class="travelmate-card__photo" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@1x.jpg 1x, img/smolov-mobile@2x.jpg 2x" width="285" height="285" alt="Марк Смолов - фотография">
+              <img class="travelmate-card__img" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@1x.jpg 1x, img/smolov-mobile@2x.jpg 2x" width="285" height="285" alt="Марк Смолов - фотография">
             </picture>
           </a>
           <h3 class="travelmate-card__name travelmate-card__name--offline">
@@ -546,24 +556,30 @@
           <div class="travelmate-card__wish-wrapper">
             <p class="travelmate-card__wish-title">хочет посетить:</p>
             <div class="travelmate-card__wish-countries">
-              <span class="travelmate-card__wish travelmate-card__wish--usa">США</span>
-              <span class="travelmate-card__wish travelmate-card__wish--australia">Австралия</span>
-              <span class="travelmate-card__wish travelmate-card__wish--dominica">Доминика</span>
+              <div class="travelmate-card__wish travelmate-card__wish--usa">
+                <img class="travelmate-card__flag tooltip" src="img/flag-usa.svg" width="26" height="18" alt="Флаг США" data-label="США">США
+              </div>
+              <div class="travelmate-card__wish travelmate-card__wish--australia">
+                <img class="travelmate-card__flag tooltip" src="img/flag-australia.svg" width="26" height="18" alt="Флаг Австралии" data-label="Австралия">Австралия
+              </div>
+              <div class="travelmate-card__wish travelmate-card__wish--dominica">
+                <img class="travelmate-card__flag tooltip" src="img/flag-dominica.svg" width="26" height="18" alt="Флаг Доминики" data-label="Доминика">Доминика
+              </div>
             </div>
           </div>
           <div class="travelmate-card__transport-wrapper">
             <p class="travelmate-card__transport-title">транспорт:</p>
             <div class="travelmate-card__transport-list">
-              <span class="travelmate-card__transport travelmate-card__transport--on">
+              <span class="travelmate-card__transport travelmate-card__transport--on tooltip" data-label="На самолете">
                 <svg class="travelmate-card__icon-plane" width="13" height="14"><use xlink:href="#icon-plane"></use></svg>
               </span>
-              <span class="travelmate-card__transport travelmate-card__transport--off">
+              <span class="travelmate-card__transport travelmate-card__transport--off tooltip" data-label="На автобусе">
                 <svg class="travelmate-card__icon-bus" width="13" height="14"><use xlink:href="#icon-bus"></use></svg>
               </span>
-              <span class="travelmate-card__transport travelmate-card__transport--on">
+              <span class="travelmate-card__transport travelmate-card__transport--on tooltip" data-label="На велосипеде">
                 <svg class="travelmate-card__icon-bicycle" width="16" height="14"><use xlink:href="#icon-bicycle"></use></svg>
               </span>
-              <span class="travelmate-card__transport travelmate-card__transport--off">
+              <span class="travelmate-card__transport travelmate-card__transport--off tooltip" data-label="Бегом">
                 <svg class="travelmate-card__icon-run" width="13" height="14"><use xlink:href="#icon-run"></use></svg>
               </span>
             </div>
@@ -581,14 +597,14 @@
           <a class="travelmate-card__invite" href="">Позвать!</a>
         </article>
         <article class="potential-travelmates__item travelmate-card">
-          <a href="" title="Лариса Роговая - перейти в профиль">
+          <a class="travelmate-card__photo" href="" title="Лариса Роговая - перейти в профиль">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
-              <img class="travelmate-card__photo" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@1x.jpg 1x, img/rogovaya-mobile@2x.jpg 2x" width="285" height="285" alt="Лариса Роговая - фотография">
+              <img class="travelmate-card__img" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@1x.jpg 1x, img/rogovaya-mobile@2x.jpg 2x" width="285" height="285" alt="Лариса Роговая - фотография">
             </picture>
           </a>
           <h3 class="travelmate-card__name travelmate-card__name--online">
@@ -599,23 +615,27 @@
           <div class="travelmate-card__wish-wrapper">
             <p class="travelmate-card__wish-title">хочет посетить:</p>
             <div class="travelmate-card__wish-countries">
-              <span class="travelmate-card__wish travelmate-card__wish--united-kingdom">Великобритания</span>
-            <span class="travelmate-card__wish travelmate-card__wish--germany">Германия</span>
+              <div class="travelmate-card__wish travelmate-card__wish--united-kingdom">
+                <img class="travelmate-card__flag tooltip" src="img/flag-united-kingdom.svg" width="26" height="18" alt="Флаг Великобритании" data-label="Великобритания">Великобритания
+              </div>
+              <div class="travelmate-card__wish travelmate-card__wish--germany">
+                <img class="travelmate-card__flag tooltip" src="img/flag-germany.svg" width="26" height="18" alt="Флаг Германии" data-label="Германия">Германия
+              </div>
             </div>
           </div>
           <div class="travelmate-card__transport-wrapper">
             <p class="travelmate-card__transport-title">транспорт:</p>
             <div class="travelmate-card__transport-list">
-              <span class="travelmate-card__transport travelmate-card__transport--on">
+              <span class="travelmate-card__transport travelmate-card__transport--on tooltip" data-label="На самолете">
                 <svg class="travelmate-card__icon-plane" width="13" height="14"><use xlink:href="#icon-plane"></use></svg>
               </span>
-              <span class="travelmate-card__transport travelmate-card__transport--on">
+              <span class="travelmate-card__transport travelmate-card__transport--on tooltip" data-label="На автобусе">
                 <svg class="travelmate-card__icon-bus" width="13" height="14"><use xlink:href="#icon-bus"></use></svg>
               </span>
-              <span class="travelmate-card__transport travelmate-card__transport--off">
+              <span class="travelmate-card__transport travelmate-card__transport--off tooltip" data-label="На велосипеде">
                 <svg class="travelmate-card__icon-bicycle" width="16" height="14"><use xlink:href="#icon-bicycle"></use></svg>
               </span>
-              <span class="travelmate-card__transport travelmate-card__transport--off">
+              <span class="travelmate-card__transport travelmate-card__transport--off tooltip" data-label="Бегом">
                 <svg class="travelmate-card__icon-run" width="13" height="14"><use xlink:href="#icon-run"></use></svg>
               </span>
             </div>
