@@ -333,6 +333,16 @@
   }
 }
 
+.travelmate-card__flag-icon {
+  width: 26px;
+  height: 18px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 36px;
+    height: 24px;
+  }
+}
+
 .travelmate-card__transport-wrapper {
   grid-column: 1 / 3;
   grid-row: 5 / 6;

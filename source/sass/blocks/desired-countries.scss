@@ -218,6 +218,8 @@
 }
 
 .desired-countries__flag {
+  display: flex;
+  align-items: center;
   position: relative;
   border: 1px solid #cbced9;
   border-radius: 4px;
@@ -225,15 +227,11 @@
   margin-left: -1px;
   width: 53px;
   height: 42px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 35px 24px;
 
   @media screen and (min-width: $tablet-width) {
     width: 137px;
     height: 70px;
     border-color: transparent;
-    background-size: 70px 47px;
     background-position: left 25px center;
   }
 
@@ -257,6 +255,29 @@
 
   &--czechia {
     background-image: url("../img/flag-czechia.svg");
+  }
+}
+
+.desired-countries__flag-icon,
+.desired-countries__flag-icon svg {
+  width: 35px;
+  height: 24px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 70px;
+    height: 47px;
+  }
+}
+
+.desired-countries__flag-icon {
+  margin: auto;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-left: 25px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-left: 40px;
   }
 }
 
