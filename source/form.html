@@ -12,7 +12,7 @@
       <a class="page-header__logo" href="index.html">
         <span class="visually-hidden">Погнали?</span>
       </a>
-      <a class="page-header__button" type="button" aria-label="Кнопка показа меню"></a>
+      <a class="page-header__button" aria-label="Кнопка показа меню"></a>
     </div>
     <nav class="page-header__menu">
       <a class="page-header__menu-item" href="index.html">О сервисе</a>
@@ -48,11 +48,16 @@
           <span class="mark__level">level</span>
         </div>
         <div class="profile__photo-wrapper">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg">
-            <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg">
-            <img class="profile__photo" src="img/demin-mobile@1x.jpg" alt="Петя Демин - фотография" width="100" height="100">
-          </picture>
+          <a href="" title="Профиль пользователя">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/photo-account-desktop@1x.webp 1x, img/photo-account-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.webp 1x, img/photo-account-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-account-mobile@1x.webp 1x, img/photo-account-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/photo-account-desktop@1x.jpg 1x, img/photo-account-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x">
+              <img class="profile__photo" src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@1x.jpg 1x, img/photo-account-mobile@2x.jpg 2x" alt="Фотография пользователя" width="100" height="100">
+            </picture>
+          </a>
           <label class="profile__photo-button">
             <input class="visually-hidden" type="file">Фото
           </label>
@@ -69,19 +74,19 @@
           <legend class="profile__transport-title">транспорт</legend>
           <div class="profile__transport transportation">
             <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-avia" id="transportation-avia" checked>
-            <label class="transportation__label transportation__label--avia" for="transportation-avia" aria-label="Кнопка передвижения на самолете" data-transport="Авиаперелет">
+            <label class="transportation__label transportation__label--avia tooltip" for="transportation-avia" aria-label="Кнопка передвижения на самолете" data-label="Авиаперелет">
               <svg height="16"><use xlink:href="#icon-plane"></use></svg>
             </label>
             <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bus" id="transportation-bus" checked>
-            <label class="transportation__label transportation__label--bus" for="transportation-bus" aria-label="Кнопка передвижения на автотранспорте" data-transport="Автотранспорт">
+            <label class="transportation__label transportation__label--bus tooltip" for="transportation-bus" aria-label="Кнопка передвижения на автотранспорте" data-label="Автотранспорт">
               <svg height="16"><use xlink:href="#icon-bus"></use></svg>
             </label>
             <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-bicycle" id="transportation-bicycle">
-            <label class="transportation__label transportation__label--bicycle" for="transportation-bicycle" aria-label="Кнопка передвижения на велосипеде" data-transport="Велосипед">
+            <label class="transportation__label transportation__label--bicycle tooltip" for="transportation-bicycle" aria-label="Кнопка передвижения на велосипеде" data-label="Велосипед">
               <svg height="16"><use xlink:href="#icon-bicycle"></use></svg>
             </label>
             <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-foot" id="transportation-foot" checked>
-            <label class="transportation__label transportation__label--foot" for="transportation-foot" aria-label="Кнопка передвижения пешком" data-transport="Пешком">
+            <label class="transportation__label transportation__label--foot tooltip" for="transportation-foot" aria-label="Кнопка передвижения пешком" data-label="Пешком">
               <svg height="16"><use xlink:href="#icon-run"></use></svg>
             </label>
           </div>
@@ -178,13 +183,13 @@
             </div>
             <div class="calendar__list">
               <div class="calendar__weekdays">
-                <div class="calendar__weekday" aria-label="Понедельник">П<span>н</span></div>
-                <div class="calendar__weekday" aria-label="Вторник">В<span>т</span></div>
-                <div class="calendar__weekday" aria-label="Среда">С<span>р</span></div>
-                <div class="calendar__weekday" aria-label="Четверг">Ч<span>т</span></div>
-                <div class="calendar__weekday" aria-label="Пятница">П<span>т</span></div>
-                <div class="calendar__weekday calendar__weekday--weekend" aria-label="Суббота">С<span>б</span></div>
-                <div class="calendar__weekday calendar__weekday--weekend" aria-label="Воскресенье">В<span>с</span></div>
+                <div class="calendar__weekday tooltip" data-label="Понедельник">П<span>н</span></div>
+                <div class="calendar__weekday tooltip" data-label="Вторник">В<span>т</span></div>
+                <div class="calendar__weekday tooltip" data-label="Среда">С<span>р</span></div>
+                <div class="calendar__weekday tooltip" data-label="Четверг">Ч<span>т</span></div>
+                <div class="calendar__weekday tooltip" data-label="Пятница">П<span>т</span></div>
+                <div class="calendar__weekday calendar__weekday--weekend tooltip" data-label="Суббота">С<span>б</span></div>
+                <div class="calendar__weekday calendar__weekday--weekend tooltip" data-label="Воскресенье">В<span>с</span></div>
               </div>
               <div class="calendar__days">
                 <input class="calendar__input" type="checkbox" name="feb-23" id="feb-23" disabled><label class="calendar__day" for="feb-23">23</label>
@@ -224,7 +229,7 @@
                 <input class="calendar__input" type="checkbox" name="march-29" id="march-29"><label class="calendar__day" for="march-29">29</label>
                 <input class="calendar__input" type="checkbox" name="march-30" id="march-30"><label class="calendar__day" for="march-30">30</label>
                 <input class="calendar__input" type="checkbox" name="march-31" id="march-31"><label class="calendar__day" for="march-31">31</label>
-                <input class="calendar__input" type="checkbox" name="april-1" id="april-1"><label class="calendar__day" for="april-1"><div>1<span class="calendar__day-month">&nbsp;апр</span></div></label>
+                <input class="calendar__input" type="checkbox" name="april-1" id="april-1"><label class="calendar__day" for="april-1"><span>1<span class="calendar__day-month">&nbsp;апр</span></span></label>
                 <input class="calendar__input" type="checkbox" name="april-2" id="april-2"><label class="calendar__day" for="april-2">2</label>
                 <input class="calendar__input" type="checkbox" name="april-3" id="april-3"><label class="calendar__day" for="april-3">3</label>
                 <input class="calendar__input" type="checkbox" name="april-4" id="april-4"><label class="calendar__day" for="april-4">4</label>
@@ -250,18 +255,17 @@
             <h4 class="visually-hidden">Список выбранных стран</h4>
             <div class="desired-countries__item">
               <a class="desired-countries__name" href="">Босния и Герцеговина</a>
-              <div class="desired-countries__flag desired-countries__flag--bosnia"></div>
+              <div class="desired-countries__flag desired-countries__flag--bosnia" data-label="Босния и Герцеговина"></div>
               <a class="desired-countries__close" aria-label="Удалить выбранную страну">
                 <svg class="desired-countries__icon-close" width="9" height="9"><use xlink:href="#icon-close"></use></svg>
               </a>
             </div>
             <div class="desired-countries__item">
               <a class="desired-countries__name" href="">Чехия</a>
-              <div class="desired-countries__flag desired-countries__flag--czechia">
+              <div class="desired-countries__flag desired-countries__flag--czechia" data-label="Чехия"></div>
               <a class="desired-countries__close" aria-label="Удалить выбранную страну">
                 <svg class="desired-countries__icon-close" width="9" height="9"><use xlink:href="#icon-close"></use></svg>
               </a>
-              </div>
             </div>
             <div class="desired-countries__item desired-countries__item--choose">
               <a class="desired-countries__name desired-countries__expand" href="">Выберите страну</a>
@@ -554,7 +558,7 @@
             <div class="entertainments__item">
               <div class="entertainments__header">
                 <p class="entertainments__country">Босния и Герцеговина</p>
-                <div class="entertainments__flag entertainments__flag--bosnia"></div>
+                <div class="entertainments__flag entertainments__flag--bosnia tooltip" data-label="Босния и Герцеговина"></div>
               </div>
               <textarea class="entertainments__plan" name="action-plan_bosnia" id="action-plan_bosnia" placeholder="План действий"></textarea>
               <label for="action-plan_bosnia" aria-label="План действий в выбранной стране"></label>
@@ -562,7 +566,7 @@
             <div class="entertainments__item">
               <div class="entertainments__header">
                 <p class="entertainments__country">Чехия</p>
-                <div class="entertainments__flag entertainments__flag--czechia"></div>
+                <div class="entertainments__flag entertainments__flag--czechia tooltip" data-label="Чехия"></div>
               </div>
               <textarea class="entertainments__plan" name="action-plan_czechia" id="action-plan_czechia" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
               <label for="action-plan_czechia" aria-label="План действий в выбранной стране"></label>

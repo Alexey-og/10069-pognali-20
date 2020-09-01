@@ -61,6 +61,10 @@
 
   & .travelmate-filter__inputs {
     display: none;
+
+    @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
+      display: flex;
+    }
   }
 }
 
@@ -110,7 +114,6 @@
   }
 
   @media screen and (min-width: $tablet-width) {
-    margin-bottom: 13px;
     padding-top: 12px;
     padding-bottom: 12px;
     border-top: none;

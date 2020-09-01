@@ -148,6 +148,10 @@
   background-image: url("../img/rates@1x.png");
   background-size: contain;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/rates@2x.png");
+  }
+
   @media screen and (min-width: $tablet-width) {
     right: 85px;
     top: auto;

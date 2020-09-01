@@ -45,6 +45,11 @@ $desktop-width: 1440px;
   background-repeat: no-repeat;
 }
 
+@mixin top-radius ($radius: 30px) {
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
 @mixin bottom-radius ($radius: 30px) {
   border-bottom-left-radius: $radius;
   border-bottom-right-radius: $radius;
@@ -75,9 +80,4 @@ $desktop-width: 1440px;
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-@mixin top-radius ($radius: 30px) {
-  border-top-left-radius: $radius;
-  border-top-right-radius: $radius;
 }
