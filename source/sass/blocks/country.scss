@@ -218,6 +218,8 @@
   top: -12px;
   width: 35px;
   height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
 
   @media screen and (min-width: $tablet-width) {
     left: auto;
@@ -229,5 +231,17 @@
 
   @media screen and (min-width: $tablet-width) {
     top: 23px;
+  }
+
+  &--thailand {
+    background-image: url("../img/flag-thailand.svg");
+  }
+
+  &--france {
+    background-image: url("../img/flag-france.svg");
+  }
+
+  &--czechia {
+    background-image: url("../img/flag-czechia.svg");
   }
 }
