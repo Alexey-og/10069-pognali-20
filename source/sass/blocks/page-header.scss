@@ -35,10 +35,10 @@
       background-color: $color-white;
     }
   }
-}
 
-.page-header--scroll {
-  position: fixed;
+  &--scroll {
+    position: fixed;
+  }
 }
 
 .page-header__top {
