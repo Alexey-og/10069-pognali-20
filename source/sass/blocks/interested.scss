@@ -1,24 +1,33 @@
 .interested {
   @include bottom-radius(30px);
-
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   margin-top: -30px;
-  padding: 100px 25px 30px;
   background-color: $color-basic-blue-dark;
   z-index: 5;
 
   @media screen and (min-width: $tablet-width) {
     @include bottom-radius(60px);
-
     margin-top: -60px;
+  }
+}
+
+.interested__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: $mobile-width;
+  margin: 0 auto;
+  padding: 100px 25px 30px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: $tablet-width;
     padding: 133px 76px 60px;
   }
 
   @media screen and (min-width: $desktop-width) {
+    width: $desktop-width;
     padding: 165px 132px 102px;
   }
 }

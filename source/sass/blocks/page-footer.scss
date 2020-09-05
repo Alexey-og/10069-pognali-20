@@ -1,29 +1,38 @@
 .page-footer {
   @include top-radius(30px);
-
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   width: 100%;
   margin-top: -30px;
-  min-height: 239px;
-  padding: 37px 25px 5px 25px;
   background-color: $color-white;
   z-index: 5;
 
   @media screen and (min-width: $tablet-width) {
     @include top-radius(60px);
+    margin-top: -60px;
+  }
+}
 
+.page-footer__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: $mobile-width;
+  min-height: 239px;
+  margin: 0 auto;
+  padding: 37px 25px 5px 25px;
+
+  @media screen and (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: center;
+    width: $tablet-width;
     min-height: 140px;
-    margin-top: -60px;
     padding: 46px 40px 32px 40px;
   }
 
   @media screen and (min-width: $desktop-width) {
+    width: $desktop-width;
     min-height: 154px;
     padding: 43px 60px 43px 60px;
   }

@@ -1,8 +1,14 @@
 .travelmates-wrapper {
-  margin: 76px 25px 76px;
+  width: $mobile-width;
+  margin: 76px auto 76px;
+  padding-left: 25px;
+  padding-right: 25px;
 
   @media screen and (min-width: $tablet-width) {
-    margin: 182px 40px 122px;
+    width: $tablet-width;
+    margin: 182px auto 122px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -10,6 +16,9 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 0 60px 135px;
+    width: $desktop-width;
+    margin: 0 auto 135px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }

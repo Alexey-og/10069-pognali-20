@@ -1,16 +1,25 @@
 .countries {
   @include bottom-radius(30px);
-
   position: relative;
   margin-top: -30px;
-  padding: 100px 25px 34px;
   background-color: $color-basic-blue-light;
   z-index: 8;
 
   @media screen and (min-width: $tablet-width) {
     @include bottom-radius(60px);
-
     margin-top: -60px;
+  }
+}
+
+
+.countries__inner {
+  position: relative;
+  width: $mobile-width;
+  margin: 0 auto;
+  padding: 100px 25px 34px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: $tablet-width;
     padding: 138px 75px 80px;
     background-image:
       url("../img/flags-back@1x.png"),
@@ -32,6 +41,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: $desktop-width;
     padding: 218px 130px 138px;
     background-position:
       right 60px top 147px,

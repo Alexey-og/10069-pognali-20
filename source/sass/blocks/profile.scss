@@ -1,17 +1,28 @@
 .profile {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 54px 25px 64px;
   z-index: 7;
 
+  @media screen and (min-width: $desktop-width) {
+    margin-top: -190px;
+  }
+}
+
+.profile__inner {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: $mobile-width;
+  margin: 0 auto;
+  padding: 54px 25px 64px;
+
   @media screen and (min-width: $tablet-width) {
+    width: $tablet-width;
     padding: 125px 75px 90px;
   }
 
   @media screen and (min-width: $desktop-width) {
     justify-content: flex-end;
-    margin-top: -190px;
+    width: $desktop-width;
     padding: 0 60px 125px 124px;
   }
 }

@@ -1,25 +1,34 @@
 .add-profile {
   @include bottom-radius(30px);
-
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
   margin-top: -30px;
-  padding: 67px 25px 38px 49px;
   background-color: #e6e8f1;
   z-index: 6;
 
   @media screen and (min-width: $tablet-width) {
     @include bottom-radius(60px);
-
-    flex-direction: column;
     margin-top: -60px;
+  }
+}
+
+.add-profile__inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: $mobile-width;
+  margin: 0 auto;
+  padding: 67px 25px 38px 49px;
+
+  @media screen and (min-width: $tablet-width) {
+    flex-direction: column;
+    width: $tablet-width;
     padding: 130px 40px 87px 40px;
   }
 
   @media screen and (min-width: $desktop-width) {
+    width: $desktop-width;
     padding: 160px 244px 187px 130px;
   }
 }
