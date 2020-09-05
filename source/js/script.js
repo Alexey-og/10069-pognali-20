@@ -1,6 +1,7 @@
 'use strict';
 
 var pageHeader = document.querySelector(".page-header");
+
 var pageHeaderButton = document.querySelector(".page-header__button");
 var businessRatesShow = document.querySelector(".add-profile__show");
 var businessRates = document.querySelector(".business-rates");
@@ -24,6 +25,15 @@ var filterLetters = document.querySelector(".filter__letters"); */
 
 
 pageHeader.classList.remove("page-header--no-js");
+
+window.addEventListener("scroll", function() {
+  pageHeader.classList.add("page-header--scroll");
+  if (pageYOffset === 0) {
+    pageHeader.classList.remove("page-header--scroll");
+  }
+});
+
+
 
 if (countrySelection) {
   countrySelection.classList.add("hidden");

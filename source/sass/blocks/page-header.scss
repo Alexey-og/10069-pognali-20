@@ -1,30 +1,22 @@
 .page-header {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  left: 0;
-  top: 0;
+  position: fixed;
   width: 100%;
   min-height: 73px;
-  padding: 0 25px 0;
+  margin-top: 0;
   background-color: $color-basic-blue;
   z-index: 50;
 
   @media screen and (min-width: $tablet-width) {
-    padding: 0 40px 0;
     background-color: $color-header-blue;
   }
 
   @media screen and (min-width: $desktop-width) {
-
-    padding: 17px 60px 0;
     background-color: $color-basic-blue;
   }
 
   &--dropped,
-  &--no-js {
+  &--no-js,
+  &--scroll {
     background-color: $color-white;
 
     @media screen and (min-width: $tablet-width) {
@@ -35,9 +27,32 @@
       background-color: $color-white;
     }
   }
+}
 
-  &--scroll {
-    position: fixed;
+.page-header__inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: $mobile-width;
+  min-height: 73px;
+  margin: 0 auto;
+  padding: 0 25px 0;
+
+  @media screen and (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding: 0 40px 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: $desktop-width;
+    margin-top: 38px;
+    padding: 5px 60px;
+
+    .page-header--scroll & {
+      margin-top: 0;
+      padding: 16px 60px 14px;
+    }
   }
 }
 
@@ -58,8 +73,15 @@
 
   @media screen and (min-width: $desktop-width) {
     width: 200px;
-    min-height: 110px;
+    min-height: 52px;
     margin-right: 40px;
+    padding: 0;
+  }
+
+  .page-header--scroll & {
+    @media screen and (min-width: $desktop-width) {
+      margin-right: 58px;
+    }
   }
 }
 
@@ -99,7 +121,8 @@
   }
 
   .page-header--dropped &,
-  .page-header--no-js & {
+  .page-header--no-js &,
+  .page-header--scroll & {
     background-image: url("../img/logo-mobile-blue@1x.png");
 
     @media (min-resolution: 2dppx) {
@@ -127,17 +150,22 @@
   cursor: pointer;
   z-index: 100;
 
+  @media screen and (min-width: $desktop-width) {
+    display: none;
+  }
+
   .page-header--dropped & {
     background-image: url("../img/icon-mobile-close.svg");
     background-size: 18px 18px;
   }
 
-  .page-header--no-js & {
-    background-image: none;
+  .page-header--scroll & {
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='11' viewBox='0 0 25 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='25' height='3' rx='1.5' fill='%23CCCCCC'/%3E%3Crect y='8' width='25' height='3' rx='1.5' fill='%23CCCCCC'/%3E%3C/svg%3E");
+    background-size: 25px 11px;
   }
 
-  @media screen and (min-width: $desktop-width) {
-    display: none;
+  .page-header--no-js & {
+    background-image: none;
   }
 }
 
@@ -175,6 +203,15 @@
       width: 60px;
       height: 2px;
       background-color: $color-white;
+
+      .page-header--scroll & {
+        width: 44px;
+        background-color: $color-special-blue;
+      }
+    }
+
+    .page-header--scroll & {
+      padding-left: 90px;
     }
   }
 }
@@ -223,6 +260,10 @@
 
   &[href]:active {
     opacity: 0.3;
+  }
+
+  .page-header--scroll & {
+    color: $color-special-blue;
   }
 }
 
