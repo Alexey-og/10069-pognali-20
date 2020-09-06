@@ -18,7 +18,8 @@
   cursor: pointer;
 
   @media screen and (min-width: $tablet-width) {
-    background-position: right 39px top 50%;
+    border-radius: 20px;
+    background-position: right 37px top 50%;
   }
 
   &:hover {

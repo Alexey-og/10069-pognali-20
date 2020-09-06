@@ -33,19 +33,19 @@
 
   @media screen and (min-width: $desktop-width) {
     width: $desktop-width;
-    min-height: 154px;
-    padding: 43px 60px 43px 60px;
+    min-height: 152px;
+    padding: 48px 60px 42px 60px;
   }
 }
 
 .page-footer__logo {
   flex-shrink: 0;
-  width: 96px;
+  width: 100px;
   height: 18px;
   background-image: url("../img/logo-mobile-blue@1x.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100px 18px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/logo-mobile-blue@2x.png");
@@ -78,6 +78,10 @@
   @media screen and (min-width: $tablet-width) {
     margin: 0 auto;
   }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-right: 36px;
+  }
 }
 
 .page-footer__copyright {
@@ -85,7 +89,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding-top: 13px;
+  padding-top: 10px;
   border-top: 1px solid $color-grey-f2;
 
   @media screen and (min-width: $tablet-width) {

@@ -38,9 +38,8 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    width: 25%;
     min-height: 107px;
-    padding: 30px 100px 10px 30px;
+    padding: 27px 100px 10px 30px;
   }
 
   &::before {
@@ -62,7 +61,7 @@
     @media screen and (min-width: $desktop-width) {
       left: auto;
       right: 63px;
-      top: 30px;
+      top: 28px;
       font-size: 24px;
       line-height: 24px;
     }
@@ -77,18 +76,7 @@
 
     @media screen and (min-width: $desktop-width) {
       margin-top: 0;
-    }
-  }
-
-  &:last-child {
-    padding-bottom: 22px;
-
-    @media screen and (min-width: $tablet-width) {
-      padding-bottom: 55px;
-    }
-
-    @media screen and (min-width: $desktop-width) {
-      padding-bottom: 0;
+      margin-left: -30px;
     }
   }
 
@@ -101,8 +89,9 @@
     }
 
     @media screen and (min-width: $desktop-width) {
-      width: calc(25% + 30px);
+      width: calc(25% + 15px);
       border-radius: 20px 0 0 20px;
+      padding-left: 33px;
     }
   }
 
@@ -115,8 +104,7 @@
     }
 
     @media screen and (min-width: $desktop-width) {
-      width: calc(25% + 30px);
-      margin-left: -30px;
+      width: calc(25% + 45px);
       border-radius: 20px 0 0 20px;
     }
   }
@@ -130,29 +118,31 @@
     }
 
     @media screen and (min-width: $desktop-width) {
-      width: calc(25% + 30px);
-      margin-left: -30px;
+      width: calc(25% + 45px);
       border-radius: 20px 0 0 20px;
     }
   }
 
   &:nth-child(4) {
+    padding-bottom: 22px;
     background-color: $color-basic-yellow;
 
     @media screen and (min-width: $tablet-width) {
       margin-left: -30px;
+      padding-bottom: 55px;
       border-radius: 0 0 20px 20px;
     }
 
     @media screen and (min-width: $desktop-width) {
-      margin-left: -30px;
+      width: calc(25% - 15px);
+      padding-bottom: 0;
       border-radius: 20px;
     }
-  }
-}
 
-.steps__item:nth-child(4)::before {
-  @media screen and (min-width: $desktop-width) {
-    right: 33px;
+    &::before {
+      @media screen and (min-width: $desktop-width) {
+        right: 33px;
+      }
+    }
   }
 }

@@ -29,7 +29,7 @@
 
   @media screen and (min-width: $desktop-width) {
     width: $desktop-width;
-    padding: 160px 244px 187px 130px;
+    padding: 164px 244px 190px 130px;
   }
 }
 
@@ -43,13 +43,14 @@
   }
 
   @media screen and (min-width: $desktop-width) {
+    margin-left: 120px;
     margin-bottom: 90px;
   }
 }
 
 .add-profile__list {
   position: relative;
-  margin: 0 0 30px 0;
+  margin: 0 0 28px 0;
   padding: 0 45px 0 0;
   width: 100%;
   list-style-type: none;
@@ -72,8 +73,8 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    margin-bottom: 4px;
-    padding: 50px 161px 50px 93px;
+    margin-bottom: 5px;
+    padding: 44px 161px 50px 91px;
 
     &::before {
       width: 446px;
@@ -88,12 +89,17 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding: 10px 0;
+  padding: 10px 0 15px;
   border-top: 1px solid rgba($color-grey-44, 0.05);
   font-weight: 300;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 20px;
   color: $color-grey-44;
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 10px 0;
+    line-height: 19px;
+  }
 
   &:last-child {
     border-bottom: 1px solid rgba($color-grey-44, 0.05);
@@ -139,7 +145,7 @@
     justify-content: space-between;
     padding: 0;
     font-size: 28px;
-    line-height: 67px;
+    line-height: 66px;
   }
 }
 

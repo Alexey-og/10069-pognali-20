@@ -3,8 +3,8 @@
   background-color: $color-basic-blue;
   background-image: url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  background-position: center top;
+  background-size: 320px 569px;
   z-index: 10;
 
   @media (min-resolution: 2dppx) {
@@ -25,6 +25,8 @@
   @media screen and (min-width: $desktop-width) {
     background-color: $color-basic-blue;
     background-image: url("../img/globe-back-desktop@1x.jpg");
+    background-size: 1800px 750px;
+    background-position: center bottom;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/globe-back-desktop@2x.jpg");
@@ -69,10 +71,10 @@
 .promo__illustration {
   position: relative;
   min-height: 405px;
-  padding-top: 21px;
+  padding-top: 19px;
   background-image: url("../img/traveller-illustration-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: right 40% bottom;
+  background-position: right calc(40% - 3px) bottom;
   background-size: 192px 255px;
 
   @media (min-resolution: 2dppx) {
@@ -174,7 +176,7 @@
   min-height: 40px;
   border-radius: 25px;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
   text-decoration: none;
@@ -207,7 +209,7 @@
 
   @media screen and (min-width: $desktop-width) {
     width: 420px;
-    margin: 82px 0 0 127px;
+    margin: 75px 0 0 127px;
     padding: 0;
     text-align: left;
   }
@@ -216,7 +218,7 @@
 .promo__citation {
   width: 170px;
   min-height: 285px;
-  padding-top: 48px;
+  padding-top: 47px;
   margin-left: 50px;
 
   @media screen and (min-width: $tablet-width) {
@@ -232,8 +234,8 @@
 
   @media screen and (min-width: $desktop-width) {
     left: auto;
-    right: 83px;
-    top: 220px;
+    right: 81px;
+    top: 217px;
     width: 265px;
   }
 }
@@ -253,7 +255,7 @@
 }
 
 .promo__author {
-  margin-top: 15px;
+  margin-top: 16px;
   font-weight: bold;
 
   @media screen and (min-width: $tablet-width) {
