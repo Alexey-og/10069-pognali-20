@@ -49,8 +49,8 @@
 .profile__mark .mark__indicator {
   width: 100px;
   height: 100px;
-  stroke-dasharray: 251px 63px;
-  stroke-dashoffset: 87px;
+  stroke-dasharray: 280px 51px;
+  stroke-dashoffset: 106px;
   stroke-width: 3;
 
   @media screen and (min-width: $tablet-width) {
@@ -60,11 +60,16 @@
 }
 
 .profile__mark .mark__number {
+  padding: 0 5px 1px 5px;
   border-bottom: 1px solid rgba($color-grey-44, 0.3);
   font-size: 38px;
   line-height: 38px;
   text-align: center;
   color: $color-basic-blue;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 3px;
+  }
 
   @media screen and (min-width: $desktop-width) {
     color: $color-white;
@@ -72,9 +77,14 @@
 }
 
 .profile__mark .mark__level {
+  padding-bottom: 3px;
   font-size: 18px;
   line-height: 18px;
   color: $color-grey-44;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-bottom: 0;
+  }
 
   @media screen and (min-width: $desktop-width) {
     color: $color-white;
@@ -87,6 +97,8 @@
   margin: 0 18px 1px auto;
 
   @media screen and (min-width: $tablet-width) {
+    width: 94px;
+    height: 94px;
     margin: 0 0 1px auto;
     order: 3;
   }
@@ -122,7 +134,7 @@
   @include flex-center;
   width: 100%;
   min-height: 40px;
-  padding: 5px 15px;
+  padding: 3px 15px 7px;
   border-radius: 20px;
   background-color: $color-special-blue-light;
   font-weight: 500;
@@ -215,13 +227,17 @@
   @media screen and (min-width: $tablet-width) {
     top: auto;
     bottom: -10px;
-    padding: 0 17px;
+    padding: 0 19px;
     font-size: 20px;
-    letter-spacing: 0.09em;
+    letter-spacing: 0.08em;
   }
 }
 
 .profile__tags-title {
+  @media screen and (min-width: $tablet-width) {
+    bottom: -9px;
+  }
+
   @media screen and (min-width: $desktop-width) {
     left: 22px;
     transform: translateX(0);
@@ -244,7 +260,7 @@
   overflow: hidden;
 
   @media screen and (min-width: $tablet-width) {
-    padding: 35px 40px 15px;
+    padding: 33px 40px 15px;
     font-size: 20px;
     line-height: 22px;
   }

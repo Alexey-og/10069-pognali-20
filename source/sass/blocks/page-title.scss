@@ -2,7 +2,7 @@
   @include bottom-radius(30px);
   position: relative;
   width: 100%;
-  background-color: $color-basic-blue;
+  background-color: $color-header-blue;
   z-index: 7;
 
   @media screen and (min-width: $tablet-width) {
@@ -28,7 +28,7 @@
   @media screen and (min-width: $tablet-width) {
     width: $tablet-width;
     min-height: 350px;
-    padding: 140px 74px 73px 77px;
+    padding: 140px 74px 70px 74px;
   }
 
   @media screen and (min-width: $desktop-width) {

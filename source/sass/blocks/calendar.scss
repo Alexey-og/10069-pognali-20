@@ -2,15 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 42px;
-  margin-bottom: 17px;
-  padding: 10px 0;
+  min-height: 44px;
+  margin-bottom: 23px;
+  padding: 10px 0 10px;
   border-top: 1px solid $color-hawkes-blue;
   border-bottom: 1px solid $color-hawkes-blue;
 
   @media screen and (min-width: $tablet-width) {
     min-height: 86px;
-    margin-bottom: 35px;
+    margin-bottom: 37px;
     padding: 20px 0;
   }
 
@@ -47,12 +47,18 @@
 
   &--previous {
     justify-content: flex-start;
-    margin-left: 17px;
+
+    @media screen and (min-width: $tablet-width) {
+      margin-left: 18px;
+    }
   }
 
   &--next {
     justify-content: flex-end;
-    margin-right: 17px;
+
+    @media screen and (min-width: $tablet-width) {
+      margin-right: 17px;
+    }
   }
 }
 
@@ -69,7 +75,7 @@
 
 .calendar__weekdays {
   display: grid;
-  grid-template-columns: repeat(7, 31px);
+  grid-template-columns: repeat(7, 32px);
 
   @media screen and (min-width: $tablet-width) {
     grid-template-columns: repeat(7, 76px);
@@ -81,13 +87,16 @@
 }
 
 .calendar__weekday {
-  height: 30px;
+  height: 24px;
   font-size: 14px;
   line-height: 1;
   text-align: center;
   color: $color-grey-44;
 
   @media screen and (min-width: $tablet-width) {
+    height: 28px;
+    padding-top: 1px;
+    padding-left: 5px;
     font-size: 18px;
   }
 
@@ -113,7 +122,7 @@
 
 .calendar__days {
   display: grid;
-  grid-template-columns: repeat(7, 31px);
+  grid-template-columns: repeat(7, 32px);
 
   @media screen and (min-width: $tablet-width) {
     grid-template-columns: repeat(7, 76px);
@@ -130,7 +139,7 @@
 
 .calendar__day {
   @include flex-center;
-  width: 31px;
+  width: 32px;
   height: 31px;
   padding: 3px;
   border: 1px solid $color-hawkes-blue;
@@ -142,8 +151,9 @@
 
   @media screen and (min-width: $tablet-width) {
     width: 76px;
-    height: 71px;
-    font-size: 18px;
+    height: 70px;
+    padding: 3px 3px 5px 3px;
+    font-size: 20px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -154,7 +164,7 @@
     height: 71px;
     padding: 14px 15px;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
@@ -179,6 +189,10 @@
 .calendar__input:checked + .calendar__day {
   background-color: $color-button-blue;
   color: $color-white;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .calendar__input:disabled + .calendar__day {
@@ -191,7 +205,7 @@
   cursor: pointer;
 
   @media screen and (min-width: $tablet-width) {
-    padding: 11px 12px;
+    padding: 3px 3px 5px 3px;
     border-width: 4px;
   }
 }

@@ -18,11 +18,11 @@
   position: relative;
   width: $mobile-width;
   margin: 0 auto;
-  padding: 25px 25px 60px 25px;
+  padding: 24px 25px 50px 25px;
 
   @media screen and (min-width: $tablet-width) {
     width: $tablet-width;
-    padding: 57px 75px 96px;
+    padding: 53px 75px 96px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -45,13 +45,14 @@
   flex-direction: column;
   justify-content: flex-start;
   margin-bottom: 10px;
-  padding: 23px;
+  padding: 23px 25px;
   min-height: 154px;
   border-radius: 10px;
   background-color: $color-white;
   color: $color-button-blue;
 
   @media screen and (min-width: $tablet-width) {
+    min-height: 152px;
     padding: 0;
   }
 
@@ -67,7 +68,7 @@
 .planned-trips__header {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   font-size: 16px;
   line-height: 1;
 
@@ -75,7 +76,7 @@
     justify-content: space-between;
     flex-direction: row-reverse;
     margin: 0;
-    padding: 40px 31px 33px 36px;
+    padding: 38px 26px 33px 36px;
     border-bottom: 1px solid rgba($color-link-water, 0.3);
     font-size: 24px;
   }
@@ -92,6 +93,11 @@
 .planned-trips__number {
   margin: 0 5px 0 0;
   font-weight: 500;
+  font-size: 16px;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+  }
 
   @media screen and (min-width: $desktop-width) {
     margin-right: 35px;
@@ -115,7 +121,7 @@
   @media screen and (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 18px 35px 18px 33px;
+    padding: 18px 33px 16px 33px;
     font-size: 20px;
   }
 
@@ -141,7 +147,7 @@
 }
 
 .planned-trips__dates {
-  margin: 0 0 22px 0;
+  margin: 0 0 24px 0;
 
   @media screen and (min-width: $tablet-width) {
     margin: 0 20px;

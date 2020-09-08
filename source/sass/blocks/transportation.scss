@@ -3,7 +3,7 @@
 }
 
 .transportation__label {
-  @include circle(31px);
+  @include circle(32px);
   @include flex-center;
   margin: 0;
   background-color: $color-white;
