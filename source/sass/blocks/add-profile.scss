@@ -2,7 +2,7 @@
   @include bottom-radius(30px);
   position: relative;
   margin-top: -30px;
-  background-color: #e6e8f1;
+  background-color: #edeff6;
   z-index: 6;
 
   @media screen and (min-width: $tablet-width) {
@@ -24,12 +24,12 @@
   @media screen and (min-width: $tablet-width) {
     flex-direction: column;
     width: $tablet-width;
-    padding: 130px 40px 87px 40px;
+    padding: 129px 40px 88px 40px;
   }
 
   @media screen and (min-width: $desktop-width) {
     width: $desktop-width;
-    padding: 164px 244px 190px 130px;
+    padding: 163px 244px 190px 130px;
   }
 }
 
@@ -38,7 +38,7 @@
   padding: 0;
 
   @media screen and (min-width: $tablet-width) {
-    margin: 0 0 36px 0;
+    margin: 0 0 36px 2px;
     text-align: center;
   }
 
@@ -57,8 +57,8 @@
   counter-reset: profile-list;
 
   @media screen and (min-width: $tablet-width) {
-    margin: 0 0 11px 0;
-    padding: 42px 34px 44px 90px;
+    margin: 0 0 13px 0;
+    padding: 40px 34px 44px 90px;
 
     &::before {
       position: absolute;
@@ -96,9 +96,17 @@
   line-height: 20px;
   color: $color-grey-44;
 
+  @media screen and (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    font-size: 28px;
+    line-height: 65px;
+  }
+
   @media screen and (min-width: $desktop-width) {
     padding: 10px 0;
-    line-height: 19px;
+    line-height: 46px;
   }
 
   &:last-child {
@@ -129,7 +137,7 @@
   }
 
   &:nth-child(1)::before {
-    background-color: $color-special-orange-light;
+    background-color: $color-special-orange;
   }
 
   &:nth-child(2)::before {
@@ -138,14 +146,6 @@
 
   &:nth-child(3)::before {
     background-color: $color-basic-yellow;
-  }
-
-  @media screen and (min-width: $tablet-width) {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0;
-    font-size: 28px;
-    line-height: 66px;
   }
 }
 

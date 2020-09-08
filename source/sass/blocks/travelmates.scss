@@ -32,9 +32,9 @@
 
   @media (min-resolution: 2dppx) {
     background-image:
-    url("../img/blue-rect-r20.svg"),
-    url("../img/smolov-back-desktop@2x.png"),
-    url("../img/rogovaya-back-mobile@2x.png");
+      url("../img/blue-rect-r20.svg"),
+      url("../img/smolov-back-desktop@2x.png"),
+      url("../img/rogovaya-back-mobile@2x.png");
   }
 
   @media screen and (min-width: $tablet-width) {
@@ -46,7 +46,7 @@
       url("../img/rogovaya-back-desktop@1x.png");
     background-position:
       left 40px top 131px,
-      left 40px top 492px,
+      left 40px top 486px,
       right 74px top 140px;
     background-repeat: no-repeat;
     background-size:
@@ -67,7 +67,7 @@
     grid-template-columns: 50% 50%;
     grid-template-rows: min-content min-content;
     width: $desktop-width;
-    padding: 193px 30px 104px 30px;
+    padding: 192px 30px 104px 30px;
     background-position:
       left 60px top 130px,
       left 547px top 194px,
@@ -79,7 +79,7 @@
   padding: 0 30px 34px 25px;
 
   @media screen and (min-width: $tablet-width) {
-    padding: 0 50px 20px 0;
+    padding: 0 50px 23px 0;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -94,7 +94,7 @@
   margin: 0 0 20px 0;
 
   @media screen and (min-width: $tablet-width) {
-    margin: 0 0 55px 0;
+    margin: 0 0 56px 0;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -111,12 +111,13 @@
     width: 430px;
     margin: 0 0 39px 0;
     font-size: 28px;
-    line-height: 33px;
+    line-height: 34px;
   }
 
   @media screen and (min-width: $desktop-width) {
     width: 430px;
-    margin: 0 0 42px 0;
+    margin: 0 0 39px 0;
+    line-height: 34px;
   }
 }
 
@@ -127,6 +128,7 @@
   line-height: 22px;
 
   @media screen and (min-width: $tablet-width) {
+    width: 290px;
     font-size: 21px;
     line-height: 24px;
   }
@@ -138,7 +140,7 @@
   margin-bottom: 19px;
 
   @media screen and (min-width: $tablet-width) {
-    margin-bottom: 81px;
+    margin-bottom: 72px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -155,8 +157,12 @@
   padding-bottom: 10px;
 
   @media screen and (min-width: $tablet-width) {
-    width: 620px;
+    width: 616px;
     height: 80px;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 9px 32px 13px;
+    background-position: right 35px top 50%;
     font-size: 24px;
   }
 

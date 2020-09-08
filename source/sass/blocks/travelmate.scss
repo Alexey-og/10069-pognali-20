@@ -71,7 +71,7 @@
   min-height: 158px;
   background-color: $color-white;
 
-  @media screen and (min-width: $desktop-width) {
+  @media screen and (min-width: $tablet-width) {
     @include bottom-radius(20px);
   }
 }
@@ -81,7 +81,7 @@
 
   position: relative;
   min-height: 25px;
-  margin-top: -12px;
+  margin-top: -13px;
 }
 
 .travelmate__flag {
@@ -124,6 +124,7 @@
   text-align: center;
 
   @media screen and (min-width: $tablet-width) {
+    margin: 6px auto 22px 46px;
     padding-left: 22px;
   }
 
@@ -178,6 +179,8 @@
   color: $color-special-grey;
 
   @media screen and (min-width: $tablet-width) {
+    padding-left: 20px;
+    padding-right: 20px;
     font-size: 20px;
     line-height: 23px;
   }
@@ -188,7 +191,12 @@
   padding-bottom: 16px;
 
   @media screen and (min-width: $tablet-width) {
-    padding-top: 21px;
+    padding-top: 22px;
+    padding-bottom: 23px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 22px;
     padding-bottom: 22px;
   }
 }
@@ -202,7 +210,7 @@
   width: 58px;
   height: 58px;
 
-  @media screen and (min-width: $desktop-width) {
+  @media screen and (min-width: $tablet-width) {
     left: 23px;
     top: 21px;
     width: 58px;

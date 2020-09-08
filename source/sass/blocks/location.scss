@@ -21,14 +21,14 @@
 
   @media screen and (min-width: $tablet-width) {
     width: $tablet-width;
-    padding: 108px 75px 84px 75px;
+    padding: 108px 75px 85px 75px;
   }
 
   @media screen and (min-width: $desktop-width) {
     flex-direction: row;
     align-items: center;
     width: $desktop-width;
-    padding: 115px 75px 55px 283px;
+    padding: 115px 75px 56px 283px;
   }
 }
 
@@ -114,9 +114,9 @@
   @media screen and (min-width: $tablet-width) {
     min-height: 80px;
     border-radius: 20px;
-    padding-left: 36px;
+    padding: 19px 23px 21px 35px;
     font-size: 24px;
-    background-position: right 33px center;
+    background-position: right 32px center;
   }
 
   @media screen and (min-width: $desktop-width) {

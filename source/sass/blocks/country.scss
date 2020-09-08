@@ -10,8 +10,9 @@
   @media screen and (min-width: $tablet-width) {
     flex-direction: row-reverse;
     border-radius: 20px;
-    width: 616px;
+    width: 617px;
     min-height: 140px;
+    margin-right: 0;
     background-position: right top;
 
     &:last-of-type::after {
@@ -44,7 +45,6 @@
 
 .country__img {
   @include top-radius(10px);
-
   flex-shrink: 0;
   width: 270px;
   height: 110px;
@@ -71,8 +71,12 @@
     flex-grow: 1;
     height: 140px;
     margin: 0;
-    padding: 24px 0 24px 29px;
+    padding: 28px 0 23px 29px;
     border-radius: 20px 0 0 20px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 22px 0 23px 30px;
   }
 }
 
@@ -101,7 +105,12 @@
   color: $color-black;
 
   @media screen and (min-width: $tablet-width) {
+    padding-bottom: 5px;
     font-size: 24px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-bottom: 4px;
   }
 }
 
@@ -166,18 +175,19 @@
   top: -13px;
   width: 35px;
   height: 24px;
-  background-size: contain;
+  background-size: 35px 24px;
   background-repeat: no-repeat;
 
   @media screen and (min-width: $tablet-width) {
     left: auto;
-    right: -35px;
+    right: -36px;
     top: 17px;
     width: 70px;
     height: 47px;
+    background-size: 70px 47px;
   }
 
-  @media screen and (min-width: $tablet-width) {
+  @media screen and (min-width: $desktop-width) {
     top: 24px;
   }
 

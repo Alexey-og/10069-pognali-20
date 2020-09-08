@@ -33,7 +33,7 @@
   @media screen and (min-width: $tablet-width) {
     width: $tablet-width;
     min-height: 921px;
-    padding: 278px 385px 0 74px;
+    padding: 275px 385px 0 75px;
     background-image:
       url("../img/about-tablet@1x.png"),
       url("data:image/svg+xml,%3Csvg width='688' height='212' viewBox='0 0 688 212' fill='%23141b3b' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='688' height='212' rx='20'/%3E%3C/svg%3E");
@@ -51,8 +51,8 @@
 
   @media screen and (min-width: $desktop-width) {
     width: $desktop-width;
-    min-height: 750px;
-    padding: 129px 690px 0 130px;
+    min-height: 751px;
+    padding: 129px 690px 2px 130px;
     background-image:
       url("../img/about-desktop@1x.png"),
       url("data:image/svg+xml,%3Csvg width='212' height='212' viewBox='0 0 212 212' fill='%23141b3b' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='212' height='212' rx='20'/%3E%3C/svg%3E");
@@ -66,6 +66,14 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../img/about-desktop@2x.png"), url("data:image/svg+xml,%3Csvg width='212' height='212' viewBox='0 0 212 212' fill='%23141b3b' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='212' height='212' rx='20'/%3E%3C/svg%3E");
     }
+  }
+}
+
+.about-service__inner .heading-2 {
+  margin-bottom: 41px;
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 58px;
   }
 }
 
@@ -87,7 +95,7 @@
 
   @media screen and (min-width: $tablet-width) {
     font-size: 21px;
-    line-height: 24px;
+    line-height: 25px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -102,14 +110,16 @@
     display: flex;
     width: 276px;
     min-height: 80px;
-    margin-top: 50px;
+    margin-top: 54px;
+    padding-left: 32px;
     padding-right: 55px;
     font-size: 24px;
     line-height: 24px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    margin-top: 88px;
+    margin-top: 86px;
+    padding: 19px 55px 21px 33px;
     padding-left: 33px;
     border-radius: 20px;
   }

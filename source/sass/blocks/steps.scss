@@ -31,7 +31,7 @@
   @media screen and (min-width: $tablet-width) {
     width: 50%;
     min-height: 140px;
-    padding: 31px 100px 55px 33px;
+    padding: 30px 100px 55px 33px;
     border-radius: 20px;
     font-size: 24px;
     line-height: 24px;
@@ -39,7 +39,7 @@
 
   @media screen and (min-width: $desktop-width) {
     min-height: 107px;
-    padding: 27px 100px 10px 30px;
+    padding: 28px 100px 10px 30px;
   }
 
   &::before {
@@ -51,7 +51,7 @@
     color: $color-white;
 
     @media screen and (min-width: $tablet-width) {
-      left: 33px;
+      left: 34px;
       top: auto;
       bottom: 23px;
       font-size: 30px;
@@ -91,7 +91,7 @@
     @media screen and (min-width: $desktop-width) {
       width: calc(25% + 15px);
       border-radius: 20px 0 0 20px;
-      padding-left: 33px;
+      padding-left: 34px;
     }
   }
 
