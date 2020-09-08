@@ -1,13 +1,12 @@
 .country-selection {
   @include top-radius(4px);
-
   position: absolute;
   content: "";
   left: 0;
   top: 0;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 16px rgba(#d4d9eb, 0.25);
+  box-shadow: 0 2px 16px rgba($color-hawkes-blue-b, 0.25);
   background-color: $color-white;
   z-index: 2;
 
@@ -15,7 +14,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 575px;
-    box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18);
+    box-shadow: 0 8px 16px rgba($color-tory-blue, 0.18);
     background-color: transparent;
   }
 
@@ -25,7 +24,6 @@
 
   &::after {
     @include circle(24px);
-
     position: absolute;
     content: "";
     right: -12px;
@@ -41,7 +39,6 @@
 
 .country-selection__header {
   @include top-radius(4px);
-
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -79,7 +76,6 @@
 
 .country-selection__close {
   @include flex-center;
-
   width: 26px;
   height: 26px;
   border: none;
@@ -107,7 +103,7 @@
   @media screen and (min-width: $tablet-width) {
     width: 370px;
     padding: 35px 70px 33px 27px;
-    border-right: 1px solid #cbced9;
+    border-right: 1px solid $color-link-water;
     border-bottom-left-radius: 4px;
     background-color: $color-white;
   }
@@ -122,12 +118,12 @@
   display: grid;
   grid-template-columns: repeat(5, 44px);
   width: 220px;
-  border-right: 1px solid #cbced9;
+  border-right: 1px solid $color-link-water;
 
   @media screen and (min-width: $tablet-width) {
     grid-template-columns: repeat(5, 53px);
     width: 265px;
-    border-top: 1px solid #cbced9;
+    border-top: 1px solid $color-link-water;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -143,8 +139,8 @@
 }
 
 .country-selection__input:checked + .country-selection__letter {
-  border-color: #1d2e5b;
-  background-color: #1d2e5b;
+  border-color: $color-button-blue;
+  background-color: $color-button-blue;
   color: $color-white;
 }
 
@@ -152,8 +148,8 @@
   @include flex-center;
 
   height: 40px;
-  border-left: 1px solid #cbced9;
-  border-bottom: 1px solid #cbced9;
+  border-left: 1px solid $color-link-water;
+  border-bottom: 1px solid $color-link-water;
   font-weight: 500;
   font-size: 14px;
   line-height: 1;
@@ -167,7 +163,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    border: 1px solid #cbced9;
+    border: 1px solid $color-link-water;
     border-radius: 4px;
   }
 
@@ -176,8 +172,8 @@
   }
 
   &:active {
-    border-color: #1d2e5b;
-    background-color: #1d2e5b;
+    border-color: $color-button-blue;
+    background-color: $color-button-blue;
     color: $color-white;
   }
 }
@@ -186,7 +182,7 @@
   @include bottom-radius(4px);
 
   padding: 19px 19px 27px 19px;
-  border: 1px solid #cbced9;
+  border: 1px solid $color-link-water;
   background-color: $color-white;
 
   @media screen and (min-width: $tablet-width) {

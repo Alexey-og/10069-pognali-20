@@ -5,7 +5,7 @@
 
   @media screen and (min-width: $desktop-width) {
     padding-top: 30px;
-    border-top: 1px solid #e1e3e9;
+    border-top: 1px solid $color-solitude;
   }
 }
 
@@ -16,7 +16,7 @@
 
   @media screen and (min-width: $tablet-width) {
     padding-top: 25px;
-    border-top: 1px solid #e1e3e9;
+    border-top: 1px solid $color-solitude;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -73,7 +73,7 @@
   height: 43px;
   margin-top: 8px;
   margin-bottom: 20px;
-  border: 1px solid #cbced9;
+  border: 1px solid $color-link-water;
   border-radius: 4px;
   order: 3;
 
@@ -90,7 +90,7 @@
   }
 
   &:hover {
-    border-color: #959bb2;
+    border-color: $color-rock-blue;
   }
 
   &:active {
@@ -139,7 +139,7 @@
   &:hover {
     &::before,
     &::after {
-      background-color: #959bb2;
+      background-color: $color-rock-blue;
     }
   }
 
@@ -284,7 +284,7 @@
   }
 
   &::before {
-    border: 1px solid #cbced9;
+    border: 1px solid $color-link-water;
     border-radius: 4px;
   }
 
@@ -299,7 +299,7 @@
   }
 
   &:hover::before {
-    border-color: #959bb2;
+    border-color: $color-rock-blue;
   }
 
   &:active::before {

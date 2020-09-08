@@ -90,7 +90,6 @@
   @media screen and (min-width: $tablet-width) {
     @include flex-center;
     @include circle(50px);
-
     margin: 0;
     background-color: transparent;
     font-weight: bold;

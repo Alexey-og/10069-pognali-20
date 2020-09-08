@@ -49,7 +49,7 @@
         <a class="page-title__to-main" href="index.html">На главную</a>
       </div>
     </div>
-    <section class="filter">
+    <section class="filter filter--expand">
       <div class="filter__inner">
         <div class="filter__header filter-header">
           <h2 class="filter-header__title">Фильтрация по странам<span class="filter-header__title-colon">:</span></h2>
@@ -351,10 +351,10 @@
     <div class="travelmates-wrapper">
       <form class="travelmate-filter" action="https://echo.htmlacademy.ru/" method="post">
         <h2 class="travelmate-filter__heading">Подберите идеального попутчика</h2>
-        <fieldset class="travelmate-filter__item travelmate-filter__item--rolled">
+        <fieldset class="travelmate-filter__item travelmate-filter__item--hobby">
           <legend class="visually-hidden">Хобби</legend>
           <div class="travelmate-filter__container">
-            <a class="travelmate-filter__title">Хобби<span class="travelmate-filter__title-colon">:</span></a>
+            <a class="travelmate-filter__title travelmate-filter__title--hobby">Хобби<span class="travelmate-filter__title-colon">:</span></a>
             <div class="travelmate-filter__inputs">
               <input class="visually-hidden" type="checkbox" name="hobby-gym" id="hobby-gym" checked><label class="travelmate-filter__label" for="hobby-gym">Спортзал</label>
               <input class="visually-hidden" type="checkbox" name="hobby-hookah" id="hobby-hookah"><label class="travelmate-filter__label" for="hobby-hookah">Кальян</label>
@@ -362,10 +362,10 @@
             </div>
           </div>
         </fieldset>
-        <fieldset class="travelmate-filter__item">
+        <fieldset class="travelmate-filter__item travelmate-filter__item--music">
           <legend class="visually-hidden">Музыка</legend>
           <div class="travelmate-filter__container">
-            <a class="travelmate-filter__title">Музыка<span class="travelmate-filter__title-colon">:</span></a>
+            <a class="travelmate-filter__title travelmate-filter__title--music">Музыка<span class="travelmate-filter__title-colon">:</span></a>
             <div class="travelmate-filter__inputs">
               <input class="visually-hidden" type="checkbox" name="music-hard-rock" id="music-hard-rock" checked><label class="travelmate-filter__label" for="music-hard-rock">Тяжелый рок</label>
               <input class="visually-hidden" type="checkbox" name="music-russian-rap" id="music-russian-rap" checked><label class="travelmate-filter__label" for="music-russian-rap">Русский рэп</label>
@@ -373,10 +373,10 @@
             </div>
           </div>
         </fieldset>
-        <fieldset class="travelmate-filter__item travelmate-filter__item--rolled">
+        <fieldset class="travelmate-filter__item travelmate-filter__item--food">
           <legend class="visually-hidden">Еда</legend>
           <div class="travelmate-filter__container">
-            <a class="travelmate-filter__title">Еда<span class="travelmate-filter__title-colon">:</span></a>
+            <a class="travelmate-filter__title travelmate-filter__title--food">Еда<span class="travelmate-filter__title-colon">:</span></a>
             <div class="travelmate-filter__inputs">
               <input class="visually-hidden" type="checkbox" name="food-meat" id="food-meat" checked><label class="travelmate-filter__label" for="food-meat">Мясоед</label>
               <input class="visually-hidden" type="checkbox" name="food-healthy-diet" id="food-healthy-diet"><label class="travelmate-filter__label" for="food-healthy-diet">Сидит на ПП</label>
@@ -384,10 +384,10 @@
             </div>
           </div>
         </fieldset>
-        <fieldset class="travelmate-filter__item">
+        <fieldset class="travelmate-filter__item travelmate-filter__item--transport">
           <legend class="visually-hidden">Транспорт</legend>
           <div class="travelmate-filter__container">
-            <a class="travelmate-filter__title">Транспорт<span class="travelmate-filter__title-colon">:</span></a>
+            <a class="travelmate-filter__title travelmate-filter__title--transport">Транспорт<span class="travelmate-filter__title-colon">:</span></a>
             <div class="travelmate-filter__inputs transportation travelmate-filter__transportation">
               <input class="transportation__checkbox visually-hidden" type="checkbox" name="transportation-avia" id="transportation-avia" checked>
               <label class="transportation__label transportation__label--avia tooltip" for="transportation-avia" aria-label="Кнопка передвижения на самолете" data-label="Авиаперелет">
@@ -408,10 +408,10 @@
             </div>
           </div>
         </fieldset>
-        <fieldset class="travelmate-filter__item">
+        <fieldset class="travelmate-filter__item travelmate-filter__item--level">
           <legend class="visually-hidden">Левел</legend>
           <div class="travelmate-filter__container">
-            <a class="travelmate-filter__title">Левел<span class="travelmate-filter__title-colon">:</span></a>
+            <a class="travelmate-filter__title travelmate-filter__title--level">Левел<span class="travelmate-filter__title-colon">:</span></a>
             <div class="travelmate-filter__inputs travelmate-range">
               <div class="travelmate-range__inputs-wrapper">
                 <input class="travelmate-range__input travelmate-range__input--min" type="text" value="30">
@@ -498,7 +498,7 @@
               <span class="travelmate-card__mark-level">level</span>
             </div>
           </div>
-          <a class="travelmate-card__invite" href="">Позвать!</a>
+          <a class="travelmate-card__invite" href="invite.html">Позвать!</a>
         </article>
         <article class="potential-travelmates__item travelmate-card">
           <a class="travelmate-card__photo" href="" title="Петя Демин - перейти в профиль">
@@ -560,7 +560,7 @@
               <span class="travelmate-card__mark-level">level</span>
             </div>
           </div>
-          <a class="travelmate-card__invite" href="">Позвать!</a>
+          <a class="travelmate-card__invite" href="invite.html">Позвать!</a>
         </article>
         <article class="potential-travelmates__item travelmate-card">
           <a class="travelmate-card__photo" href="" title="Марк Смолов - перейти в профиль">
@@ -628,7 +628,7 @@
               <span class="travelmate-card__mark-level">level</span>
             </div>
           </div>
-          <a class="travelmate-card__invite" href="">Позвать!</a>
+          <a class="travelmate-card__invite" href="invite.html">Позвать!</a>
         </article>
         <article class="potential-travelmates__item travelmate-card">
           <a class="travelmate-card__photo" href="" title="Лариса Роговая - перейти в профиль">
@@ -690,7 +690,7 @@
               <span class="travelmate-card__mark-level">level</span>
             </div>
           </div>
-          <a class="travelmate-card__invite" href="">Позвать!</a>
+          <a class="travelmate-card__invite" href="invite.html">Позвать!</a>
         </article>
         <div class="potential-travelmates__show-more">
           <a class="potential-travelmates__show" href="">Показать еще</a>

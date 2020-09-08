@@ -37,14 +37,12 @@
 .travelmate__photo,
 .travelmate__img {
   @include top-radius(10px);
-
   display: block;
   width: 270px;
   height: 270px;
 
   @media screen and (min-width: $tablet-width) {
     @include top-radius(20px);
-
     width: 285px;
     height: 285px;
   }
@@ -61,7 +59,6 @@
 
 .travelmate__info {
   @include bottom-radius(10px);
-
   position: relative;
   display: flex;
   flex-direction: column;
@@ -78,7 +75,6 @@
 
 .travelmate__flags {
   @include flex-center;
-
   position: relative;
   min-height: 25px;
   margin-top: -13px;

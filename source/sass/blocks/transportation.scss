@@ -5,7 +5,6 @@
 .transportation__label {
   @include circle(31px);
   @include flex-center;
-
   margin: 0;
   background-color: $color-white;
   fill: $color-grey-d9;

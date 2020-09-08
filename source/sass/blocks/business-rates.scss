@@ -67,11 +67,10 @@
 .business-rates__close {
   @include flex-center;
   @include bottom-radius(20px);
-
   min-height: 59px;
   padding: 10px 15px;
   border: none;
-  background-color: #f3f4f8;
+  background-color: $color-ghost-white;
   font-weight: bold;
   font-size: 16px;
   line-height: 1;

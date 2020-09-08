@@ -329,7 +329,7 @@
     top: 50%;
     transform: translateY(-50%);
     left: 0;
-    background-color: #121936;
+    background-color: $color-midnight-express;
     background-position: center;
     background-repeat: no-repeat;
 
@@ -357,7 +357,6 @@
 
   @media screen and (min-width: $desktop-width) {
     @include circle (50px);
-
     padding: 0;
   }
 }
@@ -487,7 +486,6 @@
 
 .page-header__social-icon {
   @include flex-center;
-
   padding-right: 27px;
 
   &:hover {

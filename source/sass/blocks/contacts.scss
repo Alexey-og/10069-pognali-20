@@ -50,9 +50,8 @@
 .contacts__icon {
   @include flex-center;
   @include circle(45px);
-
   margin-right: 15px;
-  background-color: #121936;
+  background-color: $color-midnight-express;
 
   @media screen and (min-width: $tablet-width) {
     width: 68px;

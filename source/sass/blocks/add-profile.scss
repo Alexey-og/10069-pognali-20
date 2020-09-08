@@ -68,7 +68,7 @@
       width: 198px;
       height: 100%;
       border-radius: 20px;
-      background-color: #e2e5f2;
+      background-color: $color-lavender;
     }
   }
 
@@ -116,7 +116,6 @@
   &::before {
     @include circle(34px);
     @include flex-center;
-
     position: absolute;
     right: -44px;
     top: 3px;
@@ -128,7 +127,6 @@
 
     @media screen and (min-width: $tablet-width) {
       @include circle(68px);
-
       left: -90px;
       top: 50%;
       transform: translateY(-50%);
@@ -187,7 +185,7 @@
   font-size: 16px;
   line-height: 1;
   text-decoration: none;
-  color: #132576;
+  color: $color-midnight-blue;
 
   &:hover {
     color: rgba($color-basic-blue-dark, 0.7);
@@ -201,7 +199,7 @@
     margin-right: auto;
     padding-left: 89px;
     font-size: 20px;
-    color: #132576;
+    color: $color-midnight-blue;
 
     &:hover {
       opacity: 0.7;
@@ -213,13 +211,12 @@
 
     &::before {
       @include circle(68px);
-
       position: absolute;
       content: "";
       left: 0;
       top: 50%;
       transform: translateY(-50%);
-      background-color: #e2e5f2;
+      background-color: $color-lavender;
       background-image: url("../img/icon-businessman.svg");
       background-position: center;
       background-repeat: no-repeat;

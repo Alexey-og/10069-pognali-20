@@ -50,9 +50,8 @@
   @include circle(45px);
   @include flex-center;
   flex-shrink: 0;
-
   margin-right: 16px;
-  background-color: #121936;
+  background-color: $color-midnight-express;
 
   @media screen and (min-width: $tablet-width) {
     width: 68px;

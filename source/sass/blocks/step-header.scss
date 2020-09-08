@@ -23,7 +23,6 @@
 
 .step-header__steps-list {
   @include list-reset;
-
   display: none;
 }
 
@@ -39,7 +38,6 @@
 
   &::before {
     @include circle(6px);
-
     position: absolute;
     content: "";
     left: 0;
