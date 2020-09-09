@@ -53,11 +53,12 @@
 
   @media screen and (min-width: $desktop-width) {
     flex-direction: row;
+    margin-bottom: 34px;
   }
 }
 
 .plan-step__title span {
-  margin-right: 0.5em;
+  margin-right: 10px;
 }
 
 .plan-step__description {
@@ -102,6 +103,11 @@
   text-transform: uppercase;
   color: rgba($color-black, 0.6);
 
+  @media screen and (min-width: $desktop-width) {
+    margin-top: 5px;
+    margin-bottom: 17px;
+  }
+
   &::before {
     @include circle(6px);
     position: absolute;
@@ -132,6 +138,10 @@
 
   @media screen and (min-width: $tablet-width) {
     margin-bottom: 35px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 31px;
   }
 }
 

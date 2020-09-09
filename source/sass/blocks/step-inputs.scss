@@ -59,7 +59,8 @@
 
   @media screen and (min-width: $desktop-width) {
     width: 27%;
-    margin-right: 25px;
+    margin-top: -2px;
+    margin-right: 18px;
     line-height: 70px;
     letter-spacing: 0;
     order: 1;
@@ -211,6 +212,7 @@
 
   @media screen and (min-width: $desktop-width) {
     width: 60px;
+    padding: 8px 12px 13px 8px;
   }
 }
 
@@ -230,7 +232,8 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    margin-left: 35px;
+    margin-left: 34px;
+    margin-top: -2px;
     line-height: 70px;
     order: 3;
   }
@@ -247,6 +250,7 @@
 
   @media screen and (min-width: $desktop-width) {
     margin-bottom: 0;
+    margin-right: -2px;
   }
 }
 

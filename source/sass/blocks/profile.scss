@@ -179,8 +179,9 @@
     width: 190px;
     min-height: 50px;
     margin-top: -10px;
-    padding: 5px 15px;
+    padding: 5px 15px 5px 15px;
     border-radius: 0 0 10px 10px;
+    letter-spacing: 0;
     cursor: pointer;
   }
 }
@@ -240,6 +241,7 @@
 
   @media screen and (min-width: $desktop-width) {
     left: 22px;
+    letter-spacing: 0.07em;
     transform: translateX(0);
   }
 }

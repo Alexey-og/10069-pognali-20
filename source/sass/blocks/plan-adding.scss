@@ -23,7 +23,7 @@
 
   @media screen and (min-width: $desktop-width) {
     width: $desktop-width;
-    padding: 49px 60px 90px;
+    padding: 51px 60px 90px;
   }
 }
 
@@ -35,6 +35,10 @@
 
   @media screen and (min-width: $tablet-width) {
     margin-bottom: 58px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-left: 70px;
   }
 }
 

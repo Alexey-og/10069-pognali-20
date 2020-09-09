@@ -27,7 +27,7 @@
 
   @media screen and (min-width: $desktop-width) {
     width: $desktop-width;
-    padding: 53px 58px 110px 124px;
+    padding: 50px 58px 110px 124px;
   }
 }
 
@@ -37,6 +37,10 @@
   @media screen and (min-width: $tablet-width) {
     margin-bottom: 52px;
     font-size: 36px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-left: 6px;
   }
 }
 
@@ -61,7 +65,7 @@
     align-items: center;
     min-height: 97px;
     margin-bottom: 15px;
-    padding: 30px 43px;
+    padding: 30px 41px 30px 43px;
   }
 }
 
@@ -107,6 +111,10 @@
 .planned-trips__countries {
   margin: 0;
   font-weight: bold;
+
+  @media screen and (min-width: $desktop-width) {
+    margin-left: 2px;
+  }
 }
 
 .planned-trips__info {
@@ -128,7 +136,7 @@
   @media screen and (min-width: $desktop-width) {
     justify-content: flex-end;
     width: 50%;
-    padding: 0;
+    padding: 3px 0 0 0;
   }
 }
 
@@ -142,7 +150,7 @@
 
   @media screen and (min-width: $desktop-width) {
     width: 25%;
-    margin-right: 15px;
+    margin: 0 8px 0 -2px;
   }
 }
 

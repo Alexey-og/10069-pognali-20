@@ -11,7 +11,8 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    background-color: $color-basic-blue;
+    background-color: $color-basic-blue-dark;
+    /* background-color: $color-basic-blue; */
   }
 
   &--index {
