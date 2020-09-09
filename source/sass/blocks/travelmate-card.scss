@@ -1,7 +1,7 @@
 .travelmate-card {
   display: grid;
   grid-template-columns: 104px 91px 75px;
-  grid-template-rows: 60px 30px 50px 130px 80px 65px;
+  grid-template-rows: repeat(6, min-content);
   border-radius: 20px;
   background-color: $color-white;
   color: $color-black;
@@ -70,7 +70,8 @@
   position: relative;
   grid-column: 2 / 4;
   grid-row: 1 / 2;
-  margin: 13px 22px 8px 0;
+  margin: 13px 22px 0 0;
+  line-height: 20px;
 
   @media screen and (min-width: $tablet-width) {
     grid-column: 2 / 4;
@@ -139,6 +140,8 @@
   position: relative;
   grid-column: 2 / 4;
   grid-row: 2 / 3;
+  margin-top: -2px;
+  padding-top: 0;
   font-weight: bold;
   font-size: 14px;
   line-height: 1;
@@ -163,11 +166,10 @@
 
 .travelmate-card__heart {
   @include circle(30px);
-
   position: absolute;
   content: "";
-  left: -37px;
-  top: -7px;
+  left: -36px;
+  top: -9px;
   background-color: $color-lavender;
   background-position: center;
   background-repeat: no-repeat;
@@ -191,7 +193,7 @@
 .travelmate-card__tags {
   grid-column: 1 / 4;
   grid-row: 3 / 4;
-  margin: 6px 55px 5px 25px;
+  margin: 7px 55px 5px 25px;
   font-size: 15px;
   line-height: 18px;
   color: $color-grey-44;
@@ -234,7 +236,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  margin: 0 0 19px 26px;
+  margin: 2px 0 19px 26px;
   font-size: 15px;
   line-height: 1;
   background-color: $color-white;
@@ -282,6 +284,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   margin-left: 25px;
+  margin-bottom: 6px;
 
   @media screen and (min-width: $tablet-width) {
     flex-direction: row;
@@ -363,7 +366,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  margin: 0 0 19px 26px;
+  margin: -2px 0 19px 26px;
   font-size: 15px;
   line-height: 15px;
   background-color: $color-white;
@@ -513,9 +516,10 @@
 
 .travelmate-card__mark {
   @include flex-center;
-  @include circle(57px);
+  @include circle(45px);
   position: relative;
-  margin-top: -5px;
+  margin-top: -8px;
+  margin-right: 10px;
   margin-left: 10px;
 
   @media screen and (min-width: $tablet-width) {
@@ -530,10 +534,10 @@
 .travelmate-card__mark-indicator {
   position: absolute;
   content: "";
-  left: 0;
+  left: -9px;
   top: 0;
-  width: 57px;
-  height: 57px;
+  width: 60px;
+  height: 60px;
   /* stroke-width: 3px;
   stroke-linecap: round;
   stroke-dashoffset: 38px; */
@@ -568,6 +572,8 @@
 }
 
 .travelmate-card__mark-number {
+  padding-top: 13px;
+  padding-right: 3px;
   font-weight: bold;
   font-size: 24px;
   line-height: 24px;
@@ -597,7 +603,7 @@
   grid-column: 1 / 4;
   grid-row: 6 / 7;
   min-height: 40px;
-  margin: 3px 20px 22px;
+  margin: 20px 20px 22px;
   border-radius: 25px;
   background-color: $color-basic-yellow;
   font-weight: bold;

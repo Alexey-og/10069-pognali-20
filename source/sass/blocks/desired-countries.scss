@@ -307,6 +307,10 @@
     stroke-opacity: 0.1;
   }
 
+  @media screen and (min-width: $desktop-width) {
+    right: 4px;
+  }
+
   &:hover {
     stroke-opacity: 0.3;
   }

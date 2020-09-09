@@ -1,4 +1,5 @@
 .plan-step {
+  margin-bottom: 10px;
   padding: 22px 25px 23px;
   border-radius: 10px;
   background-color: $color-white;
@@ -8,13 +9,36 @@
   }
 
   @media screen and (min-width: $tablet-width) {
+    margin-bottom: 40px;
     padding: 47px 43px 54px;
     border-radius: 30px;
   }
 
   @media screen and (min-width: $desktop-width) {
+    margin-bottom: 45px;
     padding: 100px 160px 106px;
     border-radius: 60px;
+  }
+
+  &:not(:first-of-type) {
+    padding-bottom: 16px;
+
+    @media screen and (min-width: $tablet-width) {
+      margin-bottom: 51px;
+      padding-top: 46px;
+      padding-bottom: 54px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      padding-top: 97px;
+      padding-bottom: 108px;
+    }
+  }
+
+  &:nth-of-type(2) {
+    @media screen and (min-width: $desktop-width) {
+      margin-bottom: 43px;
+    }
   }
 }
 
@@ -31,9 +55,13 @@
   }
 }
 
-.plan-step:not(:nth-of-type(1)) .plan-step__header {
+.plan-step:not(:first-of-type) .plan-step__header {
   @media screen and (min-width: $tablet-width) {
     margin-bottom: 31px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 54px;
   }
 }
 
@@ -151,6 +179,10 @@
   @media screen and (min-width: $tablet-width) {
     margin-bottom: 50px;
   }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 55px;
+  }
 }
 
 .plan-step__calendar {
@@ -170,6 +202,10 @@
 
   @media screen and (min-width: $tablet-width) {
     margin-bottom: -2px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 5px;
   }
 }
 
@@ -217,6 +253,10 @@
     font-size: 24px;
     text-transform: none;
   }
+
+  @media screen and (min-width: $tablet-width) {
+    width: 286px;
+  }
 }
 
 .plan-step__step-back {
@@ -247,6 +287,11 @@
       background-image: url("data:image/svg+xml,%3Csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 7L12 0V14L0 7Z' fill='%231D2E5B'/%3E%3C/svg%3E");
       background-size: 12px 14px;
     }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-right: 2px;
+    padding-left: 36px;
   }
 
   &:hover {

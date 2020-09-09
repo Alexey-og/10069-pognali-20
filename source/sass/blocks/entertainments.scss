@@ -7,6 +7,12 @@
     padding-right: 30px;
     border-top: 1px solid $color-solitude;
   }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-top: 80px;
+    padding-right: 30px;
+    border-top: 1px solid $color-solitude;
+  }
 }
 
 .entertainments__item {
@@ -45,7 +51,7 @@
     }
 
     @media screen and (min-width: $desktop-width) {
-      right: -46px;
+      right: -45px;
     }
   }
 }
@@ -60,6 +66,10 @@
 
   @media screen and (min-width: $tablet-width) {
     margin-bottom: 44px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 42px;
   }
 
   &::before,
@@ -82,7 +92,7 @@
     }
 
     @media screen and (min-width: $desktop-width) {
-      right: -52px;
+      right: -51px;
     }
   }
 
@@ -114,6 +124,10 @@
     padding-left: 0;
     font-weight: bold;
     font-size: 30px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    margin-left: -1px;
   }
 
   &::after {
@@ -148,6 +162,7 @@
 
   @media screen and (min-width: $desktop-width) {
     right: -155px;
+    top: 2px;
   }
 }
 
@@ -191,6 +206,7 @@
 
   @media screen and (min-width: $desktop-width) {
     margin-right: 150px;
+    padding: 21px 20px 15px 24px;
   }
 
   &::placeholder {
