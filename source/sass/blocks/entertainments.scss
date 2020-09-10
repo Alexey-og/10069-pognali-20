@@ -5,7 +5,13 @@
   @media screen and (min-width: $tablet-width) {
     padding-top: 37px;
     padding-right: 30px;
-    border-top: 1px solid #e1e3e9;
+    border-top: 1px solid $color-solitude;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-top: 80px;
+    padding-right: 30px;
+    border-top: 1px solid $color-solitude;
   }
 }
 
@@ -18,13 +24,21 @@
   }
 }
 
+.entertainments__item:nth-of-type(1) {
+  margin-top: 1px;
+}
+
 .entertainments__item:not(:last-child) {
   margin-bottom: 23px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 4px;
+  }
 
   &::before {
     position: absolute;
     content: "";
-    left: -16px;
+    left: -14px;
     top: 11px;
     width: 2px;
     height: 281px;
@@ -32,11 +46,12 @@
 
     @media screen and (min-width: $tablet-width) {
       left: auto;
-      right: -29px;
+      right: -27px;
+      height: 270px;
     }
 
     @media screen and (min-width: $desktop-width) {
-      right: -46px;
+      right: -45px;
     }
   }
 }
@@ -53,6 +68,10 @@
     margin-bottom: 44px;
   }
 
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 42px;
+  }
+
   &::before,
   &::after {
     position: absolute;
@@ -67,20 +86,20 @@
 
     @media screen and (min-width: $tablet-width) {
       left: auto;
-      right: -35px;
+      right: -33px;
       width: 14px;
       height: 14px;
     }
 
     @media screen and (min-width: $desktop-width) {
-      right: -52px;
+      right: -51px;
     }
   }
 
   &::after {
     top: 11px;
-    left: -16px;
-    width: 16px;
+    left: -14px;
+    width: 14px;
     height: 2px;
 
     @media screen and (min-width: $tablet-width) {
@@ -105,6 +124,10 @@
     padding-left: 0;
     font-weight: bold;
     font-size: 30px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    margin-left: -1px;
   }
 
   &::after {
@@ -134,10 +157,12 @@
   @media screen and (min-width: $tablet-width) {
     width: 70px;
     height: 47px;
+    margin-top: 4px;
   }
 
   @media screen and (min-width: $desktop-width) {
     right: -155px;
+    top: 2px;
   }
 }
 
@@ -165,7 +190,7 @@
   width: 100%;
   height: 220px;
   padding: 11px 14px;
-  border: 1px solid #cbced9;
+  border: 1px solid $color-link-water;
   border-radius: 4px;
   font-size: 16px;
   line-height: 22px;
@@ -174,12 +199,14 @@
 
   @media screen and (min-width: $tablet-width) {
     height: 140px;
+    padding: 15px 35px 15px 18px;
     font-size: 20px;
     line-height: 23px;
   }
 
   @media screen and (min-width: $desktop-width) {
     margin-right: 150px;
+    padding: 21px 20px 15px 24px;
   }
 
   &::placeholder {
@@ -210,7 +237,7 @@
   height: 56px;
   border-radius: 0 0 4px 4px;
   padding: 10px 15px;
-  background-color: #ffefef;
+  background-color: $color-white-smoke;
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;

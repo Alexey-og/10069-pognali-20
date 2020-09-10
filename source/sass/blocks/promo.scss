@@ -1,11 +1,10 @@
 .promo {
   position: relative;
-  padding-top: 73px;
   background-color: $color-basic-blue;
   background-image: url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: left center;
-  background-size: contain;
+  background-position: center top;
+  background-size: 320px 569px;
   z-index: 10;
 
   @media (min-resolution: 2dppx) {
@@ -13,8 +12,6 @@
   }
 
   @media screen and (min-width: $tablet-width) {
-    min-height: 994px;
-    padding-top: 132px;
     background-color: $color-header-blue;
     background-image: url("../img/globe-back-tablet@1x.jpg");
     background-position: center bottom;
@@ -26,10 +23,10 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    min-height: 750px;
-    padding-top: 110px;
     background-color: $color-basic-blue;
     background-image: url("../img/globe-back-desktop@1x.jpg");
+    background-size: 1800px 750px;
+    background-position: center bottom;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/globe-back-desktop@2x.jpg");
@@ -52,13 +49,32 @@
   }
 }
 
+.promo__inner {
+  position: relative;
+  width: $mobile-width;
+  margin: 0 auto;
+  padding-top: 73px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: $tablet-width;
+    min-height: 994px;
+    padding-top: 132px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: $desktop-width;
+    min-height: 750px;
+    padding-top: 110px;
+  }
+}
+
 .promo__illustration {
   position: relative;
   min-height: 405px;
-  padding-top: 21px;
+  padding-top: 19px;
   background-image: url("../img/traveller-illustration-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: right 40% bottom;
+  background-position: right calc(40% - 3px) bottom;
   background-size: 192px 255px;
 
   @media (min-resolution: 2dppx) {
@@ -67,8 +83,9 @@
 
   @media screen and (min-width: $tablet-width) {
     height: 862px;
+    padding-top: 26px;
     background-image: url("../img/traveller-illustration-tablet@1x.png");
-    background-position: right 26% bottom 140px;
+    background-position: right 111px bottom 140px;
     background-size: 372px 451px;
 
     @media (min-resolution: 2dppx) {
@@ -155,12 +172,11 @@
 
 .promo__login {
   @include flex-center;
-
   min-width: 190px;
   min-height: 40px;
   border-radius: 25px;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
   text-decoration: none;
@@ -186,14 +202,14 @@
   color: $color-white;
 
   @media screen and (min-width: $tablet-width) {
-    padding: 0 60px;
+    padding: 0 60px 0 62px;
     font-size: 60px;
     line-height: 70px;
   }
 
   @media screen and (min-width: $desktop-width) {
     width: 420px;
-    margin: 82px 0 0 127px;
+    margin: 70px 0 0 127px;
     padding: 0;
     text-align: left;
   }
@@ -202,14 +218,14 @@
 .promo__citation {
   width: 170px;
   min-height: 285px;
-  padding-top: 48px;
+  padding-top: 47px;
   margin-left: 50px;
 
   @media screen and (min-width: $tablet-width) {
     position: absolute;
     content: "";
-    left: 10%;
-    top: 458px;
+    left: 73px;
+    top: 456px;
     width: 270px;
     margin-left: 0;
     padding: 0;
@@ -218,8 +234,8 @@
 
   @media screen and (min-width: $desktop-width) {
     left: auto;
-    right: 83px;
-    top: 220px;
+    right: 81px;
+    top: 218px;
     width: 265px;
   }
 }
@@ -239,7 +255,7 @@
 }
 
 .promo__author {
-  margin-top: 15px;
+  margin-top: 16px;
   font-weight: bold;
 
   @media screen and (min-width: $tablet-width) {

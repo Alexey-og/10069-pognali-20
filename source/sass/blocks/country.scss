@@ -6,15 +6,13 @@
   border-radius: 10px;
   width: 270px;
   min-height: 190px;
-  /* background-position: left top;
-  background-repeat: no-repeat;
-  background-size: contain; */
 
   @media screen and (min-width: $tablet-width) {
     flex-direction: row-reverse;
     border-radius: 20px;
-    width: 616px;
+    width: 617px;
     min-height: 140px;
+    margin-right: 0;
     background-position: right top;
 
     &:last-of-type::after {
@@ -37,54 +35,6 @@
   &:last-of-type {
     margin-bottom: 0;
   }
-
-  /* &--thailand {
-    background-image: url("../img/thailand-mobile@1x.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/thailand-mobile@2x.jpg");
-    }
-
-    @media screen and (min-width: $tablet-width) {
-      background-image: url("../img/thailand-desktop@1x.jpg");
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/thailand-desktop@2x.jpg");
-      }
-    }
-  }
-
-  &--france {
-    background-image: url("../img/france-mobile@1x.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/france-mobile@2x.jpg");
-    }
-
-    @media screen and (min-width: $tablet-width) {
-      background-image: url("../img/france-desktop@1x.jpg");
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/france-desktop@2x.jpg");
-      }
-    }
-  }
-
-  &--czechia {
-    background-image: url("../img/czechia-mobile@1x.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/czechia-mobile@2x.jpg");
-    }
-
-    @media screen and (min-width: $tablet-width) {
-      background-image: url("../img/czechia-desktop@1x.jpg");
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/czechia-desktop@2x.jpg");
-      }
-    }
-  } */
 }
 
 .country__picture {
@@ -95,7 +45,6 @@
 
 .country__img {
   @include top-radius(10px);
-
   flex-shrink: 0;
   width: 270px;
   height: 110px;
@@ -111,9 +60,8 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  /* margin: 100px 0 0 0; */
-  margin-top: -10px;
-  padding: 25px 24px 0;
+  margin-top: -11px;
+  padding: 24px 24px 0;
   min-height: 89px;
   border-radius: 10px;
   background-color: $color-white;
@@ -123,8 +71,12 @@
     flex-grow: 1;
     height: 140px;
     margin: 0;
-    padding: 30px 0 27px 29px;
+    padding: 28px 0 23px 29px;
     border-radius: 20px 0 0 20px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 22px 0 23px 30px;
   }
 }
 
@@ -146,19 +98,24 @@
 
 .country__title {
   margin: 0;
-  padding-bottom: 2px;
+  padding-bottom: 4px;
   font-weight: bold;
   font-size: 21px;
   line-height: 1;
   color: $color-black;
 
   @media screen and (min-width: $tablet-width) {
+    padding-bottom: 5px;
     font-size: 24px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-bottom: 4px;
   }
 }
 
 .country__slogan {
-  width: 130px;
+  width: 150px;
   margin: 0;
   font-weight: 500;
   font-size: 16px;
@@ -175,7 +132,7 @@
 .country__users {
   position: relative;
   height: 20px;
-  margin: 0;
+  margin: 3px 0 0 0;
   padding-left: 19px;
   font-weight: 500;
   font-size: 16px;
@@ -215,22 +172,23 @@
   position: absolute;
   content: "";
   left: 25px;
-  top: -12px;
+  top: -13px;
   width: 35px;
   height: 24px;
-  background-size: contain;
+  background-size: 35px 24px;
   background-repeat: no-repeat;
 
   @media screen and (min-width: $tablet-width) {
     left: auto;
-    right: -35px;
+    right: -36px;
     top: 17px;
     width: 70px;
     height: 47px;
+    background-size: 70px 47px;
   }
 
-  @media screen and (min-width: $tablet-width) {
-    top: 23px;
+  @media screen and (min-width: $desktop-width) {
+    top: 24px;
   }
 
   &--thailand {

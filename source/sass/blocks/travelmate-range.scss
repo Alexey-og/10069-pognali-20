@@ -28,7 +28,7 @@
 
   &::after {
     height: 1px;
-    background-color: #cbced9;
+    background-color: $color-link-water;
     z-index: 2;
   }
 }
@@ -39,7 +39,7 @@
   text-align: center;
   width: 50%;
   height: 35px;
-  border: 1px solid #cbced9;
+  border: 1px solid $color-link-water;
   background-color: $color-white;
   font-weight: 500;
   font-size: 14px;
@@ -59,7 +59,7 @@
 
   &:active,
   &:focus {
-    border-color: #959bb2;
+    border-color: $color-rock-blue;
   }
 
   &--min {
@@ -78,7 +78,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  margin: 20px 0 20px;
+  margin: 23px 0 17px;
 
   @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
     width: 281px;
@@ -95,7 +95,7 @@
   flex-grow: 1;
   height: 2px;
   border-radius: 1px;
-  background-color: rgba(#1d2e5b, 0.2);
+  background-color: rgba($color-button-blue, 0.2);
 
   @media screen and (min-width: $tablet-width) {
     height: 3px;
@@ -107,7 +107,7 @@
   flex-grow: 1;
   margin-left: 30%;
   margin-right: 0%;
-  background-color: #1d2e5b;
+  background-color: $color-button-blue;
 }
 
 .travelmate-range__button {

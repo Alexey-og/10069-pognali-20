@@ -1,30 +1,41 @@
 .countries {
   @include bottom-radius(30px);
-
   position: relative;
   margin-top: -30px;
-  padding: 100px 25px 34px;
   background-color: $color-basic-blue-light;
   z-index: 8;
 
   @media screen and (min-width: $tablet-width) {
     @include bottom-radius(60px);
-
     margin-top: -60px;
-    padding: 138px 75px 80px;
+  }
+}
+
+
+.countries__inner {
+  position: relative;
+  width: $mobile-width;
+  margin: 0 auto;
+  padding: 100px 25px 33px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding: 129px 74px 80px 76px;
     background-image:
       url("../img/flags-back@1x.png"),
-      url("data:image/svg+xml,%3Csvg width='141' height='141' viewBox='0 0 141 141' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='141' height='141' rx='20' fill='%23e2e5f2'/%3E%3C/svg%3E");
+      url("../img/rect-r20-lavender.svg");
     background-repeat: no-repeat;
     background-position:
-      right 40px top 136px,
-      left 40px top 464px;
+      right 40px top 140px,
+      left 40px top 466px;
     background-size:
       289px 575px,
       141px 141px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/flags-back@2x.png"), url("data:image/svg+xml,%3Csvg width='141' height='141' viewBox='0 0 141 141' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='141' height='141' rx='20' fill='%23e2e5f2'/%3E%3C/svg%3E");
+      background-image:
+        url("../img/flags-back@2x.png"),
+        url("../img/rect-r20-lavender.svg");
     }
   }
 
@@ -32,7 +43,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 218px 130px 138px;
+    width: $desktop-width;
+    padding: 221px 130px 140px;
     background-position:
       right 60px top 147px,
       left 60px top 150px;
@@ -49,21 +61,26 @@
   margin-left: 24px;
 
   @media screen and (min-width: $tablet-width) {
+    margin-left: -2px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
     margin-left: 0;
+    margin-bottom: 60px;
   }
 }
 
 .countries__description {
-  margin: 0 30px 60px 24px;
+  margin: 0 45px 60px 24px;
   color: $color-special-grey;
 
   @media screen and (min-width: $tablet-width) {
     width: 345px;
-    margin: 0 0 98px 0;
+    margin: 0 0 108px 0;
   }
 
   @media screen and (min-width: $desktop-width) {
-    margin: 0;
+    margin: 0 0 0 1px;
     padding-bottom: 100px;
   }
 }
@@ -76,21 +93,24 @@
 }
 
 .countries__button {
-  margin-top: 25px;
+  margin-top: 24px;
   min-height: 62px;
 
   @media screen and (min-width: $tablet-width) {
-    margin-top: 44px;
+    width: 616px;
     min-height: 82px;
+    margin-top: 47px;
     padding: 10px 70px 10px 33px;
-    border-radius: 20px;
+    background-position: right 33px top 50%;
     font-size: 24px;
   }
 
   @media screen and (min-width: $desktop-width) {
     width: 275px;
     min-height: 80px;
-    margin: -80px 0 auto 732px;
+    margin: -70px 0 auto 732px;
+    padding: 10px 70px 10px 34px;
+    background-position: right 35px top 50%;
     order: 3;
   }
 }

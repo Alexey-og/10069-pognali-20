@@ -1,5 +1,6 @@
 .plan-step {
-  padding: 23px 25px 23px;
+  margin-bottom: 10px;
+  padding: 22px 25px 23px;
   border-radius: 10px;
   background-color: $color-white;
 
@@ -8,13 +9,36 @@
   }
 
   @media screen and (min-width: $tablet-width) {
-    padding: 48px 43px 54px;
+    margin-bottom: 40px;
+    padding: 47px 43px 54px;
     border-radius: 30px;
   }
 
   @media screen and (min-width: $desktop-width) {
+    margin-bottom: 45px;
     padding: 100px 160px 106px;
     border-radius: 60px;
+  }
+
+  &:not(:first-of-type) {
+    padding-bottom: 16px;
+
+    @media screen and (min-width: $tablet-width) {
+      margin-bottom: 51px;
+      padding-top: 46px;
+      padding-bottom: 54px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      padding-top: 97px;
+      padding-bottom: 108px;
+    }
+  }
+
+  &:nth-of-type(2) {
+    @media screen and (min-width: $desktop-width) {
+      margin-bottom: 43px;
+    }
   }
 }
 
@@ -23,11 +47,21 @@
   margin-bottom: 20px;
 
   @media screen and (min-width: $tablet-width) {
-    margin-bottom: 38px;
+    margin-bottom: 39px;
   }
 
   @media screen and (min-width: $desktop-width) {
     margin-bottom: 53px;
+  }
+}
+
+.plan-step:not(:first-of-type) .plan-step__header {
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 31px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 54px;
   }
 }
 
@@ -41,17 +75,18 @@
   color: $color-button-blue;
 
   @media screen and (min-width: $tablet-width) {
-    margin-bottom: 35px;
+    margin-bottom: 36px;
     font-size: 36px;
   }
 
   @media screen and (min-width: $desktop-width) {
     flex-direction: row;
+    margin-bottom: 34px;
   }
 }
 
 .plan-step__title span {
-  margin-right: 0.5em;
+  margin-right: 10px;
 }
 
 .plan-step__description {
@@ -70,7 +105,6 @@
 
 .plan-step__steps-list {
   @include list-reset;
-
   display: none;
 
   @media screen and (min-width: $desktop-width) {
@@ -97,9 +131,13 @@
   text-transform: uppercase;
   color: rgba($color-black, 0.6);
 
+  @media screen and (min-width: $desktop-width) {
+    margin-top: 5px;
+    margin-bottom: 17px;
+  }
+
   &::before {
     @include circle(6px);
-
     position: absolute;
     content: "";
     left: 0;
@@ -124,10 +162,14 @@
 }
 
 .plan-step__inputs {
-  margin: 0 0 25px;
+  margin: 0 0 23px;
 
   @media screen and (min-width: $tablet-width) {
     margin-bottom: 35px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 31px;
   }
 }
 
@@ -137,13 +179,17 @@
   @media screen and (min-width: $tablet-width) {
     margin-bottom: 50px;
   }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 55px;
+  }
 }
 
 .plan-step__calendar {
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 
   @media screen and (min-width: $tablet-width) {
-    margin-bottom: 47px;
+    margin-bottom: 43px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -153,6 +199,14 @@
 
 .plan-step__entertainments {
   margin: 0 0 22px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: -2px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 5px;
+  }
 }
 
 .plan-step__buttons {
@@ -194,19 +248,21 @@
     min-height: 80px;
     margin-left: 0;
     margin-right: 0;
-    padding: 20px 33px;
+    padding: 18px 33px 22px 34px;
     background-position: right 37px top 50%;
     font-size: 24px;
     text-transform: none;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    width: 286px;
   }
 }
 
 .plan-step__step-back {
   @include flex-center;
-
   position: relative;
-  margin-top: 17px;
-  padding-left: 36px;
+  margin-top: 19px;
   font-weight: bold;
   font-size: 17px;
   line-height: 1;
@@ -216,6 +272,7 @@
 
   @media screen and (min-width: $tablet-width) {
     margin: 0;
+    padding-left: 33px;
     font-size: 24px;
     text-transform: none;
 
@@ -230,6 +287,11 @@
       background-image: url("data:image/svg+xml,%3Csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 7L12 0V14L0 7Z' fill='%231D2E5B'/%3E%3C/svg%3E");
       background-size: 12px 14px;
     }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-right: 2px;
+    padding-left: 36px;
   }
 
   &:hover {

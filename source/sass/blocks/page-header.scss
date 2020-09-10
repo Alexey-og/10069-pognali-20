@@ -1,30 +1,27 @@
 .page-header {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  left: 0;
-  top: 0;
+  position: fixed;
   width: 100%;
   min-height: 73px;
-  padding: 0 25px 0;
-  background-color: $color-basic-blue;
+  margin-top: 0;
+  background-color: $color-header-blue;
   z-index: 50;
 
   @media screen and (min-width: $tablet-width) {
-    padding: 0 40px 0;
     background-color: $color-header-blue;
   }
 
   @media screen and (min-width: $desktop-width) {
+    background-color: $color-basic-blue-dark;
+    /* background-color: $color-basic-blue; */
+  }
 
-    padding: 17px 60px 0;
+  &--index {
     background-color: $color-basic-blue;
   }
 
   &--dropped,
-  &--no-js {
+  &--no-js,
+  &--scroll {
     background-color: $color-white;
 
     @media screen and (min-width: $tablet-width) {
@@ -35,9 +32,32 @@
       background-color: $color-white;
     }
   }
+}
 
-  &--scroll {
-    position: fixed;
+.page-header__inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: $mobile-width;
+  min-height: 73px;
+  margin: 0 auto;
+  padding: 0 25px 0;
+
+  @media screen and (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding: 0 40px 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: $desktop-width;
+    margin-top: 38px;
+    padding: 5px 60px;
+
+    .page-header--scroll & {
+      margin-top: 0;
+      padding: 16px 60px 14px;
+    }
   }
 }
 
@@ -47,31 +67,45 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 18px;
+  padding-bottom: 32px;
   order: 1;
 
   @media screen and (min-width: $tablet-width) {
-    width: 50%;
+    width: calc(50% + 14px);
     min-height: 132px;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 
   @media screen and (min-width: $desktop-width) {
     width: 200px;
-    min-height: 110px;
+    min-height: 52px;
     margin-right: 40px;
+    padding: 0;
+  }
+
+  .page-header--index & {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .page-header--scroll & {
+    @media screen and (min-width: $desktop-width) {
+      margin-right: 58px;
+    }
   }
 }
 
 .page-header__logo {
   display: flex;
-  width: 96px;
-  height: 23px;
+  width: 100px;
+  height: 19px;
   margin-right: auto;
   background-image: url("../img/logo-mobile-white@1x.png");
   background-repeat: no-repeat;
   background-position: left center;
-  background-size: contain;
+  background-size: 100px 19px;
   z-index: 100;
 
   @media (min-resolution: 2dppx) {
@@ -80,8 +114,9 @@
 
   @media screen and (min-width: $tablet-width) {
     width: 166px;
-    height: 60px;
+    height: 43px;
     background-image: url("../img/logo-tablet-white@1x.png");
+    background-size: 166px 43px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/logo-tablet-white@2x.png");
@@ -90,8 +125,9 @@
 
   @media screen and (min-width: $desktop-width) {
     width: 200px;
-    height: 60px;
+    height: 55px;
     background-image: url("../img/logo-desktop-white@1x.png");
+    background-size: 200px 55px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/logo-desktop-white@2x.png");
@@ -99,8 +135,10 @@
   }
 
   .page-header--dropped &,
-  .page-header--no-js & {
+  .page-header--no-js &,
+  .page-header--scroll & {
     background-image: url("../img/logo-mobile-blue@1x.png");
+    background-size: 100px 19px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/logo-mobile-blue@2x.png");
@@ -108,6 +146,7 @@
 
     @media screen and (min-width: $tablet-width) {
       background-image: url("../img/logo-tablet-blue@1x.png");
+      background-size: 166px 43px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/logo-tablet-blue@2x.png");
@@ -127,6 +166,15 @@
   cursor: pointer;
   z-index: 100;
 
+  @media screen and (min-width: $desktop-width) {
+    display: none;
+  }
+
+  .page-header--scroll & {
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='11' viewBox='0 0 25 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='25' height='3' rx='1.5' fill='%23CCCCCC'/%3E%3Crect y='8' width='25' height='3' rx='1.5' fill='%23CCCCCC'/%3E%3C/svg%3E");
+    background-size: 25px 11px;
+  }
+
   .page-header--dropped & {
     background-image: url("../img/icon-mobile-close.svg");
     background-size: 18px 18px;
@@ -135,10 +183,6 @@
   .page-header--no-js & {
     background-image: none;
   }
-
-  @media screen and (min-width: $desktop-width) {
-    display: none;
-  }
 }
 
 .page-header__menu {
@@ -146,8 +190,8 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: 48px;
-  margin-bottom: 60px;
+  margin-top: 46px;
+  margin-bottom: 54px;
   order: 2;
 
   @media screen and (min-width: $tablet-width) {
@@ -175,6 +219,15 @@
       width: 60px;
       height: 2px;
       background-color: $color-white;
+
+      .page-header--scroll & {
+        width: 44px;
+        background-color: $color-special-blue;
+      }
+    }
+
+    .page-header--scroll & {
+      padding-left: 90px;
     }
   }
 }
@@ -200,7 +253,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding-right: 33px;
+    padding-right: 34px;
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
@@ -223,6 +276,10 @@
 
   &[href]:active {
     opacity: 0.3;
+  }
+
+  .page-header--scroll & {
+    color: $color-special-blue;
   }
 }
 
@@ -250,7 +307,7 @@
   display: none;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
   order: 4;
 
   @media screen and (min-width: $tablet-width) {
@@ -284,7 +341,7 @@
     top: 50%;
     transform: translateY(-50%);
     left: 0;
-    background-color: #121936;
+    background-color: $color-midnight-express;
     background-position: center;
     background-repeat: no-repeat;
 
@@ -312,7 +369,6 @@
 
   @media screen and (min-width: $desktop-width) {
     @include circle (50px);
-
     padding: 0;
   }
 }
@@ -334,7 +390,7 @@
 
 .page-header__email::before {
   background-image: url("../img/icon-email.svg");
-  background-size: 18px 12px;
+  background-size: 19px 13px;
 
   @media screen and (min-width: $tablet-width) {
     background-size: 28px 19px;
@@ -370,7 +426,7 @@
   align-items: center;
   width: 100%;
   min-height: 50px;
-  margin: 0 0 40px;
+  margin: 0 0 50px;
   padding: 10px 15px;
   border-radius: 25px;
   background: $color-basic-yellow;
@@ -416,6 +472,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-left: 5px;
   margin-bottom: 41px;
   order: 5;
 
@@ -441,8 +498,7 @@
 
 .page-header__social-icon {
   @include flex-center;
-
-  padding-right: 26px;
+  padding-right: 27px;
 
   &:hover {
     opacity: 0.6;

@@ -47,7 +47,6 @@
 
 .profile-header__change-photo {
   @include flex-center;
-
   width: 100%;
   min-height: 40px;
   border-radius: 20px;
@@ -60,7 +59,7 @@
   cursor: pointer;
 
   &:hover {
-    background-color: #d1d7e9;
+    background-color: $color-hawkes-blue-e9;
   }
 
   &:active {

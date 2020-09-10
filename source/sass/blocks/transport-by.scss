@@ -2,6 +2,11 @@
   margin-left: 4px;
   margin-right: 4px;
 
+  @media screen and (min-width: $tablet-width) {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
   &--off {
     fill-opacity: 0.15;
   }

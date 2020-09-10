@@ -1,14 +1,14 @@
 .travelmate-card {
   display: grid;
   grid-template-columns: 104px 91px 75px;
-  grid-template-rows: 60px 30px 50px 130px 80px 65px;
+  grid-template-rows: repeat(6, min-content);
   border-radius: 20px;
   background-color: $color-white;
   color: $color-black;
 
   @media screen and (min-width: $tablet-width) {
     grid-template-columns: 254px 150px 197px 87px;
-    grid-template-rows: 84px 82px 84px min-content;
+    grid-template-rows: 84px 82px 84px 83px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -70,7 +70,8 @@
   position: relative;
   grid-column: 2 / 4;
   grid-row: 1 / 2;
-  margin: 13px 22px 8px 0;
+  margin: 13px 22px 0 0;
+  line-height: 20px;
 
   @media screen and (min-width: $tablet-width) {
     grid-column: 2 / 4;
@@ -81,12 +82,11 @@
   @media screen and (min-width: $desktop-width) {
     grid-column: 2 / 4;
     grid-row: 1 / 2;
-    margin: 40px auto auto 62px;
+    margin: 43px auto auto 62px;
   }
 
   &::after {
     @include circle(6px);
-
     position: absolute;
     content: "";
     right: 0;
@@ -95,7 +95,7 @@
     @media screen and (min-width: $tablet-width) {
       width: 8px;
       height: 8px;
-      right: -22px;
+      right: -30px;
       top: 50%;
       transform: translateY(-50%);
     }
@@ -106,11 +106,11 @@
   }
 
   &--online::after {
-    background-color: #81e31e;
+    background-color: $color-user-status-online;
   }
 
   &--offline::after {
-    background-color: #f97676;
+    background-color: $color-user-status-offline;
   }
 }
 
@@ -140,6 +140,8 @@
   position: relative;
   grid-column: 2 / 4;
   grid-row: 2 / 3;
+  margin-top: -2px;
+  padding-top: 0;
   font-weight: bold;
   font-size: 14px;
   line-height: 1;
@@ -164,12 +166,11 @@
 
 .travelmate-card__heart {
   @include circle(30px);
-
   position: absolute;
   content: "";
-  left: -37px;
-  top: -7px;
-  background-color: #e2e5f2;
+  left: -36px;
+  top: -9px;
+  background-color: $color-lavender;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 12px 10px;
@@ -184,7 +185,7 @@
   }
 
   &--active {
-    background-color: #f9eaea;
+    background-color: $color-tutu;
     background-image: url("../img/heart-active.svg");
   }
 }
@@ -192,7 +193,7 @@
 .travelmate-card__tags {
   grid-column: 1 / 4;
   grid-row: 3 / 4;
-  margin: 6px 55px 5px 25px;
+  margin: 7px 55px 5px 25px;
   font-size: 15px;
   line-height: 18px;
   color: $color-grey-44;
@@ -200,7 +201,7 @@
   @media screen and (min-width: $tablet-width) {
     grid-column: 2 / 4;
     grid-row: 2 / 3;
-    margin: 0 40px auto 4px;
+    margin: -3px 90px auto 7px;
     font-size: 20px;
     line-height: 23px;
   }
@@ -221,6 +222,7 @@
   @media screen and (min-width: $tablet-width) {
     grid-column: 1 / 5;
     grid-row: 4 / 5;
+    margin-top: -3px;
     padding-bottom: 10px;
   }
 
@@ -235,14 +237,14 @@
   position: relative;
   display: flex;
   align-items: center;
-  margin: 0 0 19px 26px;
+  margin: 2px 0 19px 26px;
   font-size: 15px;
   line-height: 1;
   background-color: $color-white;
   color: $color-grey-44;
 
   @media screen and (min-width: $tablet-width) {
-    margin: 0 0 22px 84px;
+    margin: 0 0 21px 84px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -283,6 +285,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   margin-left: 25px;
+  margin-bottom: 6px;
 
   @media screen and (min-width: $tablet-width) {
     flex-direction: row;
@@ -291,7 +294,8 @@
 
   @media screen and (min-width: $desktop-width) {
     flex-direction: column;
-    margin-left: 6px;
+    margin-top: 2px;
+    margin-left: -2px;
   }
 }
 
@@ -307,7 +311,7 @@
   color: $color-button-blue;
 
   @media screen and (min-width: $tablet-width) {
-    margin-right: 25px;
+    margin-right: 27px;
     font-size: 20px;
   }
 
@@ -364,7 +368,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  margin: 0 0 19px 26px;
+  margin: -2px 0 19px 26px;
   font-size: 15px;
   line-height: 15px;
   background-color: $color-white;
@@ -404,19 +408,20 @@
 
   @media screen and (min-width: $tablet-width) {
     flex-direction: column;
-    margin-left: 18px;
+    margin-top: 2px;
+    margin-left: 16px;
   }
 
   @media screen and (min-width: $desktop-width) {
     flex-direction: row;
-    margin-left: 0;
+    margin-top: -1px;
+    margin-left: -7px;
   }
 }
 
 .travelmate-card__transport {
   @include flex-center;
   @include circle(32px);
-
   background-color: $color-basic-blue-light;
 
   @media screen and (min-width: $tablet-width) {
@@ -515,16 +520,16 @@
 
 .travelmate-card__mark {
   @include flex-center;
-  @include circle(57px);
-
+  @include circle(45px);
   position: relative;
-  margin-top: -5px;
+  margin-top: -8px;
+  margin-right: 10px;
   margin-left: 10px;
 
   @media screen and (min-width: $tablet-width) {
     flex-direction: column;
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
     margin-top: -7px;
     margin-left: -2px;
   }
@@ -533,10 +538,10 @@
 .travelmate-card__mark-indicator {
   position: absolute;
   content: "";
-  left: 0;
+  left: -9px;
   top: 0;
-  width: 57px;
-  height: 57px;
+  width: 60px;
+  height: 60px;
   /* stroke-width: 3px;
   stroke-linecap: round;
   stroke-dashoffset: 38px; */
@@ -544,8 +549,10 @@
   stroke-dashoffset: 25px;
 
   @media screen and (min-width: $tablet-width) {
-    width: 80px;
-    height: 80px;
+    width: 83px;
+    height: 83px;
+    left: -7px;
+    top: -3px;
     stroke-linecap: round;
   }
 
@@ -571,13 +578,15 @@
 }
 
 .travelmate-card__mark-number {
+  padding-top: 13px;
+  padding-right: 3px;
   font-weight: bold;
   font-size: 24px;
   line-height: 24px;
   color: $color-button-blue;
 
   @media screen and (min-width: $tablet-width) {
-    padding-top: 4px;
+    padding-top: 8px;
   }
 }
 
@@ -586,7 +595,8 @@
 
   @media screen and (min-width: $tablet-width) {
     display: block;
-    margin-top: -2px;
+    margin-top: 2px;
+    margin-right: 6px;
     padding: 2px 3px 1px;
     border-top: 1px solid rgba($color-black, 0.1);
     font-size: 14px;
@@ -597,12 +607,10 @@
 
 .travelmate-card__invite {
   @include flex-center;
-
   grid-column: 1 / 4;
   grid-row: 6 / 7;
-
   min-height: 40px;
-  margin: 3px 20px 22px;
+  margin: 20px 20px 22px;
   border-radius: 25px;
   background-color: $color-basic-yellow;
   font-weight: bold;

@@ -1,17 +1,28 @@
 .profile {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 54px 25px 64px;
   z-index: 7;
 
+  @media screen and (min-width: $desktop-width) {
+    margin-top: -190px;
+  }
+}
+
+.profile__inner {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: $mobile-width;
+  margin: 0 auto;
+  padding: 54px 25px 64px;
+
   @media screen and (min-width: $tablet-width) {
+    width: $tablet-width;
     padding: 125px 75px 90px;
   }
 
   @media screen and (min-width: $desktop-width) {
     justify-content: flex-end;
-    margin-top: -190px;
+    width: $desktop-width;
     padding: 0 60px 125px 124px;
   }
 }
@@ -38,8 +49,8 @@
 .profile__mark .mark__indicator {
   width: 100px;
   height: 100px;
-  stroke-dasharray: 251px 63px;
-  stroke-dashoffset: 87px;
+  stroke-dasharray: 280px 51px;
+  stroke-dashoffset: 106px;
   stroke-width: 3;
 
   @media screen and (min-width: $tablet-width) {
@@ -49,11 +60,16 @@
 }
 
 .profile__mark .mark__number {
+  padding: 0 5px 1px 5px;
   border-bottom: 1px solid rgba($color-grey-44, 0.3);
   font-size: 38px;
   line-height: 38px;
   text-align: center;
   color: $color-basic-blue;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 3px;
+  }
 
   @media screen and (min-width: $desktop-width) {
     color: $color-white;
@@ -61,9 +77,14 @@
 }
 
 .profile__mark .mark__level {
+  padding-bottom: 3px;
   font-size: 18px;
   line-height: 18px;
   color: $color-grey-44;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-bottom: 0;
+  }
 
   @media screen and (min-width: $desktop-width) {
     color: $color-white;
@@ -76,6 +97,8 @@
   margin: 0 18px 1px auto;
 
   @media screen and (min-width: $tablet-width) {
+    width: 94px;
+    height: 94px;
     margin: 0 0 1px auto;
     order: 3;
   }
@@ -109,10 +132,9 @@
 .profile__change-photo,
 .profile__photo-button {
   @include flex-center;
-
   width: 100%;
   min-height: 40px;
-  padding: 5px 15px;
+  padding: 3px 15px 7px;
   border-radius: 20px;
   background-color: $color-special-blue-light;
   font-weight: 500;
@@ -136,7 +158,7 @@
   }
 
   &:hover {
-    background-color: #d1d7e9;
+    background-color: $color-hawkes-blue-e9;
   }
 
   &:active {
@@ -157,15 +179,15 @@
     width: 190px;
     min-height: 50px;
     margin-top: -10px;
-    padding: 5px 15px;
+    padding: 5px 15px 5px 15px;
     border-radius: 0 0 10px 10px;
+    letter-spacing: 0;
     cursor: pointer;
   }
 }
 
 .profile__tags-wrapper {
   @include flex-center;
-
   position: relative;
   width: 100%;
   margin: 33px 0 25px;
@@ -206,27 +228,31 @@
   @media screen and (min-width: $tablet-width) {
     top: auto;
     bottom: -10px;
-    padding: 0 17px;
+    padding: 0 19px;
     font-size: 20px;
-    letter-spacing: 0.09em;
+    letter-spacing: 0.08em;
   }
 }
 
 .profile__tags-title {
+  @media screen and (min-width: $tablet-width) {
+    bottom: -9px;
+  }
+
   @media screen and (min-width: $desktop-width) {
     left: 22px;
+    letter-spacing: 0.07em;
     transform: translateX(0);
   }
 }
 
 .profile__tags {
   @include flex-center;
-
   width: 100%;
   min-height: 89px;
   height: auto;
   padding: 25px 25px 25px;
-  border: 1px solid #cbced9;
+  border: 1px solid $color-link-water;
   border-radius: 10px;
   background-color: transparent;
   font-size: 16px;
@@ -236,7 +262,7 @@
   overflow: hidden;
 
   @media screen and (min-width: $tablet-width) {
-    padding: 35px 40px 15px;
+    padding: 33px 40px 15px;
     font-size: 20px;
     line-height: 22px;
   }
@@ -246,7 +272,7 @@
   }
 
   &:hover {
-    border-color: #aeb4cb;
+    border-color: $color-echo-blue;
   }
 
   &:active,
@@ -258,12 +284,11 @@
 
 .profile__transport-wrapper {
   @include flex-center;
-
   position: relative;
   width: 100%;
   margin: 0;
   padding: 0;
-  border: 1px solid #cbced9;
+  border: 1px solid $color-link-water;
   border-radius: 10px;
   box-sizing: border-box;
 

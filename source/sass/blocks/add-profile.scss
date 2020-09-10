@@ -1,26 +1,35 @@
 .add-profile {
   @include bottom-radius(30px);
+  position: relative;
+  margin-top: -30px;
+  background-color: #edeff6;
+  z-index: 6;
 
+  @media screen and (min-width: $tablet-width) {
+    @include bottom-radius(60px);
+    margin-top: -60px;
+  }
+}
+
+.add-profile__inner {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: -30px;
+  width: $mobile-width;
+  margin: 0 auto;
   padding: 67px 25px 38px 49px;
-  background-color: #e6e8f1;
-  z-index: 6;
 
   @media screen and (min-width: $tablet-width) {
-    @include bottom-radius(60px);
-
     flex-direction: column;
-    margin-top: -60px;
-    padding: 130px 40px 87px 40px;
+    width: $tablet-width;
+    padding: 129px 40px 88px 40px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 160px 244px 187px 130px;
+    width: $desktop-width;
+    padding: 163px 244px 190px 130px;
   }
 }
 
@@ -29,26 +38,27 @@
   padding: 0;
 
   @media screen and (min-width: $tablet-width) {
-    margin: 0 0 36px 0;
+    margin: 0 0 36px 2px;
     text-align: center;
   }
 
   @media screen and (min-width: $desktop-width) {
+    margin-left: 120px;
     margin-bottom: 90px;
   }
 }
 
 .add-profile__list {
   position: relative;
-  margin: 0 0 30px 0;
+  margin: 0 0 28px 0;
   padding: 0 45px 0 0;
   width: 100%;
   list-style-type: none;
   counter-reset: profile-list;
 
   @media screen and (min-width: $tablet-width) {
-    margin: 0 0 11px 0;
-    padding: 42px 34px 44px 90px;
+    margin: 0 0 13px 0;
+    padding: 40px 34px 44px 90px;
 
     &::before {
       position: absolute;
@@ -58,13 +68,13 @@
       width: 198px;
       height: 100%;
       border-radius: 20px;
-      background-color: #e2e5f2;
+      background-color: $color-lavender;
     }
   }
 
   @media screen and (min-width: $desktop-width) {
-    margin-bottom: 4px;
-    padding: 50px 161px 50px 93px;
+    margin-bottom: 5px;
+    padding: 44px 161px 50px 91px;
 
     &::before {
       width: 446px;
@@ -79,12 +89,25 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding: 10px 0;
+  padding: 10px 0 15px;
   border-top: 1px solid rgba($color-grey-44, 0.05);
   font-weight: 300;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 20px;
   color: $color-grey-44;
+
+  @media screen and (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    font-size: 28px;
+    line-height: 65px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 10px 0;
+    line-height: 46px;
+  }
 
   &:last-child {
     border-bottom: 1px solid rgba($color-grey-44, 0.05);
@@ -93,7 +116,6 @@
   &::before {
     @include circle(34px);
     @include flex-center;
-
     position: absolute;
     right: -44px;
     top: 3px;
@@ -105,7 +127,6 @@
 
     @media screen and (min-width: $tablet-width) {
       @include circle(68px);
-
       left: -90px;
       top: 50%;
       transform: translateY(-50%);
@@ -114,7 +135,7 @@
   }
 
   &:nth-child(1)::before {
-    background-color: $color-special-orange-light;
+    background-color: $color-special-orange;
   }
 
   &:nth-child(2)::before {
@@ -123,14 +144,6 @@
 
   &:nth-child(3)::before {
     background-color: $color-basic-yellow;
-  }
-
-  @media screen and (min-width: $tablet-width) {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0;
-    font-size: 28px;
-    line-height: 67px;
   }
 }
 
@@ -172,7 +185,7 @@
   font-size: 16px;
   line-height: 1;
   text-decoration: none;
-  color: #132576;
+  color: $color-midnight-blue;
 
   &:hover {
     color: rgba($color-basic-blue-dark, 0.7);
@@ -186,7 +199,7 @@
     margin-right: auto;
     padding-left: 89px;
     font-size: 20px;
-    color: #132576;
+    color: $color-midnight-blue;
 
     &:hover {
       opacity: 0.7;
@@ -198,13 +211,12 @@
 
     &::before {
       @include circle(68px);
-
       position: absolute;
       content: "";
       left: 0;
       top: 50%;
       transform: translateY(-50%);
-      background-color: #e2e5f2;
+      background-color: $color-lavender;
       background-image: url("../img/icon-businessman.svg");
       background-position: center;
       background-repeat: no-repeat;

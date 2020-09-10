@@ -5,7 +5,6 @@
 .social__icon {
   @include circle(45px);
   @include flex-center;
-
   background-color: $color-basic-yellow;
 
   @media screen and (min-width: $tablet-width) {

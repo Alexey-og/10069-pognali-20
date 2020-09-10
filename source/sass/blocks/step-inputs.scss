@@ -5,7 +5,7 @@
 
   @media screen and (min-width: $desktop-width) {
     padding-top: 30px;
-    border-top: 1px solid #e1e3e9;
+    border-top: 1px solid $color-solitude;
   }
 }
 
@@ -15,8 +15,8 @@
   flex-grow: 1;
 
   @media screen and (min-width: $tablet-width) {
-    padding-top: 25px;
-    border-top: 1px solid #e1e3e9;
+    padding-top: 23px;
+    border-top: 1px solid $color-solitude;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -59,7 +59,8 @@
 
   @media screen and (min-width: $desktop-width) {
     width: 27%;
-    margin-right: 25px;
+    margin-top: -2px;
+    margin-right: 18px;
     line-height: 70px;
     letter-spacing: 0;
     order: 1;
@@ -71,9 +72,9 @@
   justify-content: space-between;
   width: 100%;
   height: 43px;
-  margin-top: 8px;
+  margin-top: 10px;
   margin-bottom: 20px;
-  border: 1px solid #cbced9;
+  border: 1px solid $color-link-water;
   border-radius: 4px;
   order: 3;
 
@@ -90,7 +91,7 @@
   }
 
   &:hover {
-    border-color: #959bb2;
+    border-color: $color-rock-blue;
   }
 
   &:active {
@@ -139,7 +140,7 @@
   &:hover {
     &::before,
     &::after {
-      background-color: #959bb2;
+      background-color: $color-rock-blue;
     }
   }
 
@@ -170,7 +171,7 @@
     right: 13px;
 
     @media screen and (min-width: $tablet-width) {
-      right: 22px;
+      right: 19px;
     }
 
     @media screen and (min-width: $desktop-width) {
@@ -184,7 +185,7 @@
     height: 14px;
 
     @media screen and (min-width: $tablet-width) {
-      right: 31px;
+      right: 28px;
       height: 20px;
     }
 
@@ -211,6 +212,7 @@
 
   @media screen and (min-width: $desktop-width) {
     width: 60px;
+    padding: 8px 12px 13px 8px;
   }
 }
 
@@ -230,20 +232,26 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    margin-left: 35px;
+    margin-left: 34px;
+    margin-top: -2px;
     line-height: 70px;
+    color: $color-button-blue;
     order: 3;
   }
 }
 
 .step-inputs__kids {
+  margin-top: 2px;
+
   @media screen and (min-width: $tablet-width) {
+    margin-top: 0;
     margin-bottom: 30px;
     order: 2;
   }
 
   @media screen and (min-width: $desktop-width) {
     margin-bottom: 0;
+    margin-right: -2px;
   }
 }
 
@@ -284,7 +292,7 @@
   }
 
   &::before {
-    border: 1px solid #cbced9;
+    border: 1px solid $color-link-water;
     border-radius: 4px;
   }
 
@@ -299,7 +307,7 @@
   }
 
   &:hover::before {
-    border-color: #959bb2;
+    border-color: $color-rock-blue;
   }
 
   &:active::before {

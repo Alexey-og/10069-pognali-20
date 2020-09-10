@@ -1,38 +1,52 @@
 .travelmates {
   @include bottom-radius(30px);
-
   position: relative;
   margin-top: -30px;
-  padding: 98px 25px 31px;
   background-color: $color-basic-blue-dark;
+  z-index: 7;
+
+  @media screen and (min-width: $tablet-width) {
+    @include bottom-radius(60px);
+    margin-top: -60px;
+  }
+}
+
+.travelmates__inner {
+  position: relative;
+  width: $mobile-width;
+  margin: 0 auto;
+  padding: 96px 25px 30px;
   background-image:
-    url("data:image/svg+xml,%3Csvg width='132' height='132' viewBox='0 0 132 132' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='132' height='132' rx='20' fill='%23141b3b'/%3E%3C/svg%3E"),
+    url("../img/blue-rect-r20.svg"),
     url("../img/smolov-back-desktop@1x.png"),
     url("../img/rogovaya-back-mobile@1x.png");
   background-position:
     left -19px top 64px,
     right 25px top 64px,
-    left -2px top 337px;
+    left -13px top 337px;
   background-repeat: no-repeat;
   background-size:
     132px 132px,
     143px 143px,
-    71px 71px;
-  z-index: 7;
+    75px 71px;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("data:image/svg+xml,%3Csvg width='132' height='132' viewBox='0 0 132 132' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='132' height='132' rx='20' fill='%23141b3b'/%3E%3C/svg%3E"), url("../img/smolov-back-desktop@2x.png"), url("../img/rogovaya-back-mobile@2x.png");
+    background-image:
+      url("../img/blue-rect-r20.svg"),
+      url("../img/smolov-back-desktop@2x.png"),
+      url("../img/rogovaya-back-mobile@2x.png");
   }
 
   @media screen and (min-width: $tablet-width) {
-    @include bottom-radius(60px);
-
-    margin-top: -60px;
+    width: $tablet-width;
     padding: 197px 74px 87px;
-    background-image: url("data:image/svg+xml,%3Csvg width='212' height='212' viewBox='0 0 212 212' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='212' height='212' rx='20' fill='%23141b3b'/%3E%3C/svg%3E"), url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-desktop@1x.png");
+    background-image:
+      url("../img/blue-rect-r20.svg"),
+      url("../img/smolov-back-desktop@1x.png"),
+      url("../img/rogovaya-back-desktop@1x.png");
     background-position:
       left 40px top 131px,
-      left 40px top 492px,
+      left 40px top 486px,
       right 74px top 140px;
     background-repeat: no-repeat;
     background-size:
@@ -41,17 +55,19 @@
       285px 285px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("data:image/svg+xml,%3Csvg width='212' height='212' viewBox='0 0 212 212' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='212' height='212' rx='20' fill='%23141b3b'/%3E%3C/svg%3E"), url("../img/smolov-back-desktop@2x.png"), url("../img/rogovaya-back-desktop@2x.png");
+      background-image:
+        url("../img/blue-rect-r20.svg"),
+        url("../img/smolov-back-desktop@2x.png"),
+        url("../img/rogovaya-back-desktop@2x.png");
     }
   }
 
   @media screen and (min-width: $desktop-width) {
-    @include bottom-radius(60px);
-
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: min-content min-content;
-    padding: 190px 30px 104px 30px;
+    width: $desktop-width;
+    padding: 192px 30px 104px 30px;
     background-position:
       left 60px top 130px,
       left 547px top 194px,
@@ -60,24 +76,25 @@
 }
 
 .travelmates__info {
-  padding: 0 30px 50px 25px;
+  padding: 0 30px 34px 25px;
 
   @media screen and (min-width: $tablet-width) {
-    padding: 0 50px 20px 0;
+    padding: 0 50px 23px 0;
   }
 
   @media screen and (min-width: $desktop-width) {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    margin-top: -6px;
     padding: 0 50px 0 100px;
   }
 }
 
 .travelmates__info .heading-2 {
-  margin: 0 0 19px 0;
+  margin: 0 0 20px 0;
 
   @media screen and (min-width: $tablet-width) {
-    margin: 0 0 55px 0;
+    margin: 0 0 56px 0;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -86,7 +103,7 @@
 }
 
 .travelmates__description {
-  margin: 0 0 25px 0;
+  margin: 0 0 21px 0;
   font-size: 16px;
   line-height: 22px;
 
@@ -99,7 +116,8 @@
 
   @media screen and (min-width: $desktop-width) {
     width: 430px;
-    margin: 0 0 42px 0;
+    margin: 0 0 39px 0;
+    line-height: 34px;
   }
 }
 
@@ -110,6 +128,7 @@
   line-height: 22px;
 
   @media screen and (min-width: $tablet-width) {
+    width: 290px;
     font-size: 21px;
     line-height: 24px;
   }
@@ -118,10 +137,10 @@
 .travelmates__list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
   @media screen and (min-width: $tablet-width) {
-    margin-bottom: 81px;
+    margin-bottom: 72px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -138,8 +157,12 @@
   padding-bottom: 10px;
 
   @media screen and (min-width: $tablet-width) {
-    width: 620px;
+    width: 616px;
     height: 80px;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 9px 32px 13px;
+    background-position: right 35px top 50%;
     font-size: 24px;
   }
 
@@ -148,7 +171,8 @@
     grid-row: 2 / 3;
     width: 280px;
     min-height: 80px;
-    margin-top: 0;
+    margin-top: 15px;
     margin-left: 100px;
+    padding-left: 35px;
   }
 }
