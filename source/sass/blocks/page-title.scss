@@ -45,7 +45,7 @@
 
   @media screen and (min-width: $tablet-width) {
     display: flex;
-    margin-bottom: 13px;
+    margin-bottom: 16px;
     padding-right: 60px;
     line-height: 1;
     text-transform: uppercase;
@@ -64,6 +64,10 @@
       height: 16px;
       background-image: url("../img/icon-arrow-bend.svg");
     }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 15px;
   }
 
   &:hover {

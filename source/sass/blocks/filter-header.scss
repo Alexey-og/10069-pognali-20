@@ -11,6 +11,10 @@
   @media screen and (min-width: $tablet-width) {
     font-size: 20px;
   }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-left: 22px;
+  }
 }
 
 .filter-header__title {
@@ -113,6 +117,7 @@
   color: $color-basic-blue-dark;
 
   @media screen and (min-width: $tablet-width) {
+    margin-right: 65px;
     order: 3;
   }
 }

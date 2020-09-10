@@ -8,7 +8,7 @@
 
   @media screen and (min-width: $tablet-width) {
     grid-template-columns: 254px 150px 197px 87px;
-    grid-template-rows: 84px 82px 84px min-content;
+    grid-template-rows: 84px 82px 84px 83px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -82,7 +82,7 @@
   @media screen and (min-width: $desktop-width) {
     grid-column: 2 / 4;
     grid-row: 1 / 2;
-    margin: 40px auto auto 62px;
+    margin: 43px auto auto 62px;
   }
 
   &::after {
@@ -95,7 +95,7 @@
     @media screen and (min-width: $tablet-width) {
       width: 8px;
       height: 8px;
-      right: -22px;
+      right: -30px;
       top: 50%;
       transform: translateY(-50%);
     }
@@ -201,7 +201,7 @@
   @media screen and (min-width: $tablet-width) {
     grid-column: 2 / 4;
     grid-row: 2 / 3;
-    margin: 0 40px auto 4px;
+    margin: -3px 90px auto 7px;
     font-size: 20px;
     line-height: 23px;
   }
@@ -222,6 +222,7 @@
   @media screen and (min-width: $tablet-width) {
     grid-column: 1 / 5;
     grid-row: 4 / 5;
+    margin-top: -3px;
     padding-bottom: 10px;
   }
 
@@ -243,7 +244,7 @@
   color: $color-grey-44;
 
   @media screen and (min-width: $tablet-width) {
-    margin: 0 0 22px 84px;
+    margin: 0 0 21px 84px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -293,7 +294,8 @@
 
   @media screen and (min-width: $desktop-width) {
     flex-direction: column;
-    margin-left: 6px;
+    margin-top: 2px;
+    margin-left: -2px;
   }
 }
 
@@ -309,7 +311,7 @@
   color: $color-button-blue;
 
   @media screen and (min-width: $tablet-width) {
-    margin-right: 25px;
+    margin-right: 27px;
     font-size: 20px;
   }
 
@@ -406,12 +408,14 @@
 
   @media screen and (min-width: $tablet-width) {
     flex-direction: column;
-    margin-left: 18px;
+    margin-top: 2px;
+    margin-left: 16px;
   }
 
   @media screen and (min-width: $desktop-width) {
     flex-direction: row;
-    margin-left: 0;
+    margin-top: -1px;
+    margin-left: -7px;
   }
 }
 
@@ -524,8 +528,8 @@
 
   @media screen and (min-width: $tablet-width) {
     flex-direction: column;
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
     margin-top: -7px;
     margin-left: -2px;
   }
@@ -545,8 +549,10 @@
   stroke-dashoffset: 25px;
 
   @media screen and (min-width: $tablet-width) {
-    width: 80px;
-    height: 80px;
+    width: 83px;
+    height: 83px;
+    left: -7px;
+    top: -3px;
     stroke-linecap: round;
   }
 
@@ -580,7 +586,7 @@
   color: $color-button-blue;
 
   @media screen and (min-width: $tablet-width) {
-    padding-top: 4px;
+    padding-top: 8px;
   }
 }
 
@@ -589,7 +595,8 @@
 
   @media screen and (min-width: $tablet-width) {
     display: block;
-    margin-top: -2px;
+    margin-top: 2px;
+    margin-right: 6px;
     padding: 2px 3px 1px;
     border-top: 1px solid rgba($color-black, 0.1);
     font-size: 14px;

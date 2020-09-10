@@ -33,7 +33,7 @@
 
   @media screen and (min-width: $desktop-width) {
     width: $desktop-width;
-    padding: 120px 60px 60px 60px;
+    padding: 120px 62px 60px 58px;
   }
 }
 
@@ -49,7 +49,7 @@
 
   @media screen and (min-width: $tablet-width) {
     flex-direction: row;
-    margin-top: 60px;
+    margin-top: 71px;
     margin-bottom: 70px;
     padding: 0;
   }
@@ -164,9 +164,13 @@
   display: none;
   flex-direction: column;
 
+  @media screen and (min-width: $tablet-width) {
+    margin-left: 37px;
+  }
+
   @media screen and (min-width: $desktop-width) {
     display: flex;
-    width: 20%;
+    width: calc(16% + 5px);
     margin-bottom: 50px;
   }
 
