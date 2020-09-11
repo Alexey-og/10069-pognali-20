@@ -16,10 +16,17 @@ var desiredCountriesExpand = document.querySelector(".desired-countries__expand"
 var countrySelection = document.querySelector(".country-selection");
 var countrySelectionCloseButton = document.querySelector(".country-selection__close");
 
-/* var filterLetter = document.querySelectorAll(".filter__letter");
-var filterCountries = document.querySelectorAll(".filter__countries");
-var filterLetters = document.querySelector(".filter__letters"); */
+var filterItemHobby = document.querySelector(".travelmate-filter__item--hobby");
+var filterItemMusic = document.querySelector(".travelmate-filter__item--music");
+var filterItemFood = document.querySelector(".travelmate-filter__item--food");
+var filterItemTransport = document.querySelector(".travelmate-filter__item--transport");
+var filterItemLevel = document.querySelector(".travelmate-filter__item--level");
 
+var filterTitleHobby = document.querySelector(".travelmate-filter__title--hobby");
+var filterTitleMusic = document.querySelector(".travelmate-filter__title--music");
+var filterTitleFood = document.querySelector(".travelmate-filter__title--food");
+var filterTitleTransport = document.querySelector(".travelmate-filter__title--transport");
+var filterTitleLevel = document.querySelector(".travelmate-filter__title--level");
 
 pageHeader.classList.remove("page-header--no-js");
 
@@ -96,19 +103,6 @@ if (countrySelectionCloseButton) {
     countrySelection.classList.add("hidden");
   });
 }
-
-
-var filterItemHobby = document.querySelector(".travelmate-filter__item--hobby");
-var filterItemMusic = document.querySelector(".travelmate-filter__item--music");
-var filterItemFood = document.querySelector(".travelmate-filter__item--food");
-var filterItemTransport = document.querySelector(".travelmate-filter__item--transport");
-var filterItemLevel = document.querySelector(".travelmate-filter__item--level");
-
-var filterTitleHobby = document.querySelector(".travelmate-filter__title--hobby");
-var filterTitleMusic = document.querySelector(".travelmate-filter__title--music");
-var filterTitleFood = document.querySelector(".travelmate-filter__title--food");
-var filterTitleTransport = document.querySelector(".travelmate-filter__title--transport");
-var filterTitleLevel = document.querySelector(".travelmate-filter__title--level");
 
 if (filterItemHobby) {
   filterTitleHobby.addEventListener("click", function (evt) {
