@@ -17,6 +17,14 @@
 
   &--index {
     background-color: $color-basic-blue;
+
+    @media screen and (min-width: $tablet-width) {
+      background-color: $color-header-blue;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      background-color: $color-basic-blue;
+    }
   }
 
   &--dropped,
@@ -51,8 +59,9 @@
 
   @media screen and (min-width: $desktop-width) {
     width: $desktop-width;
-    margin-top: 38px;
-    padding: 5px 60px;
+    min-height: 74px;
+    margin-top: 37px;
+    padding: 10px 60px;
 
     .page-header--scroll & {
       margin-top: 0;
@@ -82,13 +91,18 @@
     width: 200px;
     min-height: 52px;
     margin-right: 40px;
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
-  .page-header--index & {
+  /* .page-header--index & {
     padding-top: 25px;
     padding-bottom: 25px;
-  }
+
+    @media screen and (min-width: $desktop-width) {
+
+    }
+  } */
 
   .page-header--scroll & {
     @media screen and (min-width: $desktop-width) {
@@ -125,9 +139,9 @@
 
   @media screen and (min-width: $desktop-width) {
     width: 200px;
-    height: 55px;
+    height: 52px;
     background-image: url("../img/logo-desktop-white@1x.png");
-    background-size: 200px 55px;
+    background-size: 200px 52px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/logo-desktop-white@2x.png");
@@ -150,6 +164,15 @@
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/logo-tablet-blue@2x.png");
+      }
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      background-image: url("../img/logo-desktop-blue@1x.png");
+      background-size: 200px 52px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/logo-desktop-blue@2x.png");
       }
     }
   }
@@ -205,8 +228,10 @@
     position: relative;
     display: flex;
     flex-direction: row;
+    align-items: center;
     width: auto;
     margin: 0 auto 0 0;
+    padding-top: 2px;
     padding-left: 105px;
     order: 2;
 

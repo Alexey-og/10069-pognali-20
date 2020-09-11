@@ -297,14 +297,15 @@
   top: -10px;
   background-color: $color-basic-blue-light;
   cursor: pointer;
-  stroke: $color-mischka;
+  stroke: $color-white;
+  stroke-opacity: 0.3;
 
   @media screen and (min-width: $tablet-width) {
     right: -3px;
     top: 50%;
     transform: translateY(-50%);
     background-color: transparent;
-    stroke-opacity: 0.1;
+    opacity: 0.1;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -312,17 +313,18 @@
   }
 
   &:hover {
-    stroke-opacity: 0.3;
+    stroke-opacity: 1;
   }
 
   &:active {
-    stroke-opacity: 0.05;
+    stroke-opacity: 0.1;
   }
 }
 
 .desired-countries__icon-close {
   width: 9px;
   height: 9px;
+
 
   @media screen and (min-width: $tablet-width) {
     width: 20px;

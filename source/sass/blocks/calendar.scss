@@ -210,7 +210,8 @@
   color: rgba($color-grey-44, 0.3);
 }
 
-.calendar__input:not(:disabled) + .calendar__day:hover {
+.calendar__input:not(:disabled) + .calendar__day:hover,
+.calendar__input:not(:disabled) + .calendar__day:focus {
   border: 2px solid $color-outrageous-orange;
   cursor: pointer;
 

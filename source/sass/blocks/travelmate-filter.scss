@@ -40,7 +40,26 @@
   border: none;
 
   @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
-    margin-bottom: 25px;
+    margin-bottom: 8px;
+
+    &:first-of-type {
+      padding-top: 24px;
+      border-top: 1px solid $color-golden-dream;
+    }
+
+    &:last-of-type {
+      margin-bottom: 36px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid $color-golden-dream;
+    }
+
+    &--transport {
+      padding-top: 8px;
+    }
+
+    &--level {
+      padding-top: 6px;
+    }
   }
 }
 
@@ -65,21 +84,6 @@
     @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
       display: flex;
     }
-  }
-}
-
-.travelmate-filter__item:first-of-type {
-  @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
-    padding-top: 34px;
-    border-top: 1px solid $color-golden-dream;
-  }
-}
-
-.travelmate-filter__item:last-of-type {
-  @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
-    margin-bottom: 36px;
-    padding-bottom: 36px;
-    border-bottom: 1px solid $color-golden-dream;
   }
 }
 
@@ -239,6 +243,7 @@
   padding-bottom: 11px;
 
   @media screen and (min-width: $tablet-width) and (max-width: 1439px) {
+    margin-left: -7px;
     padding-bottom: 0;
   }
 }

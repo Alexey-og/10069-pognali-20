@@ -105,14 +105,13 @@
 
 .travelmate-range__row--inner {
   flex-grow: 1;
-  margin-left: 30%;
+  margin-left: 24%;
   margin-right: 0%;
   background-color: $color-button-blue;
 }
 
 .travelmate-range__button {
   @include circle(10px);
-
   position: absolute;
   content: "";
   top: 50%;
@@ -146,7 +145,7 @@
 }
 
 .travelmate-range__button--left {
-  left: 30%;
+  left: 24%;
 }
 
 .travelmate-range__button--right {
